@@ -185,45 +185,42 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
 
             {!manualMode ? (
               <div style={{ marginBottom: 16 }}>
-                <div style={{ display: 'flex', gap: 8, marginBottom: pendingFile ? 8 : 0 }}>
+                {/* URL row */}
+                <div style={{ display: 'flex', gap: 8, marginBottom: 8 }}>
                   <input
                     value={url}
                     onChange={e => setUrl(e.target.value)}
                     placeholder="Paste YouTube, article, PDF URL..."
                     style={{ flex: 1, background: '#0d0d0d', border: '1px solid #1f2937', borderRadius: 8, padding: '10px 12px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 12 }}
                   />
-                  <button onClick={handleFeed} disabled={loading || !url} style={{ padding: '10px 14px', background: loading ? '#1f2937' : '#FFD700', border: 'none', borderRadius: 8, color: '#000', fontFamily: "'Bebas Neue', sans-serif", fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' }}>
+                  <button onClick={handleFeed} disabled={loading || !url} style={{ padding: '10px 16px', background: loading ? '#1f2937' : '#FFD700', border: 'none', borderRadius: 8, color: '#000', fontFamily: "'Bebas Neue', sans-serif", fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' }}>
                     {loading ? <Spinner size={14} /> : '⚡ FEED IN'}
                   </button>
-                  {/* Hidden file input */}
-                  <input
-                    ref={fileInputRef}
-                    type="file"
-                    accept=".pdf,.txt,.docx"
-                    style={{ display: 'none' }}
-                    onChange={e => {
-                      const f = e.target.files?.[0] ?? null
-                      setPendingFile(f)
-                      if (f) handleUpload(f)
-                    }}
-                  />
-                  <button
-                    onClick={() => fileInputRef.current?.click()}
-                    disabled={uploadLoading}
-                    title="Upload PDF, TXT or DOCX"
-                    style={{ padding: '10px 14px', background: uploadLoading ? '#1f2937' : 'transparent', border: '1px solid #4ade80', borderRadius: 8, color: '#4ade80', fontFamily: "'Bebas Neue', sans-serif", fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' }}
-                  >
-                    {uploadLoading ? <Spinner size={14} /> : '📎 FILE'}
-                  </button>
                 </div>
-                {pendingFile && !uploadLoading && (
-                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, color: '#9CA3AF', paddingLeft: 2 }}>
-                    {pendingFile.name}
-                  </div>
-                )}
+
+                {/* File upload row — full width, separate from URL input */}
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".pdf,.txt,.docx"
+                  style={{ display: 'none' }}
+                  onChange={e => {
+                    const f = e.target.files?.[0] ?? null
+                    setPendingFile(f)
+                    if (f) handleUpload(f)
+                  }}
+                />
+                <button
+                  onClick={() => fileInputRef.current?.click()}
+                  disabled={uploadLoading}
+                  style={{ width: '100%', padding: '12px 0', background: uploadLoading ? '#1f2937' : '#4ade80', border: 'none', borderRadius: 8, color: '#000', fontFamily: "'Bebas Neue', sans-serif", fontSize: 16, cursor: uploadLoading ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}
+                >
+                  {uploadLoading ? <><Spinner size={16} /><span>PROCESSING {pendingFile?.name}…</span></> : '📎 UPLOAD FILE'}
+                </button>
+
                 {uploadLoading && (
-                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, color: '#4ade80', paddingLeft: 2 }}>
-                    ⏳ Extracting &amp; summarising {pendingFile?.name}…
+                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, color: '#4ade80', marginTop: 6, textAlign: 'center' }}>
+                    ⏳ Extracting &amp; summarising — this takes a few seconds…
                   </div>
                 )}
               </div>
