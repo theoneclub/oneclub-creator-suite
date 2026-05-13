@@ -12,12 +12,45 @@ function detectType(url: string): 'youtube' | 'webpage' | 'pdf' {
   return 'webpage'
 }
 
+const ALLORIGINS_PREFIX = 'https://api.allorigins.win/raw?url='
+
+async function fetchWithFallback(url: string): Promise<string> {
+  // Try direct fetch first; on failure fall back to allorigins proxy
+  const attempts = [
+    () => fetch(url, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; OneClubBot/1.0)' },
+      signal: AbortSignal.timeout(10000),
+    }),
+    () => fetch(`${ALLORIGINS_PREFIX}${encodeURIComponent(url)}`, {
+      signal: AbortSignal.timeout(15000),
+    }),
+  ]
+
+  let lastError: unknown
+  for (const attempt of attempts) {
+    try {
+      const res = await attempt()
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      return await res.text()
+    } catch (err) {
+      lastError = err
+    }
+  }
+  throw lastError
+}
+
 async function fetchContent(url: string, type: string): Promise<{ title: string; content: string }> {
-  const res = await fetch(url, {
-    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; OneClubBot/1.0)' },
-    signal: AbortSignal.timeout(10000),
-  })
-  const html = await res.text()
+  let html: string
+  try {
+    html = await fetchWithFallback(url)
+  } catch (err) {
+    console.error('fetchContent failed for', url, err)
+    // Return a graceful fallback so the brain entry can still be created manually
+    return {
+      title: url,
+      content: `[Could not fetch content from ${url}. Add a summary manually.]`,
+    }
+  }
 
   // Extract title
   const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i)
