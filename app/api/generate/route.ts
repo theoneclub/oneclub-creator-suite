@@ -9,17 +9,32 @@ import { AvatarSettings, GeneratedContent, ScriptContent } from '@/types'
 export const dynamic = 'force-dynamic'
 
 function parseContent(raw: string): GeneratedContent {
+  // Section-end lookahead: next header must start with an uppercase letter so
+  // "HOOK RATING:" is a valid stop boundary when it falls on its own line.
   const get = (key: string) => {
-    const regex = new RegExp(`${key}:\\s*\\n([\\s\\S]*?)(?=\\n[A-Z \\-]+:|$)`, 'i')
+    const escaped = key.replace(/[-[\]{}()*+?.,\\^$|#]/g, '\\$&')
+    const regex = new RegExp(`${escaped}:\\s*\\n([\\s\\S]*?)(?=\\n[A-Z][A-Z \\-]*:|$)`, 'i')
     return raw.match(regex)?.[1]?.trim() ?? ''
   }
 
+  // Extract HOOK RATING and SEO SCORE before touching the hook field so their
+  // values are available as standalone strings.
+  const hookRatingMatch = raw.match(/^HOOK RATING:\s*(.+)/im)
+  const seoScoreMatch   = raw.match(/^SEO SCORE:\s*(.+)/im)
+
+  // Get the raw hook section, then strip any "HOOK RATING:" leak regardless of
+  // whether it appears inline on the same line or on a subsequent line.
+  const hookRaw = get('HOOK')
+  const hook    = hookRaw.replace(/\s*\nHOOK RATING:[\s\S]*/i, '')   // on its own line
+                         .replace(/\s*HOOK RATING:[\s\S]*/i,   '')   // inline / same line
+                         .trim()
+
   const script: ScriptContent = {
-    intro: get('INTRO'),
+    intro:  get('INTRO'),
     point1: get('BODY - POINT 1'),
     point2: get('BODY - POINT 2'),
     point3: get('BODY - POINT 3'),
-    cta: '',
+    cta:    '',
   }
 
   const ctaMatch = raw.match(/^CTA:\s*\n([\s\S]*?)(?=\nTITLE:|$)/im)
@@ -28,18 +43,15 @@ function parseContent(raw: string): GeneratedContent {
   const hashtagsRaw = get('HASHTAGS')
   const hashtags = hashtagsRaw.split(/\s+/).filter(h => h.startsWith('#'))
 
-  const hookRatingMatch = raw.match(/HOOK RATING:\s*(.+)/i)
-  const seoScoreMatch = raw.match(/SEO SCORE:\s*(.+)/i)
-
   return {
-    hook: get('HOOK'),
-    title: get('TITLE'),
-    caption: get('CAPTION'),
+    hook,
+    title:       get('TITLE'),
+    caption:     get('CAPTION'),
     hashtags,
     script,
-    cta: script.cta,
-    hookRating: hookRatingMatch?.[1]?.trim() ?? '',
-    seoScore: seoScoreMatch?.[1]?.trim() ?? '',
+    cta:         script.cta,
+    hookRating:  hookRatingMatch?.[1]?.trim() ?? '',
+    seoScore:    seoScoreMatch?.[1]?.trim()   ?? '',
   }
 }
 

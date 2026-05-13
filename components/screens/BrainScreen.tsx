@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import MatrixRain from '@/components/MatrixRain'
 import Spinner from '@/components/Spinner'
 import Toast from '@/components/Toast'
@@ -26,6 +26,9 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
   const [manualTitle, setManualTitle] = useState('')
   const [manualContent, setManualContent] = useState('')
   const [toast, setToast] = useState<{ msg: string; type: 'success' | 'error' } | null>(null)
+  const [uploadLoading, setUploadLoading] = useState(false)
+  const [pendingFile, setPendingFile] = useState<File | null>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   const loadGlobal = useCallback(async () => {
     const res = await fetch('/api/brain/global')
@@ -58,6 +61,26 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
       setToast({ msg: e instanceof Error ? e.message : "Couldn't fetch URL", type: 'error' })
     } finally {
       setLoading(false)
+    }
+  }
+
+  const handleUpload = async (file: File) => {
+    setUploadLoading(true)
+    try {
+      const form = new FormData()
+      form.append('file', file)
+      form.append('tag', tag)
+      form.append('memberId', memberId)
+      const res = await fetch('/api/brain/upload', { method: 'POST', body: form })
+      if (!res.ok) throw new Error((await res.json()).error)
+      setToast({ msg: '✅ File added to your Brain!', type: 'success' })
+      setPendingFile(null)
+      if (fileInputRef.current) fileInputRef.current.value = ''
+      loadMember()
+    } catch (e: unknown) {
+      setToast({ msg: e instanceof Error ? e.message : 'Upload failed', type: 'error' })
+    } finally {
+      setUploadLoading(false)
     }
   }
 
@@ -120,7 +143,7 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span style={{ fontSize: 18 }}>{s.type === 'youtube' ? '▶️' : s.type === 'pdf' ? '📄' : '🔗'}</span>
+                    <span style={{ fontSize: 18 }}>{s.type === 'youtube' ? '▶️' : s.type === 'pdf' || s.type === 'docx' || s.type === 'txt' ? '📄' : '🔗'}</span>
                     <span style={{ padding: '2px 8px', borderRadius: 999, background: TAG_COLORS[s.tag] ?? '#9CA3AF', color: '#000', fontFamily: "'Bebas Neue', sans-serif", fontSize: 10 }}>{s.tag}</span>
                     <span style={{ fontFamily: "'Space Mono', monospace", fontSize: 12, color: '#9CA3AF' }}>████████████████████</span>
                   </div>
@@ -161,16 +184,48 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
             </div>
 
             {!manualMode ? (
-              <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
-                <input
-                  value={url}
-                  onChange={e => setUrl(e.target.value)}
-                  placeholder="Paste YouTube, article, PDF URL..."
-                  style={{ flex: 1, background: '#0d0d0d', border: '1px solid #1f2937', borderRadius: 8, padding: '10px 12px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 12 }}
-                />
-                <button onClick={handleFeed} disabled={loading || !url} style={{ padding: '10px 16px', background: loading ? '#1f2937' : '#FFD700', border: 'none', borderRadius: 8, color: '#000', fontFamily: "'Bebas Neue', sans-serif", fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' }}>
-                  {loading ? <Spinner size={14} /> : '⚡ FEED IN'}
-                </button>
+              <div style={{ marginBottom: 16 }}>
+                <div style={{ display: 'flex', gap: 8, marginBottom: pendingFile ? 8 : 0 }}>
+                  <input
+                    value={url}
+                    onChange={e => setUrl(e.target.value)}
+                    placeholder="Paste YouTube, article, PDF URL..."
+                    style={{ flex: 1, background: '#0d0d0d', border: '1px solid #1f2937', borderRadius: 8, padding: '10px 12px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 12 }}
+                  />
+                  <button onClick={handleFeed} disabled={loading || !url} style={{ padding: '10px 14px', background: loading ? '#1f2937' : '#FFD700', border: 'none', borderRadius: 8, color: '#000', fontFamily: "'Bebas Neue', sans-serif", fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' }}>
+                    {loading ? <Spinner size={14} /> : '⚡ FEED IN'}
+                  </button>
+                  {/* Hidden file input */}
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".pdf,.txt,.docx"
+                    style={{ display: 'none' }}
+                    onChange={e => {
+                      const f = e.target.files?.[0] ?? null
+                      setPendingFile(f)
+                      if (f) handleUpload(f)
+                    }}
+                  />
+                  <button
+                    onClick={() => fileInputRef.current?.click()}
+                    disabled={uploadLoading}
+                    title="Upload PDF, TXT or DOCX"
+                    style={{ padding: '10px 14px', background: uploadLoading ? '#1f2937' : 'transparent', border: '1px solid #4ade80', borderRadius: 8, color: '#4ade80', fontFamily: "'Bebas Neue', sans-serif", fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' }}
+                  >
+                    {uploadLoading ? <Spinner size={14} /> : '📎 FILE'}
+                  </button>
+                </div>
+                {pendingFile && !uploadLoading && (
+                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, color: '#9CA3AF', paddingLeft: 2 }}>
+                    {pendingFile.name}
+                  </div>
+                )}
+                {uploadLoading && (
+                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, color: '#4ade80', paddingLeft: 2 }}>
+                    ⏳ Extracting &amp; summarising {pendingFile?.name}…
+                  </div>
+                )}
               </div>
             ) : (
               <div style={{ marginBottom: 16 }}>
@@ -203,7 +258,7 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
                   <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
                     <div style={{ flex: 1 }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
-                        <span style={{ fontSize: 14 }}>{s.type === 'youtube' ? '▶️' : s.type === 'pdf' ? '📄' : '🔗'}</span>
+                        <span style={{ fontSize: 14 }}>{s.type === 'youtube' ? '▶️' : s.type === 'pdf' || s.type === 'docx' || s.type === 'txt' ? '📄' : '🔗'}</span>
                         <span style={{ padding: '2px 8px', borderRadius: 999, background: TAG_COLORS[s.tag] ?? '#9CA3AF', color: '#000', fontFamily: "'Bebas Neue', sans-serif", fontSize: 10 }}>{s.tag}</span>
                       </div>
                       <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 12, color: '#fff', marginBottom: 4 }}>{s.title}</div>

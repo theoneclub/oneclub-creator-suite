@@ -27,7 +27,7 @@ export interface AvatarSettings {
 export interface BrainSource {
   id: string
   url?: string
-  type: 'youtube' | 'webpage' | 'pdf' | 'manual'
+  type: 'youtube' | 'webpage' | 'pdf' | 'docx' | 'txt' | 'manual'
   title: string
   tag: string
   summary?: string
