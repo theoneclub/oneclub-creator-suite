@@ -5,7 +5,6 @@ import ContentScreen from '@/components/screens/ContentScreen'
 import OutreachScreen from '@/components/screens/OutreachScreen'
 import EmailScreen from '@/components/screens/EmailScreen'
 import SMSScreen from '@/components/screens/SMSScreen'
-import AdminScreen from '@/components/screens/AdminScreen'
 import { MemberCredits, AvatarSettings, Screen } from '@/types'
 
 const TIERS = {
@@ -21,7 +20,6 @@ const NAV_TABS: { id: Screen; emoji: string; label: string }[] = [
   { id: 'outreach', emoji: '🤝', label: 'OUTREACH' },
   { id: 'email',    emoji: '📧', label: 'EMAIL' },
   { id: 'sms',      emoji: '📱', label: 'SMS' },
-  { id: 'admin',    emoji: '⚙️', label: 'ADMIN' },
 ]
 
 interface AppShellProps { memberId: string }
@@ -68,7 +66,6 @@ export default function AppShell({ memberId }: AppShellProps) {
       case 'outreach': return <OutreachScreen memberId={memberId} avatarSettings={avatar} />
       case 'email':    return <EmailScreen memberId={memberId} avatarSettings={avatar} />
       case 'sms':      return <SMSScreen memberId={memberId} avatarSettings={avatar} />
-      case 'admin':    return <AdminScreen />
     }
   }
 
@@ -127,7 +124,6 @@ export default function AppShell({ memberId }: AppShellProps) {
       }}>
         {NAV_TABS.map(tab => {
           const isActive = screen === tab.id
-          const isAdmin = tab.id === 'admin'
           return (
             <button
               key={tab.id}
@@ -135,7 +131,7 @@ export default function AppShell({ memberId }: AppShellProps) {
               style={{
                 flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center',
                 padding: '8px 2px 6px', background: 'transparent', border: 'none', cursor: 'pointer',
-                borderTop: `2px solid ${isActive ? (isAdmin ? '#A855F7' : '#4ade80') : 'transparent'}`,
+                borderTop: `2px solid ${isActive ? '#4ade80' : 'transparent'}`,
                 minHeight: 44,
               }}
             >
@@ -143,7 +139,7 @@ export default function AppShell({ memberId }: AppShellProps) {
               <span style={{
                 fontFamily: "'Bebas Neue', sans-serif",
                 fontSize: 9,
-                color: isActive ? (isAdmin ? '#A855F7' : '#4ade80') : isAdmin ? '#A855F7' : '#9CA3AF',
+                color: isActive ? '#4ade80' : '#9CA3AF',
                 marginTop: 2,
                 letterSpacing: 0.5,
               }}>

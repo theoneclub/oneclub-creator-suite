@@ -137,4 +137,4 @@ export interface AdminStats {
   globalBrainCount: number
 }
 
-export type Screen = 'brain' | 'content' | 'outreach' | 'email' | 'sms' | 'admin'
+export type Screen = 'brain' | 'content' | 'outreach' | 'email' | 'sms'
