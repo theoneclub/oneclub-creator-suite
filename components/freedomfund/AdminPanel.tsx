@@ -348,10 +348,7 @@ export default function AdminPanel() {
                     <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 12, color: '#fff' }}>{a.icon} {a.label}</div>
                     <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 9, color: C.grey }}>+{a.entries} entries · {a.url}</div>
                   </div>
-                  <div style={{ display: 'flex', gap: 8 }}>
-                    <button onClick={() => handleToggleAction(a.id, !a.active)} style={{ background: a.active ? C.green : C.dim, color: '#000', fontFamily: "'Space Mono', monospace", fontSize: 10, padding: '4px 10px', borderRadius: 4, border: 'none', cursor: 'pointer' }}>{a.active ? 'ON' : 'OFF'}</button>
-                    <button onClick={() => handleDeleteAction(a.id)} style={{ background: 'transparent', border: `1px solid ${C.red}`, color: C.red, fontFamily: "'Space Mono', monospace", fontSize: 10, padding: '4px 10px', borderRadius: 4, cursor: 'pointer' }}>DEL</button>
-                  </div>
+                  <button onClick={() => handleToggleAction(a.id, !a.active)} style={{ background: a.active ? C.green : C.dim, color: '#000', fontFamily: "'Space Mono', monospace", fontSize: 10, padding: '4px 10px', borderRadius: 4, border: 'none', cursor: 'pointer', minWidth: 36 }}>{a.active ? 'ON' : 'OFF'}</button>
                 </div>
               ))}
 

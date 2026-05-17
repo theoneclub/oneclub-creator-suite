@@ -1,0 +1,16 @@
+{
+  "crons": [
+    {
+      "path": "/api/scheduler/cron/8am",
+      "schedule": "0 22 * * *"
+    },
+    {
+      "path": "/api/scheduler/cron/1pm",
+      "schedule": "0 3 * * *"
+    },
+    {
+      "path": "/api/scheduler/cron/7pm",
+      "schedule": "0 9 * * *"
+    }
+  ]
+}

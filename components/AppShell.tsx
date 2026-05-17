@@ -5,6 +5,7 @@ import ContentScreen from '@/components/screens/ContentScreen'
 import OutreachScreen from '@/components/screens/OutreachScreen'
 import EmailScreen from '@/components/screens/EmailScreen'
 import SMSScreen from '@/components/screens/SMSScreen'
+import SchedulerScreen from '@/components/screens/SchedulerScreen'
 import { MemberCredits, AvatarSettings, Screen } from '@/types'
 
 const TIERS = {
@@ -20,6 +21,7 @@ const NAV_TABS: { id: Screen; emoji: string; label: string }[] = [
   { id: 'outreach', emoji: '🤝', label: 'OUTREACH' },
   { id: 'email',    emoji: '📧', label: 'EMAIL' },
   { id: 'sms',      emoji: '📱', label: 'SMS' },
+  { id: 'schedule', emoji: '📅', label: 'SCHEDULE' },
 ]
 
 interface AppShellProps { memberId: string }
@@ -66,6 +68,7 @@ export default function AppShell({ memberId }: AppShellProps) {
       case 'outreach': return <OutreachScreen memberId={memberId} avatarSettings={avatar} />
       case 'email':    return <EmailScreen memberId={memberId} avatarSettings={avatar} />
       case 'sms':      return <SMSScreen memberId={memberId} avatarSettings={avatar} />
+      case 'schedule': return <SchedulerScreen memberId={memberId} avatarSettings={avatar} />
     }
   }
 

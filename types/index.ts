@@ -137,4 +137,53 @@ export interface AdminStats {
   globalBrainCount: number
 }
 
-export type Screen = 'brain' | 'content' | 'outreach' | 'email' | 'sms'
+export type Screen = 'brain' | 'content' | 'outreach' | 'email' | 'sms' | 'schedule'
+
+export type ScheduleAngle = 'pain' | 'prize' | 'news'
+export type ScheduleTime = '8am' | '1pm' | '7pm'
+export type PostStatus = 'draft' | 'scheduled' | 'posted' | 'failed'
+
+export interface SchedulerSettings {
+  id?: string
+  member_id: string
+  enabled: boolean
+  time_8am: boolean
+  time_1pm: boolean
+  time_7pm: boolean
+  timezone: string
+  platforms: { instagram: boolean; facebook: boolean; twitter: boolean; threads: boolean }
+  use_brand_brain: boolean
+  updated_at?: string
+}
+
+export interface ScheduledPost {
+  id: string
+  member_id: string
+  scheduled_time: ScheduleTime | null
+  angle: ScheduleAngle | null
+  topic: string | null
+  short_form_script: string | null
+  twitter_post: string | null
+  threads_post: string | null
+  facebook_post: string | null
+  instagram_caption: string | null
+  news_source: string | null
+  buffer_post_ids: Record<string, string> | null
+  status: PostStatus
+  scheduled_for: string | null
+  created_at: string
+}
+
+export interface BufferChannel {
+  id: string
+  name: string
+  service: string
+  avatar: string
+}
+
+export interface NewsItem {
+  headline: string
+  summary: string
+  sourceUrl: string
+  angle: string
+}
