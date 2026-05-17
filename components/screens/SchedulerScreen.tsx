@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import MatrixRain from '@/components/MatrixRain'
 import Spinner from '@/components/Spinner'
 import Toast from '@/components/Toast'
@@ -459,8 +459,6 @@ export default function SchedulerScreen({ memberId, avatarSettings }: SchedulerS
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {ANGLES.map(angle => {
               const cfg = ANGLE_CONFIG[angle]
-              const timeKey = `time_${angle === 'pain' ? '8am' : angle === 'prize' ? '1pm' : '7pm'}` as keyof SchedulerSettings
-              const enabled = settings?.[timeKey] as boolean
               return (
                 <div key={angle} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 12px', background: '#0d0d0d', borderRadius: 10 }}>
                   <span style={{ fontFamily: 'monospace', fontSize: 12, color: '#9CA3AF', width: 56, flexShrink: 0 }}>{cfg.time}</span>
@@ -657,7 +655,6 @@ function HistoryItem({
 }) {
   const [expanded, setExpanded] = useState(false)
   const date = new Date(post.created_at).toLocaleDateString('en-AU', { day: '2-digit', month: 'short' })
-  const time = post.scheduled_time ?? ''
 
   return (
     <div style={{ background: '#111', border: '1px solid #1f2937', borderRadius: 10, marginBottom: 8, overflow: 'hidden' }}>

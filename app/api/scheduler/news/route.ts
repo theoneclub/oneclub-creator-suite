@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import { createServerClient } from '@/lib/supabase-server'
 import Anthropic from '@anthropic-ai/sdk'
 
@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic'
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const supabase = createServerClient()
 
@@ -33,7 +33,7 @@ export async function GET(req: NextRequest) {
     const message = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 1024,
-      tools: [{ type: 'web_search_20250305' as 'web_search_20250305', name: 'web_search' }],
+      tools: [{ type: 'web_search_20250305' as const, name: 'web_search' }],
       messages: [
         {
           role: 'user',

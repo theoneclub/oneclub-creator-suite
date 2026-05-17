@@ -140,11 +140,6 @@ export default function AdminPanel() {
     loadActions()
   }
 
-  const handleDeleteAction = async (id: string) => {
-    await fetch('/api/freedomfund/admin/actions', { method: 'DELETE', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
-    loadActions()
-  }
-
   // Password gate
   if (!authed) {
     return (

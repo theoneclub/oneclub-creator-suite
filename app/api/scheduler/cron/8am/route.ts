@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@/lib/supabase-server'
-import { buildBrainContext } from '@/lib/brain'
-import { callClaude } from '@/lib/claude'
 import { AvatarSettings } from '@/types'
 
 export const dynamic = 'force-dynamic'
