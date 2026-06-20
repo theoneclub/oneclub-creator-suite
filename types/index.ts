@@ -137,7 +137,27 @@ export interface AdminStats {
   globalBrainCount: number
 }
 
-export type Screen = 'brain' | 'content' | 'outreach' | 'email' | 'sms' | 'schedule'
+export type Screen = 'home' | 'brain' | 'content' | 'clone' | 'outreach' | 'email' | 'sms' | 'schedule'
+
+export interface VideoCloneResult {
+  blueprint: string
+  script: string
+  hooks: string
+  ctas: string
+  higgsfield: string
+  captions: string
+}
+
+export const CLONE_PILLARS = [
+  'Financial system critique',
+  'Escaping 9-5',
+  'Education system failure',
+  'AI replacing jobs',
+  'Recurring income',
+  'Freedom Fund',
+] as const
+
+export type ClonePillar = typeof CLONE_PILLARS[number]
 
 export type ScheduleAngle = 'pain' | 'prize' | 'news'
 export type ScheduleTime = '8am' | '1pm' | '7pm'

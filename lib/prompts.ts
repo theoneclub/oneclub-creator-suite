@@ -190,6 +190,126 @@ SEND DELAY: [Send immediately | Wait X days]
 PERSONALISATION NOTES: [what to research before sending]`
 }
 
+export function buildVideoCloneSystemPrompt(brainContext: string): string {
+  return `You are a viral content cloning specialist for THE ONE CLUB — an AI-powered faceless content system built by Morphe.
+
+Morphe persona: anonymous, hooded black leather jacket, round mirrored sunglasses, never shows face. Anti-establishment, matrix green aesthetic. Direct, authoritative, system-critical.
+
+${brainContext ? brainContext + '\n\n' : ''}WHAT YOU CLONE (non-negotiable):
+- The exact hook mechanic and opening sentence structure
+- Number of sentences per section
+- Sentence length pattern: SHORT (3-5 words) / MEDIUM (8-12) / LONG (15+)
+- Pacing, rhythm and energy
+- Emotional arc (opens on X, builds to Y, ends on Z)
+- CTA mechanic (comment trigger / DM / link / follow)
+
+WHAT YOU SWAP:
+- Topic → The One Club content pillar
+- Brand → THE ONE CLUB / Morphe
+- All CTAs and links → theoneclub.io/founding500
+
+COMPLIANCE (always):
+- No income claims or specific dollar figures as personal results
+- Always use 2026, not 2025
+- Pre-launch framing: "we're building this"
+- Never say "no loan, no equity" for Freedom Fund`
+}
+
+export function buildBluprintPrompt(transcript: string, platform: string): string {
+  return `Analyse this ${platform} video transcript and extract a STRUCTURAL BLUEPRINT.
+
+TRANSCRIPT:
+${transcript}
+
+Extract EXACTLY:
+
+1. HOOK MECHANIC: Type — question / shocking-stat / direct-call-out / pattern-interrupt / story / bold-claim
+2. HOOK WORDS: First 1-3 sentences verbatim
+3. FIRST WORD: The very first word spoken
+4. SENTENCE COUNT: Total sentences in the whole piece
+5. SENTENCE LENGTHS: Each sentence mapped as SHORT (3-5) / MEDIUM (8-12) / LONG (15+)
+6. PACING: Fast / Medium / Slow — describe the rhythm
+7. EMOTIONAL ARC: Opens with what emotion → builds to what → ends on what
+8. BODY STRUCTURE: Beat-by-beat breakdown — label each section and what it does
+9. PIVOT MOMENT: Exact sentence or beat where it shifts from problem to solution
+10. CTA MECHANIC: Exactly how the CTA works
+11. CLONE TEMPLATE: Reproduce the full script line-by-line as a structural template replacing every topic-specific word with [PLACEHOLDERS]
+
+Be extremely specific. This blueprint is used to clone the exact structure.`
+}
+
+export function buildClonePrompt(blueprint: string, pillar: string, platform: string): string {
+  return `Using the STRUCTURAL BLUEPRINT below, write One Club content that EXACTLY clones the structure for the given pillar.
+
+PLATFORM: ${platform}
+CONTENT PILLAR: ${pillar}
+
+STRUCTURAL BLUEPRINT:
+${blueprint}
+
+Match EVERY sentence length, beat order, pacing and CTA mechanic. Only change the topic, brand and links.
+
+Output all sections — use exactly these === markers:
+
+=== SCRIPT ===
+[Full cloned script: HOOK → BODY (beat for beat) → CTA → theoneclub.io/founding500]
+
+=== HOOKS ===
+[H1 — DIRECT CLONE: identical mechanic to original]
+[hook text]
+
+[H2 — SHOCKING STAT]
+[hook text]
+
+[H3 — DIRECT CALL-OUT]
+[hook text]
+
+[H4 — PATTERN INTERRUPT]
+[hook text]
+
+[H5 — RHETORICAL QUESTION]
+[hook text]
+
+[H6 — MOST PROVOCATIVE]
+[hook text]
+
+=== CTAs ===
+[CTA1 — COMMENT TRIGGER]
+[cta text]
+
+[CTA2 — OPEN LOOP]
+[cta text]
+
+[CTA3 — URGENCY]
+[cta text]
+
+[CTA4 — SOCIAL PROOF]
+[cta text]
+
+[CTA5 — DIRECT LINK → theoneclub.io/founding500]
+[cta text]
+
+[CTA6 — DM]
+[cta text]
+
+=== HIGGSFIELD ===
+SCENE: [match original setting adapted for Morphe's aesthetic]
+AVATAR: Morphe — anonymous, black leather hooded jacket, round mirrored sunglasses, never shows face
+CAMERA: [match original camera style]
+LIGHTING: [match original energy]
+ENERGY: [match original intensity]
+B-ROLL: [3 specific shot descriptions that match the script]
+FULL PROMPT: [Complete ready-to-paste Higgsfield generation prompt — 3-4 sentences]
+
+=== CAPTIONS ===
+TITLE: [Punchy emotionally charged title]
+HOOK LINE: [Caption opener mirroring the hook mechanic]
+CAPTION: [Full caption with emojis, 3-5 sentences, native to ${platform}]
+HASHTAGS: [12 targeted hashtags]
+CTA LINE: [Comment trigger or link CTA for ${platform}]
+PLATFORM NOTE: [One ${platform}-specific tip]`
+}
+
 export const BRAIN_SUMMARISE_PROMPT = `You are a content intelligence engine for The One Club creator platform.
 
 Analyse the provided content and extract:

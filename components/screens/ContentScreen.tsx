@@ -1,6 +1,5 @@
 'use client'
 import { useState, useCallback } from 'react'
-import MatrixRain from '@/components/MatrixRain'
 import Spinner from '@/components/Spinner'
 import Toast from '@/components/Toast'
 import OutputCard from '@/components/ui/OutputCard'
@@ -84,14 +83,11 @@ export default function ContentScreen({ memberId, avatarSettings }: ContentScree
       {showUpgrade && <UpgradeModal onClose={() => setShowUpgrade(false)} />}
 
       {/* Header */}
-      <div style={{ position: 'relative', overflow: 'hidden', padding: '20px 16px 16px', background: '#0d2b0d', marginBottom: 16 }}>
-        <MatrixRain />
-        <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 28, color: '#4ade80', margin: 0, position: 'relative', zIndex: 1 }}>✨ CONTENT</h1>
-      </div>
+      
 
       <div style={{ padding: '0 16px' }}>
         {/* Mode toggle */}
-        <div style={{ display: 'flex', background: '#111', border: '1px solid #1f2937', borderRadius: 999, padding: 3, marginBottom: 16 }}>
+        <div style={{ display: 'flex', background: '#161616', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 999, padding: 3, marginBottom: 16 }}>
           {(['oneclub', 'member'] as const).map(m => (
             <button key={m} onClick={() => setMode(m)} style={{
               flex: 1, padding: '8px 0', borderRadius: 999,
@@ -109,7 +105,7 @@ export default function ContentScreen({ memberId, avatarSettings }: ContentScree
           value={topic}
           onChange={e => setTopic(e.target.value)}
           placeholder="WHAT'S TODAY'S TOPIC?"
-          style={{ width: '100%', background: '#0d0d0d', border: '1px solid #1f2937', borderRadius: 12, padding: '14px 16px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 14, marginBottom: 14, boxSizing: 'border-box' }}
+          style={{ width: '100%', background: '#0f0f0f', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: '14px 16px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 14, marginBottom: 14, boxSizing: 'border-box' }}
         />
 
         {/* Hook type pills */}
@@ -151,7 +147,7 @@ export default function ContentScreen({ memberId, avatarSettings }: ContentScree
 
             {/* Script card */}
             {content.script && (
-              <div style={{ background: '#111', border: `1px solid ${CARD_COLORS[4]}`, borderRadius: 16, padding: 16, marginBottom: 12 }}>
+              <div style={{ background: '#161616', border: `1px solid ${CARD_COLORS[4]}`, borderRadius: 16, padding: 16, marginBottom: 12 }}>
                 <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 16, color: CARD_COLORS[4], marginBottom: 12 }}>🎬 FULL SCRIPT</div>
                 {(['intro', 'point1', 'point2', 'point3', 'cta'] as const).map(key => (
                   <div key={key} style={{ marginBottom: 10 }}>
@@ -187,7 +183,7 @@ export default function ContentScreen({ memberId, avatarSettings }: ContentScree
               <div style={{ textAlign: 'center', padding: 16, color: '#9CA3AF', fontFamily: 'monospace', fontSize: 11 }}>No saved hooks yet.</div>
             ) : (
               savedHooks.map(h => (
-                <div key={h.id} style={{ background: '#111', border: '1px solid #FFD700', borderRadius: 10, padding: 12, marginBottom: 8, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
+                <div key={h.id} style={{ background: '#161616', border: '1px solid #FFD700', borderRadius: 10, padding: 12, marginBottom: 8, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
                   <div style={{ fontFamily: 'monospace', fontSize: 12, color: '#fff', flex: 1 }}>{h.content}</div>
                   <div style={{ display: 'flex', gap: 6 }}>
                     <button onClick={() => copy(h.content)} style={{ background: 'none', border: '1px solid #9CA3AF', borderRadius: 6, color: '#9CA3AF', fontSize: 10, padding: '2px 6px', cursor: 'pointer' }}>📋</button>

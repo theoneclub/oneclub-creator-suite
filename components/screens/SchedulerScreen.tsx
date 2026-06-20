@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
-import MatrixRain from '@/components/MatrixRain'
 import Spinner from '@/components/Spinner'
 import Toast from '@/components/Toast'
 import { AvatarSettings, SchedulerSettings, ScheduledPost, BufferChannel, ScheduleAngle } from '@/types'
@@ -119,7 +118,7 @@ function PostCard({
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{ fontSize: 18 }}>{cfg.emoji}</span>
           <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 16, color: cfg.color }}>{cfg.label}</span>
-          <span style={{ fontFamily: 'monospace', fontSize: 10, background: '#111', color: '#9CA3AF', padding: '2px 8px', borderRadius: 999 }}>{cfg.time}</span>
+          <span style={{ fontFamily: 'monospace', fontSize: 10, background: '#161616', color: '#9CA3AF', padding: '2px 8px', borderRadius: 999 }}>{cfg.time}</span>
           {post.scheduled && (
             <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 10, background: '#4ade80', color: '#000', padding: '2px 8px', borderRadius: 999 }}>
               SCHEDULED
@@ -134,12 +133,12 @@ function PostCard({
       </div>
 
       {/* Topic */}
-      <div style={{ padding: '8px 14px', background: '#0d0d0d', fontFamily: 'monospace', fontSize: 11, color: '#9CA3AF' }}>
+      <div style={{ padding: '8px 14px', background: '#0f0f0f', fontFamily: 'monospace', fontSize: 11, color: '#9CA3AF' }}>
         {post.topic}
       </div>
 
       {/* Platform tabs */}
-      <div style={{ display: 'flex', borderBottom: '1px solid #1f2937', overflowX: 'auto' }}>
+      <div style={{ display: 'flex', borderBottom: '1px solid rgba(255,255,255,0.06)', overflowX: 'auto' }}>
         {tabs.map(t => (
           <button
             key={t.id}
@@ -163,14 +162,14 @@ function PostCard({
       </div>
 
       {/* Content */}
-      <div style={{ padding: 14, background: '#0d0d0d' }}>
+      <div style={{ padding: 14, background: '#0f0f0f' }}>
         {editing ? (
           <textarea
             value={currentContent}
             onChange={e => onUpdate(fieldMap[tab], e.target.value)}
             style={{
               width: '100%',
-              background: '#111',
+              background: '#161616',
               border: `1px solid ${cfg.color}`,
               borderRadius: 8,
               padding: 10,
@@ -199,7 +198,7 @@ function PostCard({
       <div style={{ padding: '10px 14px', background: '#0a0a0a', display: 'flex', gap: 8, flexWrap: 'wrap' }}>
         <button
           onClick={onRegen}
-          style={{ padding: '6px 12px', background: 'transparent', border: '1px solid #1f2937', color: '#9CA3AF', fontFamily: "'Bebas Neue', sans-serif", fontSize: 12, borderRadius: 8, cursor: 'pointer' }}
+          style={{ padding: '6px 12px', background: 'transparent', border: '1px solid rgba(255,255,255,0.06)', color: '#9CA3AF', fontFamily: "'Bebas Neue', sans-serif", fontSize: 12, borderRadius: 8, cursor: 'pointer' }}
         >
           ↻ REGEN
         </button>
@@ -211,7 +210,7 @@ function PostCard({
         </button>
         <button
           onClick={copy}
-          style={{ padding: '6px 12px', background: 'transparent', border: '1px solid #1f2937', color: '#9CA3AF', fontFamily: "'Bebas Neue', sans-serif", fontSize: 12, borderRadius: 8, cursor: 'pointer' }}
+          style={{ padding: '6px 12px', background: 'transparent', border: '1px solid rgba(255,255,255,0.06)', color: '#9CA3AF', fontFamily: "'Bebas Neue', sans-serif", fontSize: 12, borderRadius: 8, cursor: 'pointer' }}
         >
           📋 COPY
         </button>
@@ -397,27 +396,11 @@ export default function SchedulerScreen({ memberId, avatarSettings }: SchedulerS
       {toast && <Toast message={toast.msg} type={toast.type} onClose={() => setToast(null)} />}
 
       {/* Header */}
-      <div style={{ position: 'relative', overflow: 'hidden', padding: '20px 16px 16px', background: '#0d1a2b', marginBottom: 16 }}>
-        <MatrixRain />
-        <div style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
-            <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 28, color: '#3B82F6', margin: 0 }}>📅 AUTO SCHEDULER</h1>
-            {settings?.enabled && (
-              <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 11, background: '#4ade80', color: '#000', padding: '3px 10px', borderRadius: 999, boxShadow: '0 0 8px #4ade80' }}>
-                AUTO
-              </span>
-            )}
-          </div>
-          <div style={{ fontFamily: 'monospace', fontSize: 11, color: '#9CA3AF', marginBottom: 6 }}>
-            3 posts/day · Every platform · Zero effort
-          </div>
-          <AestClock />
-        </div>
-      </div>
+      
 
       <div style={{ padding: '0 16px' }}>
         {/* Auto Mode Card */}
-        <div style={{ background: '#111', border: `1px solid ${settings?.enabled ? '#4ade80' : '#1f2937'}`, borderRadius: 16, padding: 16, marginBottom: 16, boxShadow: settings?.enabled ? '0 0 12px #4ade8033' : 'none' }}>
+        <div style={{ background: '#161616', border: `1px solid ${settings?.enabled ? '#4ade80' : '#1f2937'}`, borderRadius: 16, padding: 16, marginBottom: 16, boxShadow: settings?.enabled ? '0 0 12px #4ade8033' : 'none' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
             <div>
               <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 18, color: '#fff' }}>AUTO MODE</div>
@@ -460,7 +443,7 @@ export default function SchedulerScreen({ memberId, avatarSettings }: SchedulerS
             {ANGLES.map(angle => {
               const cfg = ANGLE_CONFIG[angle]
               return (
-                <div key={angle} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 12px', background: '#0d0d0d', borderRadius: 10 }}>
+                <div key={angle} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 12px', background: '#0f0f0f', borderRadius: 10 }}>
                   <span style={{ fontFamily: 'monospace', fontSize: 12, color: '#9CA3AF', width: 56, flexShrink: 0 }}>{cfg.time}</span>
                   <span style={{ fontSize: 16 }}>{cfg.emoji}</span>
                   <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 14, color: cfg.color, flex: 1 }}>{cfg.label}</span>
@@ -513,7 +496,7 @@ export default function SchedulerScreen({ memberId, avatarSettings }: SchedulerS
 
         {/* Buffer Status */}
         <div style={{
-          background: '#111',
+          background: '#161616',
           border: `1px solid ${bufferConnected ? '#4ade80' : '#F97316'}`,
           borderRadius: 12,
           padding: '10px 14px',
@@ -604,7 +587,7 @@ export default function SchedulerScreen({ memberId, avatarSettings }: SchedulerS
           style={{
             width: '100%',
             background: 'transparent',
-            border: '1px solid #1f2937',
+            border: '1px solid rgba(255,255,255,0.06)',
             color: '#9CA3AF',
             fontFamily: "'Bebas Neue', sans-serif",
             fontSize: 15,
@@ -657,7 +640,7 @@ function HistoryItem({
   const date = new Date(post.created_at).toLocaleDateString('en-AU', { day: '2-digit', month: 'short' })
 
   return (
-    <div style={{ background: '#111', border: '1px solid #1f2937', borderRadius: 10, marginBottom: 8, overflow: 'hidden' }}>
+    <div style={{ background: '#161616', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, marginBottom: 8, overflow: 'hidden' }}>
       <button
         onClick={() => setExpanded(!expanded)}
         style={{ width: '100%', padding: '10px 12px', background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10, textAlign: 'left' }}
@@ -677,7 +660,7 @@ function HistoryItem({
         <span style={{ color: '#9CA3AF', fontSize: 10 }}>{expanded ? '▲' : '▼'}</span>
       </button>
       {expanded && (
-        <div style={{ padding: '0 12px 12px', borderTop: '1px solid #1f2937' }}>
+        <div style={{ padding: '0 12px 12px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
           {post.short_form_script && (
             <div style={{ fontFamily: 'monospace', fontSize: 11, color: '#e5e7eb', marginTop: 10, whiteSpace: 'pre-wrap', lineHeight: 1.5 }}>
               {post.short_form_script}

@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react'
-import MatrixRain from '@/components/MatrixRain'
 import Toast from '@/components/Toast'
 import SequenceBuilder, { SequenceItem } from '@/components/ui/SequenceBuilder'
 import UpgradeModal from '@/components/ui/UpgradeModal'
@@ -96,13 +95,10 @@ export default function SMSScreen({ memberId, avatarSettings }: SMSScreenProps) 
       {toast && <Toast message={toast.msg} type={toast.type} onClose={() => setToast(null)} />}
       {showUpgrade && <UpgradeModal onClose={() => setShowUpgrade(false)} />}
 
-      <div style={{ position: 'relative', overflow: 'hidden', padding: '20px 16px 16px', background: '#0d2b0d', marginBottom: 16 }}>
-        <MatrixRain />
-        <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 28, color: '#4ade80', margin: 0, position: 'relative', zIndex: 1 }}>📱 SMS</h1>
-      </div>
+      
 
       <div style={{ padding: '0 16px' }}>
-        <div style={{ display: 'flex', background: '#111', border: '1px solid #1f2937', borderRadius: 999, padding: 3, marginBottom: 16 }}>
+        <div style={{ display: 'flex', background: '#161616', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 999, padding: 3, marginBottom: 16 }}>
           {(['oneclub', 'member'] as const).map(m => (
             <button key={m} onClick={() => setMode(m)} style={{ flex: 1, padding: '8px 0', borderRadius: 999, background: mode === m ? '#4ade80' : 'transparent', color: mode === m ? '#000' : '#9CA3AF', border: 'none', fontFamily: "'Bebas Neue', sans-serif", fontSize: 13, cursor: 'pointer' }}>
               {m === 'oneclub' ? 'ONE CLUB' : 'MY OFFER'}
@@ -133,7 +129,7 @@ export default function SMSScreen({ memberId, avatarSettings }: SMSScreenProps) 
           <>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
               <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 16, color: '#9CA3AF' }}>{campaignName}</div>
-              <button onClick={() => { setStarted(false); setMessages([]) }} style={{ background: 'none', border: '1px solid #1f2937', color: '#9CA3AF', fontFamily: 'monospace', fontSize: 10, padding: '4px 10px', borderRadius: 6, cursor: 'pointer' }}>
+              <button onClick={() => { setStarted(false); setMessages([]) }} style={{ background: 'none', border: '1px solid rgba(255,255,255,0.06)', color: '#9CA3AF', fontFamily: 'monospace', fontSize: 10, padding: '4px 10px', borderRadius: 6, cursor: 'pointer' }}>
                 ↺ RESET
               </button>
             </div>
@@ -158,7 +154,7 @@ export default function SMSScreen({ memberId, avatarSettings }: SMSScreenProps) 
 }
 
 const inputStyle: React.CSSProperties = {
-  width: '100%', background: '#0d0d0d', border: '1px solid #1f2937', borderRadius: 10,
+  width: '100%', background: '#0f0f0f', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10,
   padding: '12px 14px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 12,
   marginBottom: 10, boxSizing: 'border-box',
 }

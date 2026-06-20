@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect, useCallback, useRef } from 'react'
-import MatrixRain from '@/components/MatrixRain'
 import Spinner from '@/components/Spinner'
 import Toast from '@/components/Toast'
 import { BrainSource } from '@/types'
@@ -96,12 +95,8 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
       {toast && <Toast message={toast.msg} type={toast.type} onClose={() => setToast(null)} />}
 
       {/* Header */}
-      <div style={{ position: 'relative', overflow: 'hidden', padding: '20px 16px 16px', background: '#0d2b0d', marginBottom: 16 }}>
-        <MatrixRain />
-        <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 28, color: '#4ade80', margin: 0, position: 'relative', zIndex: 1 }}>
-          🧠 BRAND BRAIN
-        </h1>
-        <p style={{ fontFamily: "'Space Mono', monospace", fontSize: 11, color: '#4ADE80', margin: '4px 0 0', position: 'relative', zIndex: 1 }}>
+      <div style={{ padding: '12px 16px 0' }}>
+        <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: 12, color: '#6b7280', margin: 0 }}>
           {activeSources.length} GLOBAL + {memberSources.length} PERSONAL sources loaded
         </p>
       </div>
@@ -122,7 +117,7 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
       <div style={{ padding: '0 16px' }}>
         {tab === 'global' ? (
           <div>
-            <div style={{ background: '#0d2b0d', border: '1px solid #4ade80', borderRadius: 12, padding: '10px 14px', marginBottom: 16 }}>
+            <div style={{ background: '#0a1a0a', border: '1px solid #4ade80', borderRadius: 12, padding: '10px 14px', marginBottom: 16 }}>
               <span style={{ fontFamily: "'Space Mono', monospace", fontSize: 12, color: '#4ade80' }}>
                 ● {activeSources.length} sources active — all tools drawing from Morphe&apos;s library
               </span>
@@ -138,7 +133,7 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
 
             {globalSources.map((s, i) => (
               <div key={s.id} style={{
-                background: '#111', border: `1px solid ${['#4ade80','#3B82F6','#EC4899','#A855F7','#F97316','#FFD700'][i % 6]}`,
+                background: '#161616', border: `1px solid ${['#4ade80','#3B82F6','#EC4899','#A855F7','#F97316','#FFD700'][i % 6]}`,
                 borderRadius: 12, padding: 14, marginBottom: 10,
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -191,7 +186,7 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
                     value={url}
                     onChange={e => setUrl(e.target.value)}
                     placeholder="Paste YouTube, article, PDF URL..."
-                    style={{ flex: 1, background: '#0d0d0d', border: '1px solid #1f2937', borderRadius: 8, padding: '10px 12px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 12 }}
+                    style={{ flex: 1, background: '#0f0f0f', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 8, padding: '10px 12px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 12 }}
                   />
                   <button onClick={handleFeed} disabled={loading || !url} style={{ padding: '10px 16px', background: loading ? '#1f2937' : '#FFD700', border: 'none', borderRadius: 8, color: '#000', fontFamily: "'Bebas Neue', sans-serif", fontSize: 14, cursor: 'pointer', whiteSpace: 'nowrap' }}>
                     {loading ? <Spinner size={14} /> : '⚡ FEED IN'}
@@ -230,14 +225,14 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
                   value={manualTitle}
                   onChange={e => setManualTitle(e.target.value)}
                   placeholder="Title..."
-                  style={{ width: '100%', background: '#0d0d0d', border: '1px solid #1f2937', borderRadius: 8, padding: '8px 12px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 12, marginBottom: 8, boxSizing: 'border-box' }}
+                  style={{ width: '100%', background: '#0f0f0f', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 8, padding: '8px 12px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 12, marginBottom: 8, boxSizing: 'border-box' }}
                 />
                 <textarea
                   value={manualContent}
                   onChange={e => setManualContent(e.target.value)}
                   placeholder="Paste content here..."
                   rows={6}
-                  style={{ width: '100%', background: '#0d0d0d', border: '1px solid #1f2937', borderRadius: 8, padding: '8px 12px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 12, resize: 'vertical', boxSizing: 'border-box' }}
+                  style={{ width: '100%', background: '#0f0f0f', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 8, padding: '8px 12px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 12, resize: 'vertical', boxSizing: 'border-box' }}
                 />
                 <button onClick={handleFeed} disabled={loading || !manualContent} style={{ width: '100%', marginTop: 8, padding: '12px', background: loading ? '#1f2937' : '#FFD700', border: 'none', borderRadius: 8, color: '#000', fontFamily: "'Bebas Neue', sans-serif", fontSize: 16, cursor: 'pointer' }}>
                   {loading ? '⏳ Analysing...' : '⚡ FEED IN'}
@@ -251,7 +246,7 @@ export default function BrainScreen({ memberId }: BrainScreenProps) {
               </div>
             ) : (
               memberSources.map((s, i) => (
-                <div key={s.id} style={{ background: '#111', border: `1px solid ${['#4ade80','#3B82F6','#EC4899','#A855F7','#F97316','#FFD700'][i % 6]}`, borderRadius: 12, padding: 14, marginBottom: 10 }}>
+                <div key={s.id} style={{ background: '#161616', border: `1px solid ${['#4ade80','#3B82F6','#EC4899','#A855F7','#F97316','#FFD700'][i % 6]}`, borderRadius: 12, padding: 14, marginBottom: 10 }}>
                   <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
                     <div style={{ flex: 1 }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>

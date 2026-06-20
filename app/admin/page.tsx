@@ -27,6 +27,28 @@ const TAG_COLORS: Record<string, string> = {
 
 type Section = 'dashboard' | 'brain' | 'freedomfund' | 'members' | 'settings'
 
+const TIER_CREDITS: Record<string, number> = {
+  'starter':     50,
+  'premium':    500,
+  'elite':     2000,
+  'founding 500': 500,
+  'founding':   500,
+  'bronze':      10,
+  'silver':      75,
+  'gold':       200,
+}
+
+const TIER_ENTRIES: Record<string, number> = {
+  'starter':      10,
+  'premium':      20,
+  'elite':        50,
+  'founding 500': 50,
+  'founding':     50,
+  'bronze':        1,
+  'silver':       10,
+  'gold':         50,
+}
+
 interface Member {
   member_id: string
   tier: string
@@ -435,7 +457,24 @@ export default function AdminPage() {
               <div style={{ position: 'fixed', inset: 0, background: '#000a', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ background: A.card, border: `1px solid ${A.purple}`, borderRadius: 16, padding: 32, width: 360, maxWidth: '90vw' }}>
                   <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 22, color: A.purple, marginBottom: 4 }}>EDIT MEMBER</div>
-                  <div style={{ fontFamily: 'monospace', fontSize: 11, color: A.grey, marginBottom: 20, wordBreak: 'break-all' }}>{editMember.member_id}</div>
+                  <div style={{ fontFamily: 'monospace', fontSize: 11, color: A.grey, marginBottom: 12, wordBreak: 'break-all' }}>{editMember.member_id}</div>
+
+                  {/* Tier presets */}
+                  <div style={{ marginBottom: 16 }}>
+                    <div style={{ fontFamily: 'monospace', fontSize: 10, color: A.grey, marginBottom: 6 }}>APPLY TIER PRESET</div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                      {Object.keys(TIER_CREDITS).map(tier => (
+                        <button
+                          key={tier}
+                          onClick={() => { setEditCredits(String(TIER_CREDITS[tier])); setEditEntries(String(TIER_ENTRIES[tier])) }}
+                          style={{ padding: '4px 10px', borderRadius: 999, border: `1px solid ${A.purple}`, background: 'transparent', color: A.purple, fontFamily: "'Bebas Neue', sans-serif", fontSize: 11, cursor: 'pointer', textTransform: 'uppercase' }}
+                        >
+                          {tier}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
                   <div style={{ marginBottom: 14 }}>
                     <div style={{ fontFamily: 'monospace', fontSize: 10, color: A.grey, marginBottom: 6 }}>CREDITS REMAINING</div>
                     <input type="number" value={editCredits} onChange={e => setEditCredits(e.target.value)} style={{ width: '100%', background: '#0d0d0d', border: `1px solid ${A.border}`, borderRadius: 8, padding: '10px 12px', color: '#fff', fontFamily: 'monospace', fontSize: 14, outline: 'none', boxSizing: 'border-box' }} />
