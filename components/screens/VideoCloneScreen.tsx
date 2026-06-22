@@ -65,6 +65,7 @@ export default function VideoCloneScreen({ memberId }: Props) {
   const [transcript, setTranscript] = useState('')
   const [transcriptNote, setTranscriptNote] = useState('')
   const [fetchingTranscript, setFetchingTranscript] = useState(false)
+  const [transcribingPlatform, setTranscribingPlatform] = useState('')
 
   const [loading, setLoading] = useState(false)
   const [step, setStep] = useState<string | null>(null)
@@ -76,7 +77,7 @@ export default function VideoCloneScreen({ memberId }: Props) {
 
   const urlRef = useRef<HTMLInputElement>(null)
 
-  // Auto-detect platform and try YouTube transcript when URL is pasted
+  // Auto-detect platform and try transcript when URL is pasted
   const handleUrlChange = useCallback(async (val: string) => {
     setUrl(val)
     const detected = detectPlatformFromUrl(val)
@@ -85,7 +86,19 @@ export default function VideoCloneScreen({ memberId }: Props) {
     if (!val.trim()) { setTranscriptNote(''); return }
 
     setFetchingTranscript(true)
-    setTranscriptNote('Checking for captions…')
+    setTranscribingPlatform('')
+
+    const isYouTube = /youtube\.com|youtu\.be/.test(val)
+    const isTikTok  = /tiktok\.com/.test(val)
+    const isInsta   = /instagram\.com/.test(val)
+
+    if (!isYouTube && (isTikTok || isInsta)) {
+      setTranscriptNote('Fetching & transcribing — takes ~30s…')
+      setTranscribingPlatform(isTikTok ? 'TikTok' : 'Instagram')
+    } else {
+      setTranscriptNote('Checking for captions…')
+    }
+
     try {
       const res = await fetch('/api/videoclone/transcript', {
         method: 'POST',
@@ -103,6 +116,7 @@ export default function VideoCloneScreen({ memberId }: Props) {
       setTranscriptNote('Could not auto-fetch — paste transcript below')
     } finally {
       setFetchingTranscript(false)
+      setTranscribingPlatform('')
     }
   }, [])
 
@@ -245,7 +259,7 @@ export default function VideoCloneScreen({ memberId }: Props) {
 
       {/* Header */}
       <div style={{ position: 'relative', overflow: 'hidden', padding: '20px 16px 16px', background: '#0d1a2b', marginBottom: 16 }}>
-                <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 28, color: '#3B82F6', margin: 0, position: 'relative', zIndex: 1 }}>🎬 VIDEO CLONE</h1>
+        <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 28, color: '#3B82F6', margin: 0, position: 'relative', zIndex: 1 }}>🎬 VIDEO CLONE</h1>
         <p style={{ fontFamily: 'monospace', fontSize: 11, color: '#9CA3AF', margin: '4px 0 0', position: 'relative', zIndex: 1 }}>
           Paste any viral video URL → auto-analyse → clone the exact structure
         </p>
@@ -269,7 +283,10 @@ export default function VideoCloneScreen({ memberId }: Props) {
             style={{ width: '100%', background: '#0f0f0f', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: '14px 44px 14px 16px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 13, boxSizing: 'border-box' }}
           />
           {fetchingTranscript && (
-            <div style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)' }}>
+            <div style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)', display: 'flex', alignItems: 'center', gap: 5 }}>
+              {transcribingPlatform !== '' && (
+                <span style={{ fontFamily: 'monospace', fontSize: 9, color: '#6b7280' }}>transcribing…</span>
+              )}
               <Spinner size={14} />
             </div>
           )}
@@ -323,14 +340,20 @@ export default function VideoCloneScreen({ memberId }: Props) {
         {/* Clone button */}
         <button
           onClick={clone}
-          disabled={loading || !transcript.trim()}
+          disabled={loading}
           style={{
             width: '100%', borderRadius: 999, padding: '16px 0', border: 'none',
-            background: loading ? '#1f2937' : 'linear-gradient(135deg, #3B82F6, #4ade80)',
-            color: '#000', fontFamily: "'Bebas Neue', sans-serif", fontSize: 22,
-            cursor: loading || !transcript.trim() ? 'not-allowed' : 'pointer',
+            background: loading
+              ? '#1f2937'
+              : !transcript.trim()
+                ? 'rgba(59,130,246,0.35)'
+                : 'linear-gradient(135deg, #3B82F6, #4ade80)',
+            color: !transcript.trim() && !loading ? '#6b7280' : '#000',
+            fontFamily: "'Bebas Neue', sans-serif", fontSize: 22,
+            cursor: loading ? 'not-allowed' : 'pointer',
             marginBottom: 8,
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
+            transition: 'background 0.15s',
           }}
         >
           {loading
