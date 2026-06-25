@@ -310,6 +310,45 @@ CTA LINE: [Comment trigger or link CTA for ${platform}]
 PLATFORM NOTE: [One ${platform}-specific tip]`
 }
 
+export function buildBlueprintFromVisualPrompt(title: string, caption: string, platform: string): string {
+  return `You are analysing a viral ${platform} video. You have been given the thumbnail image and the creator's caption.
+
+CAPTION / TITLE:
+${title}${caption && caption !== title ? '\n\nFULL CAPTION:\n' + caption : ''}
+
+Study the thumbnail image carefully, then extract a STRUCTURAL BLUEPRINT.
+
+From the THUMBNAIL, identify:
+- Visual format: talking head / text-on-screen / B-roll / voiceover / faceless / mixed
+- Setting: indoor / outdoor / studio / street / neutral background
+- On-screen text: any text overlays visible, their position and style
+- Hook visual: what the opening frame communicates before a single word is said
+- Energy level: calm / intense / urgent / comedic
+
+From the CAPTION, identify:
+- Hook mechanic: question / shocking-stat / direct-call-out / pattern-interrupt / story / bold-claim
+- Hook words: the opening line (often the first sentence of the caption)
+- Sentence lengths: SHORT (3-5 words) / MEDIUM (8-12) / LONG (15+)
+- Emotional arc: what emotion it opens with, builds to, ends on
+- CTA mechanic: how it drives action (comment trigger / DM / link / follow)
+- Body structure: beat-by-beat breakdown of what the video likely covers
+
+Then output EXACTLY this blueprint:
+1. HOOK MECHANIC: [type]
+2. HOOK WORDS: [opening line]
+3. FIRST WORD: [very first word]
+4. VISUAL FORMAT: [talking head / text-on-screen / B-roll / voiceover / faceless]
+5. SENTENCE LENGTHS: [each section mapped as SHORT/MEDIUM/LONG]
+6. PACING: [Fast / Medium / Slow + description]
+7. EMOTIONAL ARC: [opens on X, builds to Y, ends on Z]
+8. BODY STRUCTURE: [beat-by-beat breakdown]
+9. PIVOT MOMENT: [where it shifts from problem to solution]
+10. CTA MECHANIC: [exactly how the CTA works]
+11. CLONE TEMPLATE: [reproduce the structure as a template with PLACEHOLDERS for topic-specific words]
+
+Be specific. This blueprint is used to clone the exact format.`
+}
+
 export const BRAIN_SUMMARISE_PROMPT = `You are a content intelligence engine for The One Club creator platform.
 
 Analyse the provided content and extract:
@@ -320,3 +359,4 @@ Analyse the provided content and extract:
 5. QUOTABLE LINES — 2-3 powerful adaptable lines
 
 Be concise and actionable. Format clearly with the above headings.`
+ve headings.`

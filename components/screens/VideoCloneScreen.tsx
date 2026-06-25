@@ -65,7 +65,11 @@ export default function VideoCloneScreen({ memberId }: Props) {
   const [transcript, setTranscript] = useState('')
   const [transcriptNote, setTranscriptNote] = useState('')
   const [fetchingTranscript, setFetchingTranscript] = useState(false)
-  const [transcribingPlatform, setTranscribingPlatform] = useState('')
+
+  // Metadata from non-YouTube platforms
+  const [thumbnailUrl, setThumbnailUrl] = useState('')
+  const [videoTitle, setVideoTitle] = useState('')
+  const [analysisType, setAnalysisType] = useState<'transcript' | 'metadata' | 'none' | ''>('')
 
   const [loading, setLoading] = useState(false)
   const [step, setStep] = useState<string | null>(null)
@@ -77,27 +81,23 @@ export default function VideoCloneScreen({ memberId }: Props) {
 
   const urlRef = useRef<HTMLInputElement>(null)
 
-  // Auto-detect platform and try transcript when URL is pasted
+  const hasContent = transcript.trim() || thumbnailUrl || videoTitle
+
+  // Auto-detect platform and try transcript/metadata when URL is pasted
   const handleUrlChange = useCallback(async (val: string) => {
     setUrl(val)
     const detected = detectPlatformFromUrl(val)
     if (detected) setPlatform(detected)
 
+    // Reset metadata
+    setThumbnailUrl('')
+    setVideoTitle('')
+    setAnalysisType('')
+
     if (!val.trim()) { setTranscriptNote(''); return }
 
     setFetchingTranscript(true)
-    setTranscribingPlatform('')
-
-    const isYouTube = /youtube\.com|youtu\.be/.test(val)
-    const isTikTok  = /tiktok\.com/.test(val)
-    const isInsta   = /instagram\.com/.test(val)
-
-    if (!isYouTube && (isTikTok || isInsta)) {
-      setTranscriptNote('Fetching & transcribing — takes ~30s…')
-      setTranscribingPlatform(isTikTok ? 'TikTok' : 'Instagram')
-    } else {
-      setTranscriptNote('Checking for captions…')
-    }
+    setTranscriptNote('Analyzing video…')
 
     try {
       const res = await fetch('/api/videoclone/transcript', {
@@ -106,6 +106,11 @@ export default function VideoCloneScreen({ memberId }: Props) {
         body: JSON.stringify({ url: val }),
       })
       const data = await res.json()
+
+      if (data.thumbnailUrl) setThumbnailUrl(data.thumbnailUrl)
+      if (data.videoTitle)   setVideoTitle(data.videoTitle)
+      if (data.analysisType) setAnalysisType(data.analysisType)
+
       if (data.transcript) {
         setTranscript(data.transcript)
         setTranscriptNote(data.note)
@@ -113,10 +118,9 @@ export default function VideoCloneScreen({ memberId }: Props) {
         setTranscriptNote(data.note)
       }
     } catch {
-      setTranscriptNote('Could not auto-fetch — paste transcript below')
+      setTranscriptNote('Could not analyze — paste caption/transcript below')
     } finally {
       setFetchingTranscript(false)
-      setTranscribingPlatform('')
     }
   }, [])
 
@@ -126,20 +130,20 @@ export default function VideoCloneScreen({ memberId }: Props) {
   }
 
   const clone = useCallback(async () => {
-    if (!transcript.trim()) {
-      setToast({ msg: 'Paste the transcript first ↓', type: 'error' })
+    if (!hasContent) {
+      setToast({ msg: 'Paste a URL or caption first ↑', type: 'error' })
       return
     }
 
     setLoading(true)
-    setStep('Pass 1 — extracting structure…')
+    setStep('Pass 1 — analyzing structure…')
     setResult(null)
 
     try {
       const res = await fetch('/api/videoclone', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ memberId, transcript, platform, pillar }),
+        body: JSON.stringify({ memberId, transcript, platform, pillar, thumbnailUrl, videoTitle }),
       })
 
       setStep('Pass 2 — cloning content…')
@@ -158,7 +162,7 @@ export default function VideoCloneScreen({ memberId }: Props) {
       setLoading(false)
       setStep(null)
     }
-  }, [memberId, transcript, platform, pillar])
+  }, [memberId, transcript, platform, pillar, thumbnailUrl, videoTitle, hasContent])
 
   // ── Active tab content ───────────────────────────────────────────────────
   const renderTabContent = () => {
@@ -261,7 +265,7 @@ export default function VideoCloneScreen({ memberId }: Props) {
       <div style={{ position: 'relative', overflow: 'hidden', padding: '20px 16px 16px', background: '#0d1a2b', marginBottom: 16 }}>
         <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 28, color: '#3B82F6', margin: 0, position: 'relative', zIndex: 1 }}>🎬 VIDEO CLONE</h1>
         <p style={{ fontFamily: 'monospace', fontSize: 11, color: '#9CA3AF', margin: '4px 0 0', position: 'relative', zIndex: 1 }}>
-          Paste any viral video URL → auto-analyse → clone the exact structure
+          Paste any viral video URL → AI watches it → clones the exact format for your brand
         </p>
       </div>
 
@@ -279,14 +283,11 @@ export default function VideoCloneScreen({ memberId }: Props) {
             ref={urlRef}
             value={url}
             onChange={e => handleUrlChange(e.target.value)}
-            placeholder="PASTE VIDEO URL (YouTube, TikTok, Instagram…)"
+            placeholder="PASTE VIDEO URL (YouTube, TikTok, Instagram, Facebook…)"
             style={{ width: '100%', background: '#0f0f0f', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: '14px 44px 14px 16px', color: '#fff', fontFamily: "'Space Mono', monospace", fontSize: 13, boxSizing: 'border-box' }}
           />
           {fetchingTranscript && (
-            <div style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)', display: 'flex', alignItems: 'center', gap: 5 }}>
-              {transcribingPlatform !== '' && (
-                <span style={{ fontFamily: 'monospace', fontSize: 9, color: '#6b7280' }}>transcribing…</span>
-              )}
+            <div style={{ position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)' }}>
               <Spinner size={14} />
             </div>
           )}
@@ -302,6 +303,27 @@ export default function VideoCloneScreen({ memberId }: Props) {
             border: `1px solid ${transcriptNote.startsWith('✓') ? '#166534' : '#1f2937'}`,
           }}>
             {transcriptNote}
+          </div>
+        )}
+
+        {/* Thumbnail preview — shown when we have visual metadata */}
+        {thumbnailUrl && analysisType === 'metadata' && (
+          <div style={{ marginBottom: 14, borderRadius: 12, overflow: 'hidden', border: '1px solid rgba(59,130,246,0.3)', position: 'relative' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={thumbnailUrl}
+              alt="Video thumbnail"
+              style={{ width: '100%', display: 'block', maxHeight: 200, objectFit: 'cover' }}
+            />
+            <div style={{
+              position: 'absolute', bottom: 0, left: 0, right: 0,
+              background: 'linear-gradient(transparent, rgba(0,0,0,0.85))',
+              padding: '20px 12px 10px',
+              fontFamily: 'monospace', fontSize: 9, color: '#4ade80',
+              letterSpacing: 1,
+            }}>
+              👁 AI WILL ANALYZE THIS THUMBNAIL
+            </div>
           </div>
         )}
 
@@ -323,16 +345,23 @@ export default function VideoCloneScreen({ memberId }: Props) {
           </select>
         </div>
 
-        {/* Transcript textarea */}
+        {/* Caption / Transcript textarea */}
         <div style={{ marginBottom: 16 }}>
           <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 12, color: '#9CA3AF', marginBottom: 6, letterSpacing: 1 }}>
-            TRANSCRIPT {transcript ? `(${transcript.split(/\s+/).length} words)` : '— paste or auto-fetched above'}
+            {analysisType === 'metadata'
+              ? `CAPTION ${transcript ? `(${transcript.split(/\s+/).length} words — auto-fetched)` : '— auto-fetched above'}`
+              : `TRANSCRIPT ${transcript ? `(${transcript.split(/\s+/).length} words)` : '— paste or auto-fetched above'}`
+            }
           </div>
           <textarea
             value={transcript}
             onChange={e => setTranscript(e.target.value)}
-            placeholder="Paste the video transcript here, or it will auto-fill from YouTube captions above…"
-            rows={6}
+            placeholder={
+              analysisType === 'metadata'
+                ? 'Caption auto-fetched — you can add more context here or leave it as-is'
+                : 'Paste the video transcript/caption here, or it will auto-fill above…'
+            }
+            rows={analysisType === 'metadata' && thumbnailUrl ? 3 : 6}
             style={{ width: '100%', background: '#0f0f0f', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: '12px 14px', color: '#fff', fontFamily: 'monospace', fontSize: 12, resize: 'vertical', boxSizing: 'border-box', lineHeight: 1.6 }}
           />
         </div>
@@ -345,10 +374,10 @@ export default function VideoCloneScreen({ memberId }: Props) {
             width: '100%', borderRadius: 999, padding: '16px 0', border: 'none',
             background: loading
               ? '#1f2937'
-              : !transcript.trim()
+              : !hasContent
                 ? 'rgba(59,130,246,0.35)'
                 : 'linear-gradient(135deg, #3B82F6, #4ade80)',
-            color: !transcript.trim() && !loading ? '#6b7280' : '#000',
+            color: !hasContent && !loading ? '#6b7280' : '#000',
             fontFamily: "'Bebas Neue', sans-serif", fontSize: 22,
             cursor: loading ? 'not-allowed' : 'pointer',
             marginBottom: 8,
@@ -364,7 +393,7 @@ export default function VideoCloneScreen({ memberId }: Props) {
         {/* Steps indicator while loading */}
         {loading && (
           <div style={{ display: 'flex', gap: 8, marginBottom: 16, justifyContent: 'center' }}>
-            {['Fetching structure', 'Cloning content'].map((s, i) => (
+            {['Analyzing structure', 'Cloning content'].map((s, i) => (
               <div key={i} style={{
                 fontFamily: 'monospace', fontSize: 9, padding: '4px 10px', borderRadius: 999,
                 background: (step?.includes('Pass 1') && i === 0) || (step?.includes('Pass 2') && i === 1) ? '#4ade80' : '#1f2937',
