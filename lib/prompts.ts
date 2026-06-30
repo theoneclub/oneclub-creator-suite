@@ -359,4 +359,3 @@ Analyse the provided content and extract:
 5. QUOTABLE LINES — 2-3 powerful adaptable lines
 
 Be concise and actionable. Format clearly with the above headings.`
-ve headings.`
