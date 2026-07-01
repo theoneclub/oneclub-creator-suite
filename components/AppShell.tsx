@@ -42,7 +42,6 @@ const NAV_TOOLS: { id: Screen; emoji: string; label: string }[] = [
   { id: 'schedule', emoji: '📅', label: 'Scheduler' },
 ]
 
-const ALL_NAV = [...NAV_MAIN, ...NAV_TOOLS]
 
 const PAGE_TITLES: Record<Screen, string> = {
   home: 'Home', brain: 'Brain', content: 'Content', clone: 'Video Clone',

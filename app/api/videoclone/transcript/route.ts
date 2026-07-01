@@ -28,21 +28,6 @@ function extractYouTubeId(url: string): string | null {
   return null
 }
 
-function parseVtt(vtt: string): string {
-  return vtt
-    .split('\n')
-    .filter(line => {
-      if (!line.trim()) return false
-      if (line.startsWith('WEBVTT')) return false
-      if (/^\d+$/.test(line.trim())) return false
-      if (/-->/.test(line)) return false
-      if (/^NOTE/.test(line.trim())) return false
-      return true
-    })
-    .map(l => l.replace(/<[^>]+>/g, '').trim())
-    .filter(Boolean)
-    .join(' ')
-}
 
 async function fetchYouTubeTranscript(videoId: string): Promise<string | null> {
   const pageRes = await fetch('https://www.youtube.com/watch?v=' + videoId, {

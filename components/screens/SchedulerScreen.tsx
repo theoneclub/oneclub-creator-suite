@@ -41,6 +41,7 @@ interface GeneratedPost {
   bufferPostIds?: Record<string, string>
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function AestClock() {
   const [time, setTime] = useState('')
   useEffect(() => {
