@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Carousel studio: exported slide sets are regenerable. The reference deck is kept.
+oneclub-carousel-studio/output/*
+!oneclub-carousel-studio/output/2026-07-27-permission-slip/
+oneclub-carousel-studio/assets/*
+!oneclub-carousel-studio/assets/README.md

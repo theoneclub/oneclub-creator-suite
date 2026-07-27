@@ -1,0 +1,81 @@
+# ManyChat — comment capture + instant DM
+
+Set this up once. Every future carousel reuses it by adding the new post to the
+same trigger.
+
+## 1. The trigger
+
+**Instagram → Automation → New → Comment Trigger**
+
+| Setting | Value |
+|---|---|
+| Post | The carousel (add each new carousel to this same automation) |
+| Keyword match | `BLUEPRINT` — exact word, case-insensitive |
+| Also match | Common misfires: `blueprint`, `BLUEPRNT`, `blue print` |
+| Reply to comment publicly | On — one short line, rotate it: "Sent." / "Check your DMs." / "On its way." |
+| Reply in DM | On |
+
+Public replies matter: they raise the comment count on the post, which is the
+metric the algorithm rewards. Rotating the text keeps it from reading as a bot.
+
+## 2. The DM
+
+Send immediately. Short, no fluff, one action. Use ManyChat's own button/link —
+never a raw URL pasted in the message body, Instagram suppresses those.
+
+```
+Here it is — The Faceless AI Affiliate Blueprint.
+
+The whole system: faceless AI content, recurring vs one-time,
+and how the affiliate side stacks on top of the membership.
+
+[ Get the Blueprint ]   ← button → Brevo opt-in page
+```
+
+Second message, sent 10 minutes later only if the button was not clicked:
+
+```
+Did the link land? Tap it and I'll send the Blueprint straight to your inbox.
+```
+
+No third chase. If they do not click twice, they are not a lead yet.
+
+## 3. Tags — this is the attribution data
+
+Apply all three on trigger fire:
+
+```
+carousel:<slug>        e.g. carousel:permission-slip
+angle:<kebab-angle>    e.g. angle:system-critique
+trigger:BLUEPRINT
+```
+
+Create the tags before the post goes live. A carousel that fires an untagged
+trigger produces a lead you can never attribute, and that lead is the whole
+point of the exercise.
+
+## 4. Handoff to Brevo
+
+ManyChat → Settings → Integrations → **Brevo**. Map on tag applied:
+
+| ManyChat | Brevo |
+|---|---|
+| Email (captured on the opt-in page) | `EMAIL` |
+| First name | `FIRSTNAME` |
+| `carousel:*` tag | `CAROUSEL` attribute |
+| `angle:*` tag | `ANGLE` attribute |
+| `trigger:*` tag | `TRIGGER_WORD` attribute |
+| — | Add to list **Carousel → Blueprint** |
+
+If the native integration will not carry custom fields on your plan, bridge it
+with Make/Zapier: ManyChat "Tag Applied" → Brevo "Create or Update Contact".
+Same field map. Do not skip the three attributes to save a step — without them
+`angle-report.mjs` has nothing to rank.
+
+## 5. Per-carousel checklist
+
+- [ ] New post added to the existing `BLUEPRINT` comment trigger
+- [ ] `carousel:<slug>` and `angle:<angle>` tags created
+- [ ] Test comment from a second account → DM arrives < 30s
+- [ ] Test contact lands in Brevo with all three attributes populated
+- [ ] Row added to `automation/engagement-log.csv`

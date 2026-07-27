@@ -1,0 +1,5 @@
+# One Club — carousel engagement log. One row per posted carousel.
+# Fill views/comments/saves/shares from Buffer weekly; dms/tag from ManyChat; emails/founding500 from Brevo.
+# Then: node scripts/angle-report.mjs
+date,slug,angle,trigger,views,comments,saves,shares,dms,emails,founding500,notes
+2026-07-27,permission-slip,System Critique & Economic Grievance,BLUEPRINT,,,,,,,,first carousel — baseline

@@ -1,0 +1,55 @@
+/* ============================================================
+   THE ONE CLUB — Carousel Design Tokens (ds-bundle-morphe)
+   Locked. Do not invent new colours. If a slide needs an accent
+   that is not in this file, the answer is "use --green".
+   Mirrors app/globals.css + components/AppShell.tsx.
+   ============================================================ */
+
+:root {
+  /* Core palette — locked */
+  --black:      #000000; /* background — pure black, no gradients */
+  --card:       #111111; /* card fill */
+  --green:      #39FF14; /* primary — headlines, CTAs, active elements, borders */
+  --green-soft: #4ADE80; /* soft accent */
+  --yellow:     #FFD700; /* CTA / comment-trigger callout */
+  --white:      #FFFFFF; /* body text */
+  --grey:       #9CA3AF; /* secondary text */
+  --border-dim: #1f2937; /* inactive borders */
+
+  /* Derived — allowed, because they are the locked colours at alpha */
+  --card-soft:  #0e0e0e;
+  --green-10:   rgba(57, 255, 20, 0.10);
+  --green-24:   rgba(57, 255, 20, 0.24);
+  --yellow-12:  rgba(255, 215, 0, 0.12);
+  --white-06:   rgba(255, 255, 255, 0.06);
+  --white-10:   rgba(255, 255, 255, 0.10);
+  --track:      rgba(255, 255, 255, 0.14);
+  --scrim:      rgba(0, 0, 0, 0.78);
+
+  /* Canvas — 3:4, NOT square. Square gets throttled on IG. */
+  --slide-w: 1080px;
+  --slide-h: 1440px;
+  --pad:     76px;   /* safe margin — nothing important outside this */
+  --pad-top: 72px;
+
+  /* Type — Anton is the heavy stacked display face.
+     Swap to 'Bebas Neue' here for the lighter condensed look. */
+  --font-display: 'Anton', 'Bebas Neue', Impact, sans-serif; /* all-caps only */
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  --fs-hook:      104px;  /* auto-fits down, never up */
+  --fs-headline:  82px;
+  --fs-trigger:   88px;
+  --fs-body:      34px;
+  --fs-lede:      40px;
+  --fs-meta:      21px;
+
+  --lh-display: 0.94;
+  --lh-body:    1.45;
+  --ls-meta:    0.3em;
+  --ls-display: 0.002em;
+
+  --radius:     22px;
+  --radius-sm:  16px;
+  --radius-pill: 999px;
+}

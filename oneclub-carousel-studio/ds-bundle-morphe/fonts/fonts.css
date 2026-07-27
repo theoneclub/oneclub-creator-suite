@@ -1,0 +1,29 @@
+/* Self-hosted so renders are byte-identical offline and in CI.
+   Source: Google Fonts (Anton v26, Bebas Neue v16, Inter v20 variable), latin subset. */
+
+/* Primary display face — heavy condensed, carries the stacked headline blocks. */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('./anton-400.woff2') format('woff2');
+}
+
+/* Alternate display face — lighter condensed. Swap via --font-display in tokens.css. */
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('./bebas-neue-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url('./inter-var.woff2') format('woff2-variations'),
+       url('./inter-var.woff2') format('woff2');
+}

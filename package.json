@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "carousel:build": "node oneclub-carousel-studio/scripts/build.mjs",
+    "carousel:render": "node oneclub-carousel-studio/scripts/render.mjs",
+    "carousel:report": "node oneclub-carousel-studio/scripts/angle-report.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.95.2",

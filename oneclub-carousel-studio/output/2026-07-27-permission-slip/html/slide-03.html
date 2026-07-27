@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-ready="0">
+<head>
+<meta charset="utf-8">
+<title>permission-slip — slide 3</title>
+<link rel="stylesheet" href="../../../ds-bundle-morphe/fonts/fonts.css">
+<link rel="stylesheet" href="../../../ds-bundle-morphe/tokens.css">
+<link rel="stylesheet" href="../../../ds-bundle-morphe/carousel.css">
+</head>
+<body>
+  <div class="slide slide--value" id="slide">
+    
+    <main class="body">
+      <div class="kicker">Why faceless works</div>
+      <h2>Faceless AI content<br>isn't a <span class="hl">gimmick</span>.</h2>
+      <p class="copy">It's the only content model where the barrier to starting is a decision, not a decade.</p>
+      <div class="rows">
+        <div class="row" style="--row-accent:var(--green)">
+          
+          <div class="txt">
+            <div class="t">No face</div>
+            <div class="s">The work is the asset. You are not the product.</div>
+          </div>
+        </div>
+        <div class="row" style="--row-accent:var(--yellow)">
+          
+          <div class="txt">
+            <div class="t">No following</div>
+            <div class="s">You don't need an audience you spent years renting.</div>
+          </div>
+        </div>
+        <div class="row" style="--row-accent:var(--green-soft)">
+          
+          <div class="txt">
+            <div class="t">No brand equity</div>
+            <div class="s">Start earning this month, not in year ten.</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="foot">
+      <span class="handle">@theoneclub</span>
+      <span class="bar"><i style="width:33%"></i></span>
+      <span class="count">03 / 09</span>
+    </footer>
+  </div>
+<script>
+/* Auto-fit: shrink type until the body stops overflowing.
+   Records the final scale so the QA pass can flag slides that hit the floor. */
+(function () {
+  var FLOOR = 0.62, STEP = 0.02;
+  function fit() {
+    var slide = document.getElementById('slide');
+    var body  = slide.querySelector('.body');
+    var scale = 1;
+    slide.style.setProperty('--fit', scale);
+    var guard = 0;
+    while (body.scrollHeight > body.clientHeight + 1 && scale > FLOOR && guard++ < 40) {
+      scale = Math.round((scale - STEP) * 100) / 100;
+      slide.style.setProperty('--fit', scale);
+    }
+    /* a short block floating at the top reads as a mistake — centre it.
+       (scrollHeight is never < clientHeight, so measure the children.) */
+    var kids = body.children;
+    var contentH = kids.length
+      ? (kids[kids.length - 1].offsetTop + kids[kids.length - 1].offsetHeight) - kids[0].offsetTop
+      : 0;
+    if (contentH < body.clientHeight * 0.82) body.classList.add('body--centred');
+
+    var root = document.documentElement;
+    root.dataset.fit = String(scale);
+    root.dataset.overflow  = body.scrollHeight > body.clientHeight + 1 ? '1' : '0';
+    root.dataset.overflowX = body.scrollWidth  > body.clientWidth  + 1 ? '1' : '0';
+    root.dataset.ready = '1';
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  else window.addEventListener('load', fit);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{
+  "slug": "short-kebab-slug",
+  "date": "2026-01-01",
+  "angle": "System Critique & Economic Grievance | Recurring Income | AI Replacement Fear | Faceless AI | Affiliate Mechanics | Freedom Fund | Founding 500",
+  "trigger": "BLUEPRINT",
+  "handle": "@theoneclub",
+  "leadMagnet": "The Faceless AI Affiliate Blueprint",
+  "link": "theoneclub.io/founding500",
+  "notes": "Anything the next person needs to know to re-render this deck.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Two or three words",
+      "headline": "Bold claim, stacked\nwith one ((phrase boxed)).",
+      "image": "../../../assets/<slug>-hook.png",
+      "copy": ["The second beat of the hook — one line, no more."],
+      "tiles": [
+        { "value": "$10,000", "label": "Community-voted, monthly" },
+        { "value": "500", "label": "Founding members" }
+      ],
+      "pill": { "text": "Swipe for the way out →", "ghost": true }
+    },
+    {
+      "type": "stakes",
+      "kicker": "What it costs",
+      "headline": "What breaks for them\nif they [[ignore this]].",
+      "copy": ["One paragraph. Specific, personal, no hedging."]
+    },
+    {
+      "type": "value",
+      "kicker": "Section label",
+      "headline": "The teaching,\nstated flat.",
+      "copy": ["Optional one-line set-up before the list."],
+      "rows": [
+        { "t": "First point", "s": "The line that makes it concrete." },
+        { "t": "Second point", "s": "Different idea, same rhythm." },
+        { "t": "Third point", "s": "Three is the sweet spot. Five is the ceiling." }
+      ]
+    },
+    {
+      "type": "value",
+      "kicker": "A comparison",
+      "headline": "[[This]] compounds.\nThat doesn't.",
+      "stats": {
+        "caption": "What the comparison is measuring",
+        "items": [
+          { "label": "Ours", "value": "4", "bar": 4 },
+          { "label": "Theirs", "value": "0", "bar": 0.06, "muted": true }
+        ]
+      },
+      "pull": "The takeaway, in one line."
+    },
+    {
+      "type": "receipts",
+      "kicker": "Receipts",
+      "headline": "Proof, not theory.",
+      "copy": ["What is being built, and by whom. No personal income figures."],
+      "rows": [
+        { "t": "Founding 500", "s": "The first cohort, building in the open." },
+        { "t": "Community-voted fund", "s": "$10,000 monthly, decided by the community." },
+        { "t": "Built in public", "s": "Every step documented while we build it." }
+      ]
+    },
+    {
+      "type": "cta",
+      "kicker": "One word",
+      "trigger": "BLUEPRINT",
+      "headline": "Want the exact\nplaybook?",
+      "image": "../../../assets/<slug>-cta.png",
+      "pill": { "before": "Comment", "word": "BLUEPRINT", "text": "↓" },
+      "copy": ["and I'll send you {{The Faceless AI Affiliate Blueprint}} — start to finish. 🔒"]
+    }
+  ],
+  "caption": "Comment BLUEPRINT and I'll send you the exact playbook. 🔒\n\nThe caption restates the argument for people who never swipe. Keep the trigger word in the first 125 characters — that is what shows above the fold.\n\nComment BLUEPRINT and it's in your DMs.",
+  "hashtags": [
+    "#facelessmarketing", "#aiincome", "#recurringincome", "#affiliatemarketing",
+    "#escapethe9to5", "#aitools", "#contentautomation", "#onlinebusinesstips",
+    "#sidehustleideas", "#theoneclub"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "slug": "permission-slip",
+  "date": "2026-07-27",
+  "angle": "System Critique & Economic Grievance",
+  "trigger": "BLUEPRINT",
+  "handle": "@theoneclub",
+  "leadMagnet": "The Faceless AI Affiliate Blueprint",
+  "link": "theoneclub.io/founding500",
+  "notes": "Reference deck. Copy is the locked Part 5 script, redistributed across the block system (headline / copy / rows / stats / tiles / pull / pill). Hook + CTA art: assets/morphe-hook-permission.png and assets/morphe-cta-permission.png (Higgsfield, Morphe avatar) — drop the files in and re-render; both slides compose correctly on black until then.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "System critique",
+      "headline": "They spent 12 years\nteaching you to ((sit still.))",
+      "image": "../../../assets/morphe-hook-permission.png",
+      "copy": ["Then they call you **lazy** for wanting out."],
+      "tiles": [
+        { "value": "$10,000", "label": "Community-voted, monthly" },
+        { "value": "500", "label": "Founding members" }
+      ],
+      "pill": { "text": "Swipe for the way out →", "ghost": true }
+    },
+    {
+      "type": "stakes",
+      "kicker": "What it costs",
+      "headline": "You'll have this exact\nconversation with yourself\n[[next year]].",
+      "copy": [
+        "If you don't build a second income stream in the next 12 months, nothing about your Monday morning changes. Same desk. Same permission slip. Same quiet resentment."
+      ]
+    },
+    {
+      "type": "value",
+      "kicker": "Why faceless works",
+      "headline": "Faceless AI content\nisn't a [[gimmick]].",
+      "copy": ["It's the only content model where the barrier to starting is a decision, not a decade."],
+      "rows": [
+        { "t": "No face", "s": "The work is the asset. You are not the product." },
+        { "t": "No following", "s": "You don't need an audience you spent years renting." },
+        { "t": "No brand equity", "s": "Start earning this month, not in year ten." }
+      ]
+    },
+    {
+      "type": "value",
+      "kicker": "Recurring vs one-time",
+      "headline": "[[Recurring]] compounds.\nOne-time doesn't.",
+      "stats": {
+        "caption": "Four referrals · still paying you at month 12",
+        "items": [
+          { "label": "Recurring", "value": "4", "bar": 4 },
+          { "label": "One-time", "value": "0", "bar": 0.06, "muted": true }
+        ]
+      },
+      "pull": "Four referrals on a recurring model can cover your own membership — and keep covering it."
+    },
+    {
+      "type": "value",
+      "kicker": "The replacement myth",
+      "headline": "AI doesn't replace you.",
+      "copy": ["It replaces **the version of you that refuses to learn how to use it.**"],
+      "pull": "That's the whole difference. And it's a [[decision]], not a talent."
+    },
+    {
+      "type": "value",
+      "kicker": "How it stacks",
+      "headline": "Three streams,\none system.",
+      "numbered": true,
+      "rows": [
+        { "t": "The membership", "s": "The tools and the training you actually use." },
+        { "t": "The content engine", "s": "Faceless AI output, daily, without filming." },
+        { "t": "The affiliate ecosystem", "s": "Sits on top of the membership — not a side project bolted onto nothing." }
+      ]
+    },
+    {
+      "type": "value",
+      "kicker": "The Freedom Fund",
+      "headline": "Every member votes on\nwho gets the [[Freedom Fund]].",
+      "copy": ["You don't apply to a panel. You make your case to the people building alongside you."],
+      "tiles": [
+        { "value": "$10,000", "label": "Monthly" },
+        { "value": "1 vote", "label": "Per member" },
+        { "value": "Community", "label": "Not us" }
+      ]
+    },
+    {
+      "type": "receipts",
+      "kicker": "Receipts",
+      "headline": "This isn't theory.",
+      "copy": ["It's a system already being built by people who were exactly where you are six months ago — same job, same doubt, same scroll."],
+      "rows": [
+        { "t": "Founding 500", "s": "The first cohort, building in the open." },
+        { "t": "Community-voted fund", "s": "$10,000 monthly, decided by the community." },
+        { "t": "Built in public", "s": "Every step documented while we build it." }
+      ]
+    },
+    {
+      "type": "cta",
+      "kicker": "One word",
+      "trigger": "BLUEPRINT",
+      "headline": "Want the exact\nplaybook?",
+      "image": "../../../assets/morphe-cta-permission.png",
+      "pill": { "before": "Comment", "word": "BLUEPRINT", "text": "↓" },
+      "copy": ["and I'll send you {{The Faceless AI Affiliate Blueprint}} — start to finish. 🔒"]
+    }
+  ],
+  "caption": "Comment BLUEPRINT and I'll send you the exact playbook. 🔒\n\nTwelve years of sitting still, raising your hand and waiting to be told it's your turn — then they call you lazy the second you want out.\n\nThe faceless AI model doesn't ask permission. No face, no following, no decade of personal brand equity. Recurring beats one-time. The affiliate ecosystem stacks on top of the membership instead of replacing it. And every member votes on who gets the Freedom Fund — $10,000, monthly, decided by the community, not by us.\n\nWe're building this in the open with the Founding 500.\n\nComment BLUEPRINT and it's in your DMs.",
+  "hashtags": [
+    "#facelessmarketing", "#aiincome", "#recurringincome", "#affiliatemarketing",
+    "#escapethe9to5", "#digitalnomadlife", "#aitools", "#contentautomation",
+    "#sidehustleideas", "#onlinebusinesstips", "#theoneclub", "#faceless"
+  ]
+}
