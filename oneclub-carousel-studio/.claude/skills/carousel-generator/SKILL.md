@@ -11,9 +11,16 @@ comments, 18x the saves. Comments fire the ManyChat trigger, the DM goes out,
 the email lands, Brevo nurture starts. **The carousel's only job is to make
 someone comment one word.** Everything below serves that.
 
-The lead magnet is already built: **The Faceless AI Affiliate Blueprint**.
-Its dedicated trigger word is `BLUEPRINT`, kept out of the reel rotation so
-carousel conversion is trackable on its own.
+The lead magnet is already built: **The Faceless AI Affiliate ebook**. Its
+trigger word is `EBOOK`, kept out of the reel rotation so carousel conversion is
+trackable on its own. (`BLUEPRINT` stays reserved for the Blueprint version of
+the same asset — use one or the other per deck, never both.)
+
+**Give the whole thing away on the slides.** The carousel that earns the comment
+is the one that already taught the reader something they can act on today. Hold
+nothing back "for the DM" — the ebook is the expanded version, not the missing
+half. A deck that reads as a pitch gets scrolled; a deck that reads as a free
+lesson gets saved, and saves are what put it in front of the next person.
 
 ## Invocation
 
@@ -33,9 +40,9 @@ carousel conversion is trackable on its own.
    entrants, platform milestones. NEVER a specific personal dollar income
    claim. Freedom Fund is always "$10,000 monthly, community-voted" — never
    "no loan, no equity".
-5. **CTA** (final slide) — ONE word, comment-triggered. `BLUEPRINT` for the
-   Blueprint lead magnet; otherwise from the live rotation: FREEDOM / ESCAPE /
-   SYSTEM / FOUNDING / FREE / IN.
+5. **CTA** (final slide) — ONE word, comment-triggered. `EBOOK` for the
+   Faceless AI Affiliate ebook; otherwise from the live rotation: FREEDOM /
+   ESCAPE / SYSTEM / FOUNDING / FREE / IN / BLUEPRINT.
 
 ## Process — copy BEFORE design, always
 
@@ -85,6 +92,9 @@ Copy `decks/TEMPLATE.json`. Fields:
 | `slides[].headline` | All-caps display type, auto-fits. `\n` forces a line break — stack 2-3 lines |
 | `slides[].copy[]` | Body paragraphs |
 | `slides[].rows[]` | Accent-bar cards `{ t, s }`. `numbered: true` for a ranked list |
+| `slides[].flow[]` | Step chain `{ k, t, s }`. Three steps run across, four or more stack |
+| `slides[].big` | Oversized number `{ value, label, sub }` — one idea, unscrollable |
+| `slides[].figure` | Image in a card `{ image, caption, ratio, cover }`. `ratio` sizes the card to the art; `cover: true` crops instead of fitting |
 | `slides[].stats` | Chart card `{ caption, items:[{ label, value, bar, muted }] }` |
 | `slides[].tiles[]` | Stat tiles `{ value, label }` — two or three, no more |
 | `slides[].pull` | Centred takeaway line |
@@ -96,9 +106,16 @@ Copy `decks/TEMPLATE.json`. Fields:
 Inline markup: `[[green]]`, `{{yellow}}`, `((boxed))`, `**bold**`, `\n` line break.
 
 **Choosing a block.** A value slide is stronger as three `rows` than as a
-paragraph — the reference decks that work are lists and charts, not prose. Use
-`stats` when the point is a comparison, `tiles` when it is two or three hard
-numbers, `pull` for the line you want quoted back to you. One block per slide.
+paragraph — the decks that work are lists, diagrams and charts, not prose. Use
+`flow` for a process, `rows` for criteria, `stats` for a comparison, `big` for
+the one rule you want remembered, `figure` for a diagram, `tiles` for two or
+three hard numbers, `pull` for the line you want quoted back to you. One block
+per slide, and vary the block from slide to slide — nine card-lists in a row is
+as monotonous as nine paragraphs.
+
+**Line breaks are yours.** A `\n` in a headline is a hard break: the renderer
+holds it and shrinks the type rather than re-wrapping where the browser prefers.
+Break the line where the sentence breathes.
 
 ## Hook slide via Higgsfield
 

@@ -39,7 +39,8 @@ oneclub-carousel-studio/
 │   └── fonts/               Anton, Bebas Neue, Inter (self-hosted)
 ├── decks/                   deck JSON — the source of truth for a carousel
 │   ├── TEMPLATE.json
-│   └── 2026-07-27-permission-slip.json
+│   ├── 2026-07-27-permission-slip.json
+│   └── 2026-07-28-faceless-affiliate-playbook.json   value-first, no pitch
 ├── scripts/
 │   ├── build.mjs            deck → slide HTML + grid preview + compliance QA
 │   ├── render.mjs           slide HTML → PNGs + layout QA
@@ -57,8 +58,8 @@ oneclub-carousel-studio/
 2. **Hook art** via Higgsfield (Morphe: mirrored sunglasses, hooded jacket,
    never a face). Three variations, pick one, then build the set around it.
 3. **Deck JSON** → `build.mjs`. Every slide is assembled from the same block
-   vocabulary: headline, copy, row cards, stat panel, stat tiles, pull line,
-   action pill.
+   vocabulary: headline, copy, row cards, step flow, big number, figure, stat
+   panel, stat tiles, pull line, action pill.
 4. **QA runs itself.** Compliance rules are code, not a checklist — dollar
    figures, guarantees, Freedom Fund framing, stale years, trigger-word
    collisions, caption above-the-fold placement. Layout QA measures real
@@ -68,7 +69,7 @@ oneclub-carousel-studio/
 6. **Export** → numbered PNGs, ready for Buffer.
 
 Then the loop in `automation/`: Buffer → comment → ManyChat DM + tag → Brevo
-opt-in + Blueprint → Founding 500, with the weekly numbers coming back into
+opt-in + ebook → Founding 500, with the weekly numbers coming back into
 `engagement-log.csv` so `angle-report.mjs` can tell you what to write next.
 
 ## Deck JSON in one screen
@@ -85,6 +86,9 @@ opt-in + Blueprint → Founding 500, with the weekly numbers coming back into
       "pill":  { "text": "Swipe →", "ghost": true } },
     { "type": "stakes", "headline": "...", "copy": ["..."] },
     { "type": "value",  "headline": "...", "rows": [{ "t": "Title", "s": "Sub" }] },
+    { "type": "value",  "headline": "...", "flow": [{ "k": "01", "t": "Step", "s": "Detail" }] },
+    { "type": "value",  "headline": "...", "big":  { "value": "1", "label": "The rule", "sub": "Why" } },
+    { "type": "value",  "headline": "...", "figure": { "image": "...", "ratio": "900 / 420", "caption": "..." } },
     { "type": "value",  "headline": "...",
       "stats": { "caption": "...", "items": [{ "label": "Recurring", "value": "4", "bar": 4 }] },
       "pull": "One line that lands." },

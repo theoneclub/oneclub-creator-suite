@@ -57,6 +57,29 @@ const tiles = (items = []) =>
     ? `<div class="tiles">${items.map((t) => `<div class="tile"><b>${esc(t.value)}</b><span>${esc(t.label)}</span></div>`).join('')}</div>`
     : '';
 
+/** Step flow: { k, t, s } — the model in one picture. Three or four steps max. */
+function flow(items = []) {
+  if (!items.length) return '';
+  const vertical = items.length > 3;
+  const steps = items.map((it, i) => `
+        <div class="step" style="--row-accent:${accent(i)}">
+          ${it.k ? `<div class="k">${esc(it.k)}</div>` : ''}
+          <div class="t">${inline(it.t)}</div>
+          ${it.s ? `<div class="s">${inline(it.s)}</div>` : ''}
+        </div>`);
+  return `<div class="flow${vertical ? ' flow--v' : ''}">${steps.join('\n        <div class="arw">&rarr;</div>')}\n      </div>`;
+}
+
+/** Big number: { value, label, sub } — one idea, impossible to scroll past. */
+const big = (b) =>
+  b ? `<div class="big"><b>${esc(b.value)}</b><div class="l">${inline(b.label)}</div>${b.sub ? `<div class="s">${inline(b.sub)}</div>` : ''}</div>` : '';
+
+/** Figure: an image inside a content slide, with an optional caption. */
+const figure = (f) =>
+  f
+    ? `<figure class="figure${f.cover ? ' figure--cover' : ''}" style="${f.ratio ? `--ratio:${esc(f.ratio)}` : ''}"><div class="shot" style="background-image:url('${esc(f.image)}')"></div>${f.caption ? `<figcaption>${inline(f.caption)}</figcaption>` : ''}</figure>`
+    : '';
+
 /** Yellow action pill. `word` renders in the display face. */
 function pill(p) {
   if (!p) return '';
@@ -64,13 +87,25 @@ function pill(p) {
   return `<div class="pill${o.ghost ? ' pill--ghost' : ''}">${o.before ? `<span>${esc(o.before)}</span>` : ''}${o.word ? `<span class="word">${esc(o.word)}</span>` : ''}${o.text ? `<span>${esc(o.text)}</span>` : ''}</div>`;
 }
 
+/** Headlines: an authored \n is a hard break, not a suggestion. Lines that are
+ *  too wide shrink via the fit pass instead of re-wrapping where they like. */
+function headline(text, tag) {
+  if (!text) return '';
+  if (!text.includes('\n')) return `<${tag}>${inline(text)}</${tag}>`;
+  const lines = text.split('\n').map((l) => `<span class="ln">${inline(l)}</span>`).join('');
+  return `<${tag} class="stacked">${lines}</${tag}>`;
+}
+
 function bodyFor(slide, index) {
   const tag = index === 0 || slide.type === 'cta' ? 'h1' : 'h2';
   return [
     slide.kicker ? `<div class="kicker">${esc(slide.kicker)}</div>` : '',
-    slide.headline ? `<${tag}>${inline(slide.headline)}</${tag}>` : '',
+    headline(slide.headline, tag),
     copyBlocks(slide.copy),
     rows(slide.rows, slide.numbered),
+    flow(slide.flow),
+    big(slide.big),
+    figure(slide.figure),
     panel(slide.stats),
     tiles(slide.tiles),
     slide.pull ? `<div class="pull">${inline(slide.pull)}</div>` : '',
@@ -121,7 +156,10 @@ export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle
     var scale = 1;
     slide.style.setProperty('--fit', scale);
     var guard = 0;
-    while (body.scrollHeight > body.clientHeight + 1 && scale > FLOOR && guard++ < 40) {
+    var over = function () {
+      return body.scrollHeight > body.clientHeight + 1 || body.scrollWidth > body.clientWidth + 1;
+    };
+    while (over() && scale > FLOOR && guard++ < 40) {
       scale = Math.round((scale - STEP) * 100) / 100;
       slide.style.setProperty('--fit', scale);
     }

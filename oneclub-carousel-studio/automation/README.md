@@ -5,9 +5,9 @@ Claude Code (carousel-generator skill)
    → Higgsfield (hook slide image)
    → export PNGs
    → Buffer (scheduled post, one-word CTA in caption)
-   → [audience comments BLUEPRINT]
+   → [audience comments EBOOK]
    → ManyChat (instant DM + tag)
-   → Brevo (email capture + Blueprint delivery + nurture)
+   → Brevo (email capture + ebook delivery + nurture)
    → Founding 500 sequence
    → weekly: Buffer numbers back into engagement-log.csv → angle-report.mjs
 ```
@@ -40,9 +40,10 @@ meaningful later. Tag naming is fixed:
 ```
 carousel:<slug>          e.g. carousel:permission-slip
 angle:<kebab-angle>      e.g. angle:system-critique
-trigger:<WORD>           e.g. trigger:BLUEPRINT
+trigger:<WORD>           e.g. trigger:EBOOK
 ```
 
-Keep `BLUEPRINT` reserved for carousels. The reel rotation (FREEDOM / ESCAPE /
-SYSTEM / FOUNDING / FREE / IN) stays out of carousel captions so the two
-channels never share a number.
+Keep `EBOOK` (and `BLUEPRINT`, if you run the Blueprint version of the asset)
+reserved for carousels. The reel rotation — FREEDOM / ESCAPE / SYSTEM /
+FOUNDING / FREE / IN — stays out of carousel captions so the two channels never
+share a number.

@@ -12,7 +12,7 @@
     
     <main class="body">
       <div class="kicker">Recurring vs one-time</div>
-      <h2><span class="hl">Recurring</span> compounds.<br>One-time doesn't.</h2>
+      <h2 class="stacked"><span class="ln"><span class="hl">Recurring</span> compounds.</span><span class="ln">One-time doesn't.</span></h2>
       <div class="panel">
         <div class="cap">Four referrals · still paying you at month 12</div>
         <div class="stat" style="--row-accent:var(--green)">
@@ -45,7 +45,10 @@
     var scale = 1;
     slide.style.setProperty('--fit', scale);
     var guard = 0;
-    while (body.scrollHeight > body.clientHeight + 1 && scale > FLOOR && guard++ < 40) {
+    var over = function () {
+      return body.scrollHeight > body.clientHeight + 1 || body.scrollWidth > body.clientWidth + 1;
+    };
+    while (over() && scale > FLOOR && guard++ < 40) {
       scale = Math.round((scale - STEP) * 100) / 100;
       slide.style.setProperty('--fit', scale);
     }

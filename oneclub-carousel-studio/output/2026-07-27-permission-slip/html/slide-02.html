@@ -12,7 +12,7 @@
     
     <main class="body">
       <div class="kicker">What it costs</div>
-      <h2>You'll have this exact<br>conversation with yourself<br><span class="hl">next year</span>.</h2>
+      <h2 class="stacked"><span class="ln">You'll have this exact</span><span class="ln">conversation with yourself</span><span class="ln"><span class="hl">next year</span>.</span></h2>
       <p class="copy">If you don't build a second income stream in the next 12 months, nothing about your Monday morning changes. Same desk. Same permission slip. Same quiet resentment.</p>
     </main>
     <footer class="foot">
@@ -32,7 +32,10 @@
     var scale = 1;
     slide.style.setProperty('--fit', scale);
     var guard = 0;
-    while (body.scrollHeight > body.clientHeight + 1 && scale > FLOOR && guard++ < 40) {
+    var over = function () {
+      return body.scrollHeight > body.clientHeight + 1 || body.scrollWidth > body.clientWidth + 1;
+    };
+    while (over() && scale > FLOOR && guard++ < 40) {
       scale = Math.round((scale - STEP) * 100) / 100;
       slide.style.setProperty('--fit', scale);
     }

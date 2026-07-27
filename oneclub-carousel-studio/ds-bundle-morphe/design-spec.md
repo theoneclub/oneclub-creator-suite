@@ -82,6 +82,9 @@ Any slide can carry any of these; the type decides the base composition.
 | `copy[]` | Body paragraphs. `**bold**` promotes a phrase to white. |
 | `rows[]` | Accent-bar cards, `{ t, s }`. Set `numbered: true` for a ranked list. The workhorse — a value slide with 3 rows outperforms a paragraph. |
 | `stats` | Chart card: label / bar / value rows. `muted: true` dims a comparison row. Bars are relative, never absolute claims. |
+| `flow[]` | Step chain, `{ k, t, s }`. Three steps run across the frame; four or more stack into a vertical chain with connectors. |
+| `big` | One oversized number with a label and a note. The slide you want screenshotted. |
+| `figure` | Artwork inside a card, `{ image, caption, ratio }`. Diagrams are contained, never cropped — pass the art's aspect ratio and the card sizes to it. |
 | `tiles[]` | Two or three stat tiles, `{ value, label }`. Hook and support slides. |
 | `pull` | Centred bold line under a chart or paragraph. The takeaway. |
 | `pill` | Yellow action pill. `{ before, word, text }` on the CTA; `{ text, ghost: true }` for a swipe prompt. |

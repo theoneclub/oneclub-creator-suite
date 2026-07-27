@@ -55,7 +55,10 @@
     var scale = 1;
     slide.style.setProperty('--fit', scale);
     var guard = 0;
-    while (body.scrollHeight > body.clientHeight + 1 && scale > FLOOR && guard++ < 40) {
+    var over = function () {
+      return body.scrollHeight > body.clientHeight + 1 || body.scrollWidth > body.clientWidth + 1;
+    };
+    while (over() && scale > FLOOR && guard++ < 40) {
       scale = Math.round((scale - STEP) * 100) / 100;
       slide.style.setProperty('--fit', scale);
     }

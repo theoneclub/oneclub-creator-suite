@@ -1,0 +1,171 @@
+{
+  "slug": "faceless-affiliate-playbook",
+  "date": "2026-07-28",
+  "angle": "Faceless AI Affiliate Marketing",
+  "trigger": "EBOOK",
+  "handle": "@theoneclub",
+  "leadMagnet": "The Faceless AI Affiliate ebook",
+  "notes": "Value-first deck — teaches the whole faceless affiliate model with no pitch. No membership, no Founding 500, no Freedom Fund. The only ask is the comment. Hook + CTA art: drop the Higgsfield renders in as assets/faceless-affiliate-hook.png and assets/faceless-affiliate-cta.png and re-render; both slides compose on black until then.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "No face. No following.\nStill ((gets paid)).",
+      "image": "../../../assets/faceless-affiliate-hook.png",
+      "copy": [
+        "No product of your own, either. The entire model — nine slides, nothing held back for the DM."
+      ],
+      "pill": {
+        "text": "Swipe — the whole system →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "kicker": "Where it goes wrong",
+      "headline": "Most people quit\nat step [[two]].",
+      "copy": [
+        "They pick a one-time offer, publish three videos, watch nothing move, and decide the model is broken. The model isn't broken. **The order is.** Do these four things in sequence and the maths starts working for you instead of against you."
+      ]
+    },
+    {
+      "type": "value",
+      "kicker": "The model, end to end",
+      "headline": "Four steps. That's it.",
+      "flow": [
+        {
+          "k": "01",
+          "t": "Pick a recurring offer",
+          "s": "Paid monthly, not once"
+        },
+        {
+          "k": "02",
+          "t": "Build one faceless angle",
+          "s": "A repeatable format"
+        },
+        {
+          "k": "03",
+          "t": "Publish daily",
+          "s": "Volume finds the winner"
+        },
+        {
+          "k": "04",
+          "t": "Get paid monthly",
+          "s": "For as long as they stay"
+        }
+      ],
+      "pull": "Everything after this slide is detail on one of those four."
+    },
+    {
+      "type": "value",
+      "kicker": "Step one · the offer",
+      "headline": "Judge an offer on three things.",
+      "numbered": true,
+      "rows": [
+        {
+          "t": "Does it pay recurring?",
+          "s": "A one-time payout resets you to zero every month. Recurring keeps paying while you sleep on it."
+        },
+        {
+          "t": "Do you actually use it?",
+          "s": "You can't make faceless content about a tool you've never opened. The demo is the content."
+        },
+        {
+          "t": "How long is the cookie?",
+          "s": "Thirty days minimum. Under seven and you're doing the work for someone else's brand."
+        }
+      ]
+    },
+    {
+      "type": "value",
+      "kicker": "Step two · the angle",
+      "headline": "Three faceless formats\nthat actually convert.",
+      "figure": {
+        "image": "../../../assets/faceless-formats.svg",
+        "ratio": "900 / 420",
+        "caption": "**Screen recording** — show the tool doing the thing. · **Text on b-roll** — one idea, big captions, stock footage. · **AI voiceover listicle** — ranked, fast, scriptable."
+      }
+    },
+    {
+      "type": "value",
+      "kicker": "Step three · the maths",
+      "headline": "[[Recurring]] pays you\nfor work you already did.",
+      "stats": {
+        "caption": "Same four sign-ups · who is still paying you in month 12",
+        "items": [
+          {
+            "label": "Recurring offer",
+            "value": "4",
+            "bar": 4
+          },
+          {
+            "label": "One-time offer",
+            "value": "0",
+            "bar": 0.06,
+            "muted": true
+          }
+        ]
+      },
+      "pull": "One-time pays for the post. Recurring pays for the back catalogue."
+    },
+    {
+      "type": "value",
+      "kicker": "Step four · the discipline",
+      "headline": "The rule nobody follows.",
+      "big": {
+        "value": "1",
+        "label": "One offer. One angle. One format. Until it works.",
+        "sub": "Adding a second offer before the first one converts isn't diversifying. It's quitting slowly, with extra steps."
+      }
+    },
+    {
+      "type": "receipts",
+      "kicker": "The honest timeline",
+      "headline": "This is a 90-day system,\nnot a 7-day one.",
+      "rows": [
+        {
+          "t": "Weeks 1–2 · Setup",
+          "s": "Pick the offer, build the angle, batch the first ten posts."
+        },
+        {
+          "t": "Weeks 3–8 · Volume",
+          "s": "Publish daily. Most posts do nothing. That is the process working, not failing."
+        },
+        {
+          "t": "Week 9+ · Compounding",
+          "s": "Repeat what moved, retire what didn't. The back catalogue keeps earning."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "kicker": "One word",
+      "trigger": "EBOOK",
+      "headline": "Want the whole thing\nwritten down?",
+      "image": "../../../assets/faceless-affiliate-cta.png",
+      "pill": {
+        "before": "Comment",
+        "word": "EBOOK",
+        "text": "↓"
+      },
+      "copy": [
+        "and I'll send you the {{Faceless AI Affiliate ebook}} — every step above, expanded, in order. 🔒"
+      ]
+    }
+  ],
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nThe whole model is on the slides above — nothing held back for the DM:\n\n1. Pick a recurring offer, not a one-time payout. Judge it on three things: does it pay monthly, do you actually use it, and is the attribution window at least 30 days.\n\n2. Build ONE faceless angle. Screen recording, text on b-roll, or AI voiceover listicle. Pick one and repeat it until it stops being hard.\n\n3. Publish daily. Most posts do nothing — that's the process working, not failing. Volume is how you find the winner you couldn't have predicted.\n\n4. Then repeat what moved and retire what didn't. One-time payouts pay for the post. Recurring pays for the back catalogue you already built.\n\nThe part most people get wrong: adding a second offer before the first one converts. That isn't diversifying, it's quitting slowly.\n\nComment EBOOK and the expanded version is in your DMs.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#recurringincome",
+    "#affiliatemarketingtips",
+    "#aitools",
+    "#contentautomation",
+    "#facelessyoutube",
+    "#onlinebusinesstips",
+    "#sidehustleideas",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}

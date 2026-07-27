@@ -15,7 +15,7 @@ the carousels scale) · Marketing Automation: enabled.
 | 2 | THE ONE CLUB | support@theoneclub.io |
 | 1 | THE ONE CLUB | theoneclub25@gmail.com |
 
-Send the Blueprint sequence from **Morph <hello@theoneclub.io>** — the DM came
+Send the ebook sequence from **Morph <hello@theoneclub.io>** — the DM came
 from Morphe, the email must match or the handoff feels like a different brand.
 
 **Lists that exist:** Founding 500 (11), Elite Members (10), Premium Members (9),
@@ -23,22 +23,22 @@ Ebook Downloads (8), Members (5).
 
 ## 1. Create what is missing
 
-**List:** `Carousel → Blueprint` — new. Keep it separate from Ebook Downloads
-so carousel-sourced leads stay measurable.
+**List:** `Carousel → Ebook` — new. Keep it separate from the existing Ebook
+Downloads list so carousel-sourced leads stay measurable on their own.
 
 **Contact attributes** (Contacts → Settings → Contact attributes). None of
 these exist yet — all three are required:
 
 | Attribute | Type | Example |
 |---|---|---|
-| `TRIGGER_WORD` | Text | `BLUEPRINT` |
-| `CAROUSEL` | Text | `permission-slip` |
-| `ANGLE` | Text | `system-critique` |
+| `TRIGGER_WORD` | Text | `EBOOK` |
+| `CAROUSEL` | Text | `faceless-affiliate-playbook` |
+| `ANGLE` | Text | `faceless-affiliate` |
 
 ## 2. The opt-in page
 
 A Brevo landing page (or a Brevo form on your own page) that the ManyChat
-button links to. One field: email. One button: "Send me the Blueprint."
+button links to. One field: email. One button: "Send me the ebook."
 
 Above the fold, restate the promise in Morphe's voice, not marketing voice —
 the reader arrived 15 seconds ago from a DM and will bounce on anything that
@@ -46,18 +46,18 @@ smells like a funnel. Compliance applies here exactly as on the slides: no
 dollar figures as personal results, no guarantees, Freedom Fund framed as
 "$10,000 monthly, community-voted".
 
-## 3. The automation: "Carousel → Blueprint"
+## 3. The automation: "Carousel → Ebook"
 
 Automations → Create → Custom. Entry point: **contact added to list
-`Carousel → Blueprint`**.
+`Carousel → Ebook`**.
 
 | # | Timing | Job | Notes |
 |---|---|---|---|
-| 1 | Immediately | **Deliver the Blueprint.** Link, nothing else. | Subject earns the open; the file is the only payload. No pitch. |
-| 2 | +24h | **Did you open it?** One idea from the Blueprint expanded — recurring vs one-time. | Single CTA to the Founding 500 page. |
+| 1 | Immediately | **Deliver the ebook.** Link, nothing else. | Subject earns the open; the file is the only payload. No pitch. |
+| 2 | +24h | **Did you open it?** One idea from the ebook expanded — recurring vs one-time. | Single CTA to the Founding 500 page. |
 | — | +48h | **Split.** Condition: joined Founding 500? | Yes → exit, they are a member. No → converge into the existing 6-email Founding 500 sequence at its email #2. |
 
-That convergence is the point: the Blueprint reader who does not convert in 48
+That convergence is the point: the ebook reader who does not convert in 48
 hours becomes a standard nurture contact instead of sitting in a dead-end list.
 Do not duplicate the Founding 500 emails inside this automation — point at the
 existing sequence so there is one place to edit them.

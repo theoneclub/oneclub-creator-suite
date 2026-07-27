@@ -12,7 +12,7 @@
     
     <main class="body">
       <div class="kicker">The Freedom Fund</div>
-      <h2>Every member votes on<br>who gets the <span class="hl">Freedom Fund</span>.</h2>
+      <h2 class="stacked"><span class="ln">Every member votes on</span><span class="ln">who gets the <span class="hl">Freedom Fund</span>.</span></h2>
       <p class="copy">You don't apply to a panel. You make your case to the people building alongside you.</p>
       <div class="tiles"><div class="tile"><b>$10,000</b><span>Monthly</span></div><div class="tile"><b>1 vote</b><span>Per member</span></div><div class="tile"><b>Community</b><span>Not us</span></div></div>
     </main>
@@ -33,7 +33,10 @@
     var scale = 1;
     slide.style.setProperty('--fit', scale);
     var guard = 0;
-    while (body.scrollHeight > body.clientHeight + 1 && scale > FLOOR && guard++ < 40) {
+    var over = function () {
+      return body.scrollHeight > body.clientHeight + 1 || body.scrollWidth > body.clientWidth + 1;
+    };
+    while (over() && scale > FLOOR && guard++ < 40) {
       scale = Math.round((scale - STEP) * 100) / 100;
       slide.style.setProperty('--fit', scale);
     }

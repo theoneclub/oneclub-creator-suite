@@ -10,8 +10,8 @@ same trigger.
 | Setting | Value |
 |---|---|
 | Post | The carousel (add each new carousel to this same automation) |
-| Keyword match | `BLUEPRINT` — exact word, case-insensitive |
-| Also match | Common misfires: `blueprint`, `BLUEPRNT`, `blue print` |
+| Keyword match | `EBOOK` — exact word, case-insensitive |
+| Also match | Common misfires: `ebook`, `e-book`, `e book`, `EBOOOK` |
 | Reply to comment publicly | On — one short line, rotate it: "Sent." / "Check your DMs." / "On its way." |
 | Reply in DM | On |
 
@@ -24,18 +24,19 @@ Send immediately. Short, no fluff, one action. Use ManyChat's own button/link �
 never a raw URL pasted in the message body, Instagram suppresses those.
 
 ```
-Here it is — The Faceless AI Affiliate Blueprint.
+Here it is — the Faceless AI Affiliate ebook.
 
-The whole system: faceless AI content, recurring vs one-time,
-and how the affiliate side stacks on top of the membership.
+Every step from the carousel, expanded: picking a recurring
+offer, building one faceless angle, and the publishing rhythm
+that finds the winner.
 
-[ Get the Blueprint ]   ← button → Brevo opt-in page
+[ Get the ebook ]   ← button → Brevo opt-in page
 ```
 
 Second message, sent 10 minutes later only if the button was not clicked:
 
 ```
-Did the link land? Tap it and I'll send the Blueprint straight to your inbox.
+Did the link land? Tap it and the ebook goes straight to your inbox.
 ```
 
 No third chase. If they do not click twice, they are not a lead yet.
@@ -47,7 +48,7 @@ Apply all three on trigger fire:
 ```
 carousel:<slug>        e.g. carousel:permission-slip
 angle:<kebab-angle>    e.g. angle:system-critique
-trigger:BLUEPRINT
+trigger:EBOOK
 ```
 
 Create the tags before the post goes live. A carousel that fires an untagged
@@ -65,7 +66,7 @@ ManyChat → Settings → Integrations → **Brevo**. Map on tag applied:
 | `carousel:*` tag | `CAROUSEL` attribute |
 | `angle:*` tag | `ANGLE` attribute |
 | `trigger:*` tag | `TRIGGER_WORD` attribute |
-| — | Add to list **Carousel → Blueprint** |
+| — | Add to list **Carousel → Ebook** |
 
 If the native integration will not carry custom fields on your plan, bridge it
 with Make/Zapier: ManyChat "Tag Applied" → Brevo "Create or Update Contact".
@@ -74,7 +75,7 @@ Same field map. Do not skip the three attributes to save a step — without them
 
 ## 5. Per-carousel checklist
 
-- [ ] New post added to the existing `BLUEPRINT` comment trigger
+- [ ] New post added to the existing `EBOOK` comment trigger
 - [ ] `carousel:<slug>` and `angle:<angle>` tags created
 - [ ] Test comment from a second account → DM arrives < 30s
 - [ ] Test contact lands in Brevo with all three attributes populated

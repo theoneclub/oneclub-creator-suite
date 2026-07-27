@@ -12,7 +12,7 @@
     
     <main class="body">
       <div class="kicker">Why faceless works</div>
-      <h2>Faceless AI content<br>isn't a <span class="hl">gimmick</span>.</h2>
+      <h2 class="stacked"><span class="ln">Faceless AI content</span><span class="ln">isn't a <span class="hl">gimmick</span>.</span></h2>
       <p class="copy">It's the only content model where the barrier to starting is a decision, not a decade.</p>
       <div class="rows">
         <div class="row" style="--row-accent:var(--green)">
@@ -55,7 +55,10 @@
     var scale = 1;
     slide.style.setProperty('--fit', scale);
     var guard = 0;
-    while (body.scrollHeight > body.clientHeight + 1 && scale > FLOOR && guard++ < 40) {
+    var over = function () {
+      return body.scrollHeight > body.clientHeight + 1 || body.scrollWidth > body.clientWidth + 1;
+    };
+    while (over() && scale > FLOOR && guard++ < 40) {
       scale = Math.round((scale - STEP) * 100) / 100;
       slide.style.setProperty('--fit', scale);
     }

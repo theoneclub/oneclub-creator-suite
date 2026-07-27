@@ -6,7 +6,9 @@
  * Severity: 'error' blocks export. 'warn' is reported and shipped.
  */
 
-export const TRIGGER_ROTATION = ['FREEDOM', 'ESCAPE', 'SYSTEM', 'FOUNDING', 'FREE', 'IN', 'BLUEPRINT'];
+// EBOOK / BLUEPRINT are the carousel-only triggers — kept out of the reel
+// rotation so carousel conversion stays measurable on its own.
+export const TRIGGER_ROTATION = ['FREEDOM', 'ESCAPE', 'SYSTEM', 'FOUNDING', 'FREE', 'IN', 'BLUEPRINT', 'EBOOK'];
 
 const RULES = [
   {
@@ -76,6 +78,9 @@ export function slideText(slide) {
   const parts = [slide.kicker, slide.headline, slide.trigger, slide.instruction, slide.pull, slide.note];
   parts.push(...(slide.copy || []));
   for (const r of slide.rows || []) parts.push(r.t, r.s);
+  for (const f of slide.flow || []) parts.push(f.k, f.t, f.s);
+  if (slide.big) parts.push(slide.big.value, slide.big.label, slide.big.sub);
+  if (slide.figure) parts.push(slide.figure.caption);
   for (const t of slide.tiles || []) parts.push(t.value, t.label);
   for (const s of slide.stats?.items || []) parts.push(s.label, s.value);
   if (slide.stats?.caption) parts.push(slide.stats.caption);

@@ -13,7 +13,7 @@
     <div class="scrim"></div>
     <main class="body">
       <div class="kicker">System critique</div>
-      <h1>They spent 12 years<br>teaching you to <span class="box">sit still.</span></h1>
+      <h1 class="stacked"><span class="ln">They spent 12 years</span><span class="ln">teaching you to <span class="box">sit still.</span></span></h1>
       <p class="copy">Then they call you <strong>lazy</strong> for wanting out.</p>
       <div class="tiles"><div class="tile"><b>$10,000</b><span>Community-voted, monthly</span></div><div class="tile"><b>500</b><span>Founding members</span></div></div>
       <div class="pill pill--ghost"><span>Swipe for the way out →</span></div>
@@ -35,7 +35,10 @@
     var scale = 1;
     slide.style.setProperty('--fit', scale);
     var guard = 0;
-    while (body.scrollHeight > body.clientHeight + 1 && scale > FLOOR && guard++ < 40) {
+    var over = function () {
+      return body.scrollHeight > body.clientHeight + 1 || body.scrollWidth > body.clientWidth + 1;
+    };
+    while (over() && scale > FLOOR && guard++ < 40) {
       scale = Math.round((scale - STEP) * 100) / 100;
       slide.style.setProperty('--fit', scale);
     }

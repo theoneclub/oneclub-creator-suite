@@ -98,6 +98,10 @@ h2 { font-size: calc(var(--fs-headline) * var(--fit)); }
   text-shadow: 0 4px 28px rgba(0, 0, 0, 0.85), 0 2px 4px rgba(0, 0, 0, 0.9);
 }
 
+/* authored line breaks hold — the fit pass scales the type instead of rewrapping */
+h1.stacked .ln,
+h2.stacked .ln { display: block; white-space: nowrap; }
+
 .hl  { color: var(--green); }
 .hlY { color: var(--yellow); }
 .dim { color: var(--grey); }
@@ -277,6 +281,131 @@ h2 { font-size: calc(var(--fs-headline) * var(--fit)); }
   text-transform: uppercase;
   color: var(--grey);
 }
+
+/* ---------- step flow (visual hook: the model in one picture) ---------- */
+
+.flow {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 42px;
+}
+.flow .step {
+  flex: 1 1 0;
+  background: var(--card);
+  border: 1px solid var(--white-06);
+  border-radius: var(--radius-sm);
+  padding: 26px 18px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.flow .step .k {
+  font-family: var(--font-display);
+  font-size: calc(40px * var(--fit));
+  line-height: 1;
+  color: var(--row-accent, var(--green));
+}
+.flow .step .t {
+  font-size: calc(25px * var(--fit));
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--white);
+}
+.flow .step .s {
+  font-size: calc(21px * var(--fit));
+  line-height: 1.3;
+  color: var(--grey);
+}
+.flow .arw {
+  align-self: center;
+  flex: 0 0 auto;
+  color: var(--border-dim);
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* four or more steps stack — four columns in a 3:4 frame is unreadable */
+.flow--v {
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-height: 0;
+  justify-content: space-evenly;
+}
+.flow--v .step {
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 24px;
+  padding: 24px 30px 26px;
+}
+.flow--v .step .k { flex: 0 0 auto; min-width: 58px; }
+.flow--v .step .t { font-size: calc(32px * var(--fit)); }
+.flow--v .step .s { font-size: calc(24px * var(--fit)); margin-left: auto; text-align: right; color: var(--grey); }
+.flow--v .arw { transform: rotate(90deg); font-size: 24px; margin: -4px 0; }
+
+/* ---------- big number (visual hook) ---------- */
+
+.big { margin-top: 38px; }
+.big b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: calc(230px * var(--fit));
+  line-height: 0.84;
+  color: var(--green);
+  letter-spacing: -0.01em;
+}
+.big .l {
+  font-size: calc(36px * var(--fit));
+  font-weight: 700;
+  line-height: 1.28;
+  color: var(--white);
+  margin-top: 20px;
+  max-width: 840px;
+}
+.big .s {
+  font-size: calc(29px * var(--fit));
+  line-height: 1.4;
+  color: var(--grey);
+  margin-top: 12px;
+  max-width: 840px;
+}
+
+/* ---------- figure (image inside a content slide) ---------- */
+
+.figure {
+  margin-top: 36px;
+  border: 1px solid var(--white-06);
+  border-radius: var(--radius);
+  background: var(--card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  min-height: 0;
+}
+.figure .shot {
+  flex: 0 1 auto;
+  aspect-ratio: var(--ratio, 4 / 3);
+  background-color: var(--card-soft);
+  background-position: center;
+  background-size: contain;      /* diagrams must not be cropped */
+  background-repeat: no-repeat;
+}
+.figure--cover .shot { background-size: cover; }
+.figure figcaption {
+  flex: 0 0 auto;
+  padding: 20px 26px 22px;
+  font-size: calc(25px * var(--fit));
+  line-height: 1.35;
+  color: var(--grey);
+  border-top: 1px solid var(--white-06);
+}
+.figure figcaption b { color: var(--green); font-weight: 700; }
 
 /* ---------- pull line ---------- */
 
