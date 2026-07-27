@@ -48,7 +48,7 @@ html, body {
 }
 /* no artwork yet: keep the composition, lose the mud */
 .slide--noart .scrim {
-  background: radial-gradient(120% 80% at 50% 6%, rgba(57,255,20,0.08) 0%, rgba(0,0,0,0) 62%);
+  background: radial-gradient(120% 80% at 50% 6%, rgba(163,240,175,0.08) 0%, rgba(0,0,0,0) 62%);
 }
 
 /* ---------- body ---------- */

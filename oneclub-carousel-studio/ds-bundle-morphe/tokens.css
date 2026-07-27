@@ -9,7 +9,7 @@
   /* Core palette — locked */
   --black:      #000000; /* background — pure black, no gradients */
   --card:       #111111; /* card fill */
-  --green:      #39FF14; /* primary — headlines, CTAs, active elements, borders */
+  --green:      #a3f0af; /* primary — headlines, CTAs, active elements, borders */
   --green-soft: #4ADE80; /* soft accent */
   --yellow:     #FFD700; /* CTA / comment-trigger callout */
   --white:      #FFFFFF; /* body text */
@@ -18,8 +18,8 @@
 
   /* Derived — allowed, because they are the locked colours at alpha */
   --card-soft:  #0e0e0e;
-  --green-10:   rgba(57, 255, 20, 0.10);
-  --green-24:   rgba(57, 255, 20, 0.24);
+  --green-10:   rgba(163, 240, 175, 0.10);
+  --green-24:   rgba(163, 240, 175, 0.24);
   --yellow-12:  rgba(255, 215, 0, 0.12);
   --white-06:   rgba(255, 255, 255, 0.06);
   --white-10:   rgba(255, 255, 255, 0.10);

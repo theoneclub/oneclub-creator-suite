@@ -30,7 +30,7 @@ site. If the site diverges, `tokens.css` is the file to edit.
 |---|---|---|
 | `--black` | `#000000` | Background |
 | `--card` | `#111111` | Row cards, stat panels |
-| `--green` | `#39FF14` | Primary: kickers, headline accents, row accents, footer handle |
+| `--green` | `#a3f0af` | Primary: kickers, headline accents, row accents, footer handle |
 | `--green-soft` | `#4ADE80` | Third accent in the row cycle |
 | `--yellow` | `#FFD700` | Highlight boxes, action pills, second accent in the cycle |
 | `--white` | `#FFFFFF` | Headlines, pull lines, progress fill |
