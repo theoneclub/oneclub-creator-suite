@@ -5,13 +5,13 @@
   "trigger": "EBOOK",
   "handle": "@theoneclub",
   "leadMagnet": "The Faceless AI Affiliate ebook",
-  "notes": "Value-first deck — teaches the whole faceless affiliate model with no pitch. No membership, no Founding 500, no Freedom Fund. The only ask is the comment. Hook + CTA art: drop the Higgsfield renders in as assets/faceless-affiliate-hook.png and assets/faceless-affiliate-cta.png and re-render; both slides compose on black until then.",
+  "notes": "Value-first deck — teaches the whole faceless affiliate model with no pitch. No membership, no Founding 500, no Freedom Fund. The only ask is the comment. Hook + CTA art is the generated matrix-grid backdrop; swap either image for a Higgsfield photo of Morphe when one is available and re-render — nothing else changes.",
   "slides": [
     {
       "type": "hook",
       "kicker": "Faceless AI affiliate marketing",
       "headline": "No face. No following.\nStill ((gets paid)).",
-      "image": "../../../assets/faceless-affiliate-hook.png",
+      "image": "../../../assets/matrix-grid-hook.svg",
       "copy": [
         "No product of your own, either. The entire model — nine slides, nothing held back for the DM."
       ],
@@ -25,8 +25,13 @@
       "kicker": "Where it goes wrong",
       "headline": "Most people quit\nat step [[two]].",
       "copy": [
-        "They pick a one-time offer, publish three videos, watch nothing move, and decide the model is broken. The model isn't broken. **The order is.** Do these four things in sequence and the maths starts working for you instead of against you."
-      ]
+        "They pick a one-time offer, publish three videos, watch nothing move, and decide the model is broken. The model isn't broken. **The order is.**"
+      ],
+      "figure": {
+        "image": "../../../assets/quit-curve.svg",
+        "ratio": "900 / 440",
+        "caption": "Results are flat for weeks, then compound. {{The yellow line}} is where most people stop — three weeks in, right before the curve turns."
+      }
     },
     {
       "type": "value",
@@ -142,7 +147,7 @@
       "kicker": "One word",
       "trigger": "EBOOK",
       "headline": "Want the whole thing\nwritten down?",
-      "image": "../../../assets/faceless-affiliate-cta.png",
+      "image": "../../../assets/matrix-grid-cta.svg",
       "pill": {
         "before": "Comment",
         "word": "EBOOK",

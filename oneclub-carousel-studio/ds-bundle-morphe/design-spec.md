@@ -72,6 +72,10 @@ from three brand colours and nothing else.
   slides only, generated in Higgsfield, composited under a top-and-bottom scrim
   with the type centred over it. He plays the role a creator's face plays in a
   talking-head video: the constant.
+- **The grid** — when no photograph exists, hook and CTA slides use the
+  generated matrix backdrops in `assets/` (perspective grid, lit horizon, code
+  rain). Vector, committed, offline, free. It is the fallback that still looks
+  deliberate — swap in a photo whenever there is one.
 
 ## Blocks
 
