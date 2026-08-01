@@ -13,7 +13,7 @@
       "headline": "Your first 30 posts\naren't content —\nthey're ((data)).",
       "image": "../../../assets/grid-particles.svg",
       "copy": [
-        "(you're not failing, you're still collecting)"
+        "(you're not failing. you're testing.)"
       ],
       "badges": [
         "30",
@@ -37,14 +37,14 @@
     {
       "type": "stakes",
       "kicker": "Where everyone stops",
-      "headline": "Three weeks in,\nright before the [[turn]].",
+      "headline": "Most people stop\nthree weeks [[in]].",
       "copy": [
-        "Results stay flat while the back catalogue builds, then compound. Quitting at week three isn't a verdict on the model — it's quitting during the flat part, which is the only part everyone sees."
+        "Nothing moves for weeks. Then it starts to build. Most people quit in the quiet part."
       ],
       "figure": {
         "image": "../../../assets/quit-curve.svg",
         "ratio": "900 / 440",
-        "caption": "{{The yellow line}} is where most people stop. The curve turns after it, not before."
+        "caption": "Flat for weeks, then it climbs. {{The yellow line}} is where most people stop."
       }
     },
     {
@@ -54,42 +54,42 @@
       "flow": [
         {
           "k": "01",
-          "t": "Batch ten posts",
-          "s": "One sitting, one format"
+          "t": "Make ten posts",
+          "s": "One sitting"
         },
         {
           "k": "02",
-          "t": "Publish daily",
-          "s": "No editing the plan mid-week"
+          "t": "Post every day",
+          "s": "Don't change the plan"
         },
         {
           "k": "03",
-          "t": "Read the data",
-          "s": "Saves and comments, not likes"
+          "t": "Check saves and comments",
+          "s": "Not likes"
         },
         {
           "k": "04",
-          "t": "Repeat the winner",
-          "s": "Retire everything else"
+          "t": "Do more of what worked",
+          "s": "Drop the rest"
         }
       ]
     },
     {
       "type": "receipts",
-      "kicker": "What to measure",
-      "headline": "Likes are the least\nuseful number you have.",
+      "kicker": "What to look at",
+      "headline": "Likes are the least\nuseful number.",
       "rows": [
         {
           "t": "Saves",
-          "s": "Someone intends to come back. That's the strongest signal a post can give you."
+          "s": "They plan to come back. Strongest signal there is."
         },
         {
           "t": "Comments",
-          "s": "The trigger word fires here. It's also what the algorithm rewards hardest."
+          "s": "Your trigger word fires here. The app rewards it too."
         },
         {
           "t": "Sends",
-          "s": "One person vouching to another. Rarer than a like and worth more."
+          "s": "One person told another. Rare, and worth the most."
         }
       ]
     },
@@ -105,11 +105,11 @@
         "text": "↓"
       },
       "copy": [
-        "and I'll send you the {{Faceless AI Affiliate ebook}} — the batching loop and what to read each week. 🔒"
+        "and I'll send you the {{Faceless AI Affiliate ebook}} — every step, written out. 🔒"
       ]
     }
   ],
-  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nYour first 30 posts are not a performance. They're research.\n\nResults stay flat while the back catalogue builds, then they compound. Almost everyone quits at week three — during the flat part, right before the curve turns. That's not a verdict on the model, it's a verdict on the timing of their patience.\n\nThe loop:\n\n1. Batch ten posts in one sitting, one format.\n2. Publish daily. Don't rewrite the plan mid-week.\n3. Read saves and comments — not likes.\n4. Repeat whatever moved. Retire the rest.\n\nSaves mean someone intends to come back. Comments are what the algorithm rewards hardest. Sends mean one person vouched for you to another. Likes tell you almost nothing.\n\nComment EBOOK for the full 30-post plan.",
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nYour first 30 posts aren't content. They're data.\n\nNothing moves for weeks. Then it starts to build. Most people quit in the quiet part, right before it turns.\n\nThe loop:\n\n1. Make ten posts in one sitting.\n2. Post every day. Don't change the plan halfway.\n3. Check saves and comments. Not likes.\n4. Do more of what worked. Drop the rest.\n\nSaves mean they plan to come back. Comments are what the app rewards most. Sends mean one person told another. Likes tell you almost nothing.\n\nComment EBOOK for the full 30-post plan.",
   "hashtags": [
     "#affiliatemarketing",
     "#facelessmarketing",

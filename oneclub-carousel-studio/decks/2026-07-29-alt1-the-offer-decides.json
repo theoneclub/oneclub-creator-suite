@@ -13,7 +13,7 @@
       "headline": "Most pick their offer\nin ((four minutes)).",
       "image": "../../../assets/matrix-grid-hook.svg",
       "copy": [
-        "(then blame the algorithm for a year)"
+        "(then wonder why nothing works)"
       ],
       "badges": [
         "1",
@@ -37,18 +37,18 @@
     {
       "type": "stakes",
       "kicker": "Why it matters most",
-      "headline": "You cannot out-post\na [[bad offer]].",
+      "headline": "You can't out-post\na [[bad offer]].",
       "copy": [
-        "Two people publish the same thirty videos. The only difference is what they linked to."
+        "Two people post the same 30 videos. One picked an offer that pays every month. The other picked one that pays once. Same work. Very different year."
       ],
       "versus": {
         "no": {
-          "t": "One-time,\n7-day cookie",
-          "s": "Same thirty videos. Back to zero every month."
+          "t": "Pays once",
+          "s": "Next month you start from zero again."
         },
         "yes": {
-          "t": "Recurring,\n30-day cookie",
-          "s": "Same thirty videos. Still paying you next year."
+          "t": "Pays monthly",
+          "s": "Last month's work still pays you this month."
         }
       }
     },
@@ -56,38 +56,38 @@
       "type": "value",
       "kicker": "The three questions",
       "numbered": true,
-      "headline": "Judge every offer\non three things.",
+      "headline": "Ask three questions.",
       "rows": [
         {
-          "t": "Does it pay recurring?",
-          "s": "One-time resets you to zero every month. Recurring keeps paying while you sleep on it."
+          "t": "Does it pay every month?",
+          "s": "Pay-once offers reset you to zero. Monthly ones keep going."
         },
         {
-          "t": "Do you actually use it?",
-          "s": "You can't make faceless content about a tool you've never opened. The demo is the content."
+          "t": "Do you use it yourself?",
+          "s": "You can't show a tool you've never opened."
         },
         {
           "t": "How long is the cookie?",
-          "s": "Thirty days minimum. Under seven and you're doing the work for someone else's brand."
+          "s": "30 days or more. Under 7 days, you're working for free."
         }
       ]
     },
     {
       "type": "receipts",
-      "kicker": "What this looks like",
-      "headline": "An afternoon of research\nbeats a year of posting.",
+      "kicker": "How to do it today",
+      "headline": "One afternoon beats\na year of guessing.",
       "rows": [
         {
-          "t": "Shortlist three",
-          "s": "Tools you already pay for. Nothing you'd have to fake."
+          "t": "Pick three tools",
+          "s": "Ones you already pay for."
         },
         {
           "t": "Read the terms",
-          "s": "Commission rate, payout schedule, attribution window. Ten minutes each."
+          "s": "How much, how often, how long. Ten minutes each."
         },
         {
-          "t": "Commit to one",
-          "s": "For ninety days. You can't read a signal you keep interrupting."
+          "t": "Choose one",
+          "s": "Then stick with it for 90 days."
         }
       ]
     },
@@ -103,11 +103,11 @@
         "text": "↓"
       },
       "copy": [
-        "and I'll send you the {{Faceless AI Affiliate ebook}} — the criteria, the terms to read, the traps. 🔒"
+        "and I'll send you the {{Faceless AI Affiliate ebook}} — what to look for, and what to avoid. 🔒"
       ]
     }
   ],
-  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nMost people pick their affiliate offer in about four minutes and then spend a year wondering why the content isn't working.\n\nThree questions decide it:\n\n1. Does it pay recurring? A one-time payout puts you back at zero every month. Recurring pays you for work you already did.\n\n2. Do you actually use it? You can't make faceless content about a tool you've never opened — the demo IS the content.\n\n3. How long is the attribution window? Thirty days minimum. Under seven days and you're doing the work for someone else's brand.\n\nShortlist three, read the terms, commit to one for ninety days.\n\nComment EBOOK for the expanded checklist.",
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nMost people pick an offer in four minutes. Then they blame the algorithm for a year.\n\nAsk three questions first:\n\n1. Does it pay every month? Pay-once offers put you back at zero. Monthly ones keep paying.\n\n2. Do you use it yourself? You can't show a tool you've never opened.\n\n3. How long is the cookie? 30 days or more. Under 7 and you're working for free.\n\nPick three tools you already pay for. Read the terms. Choose one. Stick with it for 90 days.\n\nComment EBOOK for the full checklist.",
   "hashtags": [
     "#affiliatemarketing",
     "#facelessmarketing",

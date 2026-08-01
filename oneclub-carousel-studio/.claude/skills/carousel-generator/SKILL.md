@@ -75,6 +75,19 @@ swipe-through to slide 2 is 60–75%, and a strong educational carousel saves at
 finish later. Receipts means "the most actionable thing in the deck", not brand
 proof.
 
+## Write it plainly
+
+A slide gets about two seconds. Anything the reader has to re-read is lost.
+
+- **Nothing past 20 words in a sentence.** QA warns; break it into two.
+- **Everyday words.** "Pays every month", not "recurring commission structure".
+  "Cookie" needs the plain-English gloss beside it, every time.
+- **One idea per slide.** If the headline and the body are making different
+  points, that's two slides.
+- **Concrete over abstract.** "Post a video, nothing moves, you stop" beats
+  "early-stage attrition". Name the thing the reader actually did.
+- **Read it out loud.** If you run out of breath, it's too long for a slide.
+
 ## Process — copy BEFORE design, always
 
 1. **Write the copy first.** Slide by slide, in chat, as plain text. Show it to

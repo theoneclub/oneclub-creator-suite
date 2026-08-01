@@ -13,7 +13,7 @@
       "headline": "Nobody needs your face.\nThey need the ((demo)).",
       "image": "../../../assets/grid-columns.svg",
       "copy": [
-        "(three formats, none of them on camera)"
+        "(three formats. no camera.)"
       ],
       "badges": [
         "0",
@@ -37,18 +37,18 @@
     {
       "type": "stakes",
       "kicker": "The real blocker",
-      "headline": "\"I'd start, but I'm not\ngoing [[on camera]].\"",
+      "headline": "\"I'm not going\n[[on camera]].\"",
       "copy": [
-        "That sentence has cost more people more months than any algorithm change. **The camera was never the mechanism.**"
+        "That one line has cost people months. The camera was never the point. Pick a format that doesn't need you in it."
       ],
       "versus": {
         "no": {
-          "t": "Waiting to feel\nready on camera",
-          "s": "Costs months. Changes nothing about the offer."
+          "t": "Waiting to feel ready",
+          "s": "Costs months. Nothing changes."
         },
         "yes": {
-          "t": "Recording the\nscreen instead",
-          "s": "Costs an afternoon. The demo is the content."
+          "t": "Recording your screen",
+          "s": "Costs an afternoon. The demo is the post."
         }
       }
     },
@@ -59,25 +59,25 @@
       "figure": {
         "image": "../../../assets/faceless-formats.svg",
         "ratio": "900 / 420",
-        "caption": "**Screen recording** — show the tool doing the thing. · **Text on b-roll** — one idea, big captions, stock footage. · **AI voiceover listicle** — ranked, fast, scriptable."
+        "caption": "**Screen recording** — show the tool working. · **Text on video** — one idea, big words, stock clips. · **AI voiceover list** — quick, ranked, easy to script."
       }
     },
     {
       "type": "receipts",
       "kicker": "How to actually run it",
-      "headline": "Pick one. Repeat it\nuntil it's boring.",
+      "headline": "Pick one. Repeat it\nuntil it feels boring.",
       "rows": [
         {
-          "t": "Batch on one day",
-          "s": "Record or assemble ten at a time. Context switching is the real cost, not the filming."
+          "t": "Make ten at once",
+          "s": "One sitting, one format. Switching tasks is what eats your time."
         },
         {
-          "t": "Keep the frame identical",
-          "s": "Same layout, same caption style. Recognisable beats novel."
+          "t": "Keep it looking the same",
+          "s": "Same layout every post. People should know it's you."
         },
         {
           "t": "Change one thing at a time",
-          "s": "Hook, or format, or offer. Never all three — you learn nothing from that."
+          "s": "The hook, or the format, or the offer. Never all three."
         }
       ]
     },
@@ -93,11 +93,11 @@
         "text": "↓"
       },
       "copy": [
-        "and I'll send you the {{Faceless AI Affiliate ebook}} — scripts, layouts, and the batching routine. 🔒"
+        "and I'll send you the {{Faceless AI Affiliate ebook}} — every step, written out. 🔒"
       ]
     }
   ],
-  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\n\"I'd start, but I'm not going on camera\" has cost more people more months than any algorithm change.\n\nThe camera was never the mechanism. Three faceless formats do the entire job:\n\n1. Screen recording — show the tool doing the thing. The demo is the content.\n\n2. Text on b-roll — one idea, big captions, stock footage underneath.\n\n3. AI voiceover listicle — ranked, fast, and completely scriptable.\n\nPick ONE. Batch ten at a time on a single day. Keep the frame identical so people recognise you at a glance. Change one variable at a time or you learn nothing from the result.\n\nComment EBOOK for the scripts and the batching routine.",
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\n\"I'm not going on camera\" has cost people months. The camera was never the point.\n\nThree formats do the whole job:\n\n1. Screen recording. Show the tool working. The demo is the post.\n\n2. Text on video. One idea, big words, stock clips underneath.\n\n3. AI voiceover list. Quick, ranked, easy to script.\n\nPick one. Make ten at a time in one sitting. Keep every post looking the same so people know it's you. Change one thing at a time, or you won't know what worked.\n\nComment EBOOK for the scripts.",
   "hashtags": [
     "#affiliatemarketing",
     "#facelessmarketing",

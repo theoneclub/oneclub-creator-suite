@@ -12,20 +12,25 @@
       "kicker": "Faceless AI affiliate marketing",
       "headline": "No face. No following.\nStill ((gets paid)).",
       "image": "../../../assets/matrix-grid-hook.svg",
-      "copy": ["No product of your own, either. The entire model — nine slides, nothing held back for the DM."],
-      "pill": { "text": "Swipe — the whole system →", "ghost": true }
+      "copy": [
+        "(no product of your own either — the whole model, nothing held back)"
+      ],
+      "pill": {
+        "text": "Swipe — the whole system →",
+        "ghost": true
+      }
     },
     {
       "type": "stakes",
       "kicker": "Where it goes wrong",
       "headline": "Most people quit\nat step [[two]].",
       "copy": [
-        "They pick a one-time offer, publish three videos, watch nothing move, and decide the model is broken. The model isn't broken. **The order is.**"
+        "They pick a pay-once offer. They post three videos. Nothing moves, so they stop. The model isn't broken. **The order is.**"
       ],
       "figure": {
         "image": "../../../assets/quit-curve.svg",
         "ratio": "900 / 440",
-        "caption": "Results are flat for weeks, then compound. {{The yellow line}} is where most people stop — three weeks in, right before the curve turns."
+        "caption": "Flat for weeks, then it climbs. {{The yellow line}} is where most people stop."
       }
     },
     {
@@ -33,22 +38,47 @@
       "kicker": "The model, end to end",
       "headline": "Four steps. That's it.",
       "flow": [
-        { "k": "01", "t": "Pick a recurring offer", "s": "Paid monthly, not once" },
-        { "k": "02", "t": "Build one faceless angle", "s": "A repeatable format" },
-        { "k": "03", "t": "Publish daily", "s": "Volume finds the winner" },
-        { "k": "04", "t": "Get paid monthly", "s": "For as long as they stay" }
+        {
+          "k": "01",
+          "t": "Pick a recurring offer",
+          "s": "Paid monthly, not once"
+        },
+        {
+          "k": "02",
+          "t": "Build one faceless angle",
+          "s": "A repeatable format"
+        },
+        {
+          "k": "03",
+          "t": "Publish daily",
+          "s": "Volume finds the winner"
+        },
+        {
+          "k": "04",
+          "t": "Get paid monthly",
+          "s": "For as long as they stay"
+        }
       ],
-      "pull": "Everything after this slide is detail on one of those four."
+      "pull": "Everything after this is detail on one of those four."
     },
     {
       "type": "value",
       "kicker": "Step one · the offer",
-      "headline": "Judge an offer on three things.",
+      "headline": "Ask three questions.",
       "numbered": true,
       "rows": [
-        { "t": "Does it pay recurring?", "s": "A one-time payout resets you to zero every month. Recurring keeps paying while you sleep on it." },
-        { "t": "Do you actually use it?", "s": "You can't make faceless content about a tool you've never opened. The demo is the content." },
-        { "t": "How long is the cookie?", "s": "Thirty days minimum. Under seven and you're doing the work for someone else's brand." }
+        {
+          "t": "Does it pay every month?",
+          "s": "Pay-once offers reset you to zero. Monthly ones keep going."
+        },
+        {
+          "t": "Do you use it yourself?",
+          "s": "You can't show a tool you've never opened."
+        },
+        {
+          "t": "How long is the cookie?",
+          "s": "30 days or more. Under 7 days, you're working for free."
+        }
       ]
     },
     {
@@ -58,21 +88,30 @@
       "figure": {
         "image": "../../../assets/faceless-formats.svg",
         "ratio": "900 / 420",
-        "caption": "**Screen recording** — show the tool doing the thing. · **Text on b-roll** — one idea, big captions, stock footage. · **AI voiceover listicle** — ranked, fast, scriptable."
+        "caption": "**Screen recording** — show the tool working. · **Text on video** — one idea, big words, stock clips. · **AI voiceover list** — quick, ranked, easy to script."
       }
     },
     {
       "type": "value",
       "kicker": "Step three · the maths",
-      "headline": "[[Recurring]] pays you\nfor work you already did.",
+      "headline": "Who still pays you\na year later?",
       "stats": {
-        "caption": "Same four sign-ups · who is still paying you in month 12",
+        "caption": "Four sign-ups · still paying after 12 months",
         "items": [
-          { "label": "Recurring offer", "value": "4", "bar": 4 },
-          { "label": "One-time offer", "value": "0", "bar": 0.06, "muted": true }
+          {
+            "label": "Pays monthly",
+            "value": "4",
+            "bar": 4
+          },
+          {
+            "label": "Pays once",
+            "value": "0",
+            "bar": 0.06,
+            "muted": true
+          }
         ]
       },
-      "pull": "One-time pays for the post. Recurring pays for the back catalogue."
+      "pull": "Pay-once covers the post. Monthly covers everything you already made."
     },
     {
       "type": "value",
@@ -80,8 +119,8 @@
       "headline": "The rule nobody follows.",
       "big": {
         "value": "1",
-        "label": "One offer. One angle. One format. Until it works.",
-        "sub": "Adding a second offer before the first one converts isn't diversifying. It's quitting slowly, with extra steps."
+        "label": "One offer. One format. Until it works.",
+        "sub": "You can't learn anything from three tests running at once."
       }
     },
     {
@@ -89,9 +128,18 @@
       "kicker": "The honest timeline",
       "headline": "This is a 90-day system,\nnot a 7-day one.",
       "rows": [
-        { "t": "Weeks 1–2 · Setup", "s": "Pick the offer, build the angle, batch the first ten posts." },
-        { "t": "Weeks 3–8 · Volume", "s": "Publish daily. Most posts do nothing. That is the process working, not failing." },
-        { "t": "Week 9+ · Compounding", "s": "Repeat what moved, retire what didn't. The back catalogue keeps earning." }
+        {
+          "t": "Weeks 1–2 · Set up",
+          "s": "Pick the offer. Pick the format. Make your first ten posts."
+        },
+        {
+          "t": "Weeks 3–8 · Volume",
+          "s": "Post every day. Most posts do nothing. That's normal."
+        },
+        {
+          "t": "Week 9+ · It builds",
+          "s": "Do more of what worked. Old posts keep selling."
+        }
       ]
     },
     {
@@ -100,14 +148,29 @@
       "trigger": "EBOOK",
       "headline": "Want the whole thing\nwritten down?",
       "image": "../../../assets/matrix-grid-cta.svg",
-      "pill": { "before": "Comment", "word": "EBOOK", "text": "↓" },
-      "copy": ["and I'll send you the {{Faceless AI Affiliate ebook}} — every step above, expanded, in order. 🔒"]
+      "pill": {
+        "before": "Comment",
+        "word": "EBOOK",
+        "text": "↓"
+      },
+      "copy": [
+        "and I'll send you the {{Faceless AI Affiliate ebook}} — every step above, written out. 🔒"
+      ]
     }
   ],
-  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nThe whole model is on the slides above — nothing held back for the DM:\n\n1. Pick a recurring offer, not a one-time payout. Judge it on three things: does it pay monthly, do you actually use it, and is the attribution window at least 30 days.\n\n2. Build ONE faceless angle. Screen recording, text on b-roll, or AI voiceover listicle. Pick one and repeat it until it stops being hard.\n\n3. Publish daily. Most posts do nothing — that's the process working, not failing. Volume is how you find the winner you couldn't have predicted.\n\n4. Then repeat what moved and retire what didn't. One-time payouts pay for the post. Recurring pays for the back catalogue you already built.\n\nThe part most people get wrong: adding a second offer before the first one converts. That isn't diversifying, it's quitting slowly.\n\nComment EBOOK and the expanded version is in your DMs.",
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nThe whole model is on the slides. Nothing held back:\n\n1. Pick an offer that pays every month, not once. Ask three things: does it pay monthly, do you use it yourself, and is the cookie at least 30 days?\n\n2. Pick ONE format. Screen recording, text on video, or AI voiceover list. Repeat it until it feels boring.\n\n3. Post every day. Most posts do nothing — that's normal, not failure. Volume is how you find the winner.\n\n4. Do more of what worked. Drop the rest. Pay-once covers the post. Monthly covers everything you already made.\n\nThe part people get wrong: adding a second offer before the first one works. That's not diversifying. That's quitting slowly.\n\nComment EBOOK and it's in your DMs.",
   "hashtags": [
-    "#affiliatemarketing", "#facelessmarketing", "#aiincome", "#recurringincome",
-    "#affiliatemarketingtips", "#aitools", "#contentautomation", "#facelessyoutube",
-    "#onlinebusinesstips", "#sidehustleideas", "#digitalmarketing", "#theoneclub"
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#recurringincome",
+    "#affiliatemarketingtips",
+    "#aitools",
+    "#contentautomation",
+    "#facelessyoutube",
+    "#onlinebusinesstips",
+    "#sidehustleideas",
+    "#digitalmarketing",
+    "#theoneclub"
   ]
 }

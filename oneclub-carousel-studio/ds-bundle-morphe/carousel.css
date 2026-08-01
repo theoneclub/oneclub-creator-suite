@@ -128,7 +128,7 @@ h2.stacked .ln { display: block; white-space: nowrap; }
 
 .copy {
   font-size: calc(var(--fs-body) * var(--fit));
-  line-height: var(--lh-body);
+  line-height: 1.5;
   color: var(--grey);
   margin-top: 26px;
   max-width: 880px;
@@ -191,7 +191,7 @@ h2.stacked .ln { display: block; white-space: nowrap; }
   line-height: 1.2;
 }
 .row .s {
-  font-size: calc(27px * var(--fit));
+  font-size: calc(29px * var(--fit));
   font-weight: 400;
   color: var(--grey);
   line-height: 1.35;

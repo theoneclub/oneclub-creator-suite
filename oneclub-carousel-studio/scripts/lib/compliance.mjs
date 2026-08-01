@@ -56,6 +56,15 @@ const RULES = [
     message: (hits) => `Off-voice word(s): "${hits.join('", "')}". Brand memory lists these as words to avoid.`,
   },
   {
+    id: 'long-sentence',
+    severity: 'warn',
+    // A slide is read in about two seconds. Long sentences lose people.
+    test: (t) => (t.split(/(?<=[.!?])\s+|\n/)
+      .map((x) => x.trim())
+      .filter((x) => x.split(/\s+/).filter(Boolean).length > 20)),
+    message: (hits) => `Sentence runs ${hits[0].split(/\s+/).length} words: "${hits[0].slice(0, 60)}…". Break it up — nothing on a slide should run past 20.`,
+  },
+  {
     id: 'passive-income',
     severity: 'warn',
     test: (t) => (t.match(/\bpassive income\b/gi) || []),

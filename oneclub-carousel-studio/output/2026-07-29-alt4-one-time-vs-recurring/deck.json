@@ -13,7 +13,7 @@
       "headline": "One-time pays once.\n((Recurring)) keeps paying.",
       "image": "../../../assets/grid-radar.svg",
       "copy": [
-        "(same referral, same work, different year)"
+        "(same referral. same work. very different year.)"
       ],
       "badges": [
         "12",
@@ -37,59 +37,59 @@
     {
       "type": "stakes",
       "kicker": "The hidden cost",
-      "headline": "A one-time payout\nresets you [[monthly]].",
+      "headline": "Pay-once offers reset\nyou [[every month]].",
       "copy": [
-        "Every month starts at zero and you have to sell the same number of people again to stand still. That's not a business model, that's a treadmill with a payout button."
+        "You start at zero again. You have to sell the same number of people just to stay level."
       ],
       "versus": {
         "no": {
-          "t": "One-time",
-          "s": "Every month restarts at zero. You resell to stand still."
+          "t": "Pays once",
+          "s": "Back to zero next month. Sell it all again."
         },
         "yes": {
-          "t": "Recurring",
-          "s": "Month one keeps paying in month twelve. You build on top."
+          "t": "Pays monthly",
+          "s": "Month one still pays you in month twelve."
         }
       }
     },
     {
       "type": "value",
       "kicker": "Same four sign-ups",
-      "headline": "Who is still paying you\nin month twelve?",
+      "headline": "Who still pays you\na year later?",
       "stats": {
-        "caption": "Four referrals · still active at month 12",
+        "caption": "Four sign-ups · still paying after 12 months",
         "items": [
           {
-            "label": "Recurring",
+            "label": "Pays monthly",
             "value": "4",
             "bar": 4
           },
           {
-            "label": "One-time",
+            "label": "Pays once",
             "value": "0",
             "bar": 0.06,
             "muted": true
           }
         ]
       },
-      "pull": "One-time paid for the post. Recurring pays for the back catalogue."
+      "pull": "Pay-once covers the post. Monthly covers everything you already made."
     },
     {
       "type": "receipts",
-      "kicker": "What compounds",
-      "headline": "The back catalogue\nnever clocks off.",
+      "kicker": "Why it adds up",
+      "headline": "Old posts keep working.",
       "rows": [
         {
-          "t": "Old posts keep referring",
-          "s": "A video from month two is still working in month nine. That's the whole advantage."
+          "t": "A post from month two still sells in month nine",
+          "s": "That's the whole advantage."
         },
         {
-          "t": "Churn is the real metric",
-          "s": "Recurring only compounds if people stay. Promote tools people keep using."
+          "t": "Watch who stays",
+          "s": "Monthly only adds up if people keep the tool."
         },
         {
           "t": "Four can cover your own",
-          "s": "A handful of recurring referrals can cover the tool you're promoting. That's the first milestone."
+          "s": "A few monthly referrals can cover the tool you promote."
         }
       ]
     },
@@ -105,11 +105,11 @@
         "text": "↓"
       },
       "copy": [
-        "and I'll send you the {{Faceless AI Affiliate ebook}} — how recurring stacks and what kills it. 🔒"
+        "and I'll send you the {{Faceless AI Affiliate ebook}} — every step, written out. 🔒"
       ]
     }
   ],
-  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nOne-time pays once. Recurring keeps paying. Same referral, same work, completely different year.\n\nA one-time payout resets you to zero every month — you have to sell the same number of people again just to stand still. That's a treadmill with a payout button.\n\nTake four referrals. At month twelve, on a recurring offer, all four can still be active. On a one-time offer, the count is zero — you got paid for the post, not for the back catalogue.\n\nWhich means the metric that actually matters is churn. Recurring only compounds if people stay, so promote tools people keep using. And the first real milestone isn't a big number — it's a handful of recurring referrals covering the tool you're promoting.\n\nComment EBOOK for the full breakdown.",
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nOne-time pays once. Monthly keeps paying. Same referral, same work, very different year.\n\nA pay-once offer resets you every month. You start at zero and sell the same number of people again just to stay level.\n\nTake four sign-ups. A year later, on a monthly offer, all four can still be paying. On a pay-once offer, that number is zero.\n\nSo the thing to watch is who stays. Monthly only adds up if people keep using the tool. Promote things people keep.\n\nAnd the first real milestone is small: a few monthly referrals covering the tool you promote.\n\nComment EBOOK for the full breakdown.",
   "hashtags": [
     "#affiliatemarketing",
     "#facelessmarketing",
