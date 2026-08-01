@@ -105,6 +105,9 @@ opt-in + ebook → Founding 500, with the weekly numbers coming back into
 Inline markup: `[[green]]`, `{{yellow}}`, `((boxed))`, `**bold**`, `\n` for a
 line break in a headline.
 
+Set `"kind": "single"` for a one-off asset — a hook test, a story frame. The
+five-beat and caption rules stand down; every compliance rule still applies.
+
 ## Rules that are enforced, not suggested
 
 - No dollar figures as personal income results

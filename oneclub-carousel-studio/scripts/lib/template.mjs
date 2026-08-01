@@ -159,8 +159,10 @@ export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle
     </main>
     <footer class="foot">
       <span class="handle">${esc(handle)}</span>
-      <span class="bar"><i style="width:${progress}%"></i></span>
-      <span class="count">${String(index + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}</span>
+      ${total > 1
+        ? `<span class="bar"><i style="width:${progress}%"></i></span>
+      <span class="count">${String(index + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}</span>`
+        : '<span class="bar"></span>'}
     </footer>
   </div>
 <script>

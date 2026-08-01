@@ -1,0 +1,51 @@
+{
+  "slug": "hook-30-posts",
+  "date": "2026-08-01",
+  "kind": "single",
+  "angle": "Faceless AI Affiliate Marketing — publishing rhythm",
+  "trigger": "EBOOK",
+  "handle": "@theoneclub",
+  "notes": "Standalone visual hook. The picture carries the message before a word is read: 30 posts, 28 dim, 2 glowing. Test it as slide 1 against the alt3 hook before committing a deck to it.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "30 posts.\n28 flopped.\n((2 did the work.))",
+      "image": "../../../assets/thirty-posts-grid.svg",
+      "copy": [
+        "(that's not failure. that's how it works.)"
+      ],
+      "badges": [
+        "30",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "28",
+          "label": "Went nowhere"
+        },
+        {
+          "value": "2",
+          "label": "Carried the month"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — how to find them →",
+        "ghost": true
+      }
+    }
+  ],
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#contentautomation",
+    "#sidehustleideas",
+    "#onlinebusinesstips",
+    "#aitools",
+    "#recurringincome",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}

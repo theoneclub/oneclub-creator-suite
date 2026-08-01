@@ -44,6 +44,16 @@ lesson gets saved, and saves are what put it in front of the next person.
    Faceless AI Affiliate ebook; otherwise from the live rotation: FREEDOM /
    ESCAPE / SYSTEM / FOUNDING / FREE / IN / BLUEPRINT.
 
+## Testing a hook on its own
+
+A hook is worth building before the deck exists — it's 80% of the outcome, so
+it deserves its own round. Set `"kind": "single"` on a deck with one slide and
+the beat/caption/trigger structure rules stand down. Every text and compliance
+rule still applies, and the footer drops its counter and progress bar because a
+single asset has no swipe position.
+
+Use it to put two hooks side by side before committing five slides to either.
+
 ## Hook patterns that are working
 
 From real 20x–400x outliers in this niche (see `research/viral-formats-2026.md`,

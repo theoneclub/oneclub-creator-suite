@@ -114,7 +114,12 @@ export function auditDeck(deck) {
   const findings = [];
   const push = (severity, where, rule, message) => findings.push({ severity, where, rule, message });
 
+  // A `single` deck is a one-off asset — a hook test, a story frame. The five
+  // beats and the caption rules don't apply, but every text rule still does.
+  const single = deck.kind === 'single';
+
   // ---- the 5 beats, non-negotiable ----
+  if (!single) {
   const types = deck.slides.map((s) => s.type);
   if (types[0] !== 'hook') push('error', 'deck', 'beat-order', 'Slide 1 must be the HOOK.');
   if (types[1] !== 'stakes') push('error', 'deck', 'beat-order', 'Slide 2 must be the STAKES.');
@@ -127,8 +132,12 @@ export function auditDeck(deck) {
   if (deck.slides.length < 5 || deck.slides.length > 10) {
     push('warn', 'deck', 'length', `${deck.slides.length} slides. 5 is the floor (one beat each); 8-10 is the sweet spot for saves.`);
   }
+  }
+
+  const caption = deck.caption || '';
 
   // ---- CTA / trigger word ----
+  if (!single) {
   const trigger = (deck.trigger || '').toUpperCase();
   if (!TRIGGER_ROTATION.includes(trigger)) {
     push('error', 'deck', 'trigger', `Trigger "${deck.trigger}" is not in the live rotation (${TRIGGER_ROTATION.join(' / ')}).`);
@@ -145,7 +154,6 @@ export function auditDeck(deck) {
   }
 
   // ---- caption ----
-  const caption = deck.caption || '';
   if (!caption) {
     push('error', 'caption', 'caption', 'Caption is empty — the comment trigger lives in the caption, not just the slide.');
   } else {
@@ -160,6 +168,7 @@ export function auditDeck(deck) {
   if (tags.length < 8 || tags.length > 20) push('warn', 'hashtags', 'hashtags', `${tags.length} hashtags. 10-15 is the working range.`);
   const badTags = tags.filter((t) => !/^#[A-Za-z0-9_]+$/.test(t));
   if (badTags.length) push('error', 'hashtags', 'hashtags', `Malformed hashtag(s): ${badTags.join(', ')}`);
+  }
 
   // ---- per-slide text rules + copy length sanity ----
   deck.slides.forEach((slide, i) => {
