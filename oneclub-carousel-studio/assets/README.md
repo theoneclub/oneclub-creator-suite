@@ -26,6 +26,15 @@ pipeline and no credits spent:
 | `matrix-grid-cta.svg` | CTA slides | Same world, with a beam of light rising from the vanishing point |
 | `quit-curve.svg` | any `figure` block | Flat-then-compounding results curve with the quit point marked |
 | `faceless-formats.svg` | any `figure` block | The three faceless content formats as phone mocks |
+| `thirty-posts-grid.svg` | hook slides | Thirty post cards, twenty-eight dim, two lit |
+| `ninety-day-heatmap.svg` | hook slides | Ninety days as a heatmap — green only appears late |
+| `face-vs-faceless.svg` | hook slides | Hard split: dim figure on camera vs lit screen recording |
+| `comment-to-inbox.svg` | hook slides | The comment → DM → inbox chain |
+| `tab-graveyard.svg` | hook slides | Ten browser tabs, nine dim, one lit |
+
+Hook art needs a clear middle band: the headline block sits roughly y 380–1050,
+so put the subject above or below it, or keep it as uniform texture. Every one of
+these was rebuilt once for exactly that reason.
 
 These are the default backdrops. When a Higgsfield photo of Morphe is available,
 point the slide's `image` at the PNG instead and re-render — nothing else in the

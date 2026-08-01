@@ -1,0 +1,51 @@
+{
+  "slug": "hook-one-word",
+  "date": "2026-08-01",
+  "kind": "single",
+  "angle": "Faceless AI Affiliate Marketing",
+  "trigger": "EBOOK",
+  "handle": "@theoneclub",
+  "notes": "Visual hook. The comment-to-inbox chain drawn out. Teaches the mechanism the reader is standing inside while they read it.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "One word in the comments.\nThat's the whole ((setup)).",
+      "image": "../../../assets/comment-to-inbox.svg",
+      "copy": [
+        "(comment → dm → inbox. that's it.)"
+      ],
+      "badges": [
+        "1",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "1",
+          "label": "Word"
+        },
+        {
+          "value": "30s",
+          "label": "To the inbox"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — how to set it up →",
+        "ghost": true
+      }
+    }
+  ],
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#contentautomation",
+    "#sidehustleideas",
+    "#onlinebusinesstips",
+    "#aitools",
+    "#recurringincome",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}

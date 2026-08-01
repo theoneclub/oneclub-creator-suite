@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" width="1080" height="1440" role="img" aria-label="Split frame. Left: a dim figure on camera. Right: a lit screen recording.">
+  <defs>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="20"/></filter>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="46"/></filter>
+  </defs>
+  <rect width="1080" height="1440" fill="#000000"/>
+
+  <rect x="0" y="0" width="540" height="1440" fill="#0a0a0a"/>
+  <rect x="540" y="0" width="540" height="1440" fill="#050b07"/>
+  <ellipse cx="810" cy="1080" rx="360" ry="380" fill="#a3f0af" opacity="0.20" filter="url(#soft)"/>
+
+  <g opacity="0.85">
+    <circle cx="270" cy="890" r="96" fill="#242c36"/>
+    <path d="M 116 1230 C 128 1096 190 1030 270 1030 C 350 1030 412 1096 424 1230 Z" fill="#242c36"/>
+    <rect x="170" y="1288" width="200" height="13" rx="6.5" fill="#1f2937"/>
+    <rect x="204" y="1320" width="132" height="11" rx="5.5" fill="#1f2937"/>
+  </g>
+
+  <g>
+    <rect x="646" y="806" width="330" height="470" rx="22" fill="#0d1a12" stroke="#a3f0af" stroke-width="4"/>
+    <rect x="674" y="838" width="150" height="13" rx="6.5" fill="#a3f0af"/>
+    <rect x="674" y="864" width="278" height="10" rx="5" fill="#a3f0af" opacity="0.55"/>
+    <rect x="674" y="900" width="278" height="220" rx="12" fill="#a3f0af" opacity="0.24"/>
+    <path d="M 794 984 l 62 36 l -62 36 z" fill="#a3f0af"/>
+    <rect x="674" y="1150" width="278" height="13" rx="6.5" fill="#1f2937"/>
+    <rect x="674" y="1150" width="176" height="13" rx="6.5" fill="#a3f0af"/>
+    <rect x="674" y="1192" width="220" height="10" rx="5" fill="#a3f0af" opacity="0.5"/>
+    <rect x="674" y="1220" width="256" height="10" rx="5" fill="#a3f0af" opacity="0.3"/>
+  </g>
+
+  <line x1="540" y1="0" x2="540" y2="1440" stroke="#2a3b31" stroke-width="3"/>
+</svg>

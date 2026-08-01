@@ -1,0 +1,51 @@
+{
+  "slug": "hook-face-vs-faceless",
+  "date": "2026-08-01",
+  "kind": "single",
+  "angle": "Faceless AI Affiliate Marketing",
+  "trigger": "EBOOK",
+  "handle": "@theoneclub",
+  "notes": "Visual hook. Hard split: dim figure on the left, glowing screen recording on the right. The ❌/✅ device at full-frame scale.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "One of these needs\nyour ((face)).",
+      "image": "../../../assets/face-vs-faceless.svg",
+      "copy": [
+        "(the other one is a screen recording)"
+      ],
+      "badges": [
+        "0",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "0",
+          "label": "Cameras"
+        },
+        {
+          "value": "3",
+          "label": "Formats"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — all three formats →",
+        "ghost": true
+      }
+    }
+  ],
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#contentautomation",
+    "#sidehustleideas",
+    "#onlinebusinesstips",
+    "#aitools",
+    "#recurringincome",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "hook-90-days",
+  "date": "2026-08-01",
+  "kind": "single",
+  "angle": "Faceless AI Affiliate Marketing",
+  "trigger": "EBOOK",
+  "handle": "@theoneclub",
+  "notes": "Visual hook. Ninety days as a heatmap: nothing early, green spreading late. Sets the expectation that kills most beginners.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "Day 1 to day 90.\nGreen shows up ((last)).",
+      "image": "../../../assets/ninety-day-heatmap.svg",
+      "copy": [
+        "(this is what it really looks like)"
+      ],
+      "badges": [
+        "90",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "0",
+          "label": "Weeks 1–4"
+        },
+        {
+          "value": "90",
+          "label": "Days to judge it"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — the 90-day plan →",
+        "ghost": true
+      }
+    }
+  ],
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#contentautomation",
+    "#sidehustleideas",
+    "#onlinebusinesstips",
+    "#aitools",
+    "#recurringincome",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}

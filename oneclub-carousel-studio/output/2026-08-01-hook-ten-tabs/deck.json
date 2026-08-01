@@ -1,0 +1,51 @@
+{
+  "slug": "hook-ten-tabs",
+  "date": "2026-08-01",
+  "kind": "single",
+  "angle": "Faceless AI Affiliate Marketing",
+  "trigger": "EBOOK",
+  "handle": "@theoneclub",
+  "notes": "Visual hook. Ten browser tabs, nine dim, one lit. Pairs with the focus deck.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "Ten tabs open.\n((One)) is the business.",
+      "image": "../../../assets/tab-graveyard.svg",
+      "copy": [
+        "(the other nine are research you'll never use)"
+      ],
+      "badges": [
+        "1",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "1",
+          "label": "Offer"
+        },
+        {
+          "value": "90",
+          "label": "Days on it"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — the one rule →",
+        "ghost": true
+      }
+    }
+  ],
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#contentautomation",
+    "#sidehustleideas",
+    "#onlinebusinesstips",
+    "#aitools",
+    "#recurringincome",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}
