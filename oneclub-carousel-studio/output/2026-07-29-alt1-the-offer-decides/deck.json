@@ -1,0 +1,115 @@
+{
+  "slug": "alt1-the-offer-decides",
+  "date": "2026-07-29",
+  "angle": "Faceless AI Affiliate Marketing — offer selection",
+  "trigger": "EBOOK",
+  "handle": "@theoneclub",
+  "leadMagnet": "The Faceless AI Affiliate ebook",
+  "notes": "Alternative 1 of 5. Five beats, five slides. Angle: the offer you pick decides the outcome before you post anything.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "Your offer decides\nthe result ((before))\nyou post anything.",
+      "image": "../../../assets/matrix-grid-hook.svg",
+      "copy": [
+        "(and most people pick theirs in four minutes)"
+      ],
+      "badges": [
+        "1",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "30 days",
+          "label": "Minimum cookie"
+        },
+        {
+          "value": "1",
+          "label": "Offer at a time"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — how to judge one →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "kicker": "Why it matters most",
+      "headline": "You cannot out-post\na [[bad offer]].",
+      "copy": [
+        "Two people publish the same thirty videos. One picked a tool that pays monthly with a thirty-day window. The other picked a one-time payout with a seven-day cookie. **Same work. Different year.**"
+      ]
+    },
+    {
+      "type": "value",
+      "kicker": "The three questions",
+      "numbered": true,
+      "headline": "Judge every offer\non three things.",
+      "rows": [
+        {
+          "t": "Does it pay recurring?",
+          "s": "One-time resets you to zero every month. Recurring keeps paying while you sleep on it."
+        },
+        {
+          "t": "Do you actually use it?",
+          "s": "You can't make faceless content about a tool you've never opened. The demo is the content."
+        },
+        {
+          "t": "How long is the cookie?",
+          "s": "Thirty days minimum. Under seven and you're doing the work for someone else's brand."
+        }
+      ]
+    },
+    {
+      "type": "receipts",
+      "kicker": "What this looks like",
+      "headline": "An afternoon of research\nbeats a year of posting.",
+      "rows": [
+        {
+          "t": "Shortlist three",
+          "s": "Tools you already pay for. Nothing you'd have to fake."
+        },
+        {
+          "t": "Read the terms",
+          "s": "Commission rate, payout schedule, attribution window. Ten minutes each."
+        },
+        {
+          "t": "Commit to one",
+          "s": "For ninety days. You can't read a signal you keep interrupting."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "kicker": "One word",
+      "trigger": "EBOOK",
+      "headline": "Want the full\noffer checklist?",
+      "image": "../../../assets/matrix-grid-cta.svg",
+      "pill": {
+        "before": "Comment",
+        "word": "EBOOK",
+        "text": "↓"
+      },
+      "copy": [
+        "and I'll send you the {{Faceless AI Affiliate ebook}} — the criteria, the terms to read, the traps. 🔒"
+      ]
+    }
+  ],
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nMost people pick their affiliate offer in about four minutes and then spend a year wondering why the content isn't working.\n\nThree questions decide it:\n\n1. Does it pay recurring? A one-time payout puts you back at zero every month. Recurring pays you for work you already did.\n\n2. Do you actually use it? You can't make faceless content about a tool you've never opened — the demo IS the content.\n\n3. How long is the attribution window? Thirty days minimum. Under seven days and you're doing the work for someone else's brand.\n\nShortlist three, read the terms, commit to one for ninety days.\n\nComment EBOOK for the expanded checklist.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#recurringincome",
+    "#affiliatemarketingtips",
+    "#aitools",
+    "#contentautomation",
+    "#facelessyoutube",
+    "#onlinebusinesstips",
+    "#sidehustleideas",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}

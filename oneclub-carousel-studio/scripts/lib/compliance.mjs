@@ -81,6 +81,7 @@ export function slideText(slide) {
   for (const f of slide.flow || []) parts.push(f.k, f.t, f.s);
   if (slide.big) parts.push(slide.big.value, slide.big.label, slide.big.sub);
   if (slide.figure) parts.push(slide.figure.caption);
+  for (const b of slide.badges || []) parts.push(typeof b === 'string' ? b : b.text);
   for (const t of slide.tiles || []) parts.push(t.value, t.label);
   for (const s of slide.stats?.items || []) parts.push(s.label, s.value);
   if (slide.stats?.caption) parts.push(slide.stats.caption);
@@ -113,8 +114,8 @@ export function auditDeck(deck) {
   if (types.indexOf('receipts') !== types.length - 2 && types.includes('receipts')) {
     push('warn', 'deck', 'beat-order', 'RECEIPTS is usually the second-to-last slide.');
   }
-  if (deck.slides.length < 6 || deck.slides.length > 10) {
-    push('warn', 'deck', 'length', `${deck.slides.length} slides. 8-10 is the sweet spot for saves.`);
+  if (deck.slides.length < 5 || deck.slides.length > 10) {
+    push('warn', 'deck', 'length', `${deck.slides.length} slides. 5 is the floor (one beat each); 8-10 is the sweet spot for saves.`);
   }
 
   // ---- CTA / trigger word ----

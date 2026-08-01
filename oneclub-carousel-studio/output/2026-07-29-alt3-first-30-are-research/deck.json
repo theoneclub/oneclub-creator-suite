@@ -1,0 +1,127 @@
+{
+  "slug": "alt3-first-30-are-research",
+  "date": "2026-07-29",
+  "angle": "Faceless AI Affiliate Marketing — publishing rhythm",
+  "trigger": "EBOOK",
+  "handle": "@theoneclub",
+  "leadMagnet": "The Faceless AI Affiliate ebook",
+  "notes": "Alternative 3 of 5. Angle: volume is data collection, not effort. Reframes early failure as the process working.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "Your first 30 posts\nare ((research)).",
+      "image": "../../../assets/grid-particles.svg",
+      "copy": [
+        "(you are not failing, you are collecting data)"
+      ],
+      "badges": [
+        "30",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "30",
+          "label": "Posts before you judge"
+        },
+        {
+          "value": "1",
+          "label": "Variable at a time"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — the rhythm →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "kicker": "Where everyone stops",
+      "headline": "Three weeks in,\nright before the [[turn]].",
+      "copy": [
+        "Results stay flat while the back catalogue builds, then compound. Quitting at week three isn't a verdict on the model — it's quitting during the flat part, which is the only part everyone sees."
+      ],
+      "figure": {
+        "image": "../../../assets/quit-curve.svg",
+        "ratio": "900 / 440",
+        "caption": "{{The yellow line}} is where most people stop. The curve turns after it, not before."
+      }
+    },
+    {
+      "type": "value",
+      "kicker": "The loop",
+      "headline": "Four moves, on repeat.",
+      "flow": [
+        {
+          "k": "01",
+          "t": "Batch ten posts",
+          "s": "One sitting, one format"
+        },
+        {
+          "k": "02",
+          "t": "Publish daily",
+          "s": "No editing the plan mid-week"
+        },
+        {
+          "k": "03",
+          "t": "Read the data",
+          "s": "Saves and comments, not likes"
+        },
+        {
+          "k": "04",
+          "t": "Repeat the winner",
+          "s": "Retire everything else"
+        }
+      ]
+    },
+    {
+      "type": "receipts",
+      "kicker": "What to measure",
+      "headline": "Likes are the least\nuseful number you have.",
+      "rows": [
+        {
+          "t": "Saves",
+          "s": "Someone intends to come back. That's the strongest signal a post can give you."
+        },
+        {
+          "t": "Comments",
+          "s": "The trigger word fires here. It's also what the algorithm rewards hardest."
+        },
+        {
+          "t": "Sends",
+          "s": "One person vouching to another. Rarer than a like and worth more."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "kicker": "One word",
+      "trigger": "EBOOK",
+      "headline": "Want the 30-post\nplan written out?",
+      "image": "../../../assets/matrix-grid-cta.svg",
+      "pill": {
+        "before": "Comment",
+        "word": "EBOOK",
+        "text": "↓"
+      },
+      "copy": [
+        "and I'll send you the {{Faceless AI Affiliate ebook}} — the batching loop and what to read each week. 🔒"
+      ]
+    }
+  ],
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nYour first 30 posts are not a performance. They're research.\n\nResults stay flat while the back catalogue builds, then they compound. Almost everyone quits at week three — during the flat part, right before the curve turns. That's not a verdict on the model, it's a verdict on the timing of their patience.\n\nThe loop:\n\n1. Batch ten posts in one sitting, one format.\n2. Publish daily. Don't rewrite the plan mid-week.\n3. Read saves and comments — not likes.\n4. Repeat whatever moved. Retire the rest.\n\nSaves mean someone intends to come back. Comments are what the algorithm rewards hardest. Sends mean one person vouched for you to another. Likes tell you almost nothing.\n\nComment EBOOK for the full 30-post plan.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#recurringincome",
+    "#affiliatemarketingtips",
+    "#aitools",
+    "#contentautomation",
+    "#facelessyoutube",
+    "#onlinebusinesstips",
+    "#sidehustleideas",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}

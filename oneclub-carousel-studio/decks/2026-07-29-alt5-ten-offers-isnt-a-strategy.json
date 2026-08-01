@@ -1,0 +1,105 @@
+{
+  "slug": "alt5-ten-offers-isnt-a-strategy",
+  "date": "2026-07-29",
+  "angle": "Faceless AI Affiliate Marketing — focus and discipline",
+  "trigger": "EBOOK",
+  "handle": "@theoneclub",
+  "leadMagnet": "The Faceless AI Affiliate ebook",
+  "notes": "Alternative 5 of 5. Angle: the one-offer rule. The discipline slide most people skip.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "Ten offers is not\na ((strategy)).",
+      "image": "../../../assets/grid-topo.svg",
+      "copy": [
+        "(it's quitting, spread across ten tabs)"
+      ],
+      "badges": [
+        "1",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "1",
+          "label": "Offer"
+        },
+        {
+          "value": "1",
+          "label": "Format"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — the one rule →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "kicker": "What it actually is",
+      "headline": "Adding a second offer\nis [[avoidance]].",
+      "copy": [
+        "The first one hasn't converted yet, so starting a second feels like progress while costing nothing emotionally. It isn't progress. It's the same beginner's week, run again, with a fresh tab open."
+      ]
+    },
+    {
+      "type": "value",
+      "kicker": "The rule",
+      "headline": "The rule nobody follows.",
+      "big": {
+        "value": "1",
+        "label": "One offer. One angle. One format. Until it works.",
+        "sub": "You cannot read a signal from three experiments running at once. Focus isn't discipline for its own sake — it's the only way the data means anything."
+      }
+    },
+    {
+      "type": "receipts",
+      "kicker": "When you're allowed to add",
+      "headline": "Three conditions,\nall of them, or wait.",
+      "rows": [
+        {
+          "t": "The first one converts",
+          "s": "Not \"gets views\". Converts — comments to DMs to sign-ups."
+        },
+        {
+          "t": "The format runs itself",
+          "s": "You can batch a week in one sitting without thinking about it."
+        },
+        {
+          "t": "You have ninety days of data",
+          "s": "Anything shorter and you're reading noise as a trend."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "kicker": "One word",
+      "trigger": "EBOOK",
+      "headline": "Want it all in\nthe right order?",
+      "image": "../../../assets/matrix-grid-cta.svg",
+      "pill": {
+        "before": "Comment",
+        "word": "EBOOK",
+        "text": "↓"
+      },
+      "copy": [
+        "and I'll send you the {{Faceless AI Affiliate ebook}} — every step, in the sequence that works. 🔒"
+      ]
+    }
+  ],
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nTen offers is not a strategy. It's quitting, spread across ten tabs.\n\nAdding a second offer before the first one converts feels like progress and costs nothing emotionally — which is exactly why people do it. But it's the same beginner's week run again with a fresh tab open.\n\nThe rule: one offer, one angle, one format, until it works. You cannot read a signal from three experiments running at once.\n\nYou're allowed to add a second when all three of these are true:\n\n1. The first one converts. Not \"gets views\" — converts.\n2. The format runs itself. You can batch a week in one sitting.\n3. You have ninety days of data. Anything shorter is noise.\n\nComment EBOOK for the whole system in order.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#recurringincome",
+    "#affiliatemarketingtips",
+    "#aitools",
+    "#contentautomation",
+    "#facelessyoutube",
+    "#onlinebusinesstips",
+    "#sidehustleideas",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}

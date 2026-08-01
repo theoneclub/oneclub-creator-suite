@@ -119,10 +119,14 @@ export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle
   const handle = deck.handle || '@theoneclub';
   const progress = Math.round(((index + 1) / total) * 100);
 
+  const badges = (slide.badges || [])
+    .map((b, i) => `<div class="badge badge--${i === 0 ? 'l' : 'r'}">${esc(typeof b === 'string' ? b : b.text)}</div>`)
+    .join('\n    ');
+
   const layers = photo
     ? `${slide.image ? `<div class="art" style="background-image:url('${esc(slide.image)}')"></div>` : ''}
-    <div class="scrim"></div>`
-    : '';
+    <div class="scrim"></div>${badges ? '\n    ' + badges : ''}`
+    : badges;
 
   return `<!doctype html>
 <html lang="en" data-ready="0">

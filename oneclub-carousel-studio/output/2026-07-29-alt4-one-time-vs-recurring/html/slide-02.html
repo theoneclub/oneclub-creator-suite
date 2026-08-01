@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-ready="0">
+<head>
+<meta charset="utf-8">
+<title>alt4-one-time-vs-recurring — slide 2</title>
+<link rel="stylesheet" href="../../../ds-bundle-morphe/fonts/fonts.css">
+<link rel="stylesheet" href="../../../ds-bundle-morphe/tokens.css">
+<link rel="stylesheet" href="../../../ds-bundle-morphe/carousel.css">
+</head>
+<body>
+  <div class="slide slide--stakes" id="slide">
+    
+    <main class="body">
+      <div class="kicker">The hidden cost</div>
+      <h2 class="stacked"><span class="ln">A one-time payout</span><span class="ln">resets you <span class="hl">monthly</span>.</span></h2>
+      <p class="copy">Every month starts at zero and you have to sell the same number of people again to stand still. That's not a business model, that's a treadmill with a payout button.</p>
+    </main>
+    <footer class="foot">
+      <span class="handle">@theoneclub</span>
+      <span class="bar"><i style="width:40%"></i></span>
+      <span class="count">02 / 05</span>
+    </footer>
+  </div>
+<script>
+/* Auto-fit: shrink type until the body stops overflowing.
+   Records the final scale so the QA pass can flag slides that hit the floor. */
+(function () {
+  var FLOOR = 0.62, STEP = 0.02;
+  function fit() {
+    var slide = document.getElementById('slide');
+    var body  = slide.querySelector('.body');
+    var scale = 1;
+    slide.style.setProperty('--fit', scale);
+    var guard = 0;
+    var over = function () {
+      return body.scrollHeight > body.clientHeight + 1 || body.scrollWidth > body.clientWidth + 1;
+    };
+    while (over() && scale > FLOOR && guard++ < 40) {
+      scale = Math.round((scale - STEP) * 100) / 100;
+      slide.style.setProperty('--fit', scale);
+    }
+    /* a short block floating at the top reads as a mistake — centre it.
+       (scrollHeight is never < clientHeight, so measure the children.) */
+    var kids = body.children;
+    var contentH = kids.length
+      ? (kids[kids.length - 1].offsetTop + kids[kids.length - 1].offsetHeight) - kids[0].offsetTop
+      : 0;
+    if (contentH < body.clientHeight * 0.82) body.classList.add('body--centred');
+
+    var root = document.documentElement;
+    root.dataset.fit = String(scale);
+    root.dataset.overflow  = body.scrollHeight > body.clientHeight + 1 ? '1' : '0';
+    root.dataset.overflowX = body.scrollWidth  > body.clientWidth  + 1 ? '1' : '0';
+    root.dataset.ready = '1';
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  else window.addEventListener('load', fit);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+{
+  "slug": "alt4-one-time-vs-recurring",
+  "date": "2026-07-29",
+  "angle": "Faceless AI Affiliate Marketing — recurring vs one-time",
+  "trigger": "EBOOK",
+  "handle": "@theoneclub",
+  "leadMagnet": "The Faceless AI Affiliate ebook",
+  "notes": "Alternative 4 of 5. Angle: the compounding maths of recurring commissions, no dollar figures anywhere.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "One-time pays once.\n((Recurring)) keeps paying.",
+      "image": "../../../assets/grid-radar.svg",
+      "copy": [
+        "(same referral, same work, different year)"
+      ],
+      "badges": [
+        "12",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "4",
+          "label": "Referrals"
+        },
+        {
+          "value": "12",
+          "label": "Months later"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — the maths →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "kicker": "The hidden cost",
+      "headline": "A one-time payout\nresets you [[monthly]].",
+      "copy": [
+        "Every month starts at zero and you have to sell the same number of people again to stand still. That's not a business model, that's a treadmill with a payout button."
+      ]
+    },
+    {
+      "type": "value",
+      "kicker": "Same four sign-ups",
+      "headline": "Who is still paying you\nin month twelve?",
+      "stats": {
+        "caption": "Four referrals · still active at month 12",
+        "items": [
+          {
+            "label": "Recurring",
+            "value": "4",
+            "bar": 4
+          },
+          {
+            "label": "One-time",
+            "value": "0",
+            "bar": 0.06,
+            "muted": true
+          }
+        ]
+      },
+      "pull": "One-time paid for the post. Recurring pays for the back catalogue."
+    },
+    {
+      "type": "receipts",
+      "kicker": "What compounds",
+      "headline": "The back catalogue\nnever clocks off.",
+      "rows": [
+        {
+          "t": "Old posts keep referring",
+          "s": "A video from month two is still working in month nine. That's the whole advantage."
+        },
+        {
+          "t": "Churn is the real metric",
+          "s": "Recurring only compounds if people stay. Promote tools people keep using."
+        },
+        {
+          "t": "Four can cover your own",
+          "s": "A handful of recurring referrals can cover the tool you're promoting. That's the first milestone."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "kicker": "One word",
+      "trigger": "EBOOK",
+      "headline": "Want the maths\nlaid out properly?",
+      "image": "../../../assets/matrix-grid-cta.svg",
+      "pill": {
+        "before": "Comment",
+        "word": "EBOOK",
+        "text": "↓"
+      },
+      "copy": [
+        "and I'll send you the {{Faceless AI Affiliate ebook}} — how recurring stacks and what kills it. 🔒"
+      ]
+    }
+  ],
+  "caption": "Comment EBOOK and I'll send you the full Faceless AI Affiliate ebook. 🔒\n\nOne-time pays once. Recurring keeps paying. Same referral, same work, completely different year.\n\nA one-time payout resets you to zero every month — you have to sell the same number of people again just to stand still. That's a treadmill with a payout button.\n\nTake four referrals. At month twelve, on a recurring offer, all four can still be active. On a one-time offer, the count is zero — you got paid for the post, not for the back catalogue.\n\nWhich means the metric that actually matters is churn. Recurring only compounds if people stay, so promote tools people keep using. And the first real milestone isn't a big number — it's a handful of recurring referrals covering the tool you're promoting.\n\nComment EBOOK for the full breakdown.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#recurringincome",
+    "#affiliatemarketingtips",
+    "#aitools",
+    "#contentautomation",
+    "#facelessyoutube",
+    "#onlinebusinesstips",
+    "#sidehustleideas",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}
