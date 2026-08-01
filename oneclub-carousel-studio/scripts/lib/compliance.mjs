@@ -82,6 +82,7 @@ export function slideText(slide) {
   if (slide.big) parts.push(slide.big.value, slide.big.label, slide.big.sub);
   if (slide.figure) parts.push(slide.figure.caption);
   for (const b of slide.badges || []) parts.push(typeof b === 'string' ? b : b.text);
+  if (slide.versus) parts.push(slide.versus.no?.t, slide.versus.no?.s, slide.versus.yes?.t, slide.versus.yes?.s);
   for (const t of slide.tiles || []) parts.push(t.value, t.label);
   for (const s of slide.stats?.items || []) parts.push(s.label, s.value);
   if (slide.stats?.caption) parts.push(slide.stats.caption);
@@ -160,6 +161,11 @@ export function auditDeck(deck) {
     const cap = slide.type === 'hook' ? 150 : 110;
     if (headline.length > cap) {
       push('warn', where, 'headline-length', `Headline is ${headline.length} chars (soft cap ${cap}) — it will auto-fit smaller and lose impact.`);
+    }
+    // 2026 carousel data: hook headlines land hardest at 5-8 words.
+    if (slide.type === 'hook') {
+      const words = headline.split(/\s+/).filter(Boolean).length;
+      if (words > 10) push('warn', where, 'hook-length', `Hook is ${words} words. The pattern that performs is 5-8 — cut it down.`);
     }
     const copyLen = (slide.copy || []).join(' ').length;
     if (copyLen > 420) push('warn', where, 'copy-length', `${copyLen} chars of body copy — over ~420 the slide stops being readable in-feed.`);

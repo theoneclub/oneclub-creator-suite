@@ -440,6 +440,45 @@ h2.stacked .ln { display: block; white-space: nowrap; }
 .badge--l { left: -46px;  transform: rotate(-9deg); }
 .badge--r { right: -46px; transform: rotate(9deg); background: var(--green); color: var(--black); }
 
+/* ---------- versus: the ❌ / ✅ contrast the outliers lean on ---------- */
+
+.versus {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  align-items: stretch;
+}
+.versus .side {
+  flex: 1 1 0;
+  background: var(--card);
+  border: 1px solid var(--white-06);
+  border-radius: var(--radius);
+  padding: 32px 30px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.versus .mark {
+  font-size: calc(46px * var(--fit));
+  line-height: 1;
+}
+.versus .t {
+  font-family: var(--font-display);
+  font-size: calc(46px * var(--fit));
+  line-height: 1.02;
+  text-transform: uppercase;
+}
+.versus .s {
+  font-size: calc(25px * var(--fit));
+  line-height: 1.35;
+  color: var(--grey);
+}
+.versus .side--no  { opacity: 0.72; }
+.versus .side--no .t  { color: var(--grey); }
+.versus .side--no  { border-color: var(--border-dim); }
+.versus .side--yes { border-color: var(--green-24); background: linear-gradient(180deg, var(--green-10), var(--card) 60%); }
+.versus .side--yes .t { color: var(--green); }
+
 /* ---------- pull line ---------- */
 
 .pull {

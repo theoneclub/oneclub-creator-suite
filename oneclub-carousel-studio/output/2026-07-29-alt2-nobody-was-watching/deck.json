@@ -10,10 +10,10 @@
     {
       "type": "hook",
       "kicker": "Faceless AI affiliate marketing",
-      "headline": "Nobody was watching\nyour ((face)) anyway.",
+      "headline": "Nobody needs your face.\nThey need the ((demo)).",
       "image": "../../../assets/grid-columns.svg",
       "copy": [
-        "(three formats do the whole job without one)"
+        "(three formats, none of them on camera)"
       ],
       "badges": [
         "0",
@@ -39,8 +39,18 @@
       "kicker": "The real blocker",
       "headline": "\"I'd start, but I'm not\ngoing [[on camera]].\"",
       "copy": [
-        "That sentence has cost more people more months than any algorithm change. The camera was never the mechanism — **the format is.** Pick one that doesn't need you in frame and the blocker disappears the same afternoon."
-      ]
+        "That sentence has cost more people more months than any algorithm change. **The camera was never the mechanism.**"
+      ],
+      "versus": {
+        "no": {
+          "t": "Waiting to feel\nready on camera",
+          "s": "Costs months. Changes nothing about the offer."
+        },
+        "yes": {
+          "t": "Recording the\nscreen instead",
+          "s": "Costs an afternoon. The demo is the content."
+        }
+      }
     },
     {
       "type": "value",

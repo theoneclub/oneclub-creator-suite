@@ -44,6 +44,37 @@ lesson gets saved, and saves are what put it in front of the next person.
    Faceless AI Affiliate ebook; otherwise from the live rotation: FREEDOM /
    ESCAPE / SYSTEM / FOUNDING / FREE / IN / BLUEPRINT.
 
+## Hook patterns that are working
+
+From real 20x–400x outliers in this niche (see `research/viral-formats-2026.md`,
+refreshed 2026-07-29). Pick one deliberately — don't freestyle a hook.
+
+| Pattern | Shape |
+|---|---|
+| Contrarian negation | "Nobody needs X. They need Y." |
+| Belief correction | "Most people think / most people pick…" |
+| ❌ / ✅ binary | Two states in one frame — use the `versus` block |
+| "Without" framing | The objection, pre-answered: "start without a product" |
+| Failure reframe | "Your first 30 posts aren't content — they're data." |
+| Presupposition | "Stop adding offers." |
+| Counted resource | A named, finite asset — this is what the trigger word delivers |
+| Time-stamped specificity | "four minutes", "ninety days", "weeks 3–8" |
+
+**Hard numbers in the first three seconds** are the single most repeated device
+across the winners. Ours have to be time and counts, never dollars — the outlier
+set leads with income figures and compliance blocks that. Time and counts test
+nearly as well and are the only version we can run.
+
+**Hook headline: 5–8 words.** Past ten the renderer shrinks it, which is exactly
+when it stops working; QA warns. Slide 1 owns ~80% of the outcome, healthy
+swipe-through to slide 2 is 60–75%, and a strong educational carousel saves at
+1.5–3% of impressions.
+
+**Hold the payoff back.** The most useful slide goes second-to-last — the
+`receipts` slot — not third. Readers swipe to reach it and save the post to
+finish later. Receipts means "the most actionable thing in the deck", not brand
+proof.
+
 ## Process — copy BEFORE design, always
 
 1. **Write the copy first.** Slide by slide, in chat, as plain text. Show it to
@@ -93,6 +124,7 @@ Copy `decks/TEMPLATE.json`. Fields:
 | `slides[].copy[]` | Body paragraphs |
 | `slides[].rows[]` | Accent-bar cards `{ t, s }`. `numbered: true` for a ranked list |
 | `slides[].flow[]` | Step chain `{ k, t, s }`. Three steps run across, four or more stack |
+| `slides[].versus` | ❌/✅ contrast `{ no: { t, s }, yes: { t, s } }`. Left is what they do now, right is the swap |
 | `slides[].big` | Oversized number `{ value, label, sub }` — one idea, unscrollable |
 | `slides[].figure` | Image in a card `{ image, caption, ratio, cover }`. `ratio` sizes the card to the art; `cover: true` crops instead of fitting |
 | `slides[].stats` | Chart card `{ caption, items:[{ label, value, bar, muted }] }` |

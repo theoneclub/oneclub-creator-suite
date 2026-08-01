@@ -40,7 +40,17 @@
       "headline": "A one-time payout\nresets you [[monthly]].",
       "copy": [
         "Every month starts at zero and you have to sell the same number of people again to stand still. That's not a business model, that's a treadmill with a payout button."
-      ]
+      ],
+      "versus": {
+        "no": {
+          "t": "One-time",
+          "s": "Every month restarts at zero. You resell to stand still."
+        },
+        "yes": {
+          "t": "Recurring",
+          "s": "Month one keeps paying in month twelve. You build on top."
+        }
+      }
     },
     {
       "type": "value",

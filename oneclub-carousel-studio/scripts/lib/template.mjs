@@ -80,6 +80,19 @@ const figure = (f) =>
     ? `<figure class="figure${f.cover ? ' figure--cover' : ''}" style="${f.ratio ? `--ratio:${esc(f.ratio)}` : ''}"><div class="shot" style="background-image:url('${esc(f.image)}')"></div>${f.caption ? `<figcaption>${inline(f.caption)}</figcaption>` : ''}</figure>`
     : '';
 
+/** Versus: { no: {t, s}, yes: {t, s} } — the ❌/✅ contrast, the highest-signal
+ *  device in the outlier set. Left is what they're doing, right is the swap. */
+function versus(v) {
+  if (!v) return '';
+  const side = (o, kind, mark) => `
+        <div class="side side--${kind}">
+          <div class="mark">${mark}</div>
+          <div class="t">${inline(o.t)}</div>
+          ${o.s ? `<div class="s">${inline(o.s)}</div>` : ''}
+        </div>`;
+  return `<div class="versus">${side(v.no, 'no', '\u274C')}${side(v.yes, 'yes', '\u2705')}\n      </div>`;
+}
+
 /** Yellow action pill. `word` renders in the display face. */
 function pill(p) {
   if (!p) return '';
@@ -103,6 +116,7 @@ function bodyFor(slide, index) {
     headline(slide.headline, tag),
     copyBlocks(slide.copy),
     rows(slide.rows, slide.numbered),
+    versus(slide.versus),
     flow(slide.flow),
     big(slide.big),
     figure(slide.figure),

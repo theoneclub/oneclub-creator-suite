@@ -10,10 +10,10 @@
     {
       "type": "hook",
       "kicker": "Faceless AI affiliate marketing",
-      "headline": "Your offer decides\nthe result ((before))\nyou post anything.",
+      "headline": "Most pick their offer\nin ((four minutes)).",
       "image": "../../../assets/matrix-grid-hook.svg",
       "copy": [
-        "(and most people pick theirs in four minutes)"
+        "(then blame the algorithm for a year)"
       ],
       "badges": [
         "1",
@@ -30,7 +30,7 @@
         }
       ],
       "pill": {
-        "text": "Swipe — how to judge one →",
+        "text": "Swipe — the 3 questions →",
         "ghost": true
       }
     },
@@ -39,8 +39,18 @@
       "kicker": "Why it matters most",
       "headline": "You cannot out-post\na [[bad offer]].",
       "copy": [
-        "Two people publish the same thirty videos. One picked a tool that pays monthly with a thirty-day window. The other picked a one-time payout with a seven-day cookie. **Same work. Different year.**"
-      ]
+        "Two people publish the same thirty videos. The only difference is what they linked to."
+      ],
+      "versus": {
+        "no": {
+          "t": "One-time,\n7-day cookie",
+          "s": "Same thirty videos. Back to zero every month."
+        },
+        "yes": {
+          "t": "Recurring,\n30-day cookie",
+          "s": "Same thirty videos. Still paying you next year."
+        }
+      }
     },
     {
       "type": "value",

@@ -10,10 +10,10 @@
     {
       "type": "hook",
       "kicker": "Faceless AI affiliate marketing",
-      "headline": "Ten offers is not\na ((strategy)).",
+      "headline": "Stop adding offers.\nIt's a ((focus)) problem.",
       "image": "../../../assets/grid-topo.svg",
       "copy": [
-        "(it's quitting, spread across ten tabs)"
+        "(ten tabs open is not diversification)"
       ],
       "badges": [
         "1",
@@ -40,7 +40,17 @@
       "headline": "Adding a second offer\nis [[avoidance]].",
       "copy": [
         "The first one hasn't converted yet, so starting a second feels like progress while costing nothing emotionally. It isn't progress. It's the same beginner's week, run again, with a fresh tab open."
-      ]
+      ],
+      "versus": {
+        "no": {
+          "t": "Offer #2\nbefore #1 works",
+          "s": "Feels like progress. Resets the clock, teaches nothing."
+        },
+        "yes": {
+          "t": "One offer,\nninety days",
+          "s": "Boring. The only way the data means anything."
+        }
+      }
     },
     {
       "type": "value",

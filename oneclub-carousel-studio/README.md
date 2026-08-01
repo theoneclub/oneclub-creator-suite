@@ -48,6 +48,7 @@ oneclub-carousel-studio/
 │   └── lib/{template,compliance}.mjs
 ├── assets/                  Morphe hook art, screenshots, graphs
 ├── automation/              ManyChat / Brevo / Buffer runbooks + engagement log
+├── research/                what's working right now, and where it came from
 └── output/<date>-<slug>/    slide-01.png … + caption.txt + grid.html + qa-report.json
 ```
 
