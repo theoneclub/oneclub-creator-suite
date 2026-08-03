@@ -1,0 +1,13 @@
+{
+  "deck": "2026-08-03-first-week-plan",
+  "stage": "render",
+  "ok": true,
+  "findings": [
+    {
+      "severity": "warn",
+      "where": "slide:cta",
+      "rule": "trigger",
+      "message": "CTA slide also contains rotation word(s) FREE, BLUEPRINT — ambiguous triggers split ManyChat attribution."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "slug": "first-week-plan",
+  "date": "2026-08-03",
+  "angle": "Faceless AI Affiliate Marketing — week one execution",
+  "trigger": "SYSTEM",
+  "handle": "@theoneclub",
+  "leadMagnet": "The AI Affiliate Blueprint",
+  "notes": "Value-first companion to the beginner deck. That one argued WHY faceless affiliate is the easiest model; this one is pure execution — a costed week-one schedule and a fill-in script template. Nothing is held back. Same SYSTEM trigger, same three ManyChat aliases required (SYSTEM / BLUEPRINT / FREE). CTA art is the vector stand-in at assets/ebook-blueprint.svg until the real cover render lands.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Faceless AI affiliate marketing",
+      "headline": "Your first week.\nHour by ((hour)).",
+      "image": "../../../assets/week-one-calendar.svg",
+      "copy": [
+        "(no theory. five things, then you're posting.)"
+      ],
+      "badges": [
+        "7",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "5 hrs",
+          "label": "All week"
+        },
+        {
+          "value": "10",
+          "label": "Posts by Sunday"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — the schedule →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "kicker": "Where week one dies",
+      "headline": "Research is how\nbeginners [[hide]].",
+      "copy": [
+        "Reading about it feels like progress and costs nothing. Posting badly on day three teaches you more than a month of tabs."
+      ],
+      "versus": {
+        "no": {
+          "t": "Researching\nfor a month",
+          "s": "Feels productive. You learn nothing about your audience."
+        },
+        "yes": {
+          "t": "Publishing\non day three",
+          "s": "Uncomfortable. Real data by the weekend."
+        }
+      }
+    },
+    {
+      "type": "value",
+      "kicker": "The schedule",
+      "numbered": true,
+      "headline": "Five hours. Whole week.",
+      "rows": [
+        {
+          "t": "Day 1 · 45 min",
+          "s": "Pick one AI tool you already pay for. Join its affiliate program. Get your link."
+        },
+        {
+          "t": "Day 2 · 60 min",
+          "s": "Record one screen demo. Save it as your template — same layout every time."
+        },
+        {
+          "t": "Day 3–7 · 30 min a day",
+          "s": "Post one a day. Change the hook only. Keep everything else identical."
+        }
+      ]
+    },
+    {
+      "type": "receipts",
+      "kicker": "Steal this",
+      "headline": "The five-line script.",
+      "figure": {
+        "image": "../../../assets/script-template.svg",
+        "ratio": "1000 / 540",
+        "caption": "Fill the brackets and record. Same five lines every post — only the hook changes."
+      },
+      "pull": "Thirty seconds of screen. That's the whole video."
+    },
+    {
+      "type": "cta",
+      "kicker": "One word",
+      "trigger": "SYSTEM",
+      "headline": "Want the free\nblueprint?",
+      "image": "../../../assets/matrix-grid-cta.svg",
+      "product": {
+        "image": "../../../assets/ebook-blueprint.svg",
+        "width": "384px"
+      },
+      "copy": [
+        "Comment the word {{SYSTEM}} and I'll send it over. 🔒"
+      ],
+      "pill": {
+        "before": "Comment",
+        "word": "SYSTEM",
+        "text": "↓"
+      }
+    }
+  ],
+  "caption": "Comment the word SYSTEM and I'll send you the free AI Affiliate Blueprint. 🔒\n\nYour first week of faceless AI affiliate marketing, hour by hour. Five hours total.\n\nDAY 1 — 45 minutes. Pick one AI tool you already pay for. Join its affiliate program. Get your link. Don't shop around for a better one, you can switch later.\n\nDAY 2 — 60 minutes. Record one screen demo of that tool doing the thing it's good at. Save it as your template. Same layout every post from here.\n\nDAY 3 to 7 — 30 minutes a day. Post one a day. Change the hook only. Keep the format identical so you can tell what the hook is doing.\n\nThe script, five lines:\n\n1. HOOK — \"Most people use [tool] wrong.\"\n2. PROBLEM — \"They do [slow way] and it takes [time].\"\n3. DEMO — screen recording, no talking over it.\n4. RESULT — \"Same job. [Short time].\"\n5. CTA — \"Comment [word] for the full setup.\"\n\nFill the brackets, record, post. Thirty seconds of screen is the whole video.\n\nThe reason most people never get here: researching feels like progress and costs nothing. Posting badly on day three teaches you more than a month of open tabs.\n\nComment SYSTEM for the full blueprint.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#aitools",
+    "#contentautomation",
+    "#onlinebusinessforbeginners",
+    "#sidehustleideas",
+    "#recurringincome",
+    "#digitalmarketing",
+    "#contentstrategy",
+    "#theoneclub"
+  ]
+}
