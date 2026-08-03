@@ -158,7 +158,7 @@ export function auditDeck(deck) {
     push('error', 'caption', 'caption', 'Caption is empty — the comment trigger lives in the caption, not just the slide.');
   } else {
     const aboveFold = caption.slice(0, 125);
-    if (!new RegExp(`comment\\s+${trigger}`, 'i').test(aboveFold)) {
+    if (!new RegExp(`comment\\s+(the\\s+word\\s+)?["'\u201c\u2018]?${trigger}`, 'i').test(aboveFold)) {
       push('error', 'caption', 'caption', `"Comment ${trigger}" must appear in the first 125 characters (above the fold).`);
     }
     if (caption.length > 2200) push('error', 'caption', 'caption', `Caption is ${caption.length} chars — Instagram caps at 2200.`);

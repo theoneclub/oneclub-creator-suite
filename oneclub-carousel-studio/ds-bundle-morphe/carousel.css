@@ -139,7 +139,7 @@ h2.stacked .ln { display: block; white-space: nowrap; }
 .slide--cta .copy {
   color: var(--white);
   font-weight: 700;
-  max-width: 840px;
+  max-width: 920px;
   -webkit-text-stroke: 7px #000;
   paint-order: stroke fill;
   text-shadow: 0 6px 24px rgba(0, 0, 0, 0.7);

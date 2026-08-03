@@ -13,6 +13,16 @@ same trigger.
 | Keyword match | `EBOOK` — exact word, case-insensitive |
 | Also match | Common misfires: `ebook`, `e-book`, `e book`, `EBOOOK` |
 
+**Alias every word on the CTA slide.** The beginner deck's CTA says three
+rotation words out loud — SYSTEM (the trigger), BLUEPRINT (the asset) and FREE
+(the offer). All three need to be aliases on the same automation or the leads
+that type the wrong one land nowhere. This is the rule, not the exception:
+
+```
+trigger:  SYSTEM
+aliases:  BLUEPRINT · FREE · "the system" · "sytem"
+```
+
 **Alias the asset's own name.** If the slide says "I'll send you The AI Affiliate
 Blueprint" but the trigger is `SYSTEM`, a good share of people will type
 BLUEPRINT — they're repeating what they just read. Add every word that appears
