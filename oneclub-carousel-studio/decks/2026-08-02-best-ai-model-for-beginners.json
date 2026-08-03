@@ -5,7 +5,7 @@
   "trigger": "SYSTEM",
   "handle": "@theoneclub",
   "leadMagnet": "The AI Affiliate Blueprint",
-  "notes": "Five slides. Positions faceless AI affiliate as the beginner model with the shortest requirement list, then proves it with a comparison matrix and a twelve-month stack. TRIGGER IS `SYSTEM`, which needs two things in ManyChat: (1) SYSTEM is also a reel rotation word, so tag carousel leads separately or the two channels share a number; (2) the asset is called The AI Affiliate Blueprint, so some people will comment BLUEPRINT instead — add it as an alias on the same automation. QA flags this deliberately.",
+  "notes": "Five slides. Positions faceless AI affiliate as the beginner model with the shortest requirement list, then proves it with a comparison matrix and a twelve-month stack. TRIGGER IS `SYSTEM`, which needs two things in ManyChat: (1) SYSTEM is also a reel rotation word, so tag carousel leads separately or the two channels share a number; (2) the asset is called The AI Affiliate Blueprint, so some people will comment BLUEPRINT instead — add it as an alias on the same automation. QA flags this deliberately. CTA shows the ebook itself via the `product` block — currently the vector mockup at assets/ebook-blueprint.svg. To use the real cover render, save it as assets/ebook-blueprint.png (transparent background, 3:4) and point the product image at it; nothing else changes.",
   "slides": [
     {
       "type": "hook",
@@ -90,7 +90,7 @@
       "type": "cta",
       "kicker": "One word",
       "trigger": "SYSTEM",
-      "headline": "Want the whole\nthing written down?",
+      "headline": "The AI Affiliate\nBlueprint.",
       "image": "../../../assets/matrix-grid-cta.svg",
       "pill": {
         "before": "Comment",
@@ -98,8 +98,12 @@
         "text": "↓"
       },
       "copy": [
-        "and I'll send you {{The AI Affiliate Blueprint}} — every step above, in order. 🔒"
-      ]
+        "Every step above, written out. 🔒"
+      ],
+      "product": {
+        "image": "../../../assets/ebook-blueprint.svg",
+        "width": "400px"
+      }
     }
   ],
   "caption": "Comment SYSTEM and I'll send you The AI Affiliate Blueprint — free. 🔒\n\nFaceless AI affiliate marketing is the easiest model to start as a beginner, and it's not close.\n\nEvery other route asks for something before you begin. Dropshipping wants stock. An agency wants clients. Coaching wants a product and a face. Each one is a reason to put it off another week.\n\nThis one asks for a laptop.\n\nHow it works:\n\n1. Pick an AI tool you already use. Join its affiliate program.\n2. Record your screen showing it do the thing.\n3. Post every day. One format, repeated.\n4. Get paid every month they stay.\n\nAnd that last word is the important one. A pay-once offer is a single bar in month one. A monthly offer stacks — the post you made in month one is still paying in month twelve.\n\nComment SYSTEM and the full blueprint is in your DMs.",

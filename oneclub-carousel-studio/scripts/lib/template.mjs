@@ -93,6 +93,10 @@ function versus(v) {
   return `<div class="versus">${side(v.no, 'no', '\u274C')}${side(v.yes, 'yes', '\u2705')}\n      </div>`;
 }
 
+/** Product: the lead magnet itself. `{ image, width }` — CTA slides. */
+const product = (p) =>
+  p ? `<div class="product"${p.width ? ` style="--product-w:${esc(p.width)}"` : ''}><div class="shot" style="background-image:url('${esc(p.image)}')"></div></div>` : '';
+
 /** Yellow action pill. `word` renders in the display face. */
 function pill(p) {
   if (!p) return '';
@@ -123,6 +127,7 @@ function bodyFor(slide, index) {
     panel(slide.stats),
     tiles(slide.tiles),
     slide.pull ? `<div class="pull">${inline(slide.pull)}</div>` : '',
+    product(slide.product),
     pill(slide.pill),
   ].filter(Boolean).join('\n      ');
 }

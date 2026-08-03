@@ -90,6 +90,7 @@ Any slide can carry any of these; the type decides the base composition.
 | `big` | One oversized number with a label and a note. The slide you want screenshotted. |
 | `figure` | Artwork inside a card, `{ image, caption, ratio }`. Diagrams are contained, never cropped — pass the art's aspect ratio and the card sizes to it. |
 | `versus` | The ❌/✅ contrast, `{ no, yes }`. Left panel dims, right panel carries a green wash. The highest-signal device in the outlier research. |
+| `product` | The lead magnet itself, `{ image, width }`. Floats on a green glow with a drop shadow. CTA slides — showing the thing beats describing it. |
 | `tiles[]` | Two or three stat tiles, `{ value, label }`. Hook and support slides. |
 | `pull` | Centred bold line under a chart or paragraph. The takeaway. |
 | `pill` | Yellow action pill. `{ before, word, text }` on the CTA; `{ text, ghost: true }` for a swipe prompt. |
