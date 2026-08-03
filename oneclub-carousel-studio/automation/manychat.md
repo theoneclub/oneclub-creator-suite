@@ -12,6 +12,13 @@ same trigger.
 | Post | The carousel (add each new carousel to this same automation) |
 | Keyword match | `EBOOK` — exact word, case-insensitive |
 | Also match | Common misfires: `ebook`, `e-book`, `e book`, `EBOOOK` |
+
+**Alias the asset's own name.** If the slide says "I'll send you The AI Affiliate
+Blueprint" but the trigger is `SYSTEM`, a good share of people will type
+BLUEPRINT — they're repeating what they just read. Add every word that appears
+on the CTA slide as an alias on the same automation, or those leads land nowhere.
+The build QA warns when a CTA slide carries a rotation word that isn't its own
+trigger, which is your cue to set the alias rather than a reason to reword.
 | Reply to comment publicly | On — one short line, rotate it: "Sent." / "Check your DMs." / "On its way." |
 | Reply in DM | On |
 

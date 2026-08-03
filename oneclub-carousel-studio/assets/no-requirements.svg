@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" width="1080" height="1440" role="img" aria-label="Four crossed-out icons: a product box, stock, a client, a camera.">
+  <defs>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="46"/></filter>
+    <radialGradient id="lift" cx="50%" cy="34%" r="60%">
+      <stop offset="0%" stop-color="#a3f0af" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#a3f0af" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1440" fill="#000000"/>
+  <rect width="1080" height="1440" fill="url(#lift)"/>
+  <ellipse cx="540" cy="1180" rx="520" ry="200" fill="#a3f0af" opacity="0.07" filter="url(#soft)"/>
+
+  <g>
+    <rect x="79" y="1062" width="214" height="236" rx="20" fill="#0f0f0f" stroke="#334155" stroke-width="3"/>
+    <g transform="translate(186.0,1166)" stroke="#9CA3AF" stroke-width="7" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M -46 -26 l 46 -24 l 46 24 v 54 l -46 24 l -46 -24 z"/><path d="M -46 -26 l 46 24 l 46 -24 M 0 -2 v 54"/></g>
+    <g stroke="#dc2626" stroke-width="10" stroke-linecap="round">
+      <line x1="137" y1="1120" x2="235" y2="1220"/>
+      <line x1="235" y1="1120" x2="137" y2="1220"/>
+    </g>
+  </g>
+  <g>
+    <rect x="315" y="1062" width="214" height="236" rx="20" fill="#0f0f0f" stroke="#334155" stroke-width="3"/>
+    <g transform="translate(422.0,1166)" stroke="#9CA3AF" stroke-width="7" fill="none" stroke-linejoin="round" stroke-linecap="round"><rect x="-50" y="-6" width="44" height="40" rx="4"/><rect x="6" y="-6" width="44" height="40" rx="4"/><rect x="-22" y="-50" width="44" height="40" rx="4"/></g>
+    <g stroke="#dc2626" stroke-width="10" stroke-linecap="round">
+      <line x1="373" y1="1120" x2="471" y2="1220"/>
+      <line x1="471" y1="1120" x2="373" y2="1220"/>
+    </g>
+  </g>
+  <g>
+    <rect x="551" y="1062" width="214" height="236" rx="20" fill="#0f0f0f" stroke="#334155" stroke-width="3"/>
+    <g transform="translate(658.0,1166)" stroke="#9CA3AF" stroke-width="7" fill="none" stroke-linejoin="round" stroke-linecap="round"><circle cx="0" cy="-26" r="22"/><path d="M -44 34 C -38 -2 -18 -14 0 -14 C 18 -14 38 -2 44 34"/></g>
+    <g stroke="#dc2626" stroke-width="10" stroke-linecap="round">
+      <line x1="609" y1="1120" x2="707" y2="1220"/>
+      <line x1="707" y1="1120" x2="609" y2="1220"/>
+    </g>
+  </g>
+  <g>
+    <rect x="787" y="1062" width="214" height="236" rx="20" fill="#0f0f0f" stroke="#334155" stroke-width="3"/>
+    <g transform="translate(894.0,1166)" stroke="#9CA3AF" stroke-width="7" fill="none" stroke-linejoin="round" stroke-linecap="round"><rect x="-50" y="-24" width="86" height="58" rx="8"/><path d="M 36 -6 l 26 -16 v 44 l -26 -16 z"/><circle cx="-8" cy="5" r="14"/></g>
+    <g stroke="#dc2626" stroke-width="10" stroke-linecap="round">
+      <line x1="845" y1="1120" x2="943" y2="1220"/>
+      <line x1="943" y1="1120" x2="845" y2="1220"/>
+    </g>
+  </g>
+</svg>

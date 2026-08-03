@@ -1,0 +1,13 @@
+{
+  "deck": "2026-08-02-best-ai-model-for-beginners",
+  "stage": "render",
+  "ok": true,
+  "findings": [
+    {
+      "severity": "warn",
+      "where": "slide:cta",
+      "rule": "trigger",
+      "message": "CTA slide also contains rotation word(s) BLUEPRINT — ambiguous triggers split ManyChat attribution."
+    }
+  ]
+}

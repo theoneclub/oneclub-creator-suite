@@ -1,0 +1,119 @@
+{
+  "slug": "best-ai-model-for-beginners",
+  "date": "2026-08-02",
+  "angle": "Faceless AI Affiliate Marketing — best model for beginners",
+  "trigger": "SYSTEM",
+  "handle": "@theoneclub",
+  "leadMagnet": "The AI Affiliate Blueprint",
+  "notes": "Five slides. Positions faceless AI affiliate as the beginner model with the shortest requirement list, then proves it with a comparison matrix and a twelve-month stack. Trigger is SYSTEM — note this word is also in the reel rotation, so tag carousel leads separately in ManyChat or the two channels will share a number.",
+  "slides": [
+    {
+      "type": "hook",
+      "kicker": "Best AI business for beginners",
+      "headline": "No product. No stock.\nNo clients. No ((camera)).",
+      "image": "../../../assets/no-requirements.svg",
+      "copy": [
+        "(the shortest starting list in online business)"
+      ],
+      "badges": [
+        "0",
+        "AI"
+      ],
+      "tiles": [
+        {
+          "value": "0",
+          "label": "Upfront stock"
+        },
+        {
+          "value": "1",
+          "label": "Laptop"
+        }
+      ],
+      "pill": {
+        "text": "Swipe — why it wins →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "kicker": "Why beginners stall",
+      "headline": "Every other model\nasks for something [[first]].",
+      "copy": [
+        "Stock. Clients. A product you haven't built. Each one is a reason to not start this week."
+      ],
+      "figure": {
+        "image": "../../../assets/model-compare.svg",
+        "ratio": "1000 / 470",
+        "caption": "Only one row is all ticks. That's the whole argument for starting there."
+      }
+    },
+    {
+      "type": "value",
+      "kicker": "How it works",
+      "headline": "Four steps. That's it.",
+      "flow": [
+        {
+          "k": "01",
+          "t": "Pick an AI tool you use",
+          "s": "Join its affiliate program"
+        },
+        {
+          "k": "02",
+          "t": "Record the screen",
+          "s": "Show it doing the thing"
+        },
+        {
+          "k": "03",
+          "t": "Post every day",
+          "s": "One format, repeated"
+        },
+        {
+          "k": "04",
+          "t": "Get paid monthly",
+          "s": "For as long as they stay"
+        }
+      ],
+      "pull": "No stock to buy. No client to chase. No product to build."
+    },
+    {
+      "type": "receipts",
+      "kicker": "Why monthly matters",
+      "headline": "Month one still pays you\nin month twelve.",
+      "figure": {
+        "image": "../../../assets/twelve-month-stack.svg",
+        "ratio": "1000 / 470",
+        "caption": "**Monthly** builds on what you already made. **Pay-once** is one bar and then nothing."
+      },
+      "pull": "That's the difference between a job and a system."
+    },
+    {
+      "type": "cta",
+      "kicker": "One word",
+      "trigger": "SYSTEM",
+      "headline": "Want the whole\nthing written down?",
+      "image": "../../../assets/matrix-grid-cta.svg",
+      "pill": {
+        "before": "Comment",
+        "word": "SYSTEM",
+        "text": "↓"
+      },
+      "copy": [
+        "and I'll send you {{The AI Affiliate Blueprint}} — every step above, in order. 🔒"
+      ]
+    }
+  ],
+  "caption": "Comment SYSTEM and I'll send you The AI Affiliate Blueprint — free. 🔒\n\nFaceless AI affiliate marketing is the easiest model to start as a beginner, and it's not close.\n\nEvery other route asks for something before you begin. Dropshipping wants stock. An agency wants clients. Coaching wants a product and a face. Each one is a reason to put it off another week.\n\nThis one asks for a laptop.\n\nHow it works:\n\n1. Pick an AI tool you already use. Join its affiliate program.\n2. Record your screen showing it do the thing.\n3. Post every day. One format, repeated.\n4. Get paid every month they stay.\n\nAnd that last word is the important one. A pay-once offer is a single bar in month one. A monthly offer stacks — the post you made in month one is still paying in month twelve.\n\nComment SYSTEM and the full blueprint is in your DMs.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiincome",
+    "#aitools",
+    "#bestsidehustle",
+    "#onlinebusinessforbeginners",
+    "#contentautomation",
+    "#recurringincome",
+    "#sidehustleideas",
+    "#digitalmarketing",
+    "#theoneclub"
+  ]
+}
