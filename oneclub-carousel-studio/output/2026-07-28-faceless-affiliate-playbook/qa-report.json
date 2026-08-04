@@ -1,6 +1,7 @@
 {
-  "deck": "2026-07-28-faceless-affiliate-playbook",
-  "stage": "render",
+  "deck": "faceless-affiliate-playbook",
+  "date": "2026-07-28",
+  "stage": "build",
   "ok": true,
   "findings": []
 }

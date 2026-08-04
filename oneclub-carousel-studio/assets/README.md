@@ -33,6 +33,28 @@ pipeline and no credits spent:
 | `tab-graveyard.svg` | hook slides | Ten browser tabs, nine dim, one lit |
 | `ebook-blueprint.svg` | CTA `product` block | The Faceless AI Affiliate Blueprint as a standing paperback. **Stand-in** — replace with the real cover render (see below) |
 
+## UI panels for split slides (generated)
+
+`node scripts/make-mocks.mjs` writes these. They are 620x1300 — the ratio that
+fills the art column of a split slide — and every coordinate is computed from
+the canvas, so changing `W`/`H` in that script reflows all seven rather than
+stranding hand-placed numbers. Edit the script, never the SVG.
+
+| File | What it shows |
+|---|---|
+| `oneclub-panel.svg` | Member dashboard: the four-step build, and the community-voted monthly fund |
+| `oneclub-offer-board.svg` | Five offers checked, only the recurring one kept |
+| `oneclub-angle-sheet.svg` | The faceless script sheet, and three formats that need no camera |
+| `oneclub-calendar.svg` | Thirty dated posts, colour-coded by type |
+| `oneclub-automation.svg` | Comment to DM to email to follow-up |
+| `oneclub-tabs.svg` | Eight open tabs of half-finished plans |
+| `oneclub-walkthrough.svg` | The walkthrough the CTA hands over |
+
+A panel is referenced as `"mock": { "image": "../../../assets/<file>" }`, which
+is also what switches the slide to the split layout. Unlike hook backdrops these
+are *not* full-bleed — they carry their own window chrome and are meant to be
+read, so they need the column to themselves.
+
 **Swapping in the real ebook cover.** Save it as `assets/ebook-blueprint.png` with
 a *transparent* background, roughly 3:4, then point the CTA's `product.image` at
 the PNG. If the render you have sits on a white background, key the white out

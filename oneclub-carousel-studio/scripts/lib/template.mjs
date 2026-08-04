@@ -51,11 +51,16 @@ function panel(stats) {
       </div>`;
 }
 
-/** Stat tiles: { value, label } — hook-slide proof chips. */
-const tiles = (items = []) =>
-  items.length
-    ? `<div class="tiles">${items.map((t) => `<div class="tile"><b>${esc(t.value)}</b><span>${esc(t.label)}</span></div>`).join('')}</div>`
-    : '';
+/** Stat tiles: { value, label } — hook-slide proof chips. Add `icon` and they
+ *  become the stacked icon cards instead of a three-across row. */
+function tiles(items = []) {
+  if (!items.length) return '';
+  const withIcons = items.some((t) => t.icon);
+  const body = items.map((t) => (t.icon
+    ? `<div class="tile"><div class="ico">${icon(t.icon)}</div><div class="txt"><b>${esc(t.value)}</b><span>${esc(t.label)}</span></div></div>`
+    : `<div class="tile"><b>${esc(t.value)}</b><span>${esc(t.label)}</span></div>`)).join('');
+  return `<div class="tiles${withIcons ? ' tiles--icon' : ''}">${body}</div>`;
+}
 
 /** Step flow: { k, t, s } — the model in one picture. Three or four steps max. */
 function flow(items = []) {
@@ -97,6 +102,86 @@ function versus(v) {
 const product = (p) =>
   p ? `<div class="product"${p.width ? ` style="--product-w:${esc(p.width)}"` : ''}><div class="shot" style="background-image:url('${esc(p.image)}')"></div></div>` : '';
 
+/* ---- icons ----------------------------------------------------------------
+   Stroke glyphs for the icon tiles on `cards` and icon `tiles`. Deliberately
+   few: an icon set that keeps growing is a design smell, not a feature. */
+const ICON_PATHS = {
+  eye: '<path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',
+  bag: '<path d="M4 8h16l-1.2 12H5.2L4 8Z"/><path d="M8.5 8V6.2a3.5 3.5 0 0 1 7 0V8"/>',
+  calendar: '<rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  target: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.6" fill="currentColor"/>',
+  doc: '<path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/>',
+  users: '<circle cx="9" cy="9" r="3.2"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"/><path d="M16 7.2a3 3 0 0 1 0 5.6"/><path d="M17.5 15.5a5.5 5.5 0 0 1 3 4"/>',
+  gear: '<circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/>',
+  bolt: '<path d="M13.5 2.5 5 13.5h5.5L10 21.5 19 10h-5.5l0-7.5Z"/>',
+  chart: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+  vote: '<path d="M4 12.5 9.5 18 20 6"/><rect x="2.5" y="2.5" width="19" height="19" rx="3"/>',
+  lock: '<rect x="4.5" y="10" width="15" height="11" rx="2.5"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10"/>',
+  seed: '<path d="M12 21V11"/><path d="M12 11c0-4 3-7 8-7 0 5-3 8-8 8Z"/><path d="M12 14c0-3-2.5-5.5-6.5-5.5 0 4 2.5 6.5 6.5 6.5Z"/>',
+};
+const icon = (name) => {
+  const d = ICON_PATHS[name] || ICON_PATHS.bolt;
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+};
+
+/** Hand-drawn arrows for the `note` aside. Deliberately imperfect curves. */
+const ARROWS = {
+  curve: `<svg viewBox="0 0 210 130" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" aria-hidden="true">
+        <path d="M8 12C34 74 78 106 150 108"/><path d="M126 92l28 17-25 15"/>
+      </svg>`,
+  down: `<svg viewBox="0 0 120 190" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" aria-hidden="true">
+        <path d="M42 8c22 44 24 90 13 158"/><path d="M32 138l22 32 27-26"/>
+      </svg>`,
+  // the curve, mirrored — for an aside that sits below the thing it points at
+  up: `<svg viewBox="0 0 210 130" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" aria-hidden="true">
+        <path d="M8 118C34 56 78 24 150 22"/><path d="M124 34l30-13-21-19"/>
+      </svg>`,
+};
+const ARROW_DIRS = new Set(['curve', 'down', 'up']);
+
+/** Handwritten aside pointing at the artwork: `{ text, arrow }`. */
+function note(n) {
+  if (!n) return '';
+  const o = typeof n === 'string' ? { text: n } : n;
+  const dir = ARROW_DIRS.has(o.arrow) ? o.arrow : 'curve';
+  return `<div class="note note--${dir}">
+        ${o.text ? `<div class="hand">${esc(o.text)}</div>` : ''}
+        ${o.arrow === false ? '' : `<div class="arrow">${ARROWS[dir]}</div>`}
+      </div>`;
+}
+
+/** Chained icon cards: `{ icon, t, s, on }` — the "what happens next" stack. */
+function cards(items = [], flag) {
+  if (!items.length) return '';
+  const list = items.map((c) => `
+        <div class="card${c.on ? ' card--on' : ''}">
+          <div class="ico">${icon(c.icon)}</div>
+          <div class="txt">
+            <div class="t">${inline(c.t)}</div>
+            ${c.s ? `<div class="s">${inline(c.s)}</div>` : ''}
+          </div>
+        </div>`).join('');
+  return `<div class="cards">${list}${flag ? `\n        <div class="flagline">${esc(flag)}</div>` : ''}\n      </div>`;
+}
+
+/** The device / UI artwork that holds the right column of a split slide. */
+const mock = (m) => {
+  if (!m) return '';
+  const o = typeof m === 'string' ? { image: m } : m;
+  return `<div class="mock" style="background-image:url('${esc(o.image)}')${o.ratio ? `;--mock-ratio:${esc(o.ratio)}` : ''}"></div>`;
+};
+
+/** CTA block: the one word we want typed, at the size it deserves. */
+function ctaBlock(slide) {
+  if (!slide.trigger) return '';
+  return `<div class="ctablock">
+        <div class="rule"></div>
+        <div class="lead">${esc(slide.ctaLead || 'Comment')}</div>
+        <div class="word">&ldquo;${esc(slide.trigger)}&rdquo;</div>
+        ${slide.instruction ? `<div class="tail">${inline(slide.instruction)}</div>` : ''}
+      </div>`;
+}
+
 /** Yellow action pill. `word` renders in the display face. */
 function pill(p) {
   if (!p) return '';
@@ -115,10 +200,12 @@ function headline(text, tag) {
 
 function bodyFor(slide, index) {
   const tag = index === 0 || slide.type === 'cta' ? 'h1' : 'h2';
-  return [
+  const blocks = [
+    slide.step ? `<div class="steppill">${esc(slide.step)}</div>` : '',
     slide.kicker ? `<div class="kicker">${esc(slide.kicker)}</div>` : '',
     headline(slide.headline, tag),
     copyBlocks(slide.copy),
+    ctaBlock(slide.trigger && slide.type === 'cta' ? slide : {}),
     rows(slide.rows, slide.numbered),
     versus(slide.versus),
     flow(slide.flow),
@@ -126,15 +213,20 @@ function bodyFor(slide, index) {
     figure(slide.figure),
     panel(slide.stats),
     tiles(slide.tiles),
+    cards(slide.cards, slide.flag),
     slide.pull ? `<div class="pull">${inline(slide.pull)}</div>` : '',
     product(slide.product),
     pill(slide.pill),
-  ].filter(Boolean).join('\n      ');
+    note(slide.note),
+  ].filter(Boolean);
+
+  return blocks.join('\n      ');
 }
 
 export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle-morphe') {
   const total = deck.slides.length;
   const photo = slide.type === 'hook' || slide.type === 'cta';
+  const split = Boolean(slide.mock || slide.split);
   const handle = deck.handle || '@theoneclub';
   const progress = Math.round(((index + 1) / total) * 100);
 
@@ -142,10 +234,15 @@ export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle
     .map((b, i) => `<div class="badge badge--${i === 0 ? 'l' : 'r'}">${esc(typeof b === 'string' ? b : b.text)}</div>`)
     .join('\n    ');
 
+  // The artwork is a slide-level layer, not a body child: the slide clips it, so
+  // it can bleed past the safe margin without landing in the body's scroll box
+  // and tripping the overflow QA on every split slide.
+  const artcol = slide.mock ? `<div class="artcol">${mock(slide.mock)}</div>` : '';
+
   const layers = photo
     ? `${slide.image ? `<div class="art" style="background-image:url('${esc(slide.image)}')"></div>` : ''}
-    <div class="scrim"></div>${badges ? '\n    ' + badges : ''}`
-    : badges;
+    <div class="scrim"></div>${artcol ? '\n    ' + artcol : ''}${badges ? '\n    ' + badges : ''}`
+    : `${artcol}${badges ? '\n    ' + badges : ''}`;
 
   return `<!doctype html>
 <html lang="en" data-ready="0">
@@ -157,8 +254,8 @@ export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle
 <link rel="stylesheet" href="${bundlePath}/carousel.css">
 </head>
 <body>
-  <div class="slide slide--${esc(slide.type)}${photo && !slide.image ? ' slide--noart' : ''}" id="slide">
-    ${layers}
+  <div class="slide slide--${esc(slide.type)}${photo && !slide.image ? ' slide--noart' : ''}${split ? ' slide--split' : ''}" id="slide"${slide.splitRatio ? ` style="--split:${esc(slide.splitRatio)}"` : ''}>
+    ${layers}${deck.chip && total > 1 ? `\n    <div class="chip">${index + 1}/${total}</div>` : ''}
     <main class="body">
       ${bodyFor(slide, index)}
     </main>

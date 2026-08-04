@@ -19,6 +19,15 @@
   src: url('./bebas-neue-400.woff2') format('woff2');
 }
 
+/* Annotation face — the handwritten aside pointing at the artwork. Never body copy. */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url('./caveat-600.woff2') format('woff2');
+}
+
 @font-face {
   font-family: 'Inter';
   font-style: normal;

@@ -1,0 +1,109 @@
+{
+  "slug": "the-one-club-documented",
+  "date": "2026-08-04",
+  "angle": "The One Club — the whole system, documented",
+  "trigger": "FOUNDING",
+  "handle": "@theoneclub",
+  "chip": true,
+  "slides": [
+    {
+      "type": "hook",
+      "headline": "ONE SYSTEM.\nFIVE HUNDRED\nFOUNDING SEATS.",
+      "tiles": [
+        { "icon": "target", "value": "ONE", "label": "SYSTEM EVERY MEMBER RUNS" },
+        { "icon": "users", "value": "500", "label": "FOUNDING SEATS, THEN THE DOOR SHUTS" },
+        { "icon": "vote", "value": "$10,000", "label": "MONTHLY FUND · COMMUNITY-VOTED" }
+      ],
+      "note": { "text": "This is the club.", "arrow": "up" }
+    },
+    {
+      "type": "stakes",
+      "kicker": "The real problem",
+      "headline": "YOU DON'T NEED\nMORE INFORMATION.",
+      "copy": [
+        "You have a course, six saved reels and a podcast queue.",
+        "None of them tell you what to do **tomorrow morning**. That is the whole problem."
+      ],
+      "mock": { "image": "../../../assets/oneclub-tabs.svg" }
+    },
+    {
+      "type": "value",
+      "step": "STEP 1",
+      "headline": "PICK ONE OFFER\nTHAT PAYS\nEVERY MONTH.",
+      "copy": [
+        "Not ten. One.",
+        "Software people keep using, that pays you again in thirty days — not a one-time tip."
+      ],
+      "mock": { "image": "../../../assets/oneclub-offer-board.svg" },
+      "note": { "text": "This one.", "arrow": "curve" }
+    },
+    {
+      "type": "value",
+      "step": "STEP 2",
+      "headline": "BUILD ONE ANGLE.\nNEVER SHOW\nYOUR FACE.",
+      "copy": [
+        "Screen recording, text on screen, or an AI voice.",
+        "Same four lines every time: hook, body, proof, one word to comment."
+      ],
+      "mock": { "image": "../../../assets/oneclub-angle-sheet.svg" }
+    },
+    {
+      "type": "value",
+      "step": "STEP 3",
+      "headline": "POST THIRTY TIMES\nBEFORE YOU\nJUDGE IT.",
+      "copy": [
+        "Your first thirty posts are not content. They are data.",
+        "They tell you which angle to keep. Most people quit at nine."
+      ],
+      "mock": { "image": "../../../assets/oneclub-calendar.svg" }
+    },
+    {
+      "type": "value",
+      "step": "STEP 4",
+      "headline": "AUTOMATE THE PART\nWHERE PEOPLE\nQUIT.",
+      "copy": [
+        "One comment fires the DM. The DM sends the email.",
+        "The follow-up runs for weeks without you opening anything."
+      ],
+      "mock": { "image": "../../../assets/oneclub-automation.svg" }
+    },
+    {
+      "type": "receipts",
+      "kicker": "What the club actually does",
+      "headline": "YOU BRING THE HOURS.\nWE BRING THE\nREST OF IT.",
+      "cards": [
+        { "icon": "target", "t": "The offer", "s": "Shortlisted and checked, so you skip the guessing", "on": true },
+        { "icon": "doc", "t": "The angle", "s": "Hooks and scripts written out, ready to record" },
+        { "icon": "calendar", "t": "The rhythm", "s": "Thirty dated posts — not thirty vague ideas" },
+        { "icon": "bolt", "t": "The wiring", "s": "Comment to DM to inbox, running unattended" },
+        { "icon": "vote", "t": "The fund", "s": "$10,000 monthly, voted on by the community" }
+      ],
+      "flag": "Built together"
+    },
+    {
+      "type": "cta",
+      "split": true,
+      "headline": "I DOCUMENTED\nTHE WHOLE BUILD.",
+      "trigger": "FOUNDING",
+      "ctaLead": "Comment",
+      "instruction": "below and I'll DM you\nthe full walkthrough.",
+      "mock": { "image": "../../../assets/oneclub-walkthrough.svg" },
+      "note": { "arrow": "down" }
+    }
+  ],
+  "caption": "Comment FOUNDING and I'll DM you the full walkthrough — every step in this carousel, written out start to finish.\n\nThe One Club is one system, run the same way by everyone inside it.\n\nStep 1 — pick one offer that pays every month, not once.\nStep 2 — build one angle you can make without ever showing your face.\nStep 3 — post thirty times before you judge whether it works.\nStep 4 — automate the part where people quit: comment, DM, email, follow-up.\n\nThat is the whole thing. Nothing held back.\n\nWhat the club adds is the boring half. The offer, already checked. The scripts, already written. Thirty dated posts instead of thirty vague ideas. The wiring, already built.\n\nPlus the $10,000 monthly fund, community-voted, that members decide together.\n\nWe're building this in the open, and the first 500 seats are the ones that shape it.\n\nComment FOUNDING and it's in your DMs.",
+  "hashtags": [
+    "#theoneclub",
+    "#facelessmarketing",
+    "#aiaffiliate",
+    "#affiliatemarketing",
+    "#recurringincome",
+    "#digitalbusiness",
+    "#onlinebusiness",
+    "#aitools",
+    "#contentsystem",
+    "#buildinpublic",
+    "#sidebusiness",
+    "#foundingmembers"
+  ]
+}

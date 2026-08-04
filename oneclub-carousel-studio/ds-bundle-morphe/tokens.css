@@ -36,6 +36,7 @@
      Swap to 'Bebas Neue' here for the lighter condensed look. */
   --font-display: 'Anton', 'Bebas Neue', Impact, sans-serif; /* all-caps only */
   --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-hand:    'Caveat', cursive;  /* the annotation aside only — never body copy */
 
   --fs-hook:      104px;  /* auto-fits down, never up */
   --fs-headline:  82px;

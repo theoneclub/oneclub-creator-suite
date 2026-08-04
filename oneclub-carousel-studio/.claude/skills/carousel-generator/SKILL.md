@@ -158,6 +158,36 @@ Copy `decks/TEMPLATE.json`. Fields:
 | `slides[].trigger` | CTA slide only — must equal the deck trigger |
 | `caption`, `hashtags[]` | `Comment <WORD>` must be in the first 125 chars |
 
+### Split slides — copy left, screen right
+
+The step-by-step layout. Give a slide a `mock` and it splits: copy holds the
+left column, the artwork holds the right and bleeds off the edge.
+
+| Field | Notes |
+|---|---|
+| `slides[].mock` | `{ image }` — a UI panel from `scripts/make-mocks.mjs`. Presence of this field is what makes a slide split |
+| `slides[].split` | Force the split layout with no artwork (the CTA uses it) |
+| `slides[].splitRatio` | Copy-column width in px. Default `464px` |
+| `slides[].step` | Black-on-green `STEP 1` pill above the headline |
+| `slides[].note` | Handwritten aside `{ text, arrow }`. `arrow`: `curve` (points right/down), `up`, `down`, or `false` |
+| `slides[].cards[]` | Chained icon cards `{ icon, t, s, on }` joined by a connector spine |
+| `slides[].flag` | Pill closing a `cards` chain, e.g. `"Built together"` |
+| `slides[].tiles[].icon` | Adds an icon tile — turns the three-across tiles into stacked stat cards |
+| `deck.chip` | `true` draws the `3/8` counter chip top-right |
+
+Icons: `eye bag calendar target doc users gear bolt chart vote lock seed`.
+Keep the set small — one that grows every deck is a design smell.
+
+**Mockups are generated, not drawn.** `node scripts/make-mocks.mjs` writes the
+panels in `assets/oneclub-*.svg` at 620×1300, laid out from the canvas size so
+changing it reflows every panel. Add a new panel there rather than hand-placing
+coordinates in a one-off file.
+
+**Never put artwork inside `.body`.** The art is a slide-level layer so the
+slide clips its bleed; anything in the body's scroll box counts as overflow and
+fails the layout QA on every split slide. Same rule for negative margins and
+negative `inset` on glows.
+
 Inline markup: `[[green]]`, `{{yellow}}`, `((boxed))`, `**bold**`, `\n` line break.
 
 **Choosing a block.** A value slide is stronger as three `rows` than as a

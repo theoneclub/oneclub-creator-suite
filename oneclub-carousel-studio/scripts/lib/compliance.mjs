@@ -84,9 +84,12 @@ export function checkText(text, where) {
 
 /** Flatten every user-visible string on a slide, whatever block it lives in. */
 export function slideText(slide) {
-  const parts = [slide.kicker, slide.headline, slide.trigger, slide.instruction, slide.pull, slide.note];
+  const parts = [slide.kicker, slide.step, slide.headline, slide.trigger, slide.ctaLead, slide.instruction, slide.pull, slide.flag];
+  parts.push(typeof slide.note === 'string' ? slide.note : slide.note?.text);
   parts.push(...(slide.copy || []));
   for (const r of slide.rows || []) parts.push(r.t, r.s);
+  for (const c of slide.cards || []) parts.push(c.t, c.s);
+  if (slide.mock) parts.push(typeof slide.mock === 'string' ? undefined : slide.mock.caption);
   for (const f of slide.flow || []) parts.push(f.k, f.t, f.s);
   if (slide.big) parts.push(slide.big.value, slide.big.label, slide.big.sub);
   if (slide.figure) parts.push(slide.figure.caption);
