@@ -334,7 +334,37 @@ ${footer(s.footerY, s.footerH, {
   })}`);
 }
 
+/** The fill-in-the-blank sheet — the deck's payoff, as a thing you can copy. */
+function hookSheet() {
+  const lines = [
+    ['NEGATE', 'Nobody needs ______. They need ______.'],
+    ['CORRECT', 'Most people think ______.'],
+    ['BINARY', '______ &#10060;   ______ &#9989;'],
+    ['WITHOUT', 'How to ______ without ______.'],
+    ['REFRAME', 'Your ______ isn’t ______ — it’s ______.'],
+    ['COUNT', 'The ___ ______ I actually reuse.'],
+  ];
+  const [head, y0] = intro('WRITE THE LINE FIRST', 'Fill the blanks.', 'Six shapes. Pick one, then write the post.');
+  const s = slots(y0 + 16, lines.length, { footer: 108 });
+  const list = lines.map(([k, t], i) => {
+    const y = s.at(i);
+    return `  ${rect(PAD, y, IW, s.h, 15)}
+  <rect x="${PAD}" y="${y}" width="6" height="${s.h}" rx="3" fill="${G}"/>
+  <text class="lab" x="${PAD + 28}" y="${y + s.h / 2 - 8}" fill="${G}">${esc(k)}</text>
+  <text class="s" x="${PAD + 28}" y="${y + s.h / 2 + 22}" font-size="16" fill="#ffffff">${t}</text>`;
+  }).join('\n');
+
+  return svg('A hook worksheet: six fill-in-the-blank first-line shapes', `${chrome('FIRST LINE', '6 SHAPES')}
+  <rect x="1" y="89" width="${W - 2}" height="200" fill="url(#glow)"/>
+${head}
+${list}
+  ${rect(PAD, s.footerY, IW, s.footerH, 18)}
+  <text class="s" x="${PAD + 26}" y="${s.footerY + 42}" font-size="15">Five to eight words. Say it out loud.</text>
+  <text class="s" x="${PAD + 26}" y="${s.footerY + 74}" font-size="15" fill="${DIM}">If you run out of breath, it is too long.</text>`);
+}
+
 const PANELS = {
+  'hook-sheet.svg': hookSheet,
   'oneclub-panel.svg': clubPanel,
   'oneclub-offer-board.svg': offerBoard,
   'oneclub-angle-sheet.svg': angleSheet,

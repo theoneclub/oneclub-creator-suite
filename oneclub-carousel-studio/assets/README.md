@@ -49,6 +49,7 @@ stranding hand-placed numbers. Edit the script, never the SVG.
 | `oneclub-automation.svg` | Comment to DM to email to follow-up |
 | `oneclub-tabs.svg` | Eight open tabs of half-finished plans |
 | `oneclub-walkthrough.svg` | The walkthrough the CTA hands over |
+| `hook-sheet.svg` | Six fill-in-the-blank first-line shapes |
 
 A panel is referenced as `"mock": { "image": "../../../assets/<file>" }`, which
 is also what switches the slide to the split layout. Unlike hook backdrops these

@@ -183,6 +183,24 @@ panels in `assets/oneclub-*.svg` at 620×1300, laid out from the canvas size so
 changing it reflows every panel. Add a new panel there rather than hand-placing
 coordinates in a one-off file.
 
+### Teaching blocks — for decks that give something away
+
+A deck that explains the product is a pitch. A deck that teaches one thing
+properly is what gets saved, and the save is what puts it in front of the next
+person. These blocks exist for the second kind.
+
+| Field | Notes |
+|---|---|
+| `slides[].label` | Outlined pill with an arrow chip — `"What to do instead"`, `"Shapes 1 and 2"`. Names the move the slide is making |
+| `slides[].ghost` | The slide's own word repeated huge and hollow behind the copy |
+| `slides[].infocard` | `{ icon, t, accent, s }` — three lines in a bordered box, middle line in green. Use it to hand over the goods, once |
+| `slides[].button` | The big green comment button. Suppresses the `trigger` word block — the button already makes the ask |
+
+The reference decks that teach share one shape: **claim → the number that proves
+it → the fix → the templates → the worksheet → the ask.** Slide 1 makes a claim
+about the reader's work, not about you. Nothing before the last slide mentions
+what you sell.
+
 **Never put artwork inside `.body`.** The art is a slide-level layer so the
 slide clips its bleed; anything in the body's scroll box counts as overflow and
 fails the layout QA on every split slide. Same rule for negative margins and

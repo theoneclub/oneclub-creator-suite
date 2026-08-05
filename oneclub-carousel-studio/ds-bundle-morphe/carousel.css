@@ -156,6 +156,7 @@ h2.stacked .ln { display: block; white-space: nowrap; }
   flex: 1 1 auto;
   min-height: 0;
 }
+.rows--few { flex: 0 0 auto; justify-content: flex-start; }
 .row {
   position: relative;
   display: flex;
@@ -643,6 +644,8 @@ h2.stacked .ln { display: block; white-space: nowrap; }
 .slide--split .copy + .copy { margin-top: 14px; }
 .slide--split .steppill { font-size: 25px; padding: 10px 20px 12px; margin-bottom: 20px; }
 .slide--split .kicker { font-size: 18px; margin-bottom: 16px; }
+.slide--split .labelpill { font-size: 21px; padding: 9px 22px 11px 9px; gap: 12px; margin-bottom: 20px; }
+.slide--split .labelpill .dot { width: 34px; height: 34px; font-size: 19px; }
 .slide--split .note { margin-top: 22px; }
 .slide--split .note .hand { font-size: calc(40px * var(--fit)); }
 .slide--split .note .arrow svg { width: 150px; height: 92px; }
@@ -910,6 +913,132 @@ h2.stacked .ln { display: block; white-space: nowrap; }
 .slide--split .pull,
 .slide--split .pill,
 .slide--split .product { align-self: flex-start; }
+
+/* ============================================================
+   TEACHING BLOCKS — the label pill, the ghost word, the info
+   card, the comment button. Built for decks that give something
+   away rather than describe something for sale.
+   ============================================================ */
+
+/* ---------- label pill: names what the slide is about to do ---------- */
+
+.labelpill {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  border: 2px solid var(--green-24);
+  border-radius: var(--radius-pill);
+  background: var(--green-10);
+  color: var(--white);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 12px 30px 14px 12px;
+  margin-bottom: 28px;
+}
+.labelpill .dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--black);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* ---------- ghost word: the headline's own echo, behind it ---------- */
+
+.ghost {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+  font-family: var(--font-display);
+  font-size: 172px;
+  line-height: 0.92;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.055);
+}
+.ghost span { display: block; }
+.ghost span:nth-child(even) { margin-left: -180px; }
+
+/* ---------- info card: the aside that hands over the goods ---------- */
+
+.infocard {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-top: 40px;
+  padding: 26px 32px 28px;
+  border: 2px solid var(--green-24);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+.infocard .ico {
+  flex: 0 0 auto;
+  width: 82px;
+  height: 82px;
+  border-radius: 20px;
+  background: var(--green-10);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infocard .ico svg { width: 44px; height: 44px; }
+.infocard .txt { min-width: 0; }
+.infocard .a,
+.infocard .c {
+  font-size: calc(30px * var(--fit));
+  font-weight: 800;
+  line-height: 1.16;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.infocard .b {
+  font-size: calc(38px * var(--fit));
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 2px 0;
+}
+
+/* ---------- the comment button ---------- */
+
+.bigbtn {
+  align-self: stretch;
+  margin-top: 42px;
+  padding: 32px 40px 36px;
+  border-radius: var(--radius-pill);
+  background: var(--green);
+  color: var(--black);
+  font-size: calc(40px * var(--fit));
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.6);
+  /* the button is the contrast — the photo-slide outline would fight it */
+  -webkit-text-stroke: 0;
+  paint-order: normal;
+  text-shadow: none;
+}
 
 /* ---------- per-type trims ---------- */
 

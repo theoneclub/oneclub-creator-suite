@@ -6,9 +6,10 @@
  * Severity: 'error' blocks export. 'warn' is reported and shipped.
  */
 
-// EBOOK / BLUEPRINT are the carousel-only triggers — kept out of the reel
-// rotation so carousel conversion stays measurable on its own.
-export const TRIGGER_ROTATION = ['FREEDOM', 'ESCAPE', 'SYSTEM', 'FOUNDING', 'FREE', 'IN', 'BLUEPRINT', 'EBOOK'];
+// EBOOK / BLUEPRINT / HOOKS are the carousel-only triggers — kept out of the
+// reel rotation so carousel conversion stays measurable on its own. One trigger
+// per asset: reusing a word across two magnets is what makes attribution mush.
+export const TRIGGER_ROTATION = ['FREEDOM', 'ESCAPE', 'SYSTEM', 'FOUNDING', 'FREE', 'IN', 'BLUEPRINT', 'EBOOK', 'HOOKS'];
 
 const RULES = [
   {
@@ -84,7 +85,10 @@ export function checkText(text, where) {
 
 /** Flatten every user-visible string on a slide, whatever block it lives in. */
 export function slideText(slide) {
-  const parts = [slide.kicker, slide.step, slide.headline, slide.trigger, slide.ctaLead, slide.instruction, slide.pull, slide.flag];
+  const parts = [slide.kicker, slide.step, slide.headline, slide.trigger, slide.ctaLead, slide.instruction, slide.pull, slide.flag, slide.ghost];
+  parts.push(typeof slide.label === 'string' ? slide.label : slide.label?.text);
+  parts.push(typeof slide.button === 'string' ? slide.button : slide.button?.text);
+  if (slide.infocard) parts.push(slide.infocard.t, slide.infocard.accent, slide.infocard.s);
   parts.push(typeof slide.note === 'string' ? slide.note : slide.note?.text);
   parts.push(...(slide.copy || []));
   for (const r of slide.rows || []) parts.push(r.t, r.s);

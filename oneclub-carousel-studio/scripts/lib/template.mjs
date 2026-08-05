@@ -25,6 +25,9 @@ const copyBlocks = (copy = []) => copy.map((p) => `<p class="copy">${inline(p)}<
 /** Row cards: { t, s } — optional `numbered` turns them into a ranked list. */
 function rows(items = [], numbered = false) {
   if (!items.length) return '';
+  // Two cards told to fill the frame end up pinned to opposite edges with a
+  // hole between them. Past two, space-evenly reads as a list.
+  const few = items.length <= 2;
   const li = items.map((it, i) => `
         <div class="row" style="--row-accent:${accent(i)}">
           ${numbered ? `<div class="n">${i + 1}</div>` : ''}
@@ -33,7 +36,7 @@ function rows(items = [], numbered = false) {
             ${it.s ? `<div class="s">${inline(it.s)}</div>` : ''}
           </div>
         </div>`).join('');
-  return `<div class="rows">${li}\n      </div>`;
+  return `<div class="rows${few ? ' rows--few' : ''}">${li}\n      </div>`;
 }
 
 /** Stat panel: { label, value, bar (0-1), muted } — bars are relative, never absolute claims. */
@@ -171,9 +174,30 @@ const mock = (m) => {
   return `<div class="mock" style="background-image:url('${esc(o.image)}')${o.ratio ? `;--mock-ratio:${esc(o.ratio)}` : ''}"></div>`;
 };
 
+/** Outlined pill with a filled arrow chip — names what the slide is about to do. */
+const label = (l) =>
+  (l ? `<div class="labelpill"><span class="dot">&rarr;</span>${esc(typeof l === 'string' ? l : l.text)}</div>` : '');
+
+/** Info card: three short lines in a bordered box, the middle one accented. */
+function infocard(c) {
+  if (!c) return '';
+  return `<div class="infocard">
+        ${c.icon ? `<div class="ico">${icon(c.icon)}</div>` : ''}
+        <div class="txt">
+          ${c.t ? `<div class="a">${inline(c.t)}</div>` : ''}
+          ${c.accent ? `<div class="b">${inline(c.accent)}</div>` : ''}
+          ${c.s ? `<div class="c">${inline(c.s)}</div>` : ''}
+        </div>
+      </div>`;
+}
+
+/** The big rounded comment button — the CTA's one tappable-looking thing. */
+const button = (b) => (b ? `<div class="bigbtn">${esc(typeof b === 'string' ? b : b.text)}</div>` : '');
+
 /** CTA block: the one word we want typed, at the size it deserves. */
 function ctaBlock(slide) {
-  if (!slide.trigger) return '';
+  // The button already says the word — printing both is the same ask twice.
+  if (!slide.trigger || slide.button) return '';
   return `<div class="ctablock">
         <div class="rule"></div>
         <div class="lead">${esc(slide.ctaLead || 'Comment')}</div>
@@ -202,6 +226,7 @@ function bodyFor(slide, index) {
   const tag = index === 0 || slide.type === 'cta' ? 'h1' : 'h2';
   const blocks = [
     slide.step ? `<div class="steppill">${esc(slide.step)}</div>` : '',
+    label(slide.label),
     slide.kicker ? `<div class="kicker">${esc(slide.kicker)}</div>` : '',
     headline(slide.headline, tag),
     copyBlocks(slide.copy),
@@ -216,6 +241,8 @@ function bodyFor(slide, index) {
     cards(slide.cards, slide.flag),
     slide.pull ? `<div class="pull">${inline(slide.pull)}</div>` : '',
     product(slide.product),
+    infocard(slide.infocard),
+    button(slide.button),
     pill(slide.pill),
     note(slide.note),
   ].filter(Boolean);
@@ -239,10 +266,16 @@ export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle
   // and tripping the overflow QA on every split slide.
   const artcol = slide.mock ? `<div class="artcol">${mock(slide.mock)}</div>` : '';
 
+  // The word repeated huge and hollow behind the copy. A slide-level layer for
+  // the same reason the artwork is one: it must not enter the body's scroll box.
+  const ghost = slide.ghost
+    ? `<div class="ghost" aria-hidden="true">${Array.from({ length: 5 }, () => `<span>${esc(slide.ghost)}</span>`).join('')}</div>`
+    : '';
+
   const layers = photo
     ? `${slide.image ? `<div class="art" style="background-image:url('${esc(slide.image)}')"></div>` : ''}
-    <div class="scrim"></div>${artcol ? '\n    ' + artcol : ''}${badges ? '\n    ' + badges : ''}`
-    : `${artcol}${badges ? '\n    ' + badges : ''}`;
+    <div class="scrim"></div>${ghost ? '\n    ' + ghost : ''}${artcol ? '\n    ' + artcol : ''}${badges ? '\n    ' + badges : ''}`
+    : `${ghost}${artcol}${badges ? '\n    ' + badges : ''}`;
 
   return `<!doctype html>
 <html lang="en" data-ready="0">

@@ -90,6 +90,21 @@ with Make/Zapier: ManyChat "Tag Applied" → Brevo "Create or Update Contact".
 Same field map. Do not skip the three attributes to save a step — without them
 `angle-report.mjs` has nothing to rank.
 
+## 6. Live triggers
+
+One word per asset. Reusing a word across two magnets is exactly what makes
+`angle-report.mjs` unable to tell you which deck converted.
+
+| Trigger | Asset | Deck |
+|---|---|---|
+| `EBOOK` | The Faceless AI Affiliate ebook | `faceless-affiliate-playbook`, the five alternates |
+| `SYSTEM` | The AI Affiliate Blueprint | `best-ai-model-for-beginners`, `first-week-plan` |
+| `FOUNDING` | The One Club walkthrough | `the-one-club-documented` |
+| `HOOKS` | The first-line swipe file | `first-line-patterns` |
+
+`FOUNDING` and `HOOKS` are new — create both automations before either deck
+goes live, or the comments land nowhere.
+
 ## 5. Per-carousel checklist
 
 - [ ] New post added to the existing `EBOOK` comment trigger

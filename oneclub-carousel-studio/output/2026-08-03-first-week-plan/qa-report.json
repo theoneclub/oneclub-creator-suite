@@ -1,6 +1,7 @@
 {
-  "deck": "2026-08-03-first-week-plan",
-  "stage": "render",
+  "deck": "first-week-plan",
+  "date": "2026-08-03",
+  "stage": "build",
   "ok": true,
   "findings": [
     {

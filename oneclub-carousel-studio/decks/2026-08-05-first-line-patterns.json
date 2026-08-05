@@ -1,0 +1,119 @@
+{
+  "slug": "first-line-patterns",
+  "date": "2026-08-05",
+  "angle": "Faceless AI Affiliate — writing the first line",
+  "trigger": "HOOKS",
+  "handle": "@theoneclub",
+  "chip": true,
+  "slides": [
+    {
+      "type": "hook",
+      "ghost": "first line",
+      "headline": "YOUR FIRST LINE\nIS {{80%}}\nOF THE POST.",
+      "copy": [
+        "Everything after it is just delivery."
+      ],
+      "pill": { "text": "Swipe — the six patterns →", "ghost": true }
+    },
+    {
+      "type": "stakes",
+      "kicker": "Where the post is actually lost",
+      "headline": "THE TOPIC IS\nRARELY THE\nPROBLEM.",
+      "copy": [
+        "A post that gets scrolled almost never had a bad idea.",
+        "It had a **flat first line**, and nobody stayed to find out."
+      ],
+      "tiles": [
+        { "icon": "chart", "value": "60–75%", "label": "REACH SLIDE TWO WHEN THE FIRST LINE WORKS" },
+        { "icon": "bolt", "value": "UNDER 50%", "label": "MEANS THE LINE FAILED — NOT THE TOPIC" }
+      ]
+    },
+    {
+      "type": "value",
+      "label": "What to do instead",
+      "ghost": "ending",
+      "headline": "STOP WRITING\nINTROS. LEAD WITH\nTHE ((ENDING)).",
+      "copy": [
+        "The sentence you were saving for the end is the one that earns the swipe."
+      ],
+      "infocard": {
+        "icon": "doc",
+        "t": "Here are the",
+        "accent": "6 shapes",
+        "s": "that keep showing up. Steal them."
+      }
+    },
+    {
+      "type": "value",
+      "label": "Shapes 1 and 2",
+      "headline": "NEGATE IT.\nTHEN CORRECT\nTHE BELIEF.",
+      "rows": [
+        { "t": "Nobody needs ___. They need ___.", "s": "“Nobody needs your face. They need the demo.”" },
+        { "t": "Most people think ___.", "s": "“Most people pick their offer in four minutes.”" }
+      ]
+    },
+    {
+      "type": "value",
+      "label": "Shapes 3 and 4",
+      "headline": "SHOW TWO STATES.\nANSWER THE\nOBJECTION FIRST.",
+      "rows": [
+        { "t": "___ ❌   ___ ✅", "s": "Two futures in one frame. No sentence needed." },
+        { "t": "How to ___ without ___.", "s": "“How to start without a product of your own.”" }
+      ]
+    },
+    {
+      "type": "value",
+      "label": "Shapes 5 and 6",
+      "headline": "REFRAME THE\nFAILURE. THEN\nCOUNT THE THING.",
+      "rows": [
+        { "t": "Your ___ isn't ___ — it's ___.", "s": "“Your first 30 posts aren't content. They're data.”" },
+        { "t": "The ___ things I actually reuse.", "s": "A named, finite list. People swipe to see the number." }
+      ]
+    },
+    {
+      "type": "value",
+      "ghost": "5-8",
+      "headline": "THE LENGTH RULE.",
+      "big": {
+        "value": "5–8",
+        "label": "words in the first line",
+        "sub": "Past ten it shrinks on screen — and that is the exact moment it stops landing. Read it out loud. If you run out of breath, cut it."
+      }
+    },
+    {
+      "type": "receipts",
+      "label": "Before you write",
+      "headline": "FILL THE BLANKS\nBEFORE YOU WRITE\nTHE POST.",
+      "copy": [
+        "Pick one shape. Fill it in. Then write everything else to match it."
+      ],
+      "mock": { "image": "../../../assets/hook-sheet.svg" },
+      "note": { "text": "Screenshot this one.", "arrow": "curve" }
+    },
+    {
+      "type": "cta",
+      "ghost": "swipe file",
+      "headline": "I PUT ALL SIX IN\nONE SWIPE FILE.",
+      "copy": [
+        "Every shape, with worked examples you can paste over."
+      ],
+      "trigger": "HOOKS",
+      "button": "Comment HOOKS and it's yours"
+    }
+  ],
+  "caption": "Comment HOOKS and I'll send you the swipe file — all six first-line shapes with worked examples.\n\nThe first line is about 80% of whether a post works. Everything after it is delivery.\n\nThe six shapes that keep showing up:\n\n1. Negate — \"Nobody needs ___. They need ___.\"\n2. Correct — \"Most people think ___.\"\n3. Binary — \"___ ❌  ___ ✅\"\n4. Without — \"How to ___ without ___.\"\n5. Reframe — \"Your ___ isn't ___ — it's ___.\"\n6. Count — \"The ___ things I actually reuse.\"\n\nTwo rules that matter more than the shape.\n\nFive to eight words. Past ten it shrinks on screen, and that is the exact moment it stops landing.\n\nLead with the ending. The sentence you were saving for last is the one that earns the swipe.\n\nWrite the line before you write the post. If the line is flat, the post was never going to save you.\n\nComment HOOKS for the swipe file.",
+  "hashtags": [
+    "#copywritingtips",
+    "#hookwriting",
+    "#contentstrategy",
+    "#facelessmarketing",
+    "#aiaffiliate",
+    "#instagramgrowth",
+    "#contentcreatortips",
+    "#socialmediatips",
+    "#writingtips",
+    "#carouselpost",
+    "#digitalmarketing",
+    "#creatortips"
+  ]
+}
