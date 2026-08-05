@@ -1,6 +1,7 @@
 {
-  "deck": "2026-07-29-alt4-one-time-vs-recurring",
-  "stage": "render",
+  "deck": "alt4-one-time-vs-recurring",
+  "date": "2026-07-29",
+  "stage": "build",
   "ok": true,
   "findings": []
 }

@@ -1,6 +1,7 @@
 {
-  "deck": "2026-08-01-hook-90-days",
-  "stage": "render",
+  "deck": "hook-90-days",
+  "date": "2026-08-01",
+  "stage": "build",
   "ok": true,
   "findings": []
 }

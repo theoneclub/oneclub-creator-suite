@@ -515,6 +515,8 @@ h2.stacked .ln { display: block; white-space: nowrap; }
 
 .pull {
   margin-top: 40px;
+  /* after a block that grew to fill the frame, the pull lands on the footer */
+  margin-bottom: 14px;
   font-size: calc(36px * var(--fit));
   font-weight: 700;
   line-height: 1.32;

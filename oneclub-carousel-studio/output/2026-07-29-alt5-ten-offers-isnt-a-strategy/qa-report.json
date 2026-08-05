@@ -1,6 +1,7 @@
 {
-  "deck": "2026-07-29-alt5-ten-offers-isnt-a-strategy",
-  "stage": "render",
+  "deck": "alt5-ten-offers-isnt-a-strategy",
+  "date": "2026-07-29",
+  "stage": "build",
   "ok": true,
   "findings": []
 }

@@ -365,13 +365,15 @@ ${list}
 
 /** Vet any affiliate program in four questions — the deck's payoff, copyable. */
 function programCheck() {
+  // Deliberately plain. A beginner can answer all four in under a minute
+  // without opening the program's terms page.
   const rows = [
-    ['PAYS AGAIN?', 'Every month beats once. Check this first.'],
-    ['COOKIE LENGTH?', '30–90 days is normal. Under 7, walk.'],
-    ['PAYOUT FLOOR?', 'Some hold your money to a threshold.'],
-    ['ANYONE ELSE ON IT?', 'Nobody in your niche = usually a reason.'],
+    ['WOULD YOU SIGN UP?', 'If you would not pay for it, it shows.'],
+    ['DOES IT PAY MONTHLY?', 'Or once, and you are back at zero.'],
+    ['CAN YOU SHOW IT?', 'No screen to record means no faceless post.'],
+    ['STILL USING IT IN A YEAR?', 'A tool they keep is a payment you keep.'],
   ];
-  const [head, y0] = intro('BEFORE YOU PROMOTE ANYTHING', 'Four questions.', 'Three good answers or leave it alone.');
+  const [head, y0] = intro('BEFORE YOU PROMOTE ANYTHING', 'Four questions.', 'Three honest yeses, or leave it alone.');
   const s = slots(y0 + 20, rows.length, { footer: 132, gap: 22 });
   const list = rows.map(([k, t], i) => {
     const y = s.at(i);
@@ -389,7 +391,7 @@ ${list}
 ${footer(s.footerY, s.footerH, {
     icon: tickIcon(PAD + 48, s.footerY + s.footerH / 2),
     title: 'Three ticks minimum',
-    sub: 'Two or fewer and the maths never works.',
+    sub: 'Two or fewer and it is not worth the posts.',
   })}`);
 }
 

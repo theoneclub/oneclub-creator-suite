@@ -1,6 +1,7 @@
 {
-  "deck": "2026-08-01-hook-one-word",
-  "stage": "render",
+  "deck": "hook-one-word",
+  "date": "2026-08-01",
+  "stage": "build",
   "ok": true,
   "findings": []
 }

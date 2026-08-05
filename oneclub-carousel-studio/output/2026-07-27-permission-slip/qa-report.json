@@ -1,6 +1,7 @@
 {
-  "deck": "2026-07-27-permission-slip",
-  "stage": "render",
+  "deck": "permission-slip",
+  "date": "2026-07-27",
+  "stage": "build",
   "ok": true,
   "findings": []
 }

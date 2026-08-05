@@ -1,6 +1,7 @@
 {
-  "deck": "2026-07-29-alt1-the-offer-decides",
-  "stage": "render",
+  "deck": "alt1-the-offer-decides",
+  "date": "2026-07-29",
+  "stage": "build",
   "ok": true,
   "findings": []
 }

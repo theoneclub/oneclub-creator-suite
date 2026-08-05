@@ -1,6 +1,7 @@
 {
-  "deck": "2026-07-29-alt2-nobody-was-watching",
-  "stage": "render",
+  "deck": "alt2-nobody-was-watching",
+  "date": "2026-07-29",
+  "stage": "build",
   "ok": true,
   "findings": []
 }

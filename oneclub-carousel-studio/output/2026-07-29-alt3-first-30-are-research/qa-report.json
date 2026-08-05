@@ -1,6 +1,7 @@
 {
-  "deck": "2026-07-29-alt3-first-30-are-research",
-  "stage": "render",
+  "deck": "alt3-first-30-are-research",
+  "date": "2026-07-29",
+  "stage": "build",
   "ok": true,
   "findings": []
 }

@@ -20,30 +20,30 @@
   <rect x="1" y="89" width="618" height="200" fill="url(#glow)"/>
   <text class="lab" x="34" y="130">BEFORE YOU PROMOTE ANYTHING</text>
   <text class="num" x="34" y="184">Four questions.</text>
-  <text class="s" x="34" y="218">Three good answers or leave it alone.</text>
+  <text class="s" x="34" y="218">Three honest yeses, or leave it alone.</text>
   <rect x="34" y="272" width="552" height="188" rx="16" fill="#111111" stroke="rgba(255,255,255,0.09)"/>
   <rect x="34" y="272" width="6" height="188" rx="3" fill="#a3f0af"/>
   <rect x="532" y="348" width="36" height="36" rx="10" fill="none" stroke="#4b5563" stroke-width="2"/>
-  <text class="lab" x="62" y="356" fill="#a3f0af">PAYS AGAIN?</text>
-  <text class="s" x="62" y="388" font-size="16" fill="#ffffff">Every month beats once. Check this first.</text>
+  <text class="lab" x="62" y="356" fill="#a3f0af">WOULD YOU SIGN UP?</text>
+  <text class="s" x="62" y="388" font-size="16" fill="#ffffff">If you would not pay for it, it shows.</text>
   <rect x="34" y="482" width="552" height="188" rx="16" fill="#111111" stroke="rgba(255,255,255,0.09)"/>
   <rect x="34" y="482" width="6" height="188" rx="3" fill="#a3f0af"/>
   <rect x="532" y="558" width="36" height="36" rx="10" fill="none" stroke="#4b5563" stroke-width="2"/>
-  <text class="lab" x="62" y="566" fill="#a3f0af">COOKIE LENGTH?</text>
-  <text class="s" x="62" y="598" font-size="16" fill="#ffffff">30–90 days is normal. Under 7, walk.</text>
+  <text class="lab" x="62" y="566" fill="#a3f0af">DOES IT PAY MONTHLY?</text>
+  <text class="s" x="62" y="598" font-size="16" fill="#ffffff">Or once, and you are back at zero.</text>
   <rect x="34" y="692" width="552" height="188" rx="16" fill="#111111" stroke="rgba(255,255,255,0.09)"/>
   <rect x="34" y="692" width="6" height="188" rx="3" fill="#a3f0af"/>
   <rect x="532" y="768" width="36" height="36" rx="10" fill="none" stroke="#4b5563" stroke-width="2"/>
-  <text class="lab" x="62" y="776" fill="#a3f0af">PAYOUT FLOOR?</text>
-  <text class="s" x="62" y="808" font-size="16" fill="#ffffff">Some hold your money to a threshold.</text>
+  <text class="lab" x="62" y="776" fill="#a3f0af">CAN YOU SHOW IT?</text>
+  <text class="s" x="62" y="808" font-size="16" fill="#ffffff">No screen to record means no faceless post.</text>
   <rect x="34" y="902" width="552" height="188" rx="16" fill="#111111" stroke="rgba(255,255,255,0.09)"/>
   <rect x="34" y="902" width="6" height="188" rx="3" fill="#a3f0af"/>
   <rect x="532" y="978" width="36" height="36" rx="10" fill="none" stroke="#4b5563" stroke-width="2"/>
-  <text class="lab" x="62" y="986" fill="#a3f0af">ANYONE ELSE ON IT?</text>
-  <text class="s" x="62" y="1018" font-size="16" fill="#ffffff">Nobody in your niche = usually a reason.</text>
+  <text class="lab" x="62" y="986" fill="#a3f0af">STILL USING IT IN A YEAR?</text>
+  <text class="s" x="62" y="1018" font-size="16" fill="#ffffff">A tool they keep is a payment you keep.</text>
   <rect x="34" y="1134" width="552" height="132" rx="18" fill="#0e150f" stroke="rgba(163,240,175,0.34)"/>
   <circle cx="82" cy="1200" r="19" fill="#a3f0af"/>
   <path d="M74.02 1200.38 l6.08 6.84 L90.74 1193.54" fill="none" stroke="#000" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
   <text class="t" x="122" y="1196" font-size="19" fill="#a3f0af">Three ticks minimum</text>
-  <text class="s" x="122" y="1224" font-size="15">Two or fewer and the maths never works.</text>
+  <text class="s" x="122" y="1224" font-size="15">Two or fewer and it is not worth the posts.</text>
 </svg>
