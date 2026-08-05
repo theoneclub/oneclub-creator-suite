@@ -101,9 +101,10 @@ One word per asset. Reusing a word across two magnets is exactly what makes
 | `SYSTEM` | The AI Affiliate Blueprint | `best-ai-model-for-beginners`, `first-week-plan` |
 | `FOUNDING` | The One Club walkthrough | `the-one-club-documented` |
 | `HOOKS` | The first-line swipe file | `first-line-patterns` |
+| `PAID` | The program-vetting checklist | `how-affiliates-get-paid` |
 
-`FOUNDING` and `HOOKS` are new — create both automations before either deck
-goes live, or the comments land nowhere.
+`FOUNDING`, `HOOKS` and `PAID` are new — create all three automations before
+those decks go live, or the comments land nowhere.
 
 ## 5. Per-carousel checklist
 

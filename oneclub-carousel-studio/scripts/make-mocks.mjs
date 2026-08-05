@@ -363,8 +363,39 @@ ${list}
   <text class="s" x="${PAD + 26}" y="${s.footerY + 74}" font-size="15" fill="${DIM}">If you run out of breath, it is too long.</text>`);
 }
 
+/** Vet any affiliate program in four questions — the deck's payoff, copyable. */
+function programCheck() {
+  const rows = [
+    ['PAYS AGAIN?', 'Every month beats once. Check this first.'],
+    ['COOKIE LENGTH?', '30–90 days is normal. Under 7, walk.'],
+    ['PAYOUT FLOOR?', 'Some hold your money to a threshold.'],
+    ['ANYONE ELSE ON IT?', 'Nobody in your niche = usually a reason.'],
+  ];
+  const [head, y0] = intro('BEFORE YOU PROMOTE ANYTHING', 'Four questions.', 'Three good answers or leave it alone.');
+  const s = slots(y0 + 20, rows.length, { footer: 132, gap: 22 });
+  const list = rows.map(([k, t], i) => {
+    const y = s.at(i);
+    return `  ${rect(PAD, y, IW, s.h, 16)}
+  <rect x="${PAD}" y="${y}" width="6" height="${s.h}" rx="3" fill="${G}"/>
+  <rect x="${W - PAD - 54}" y="${y + s.h / 2 - 18}" width="36" height="36" rx="10" fill="none" stroke="${DIM}" stroke-width="2"/>
+  <text class="lab" x="${PAD + 28}" y="${y + s.h / 2 - 10}" fill="${G}">${esc(k)}</text>
+  <text class="s" x="${PAD + 28}" y="${y + s.h / 2 + 22}" font-size="16" fill="#ffffff">${esc(t)}</text>`;
+  }).join('\n');
+
+  return svg('A four-question checklist for vetting an affiliate program before promoting it', `${chrome('PROGRAM CHECK', '4 QUESTIONS')}
+  <rect x="1" y="89" width="${W - 2}" height="200" fill="url(#glow)"/>
+${head}
+${list}
+${footer(s.footerY, s.footerH, {
+    icon: tickIcon(PAD + 48, s.footerY + s.footerH / 2),
+    title: 'Three ticks minimum',
+    sub: 'Two or fewer and the maths never works.',
+  })}`);
+}
+
 const PANELS = {
   'hook-sheet.svg': hookSheet,
+  'program-check.svg': programCheck,
   'oneclub-panel.svg': clubPanel,
   'oneclub-offer-board.svg': offerBoard,
   'oneclub-angle-sheet.svg': angleSheet,
