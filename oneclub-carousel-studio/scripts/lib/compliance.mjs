@@ -9,7 +9,7 @@
 // EBOOK / BLUEPRINT / HOOKS are the carousel-only triggers — kept out of the
 // reel rotation so carousel conversion stays measurable on its own. One trigger
 // per asset: reusing a word across two magnets is what makes attribution mush.
-export const TRIGGER_ROTATION = ['FREEDOM', 'ESCAPE', 'SYSTEM', 'FOUNDING', 'FREE', 'IN', 'BLUEPRINT', 'EBOOK', 'HOOKS', 'PAID'];
+export const TRIGGER_ROTATION = ['FREEDOM', 'ESCAPE', 'SYSTEM', 'FOUNDING', 'FREE', 'IN', 'BLUEPRINT', 'EBOOK', 'HOOKS', 'GUIDE'];
 
 const RULES = [
   {

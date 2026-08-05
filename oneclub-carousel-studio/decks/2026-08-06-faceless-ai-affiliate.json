@@ -1,0 +1,131 @@
+{
+  "slug": "faceless-ai-affiliate",
+  "date": "2026-08-06",
+  "angle": "Faceless AI Affiliate Marketing — the whole model",
+  "trigger": "GUIDE",
+  "handle": "@theoneclub",
+  "chip": true,
+  "slides": [
+    {
+      "type": "hook",
+      "ghost": "faceless",
+      "headline": "NO FACE.\nNO PRODUCT.\nNO {{FOLLOWING}}.",
+      "copy": [
+        "This is what faceless AI affiliate actually is."
+      ],
+      "pill": { "text": "Swipe — the whole model →", "ghost": true }
+    },
+    {
+      "type": "stakes",
+      "kicker": "Where the first year goes",
+      "headline": "FACELESS DOESN'T\nMEAN {{EFFORTLESS}}.",
+      "copy": [
+        "It means the camera stops being the reason you don't post.",
+        "The work moves somewhere else: **picking one offer**, and posting often enough to learn something."
+      ],
+      "tiles": [
+        { "icon": "target", "value": "1 OFFER", "label": "IS THE STRATEGY — NOT TEN" },
+        { "icon": "calendar", "value": "30 POSTS", "label": "BEFORE THE DATA MEANS ANYTHING" }
+      ]
+    },
+    {
+      "type": "value",
+      "label": "The model in one slide",
+      "headline": "FOUR MOVING\nPARTS. THAT'S IT.",
+      "flow": [
+        { "k": "1", "t": "One recurring offer", "s": "Pays again next month" },
+        { "k": "2", "t": "One faceless angle", "s": "Screen, text or AI voice" },
+        { "k": "3", "t": "A posting rhythm", "s": "Thirty before you judge" },
+        { "k": "4", "t": "One tracked link", "s": "So you know which angle worked" }
+      ]
+    },
+    {
+      "type": "value",
+      "label": "What faceless looks like",
+      "headline": "THREE FORMATS.\nNO CAMERA.\nNO STUDIO.",
+      "rows": [
+        { "t": "Screen recording", "s": "You demo the tool. Your voice, or an AI voice, over the top." },
+        { "t": "Text on screen", "s": "The whole script as captions, over stock footage." },
+        { "t": "AI voice and stills", "s": "A written script read aloud, over images you never appear in." }
+      ]
+    },
+    {
+      "type": "value",
+      "label": "Where AI actually helps",
+      "headline": "AI DOESN'T PICK.\nIT PRODUCES.",
+      "versus": {
+        "no": { "t": "What people expect", "s": "That AI finds the offer, reads the market and decides for them." },
+        "yes": { "t": "What it actually does", "s": "Writes the script, edits the cut, reads the voice. Forty times a month." }
+      },
+      "copy": [
+        "The judgement stays yours. The volume is the machine's."
+      ]
+    },
+    {
+      "type": "value",
+      "label": "The offer question",
+      "headline": "ONE-TIME PAYS ONCE.\nRECURRING KEEPS\nPAYING.",
+      "stats": {
+        "caption": "The same ten signups, one year on",
+        "items": [
+          { "label": "One-time offer", "value": "×1", "bar": 1, "muted": true },
+          { "label": "Recurring offer", "value": "×12", "bar": 12 }
+        ]
+      },
+      "copy": [
+        "Same work either way. Only one of them is still paying you in month twelve."
+      ]
+    },
+    {
+      "type": "value",
+      "label": "The word everyone skips",
+      "ghost": "cookie",
+      "headline": "A ((COOKIE)) IS JUST\nA TIMER.",
+      "copy": [
+        "Someone clicks your link. A small note lands in their browser saying you sent them.",
+        "Buy before the timer runs out and you get paid. After it, you get nothing."
+      ],
+      "infocard": {
+        "icon": "calendar",
+        "t": "Most timers run",
+        "accent": "30 to 90 days",
+        "s": "Under seven days, you carry all the risk."
+      }
+    },
+    {
+      "type": "receipts",
+      "label": "Do this first",
+      "headline": "FOUR QUESTIONS\nBEFORE YOU\nPROMOTE ANYTHING.",
+      "copy": [
+        "Run any program through this before you write a single post about it."
+      ],
+      "mock": { "image": "../../../assets/program-check.svg" },
+      "note": { "text": "Screenshot this one.", "arrow": "curve" }
+    },
+    {
+      "type": "cta",
+      "headline": "THE WHOLE MODEL,\nWRITTEN DOWN.",
+      "copy": [
+        "The AI Affiliate Blueprint — every step above, expanded. Free."
+      ],
+      "product": { "image": "../../../assets/ebook-blueprint.svg", "width": "340px" },
+      "trigger": "GUIDE",
+      "button": "Comment GUIDE and it's yours"
+    }
+  ],
+  "caption": "Comment GUIDE and I'll send you the AI Affiliate Blueprint, free. The whole faceless model, written out.\n\nFaceless AI affiliate marketing has four moving parts. That is genuinely all of it.\n\n1. One recurring offer — something that pays again next month, not once\n2. One faceless angle — screen recording, text on screen, or an AI voice over stills\n3. A posting rhythm — thirty posts before you decide whether it works\n4. One tracked link per angle — so you know which one did the work\n\nWhat faceless actually means: the camera stops being the reason you don't post. It does not mean effortless. The work moves to picking the offer and showing up often enough to learn something.\n\nWhat AI actually does: it writes the script, edits the cut and reads the voice, forty times a month. It does not pick your offer or read the market. The judgement stays yours. The volume is the machine's.\n\nTwo things nobody explains:\n\nRecurring versus one-time. Same work either way, but only one is still paying you in month twelve.\n\nThe cookie. It is a timer. Someone clicks and a note lands in their browser saying you sent them. Buy before it expires and you get paid. Thirty to ninety days is normal. Under seven and you carry all the risk.\n\nComment GUIDE for the Blueprint.",
+  "hashtags": [
+    "#facelessmarketing",
+    "#aiaffiliate",
+    "#affiliatemarketing",
+    "#facelessdigitalmarketing",
+    "#recurringincome",
+    "#aitools",
+    "#onlinebusiness",
+    "#digitalmarketing",
+    "#sidebusiness",
+    "#beginnerfriendly",
+    "#affiliatetips",
+    "#contentcreatortips"
+  ]
+}

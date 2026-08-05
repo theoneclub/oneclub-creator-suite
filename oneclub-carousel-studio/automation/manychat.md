@@ -101,10 +101,15 @@ One word per asset. Reusing a word across two magnets is exactly what makes
 | `SYSTEM` | The AI Affiliate Blueprint | `best-ai-model-for-beginners`, `first-week-plan` |
 | `FOUNDING` | The One Club walkthrough | `the-one-club-documented` |
 | `HOOKS` | The first-line swipe file | `first-line-patterns` |
-| `PAID` | The program-vetting checklist | `how-affiliates-get-paid` |
+| `GUIDE` | The AI Affiliate Blueprint (ebook) | `faceless-ai-affiliate` |
 
-`FOUNDING`, `HOOKS` and `PAID` are new — create all three automations before
+`FOUNDING`, `HOOKS` and `GUIDE` are new — create all three automations before
 those decks go live, or the comments land nowhere.
+
+`GUIDE` needs `FREE` and `BLUEPRINT` as aliases on the same automation. Its CTA
+slide says "The AI Affiliate Blueprint … Free", so a good share of people will
+type one of those instead of the trigger. QA warns about exactly this, and the
+alias is the fix — not rewording the slide.
 
 ## 5. Per-carousel checklist
 
