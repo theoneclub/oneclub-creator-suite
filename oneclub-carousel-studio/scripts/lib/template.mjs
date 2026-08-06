@@ -296,7 +296,7 @@ export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle
 <link rel="stylesheet" href="${bundlePath}/carousel.css">
 </head>
 <body>
-  <div class="slide slide--${esc(slide.type)}${photo && !slide.image ? ' slide--noart' : ''}${split ? ' slide--split' : ''}${slide.scrim ? ` slide--scrim-${esc(slide.scrim)}` : ''}" id="slide"${slide.splitRatio ? ` style="--split:${esc(slide.splitRatio)}"` : ''}>
+  <div class="slide slide--${esc(slide.type)}${photo && !slide.image ? ' slide--noart' : ''}${split ? ' slide--split' : ''}${slide.scrim ? ` slide--scrim-${esc(slide.scrim)}` : ''}${slide.align ? ` slide--align-${esc(slide.align)}` : ''}" id="slide"${slide.splitRatio ? ` style="--split:${esc(slide.splitRatio)}"` : ''}>
     ${layers}${deck.chip && total > 1 ? `\n    <div class="chip">${index + 1}/${total}</div>` : ''}
     <main class="body">
       ${bodyFor(slide, index)}

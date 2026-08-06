@@ -64,15 +64,21 @@ it by hand instead:
 
 ```json
 "image":    "../../../assets/faceless-figure.jpg",
-"imageFit": "1250px 2240px",     // background-size
-"imagePos": "0px 500px",         // background-position
-"scrim":    "low"
+"imageFit": "469px 840px",       // background-size — the whole photo, uncropped
+"imagePos": "center bottom",     // background-position
+"scrim":    "vignette",
+"align":    "top"
 ```
 
-`imageFit` is wide enough to cover the full 1080 so no black bar shows at the
-edges; `imagePos` drops the hood to roughly y 780, below the headline. `scrim:
-"low"` is solid black over the top third, which both protects the type and hides
-the seam where the photo's top edge meets the slide.
+Showing the picture whole and giving the headline clear space are in tension: at
+0.558 the photo is far narrower than the 3:4 slide, so filling the frame crops
+it, and any size large enough to fill puts the head straight behind the type.
+The resolution is to stop trying to fill the frame — `align: "top"` puts the
+copy in the upper third and the complete photo sits underneath it.
+
+`scrim: "vignette"` is there because a photo smaller than the frame shows its own
+rectangle — its near-black is not the slide's pure black. The vignette dissolves
+that edge from the centre out.
 
 A panel is referenced as `"mock": { "image": "../../../assets/<file>" }`, which
 is also what switches the slide to the split layout. Unlike hook backdrops these

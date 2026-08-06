@@ -59,6 +59,21 @@ html, body {
 }
 .slide--scrim-none .scrim { display: none; }
 
+/* A photo placed smaller than the frame shows its own rectangle: the picture's
+   near-black is not the slide's pure black. This dissolves that edge from the
+   centre out, so the subject sits on the slide instead of on a panel. */
+.slide--scrim-vignette .scrim {
+  background: radial-gradient(62% 46% at 50% 74%,
+    rgba(0,0,0,0) 38%, rgba(0,0,0,0.72) 76%, #000 100%);
+}
+
+/* Hook and CTA centre their block by default. `"align": "top"` pushes it to the
+   safe margin instead, which is what an uncropped photograph needs: the type
+   takes the top, the whole picture sits underneath it. */
+/* Two classes deep would tie with .slide--hook .body and lose on source order,
+   and .body--centred from the fit pass would beat it outright. */
+.slide.slide--align-top .body { justify-content: flex-start; }
+
 /* no artwork yet: keep the composition, lose the mud */
 .slide--noart .scrim {
   background: radial-gradient(120% 80% at 50% 6%, rgba(163,240,175,0.08) 0%, rgba(0,0,0,0) 62%);

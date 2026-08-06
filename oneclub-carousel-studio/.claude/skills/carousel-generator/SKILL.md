@@ -156,7 +156,8 @@ Copy `decks/TEMPLATE.json`. Fields:
 | `slides[].pill` | Action pill `{ before, word, text }` or `{ text, ghost: true }` |
 | `slides[].image` | Hook/CTA art, relative to the slide HTML (`../../../assets/...`) |
 | `slides[].imageFit` / `imagePos` | Raw `background-size` / `background-position`. A photograph rarely composes itself around the headline — place the subject rather than settling for centre-cover |
-| `slides[].scrim` | `low` for a dark subject in the lower half: solid black over the type, clear over the subject. `none` to drop it entirely |
+| `slides[].scrim` | `low` (dark subject in the lower half), `vignette` (dissolves the edge of a photo placed smaller than the frame), `none` |
+| `slides[].align` | `top` pushes a hook/CTA block to the safe margin instead of centring it — what an uncropped photo needs, type above, picture below |
 | `slides[].trigger` | CTA slide only — must equal the deck trigger |
 | `caption`, `hashtags[]` | `Comment <WORD>` must be in the first 125 chars |
 
