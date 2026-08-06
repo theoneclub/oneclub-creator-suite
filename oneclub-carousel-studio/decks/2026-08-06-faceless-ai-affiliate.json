@@ -9,7 +9,10 @@
     {
       "type": "hook",
       "headline": "NO FACE.\nNO PRODUCT.\nNO {{WORRIES}}.",
-      "image": "../../../assets/faceless-figure.svg",
+      "image": "../../../assets/faceless-figure.jpg",
+      "imageFit": "1250px 2240px",
+      "imagePos": "0px 500px",
+      "scrim": "low",
       "copy": [
         "This is what faceless AI affiliate actually is."
       ],

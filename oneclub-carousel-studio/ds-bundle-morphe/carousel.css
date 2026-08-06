@@ -46,6 +46,19 @@ html, body {
     rgba(0,0,0,0.86) 0%, rgba(0,0,0,0.42) 38%,
     rgba(0,0,0,0.30) 58%, var(--scrim) 100%);
 }
+/* The default scrim assumes a bright photo filling the frame. `"scrim": "low"`
+   is for a dark subject sitting in the lower half: solid black down to the
+   headline, then clear so the subject survives, then just enough at the base to
+   hold the footer. The solid top also hides the seam where a photo that cannot
+   cover the whole frame meets the slide's own black. */
+.slide--scrim-low .scrim {
+  background: linear-gradient(180deg,
+    #000 0%, #000 36%,
+    rgba(0,0,0,0.60) 44%, rgba(0,0,0,0.00) 52%,
+    rgba(0,0,0,0.00) 84%, rgba(0,0,0,0.42) 100%);
+}
+.slide--scrim-none .scrim { display: none; }
+
 /* no artwork yet: keep the composition, lose the mud */
 .slide--noart .scrim {
   background: radial-gradient(120% 80% at 50% 6%, rgba(163,240,175,0.08) 0%, rgba(0,0,0,0) 62%);

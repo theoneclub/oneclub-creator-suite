@@ -272,8 +272,17 @@ export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle
     ? `<div class="ghost" aria-hidden="true">${Array.from({ length: 5 }, () => `<span>${esc(slide.ghost)}</span>`).join('')}</div>`
     : '';
 
+  // A photograph rarely composes itself around the headline. `imageFit` and
+  // `imagePos` are raw background-size / background-position, so a deck can
+  // place the subject clear of the type instead of settling for centre-cover.
+  const artStyle = [
+    `background-image:url('${esc(slide.image || '')}')`,
+    slide.imageFit ? `background-size:${esc(slide.imageFit)}` : '',
+    slide.imagePos ? `background-position:${esc(slide.imagePos)}` : '',
+  ].filter(Boolean).join(';');
+
   const layers = photo
-    ? `${slide.image ? `<div class="art" style="background-image:url('${esc(slide.image)}')"></div>` : ''}
+    ? `${slide.image ? `<div class="art" style="${artStyle}"></div>` : ''}
     <div class="scrim"></div>${ghost ? '\n    ' + ghost : ''}${artcol ? '\n    ' + artcol : ''}${badges ? '\n    ' + badges : ''}`
     : `${ghost}${artcol}${badges ? '\n    ' + badges : ''}`;
 
@@ -287,7 +296,7 @@ export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle
 <link rel="stylesheet" href="${bundlePath}/carousel.css">
 </head>
 <body>
-  <div class="slide slide--${esc(slide.type)}${photo && !slide.image ? ' slide--noart' : ''}${split ? ' slide--split' : ''}" id="slide"${slide.splitRatio ? ` style="--split:${esc(slide.splitRatio)}"` : ''}>
+  <div class="slide slide--${esc(slide.type)}${photo && !slide.image ? ' slide--noart' : ''}${split ? ' slide--split' : ''}${slide.scrim ? ` slide--scrim-${esc(slide.scrim)}` : ''}" id="slide"${slide.splitRatio ? ` style="--split:${esc(slide.splitRatio)}"` : ''}>
     ${layers}${deck.chip && total > 1 ? `\n    <div class="chip">${index + 1}/${total}</div>` : ''}
     <main class="body">
       ${bodyFor(slide, index)}
