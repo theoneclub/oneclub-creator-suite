@@ -10,7 +10,7 @@
       "type": "hook",
       "headline": "NO FACE.\nNO PRODUCT.\nNO {{WORRIES}}.",
       "image": "../../../assets/faceless-figure.jpg",
-      "imageFit": "469px 840px",
+      "imageFit": "600px 1075px",
       "imagePos": "center bottom",
       "scrim": "vignette",
       "align": "top",

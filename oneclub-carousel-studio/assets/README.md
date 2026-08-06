@@ -64,7 +64,7 @@ it by hand instead:
 
 ```json
 "image":    "../../../assets/faceless-figure.jpg",
-"imageFit": "469px 840px",       // background-size — the whole photo, uncropped
+"imageFit": "600px 1075px",      // background-size — the whole photo, uncropped
 "imagePos": "center bottom",     // background-position
 "scrim":    "vignette",
 "align":    "top"
@@ -75,6 +75,11 @@ Showing the picture whole and giving the headline clear space are in tension: at
 it, and any size large enough to fill puts the head straight behind the type.
 The resolution is to stop trying to fill the frame — `align: "top"` puts the
 copy in the upper third and the complete photo sits underneath it.
+
+600px wide is the ceiling for this photo with this copy block. The head starts
+12% down the picture, so bottom-anchored it clears the type at roughly
+`1440 - 0.876 x height`; any larger and the hood rises behind the swipe pill.
+Dropping the pill would buy about another 100px if a deck wants it bigger.
 
 `scrim: "vignette"` is there because a photo smaller than the frame shows its own
 rectangle — its near-black is not the slide's pure black. The vignette dissolves
