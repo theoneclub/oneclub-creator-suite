@@ -52,6 +52,12 @@ stranding hand-placed numbers. Edit the script, never the SVG.
 | `hook-sheet.svg` | Six fill-in-the-blank first-line shapes |
 | `program-check.svg` | Four questions to vet an affiliate program |
 
+`faceless-figure.svg` is the odd one out: it is full-bleed hook art at 1080x1440,
+not a panel, so it goes in a slide's `image` field rather than `mock`. A hooded
+figure from behind, drawn as a **silhouette** — a vector attempt at an actual
+person reads as a cartoon, and a silhouette has no facial detail to get wrong.
+Swap in a photograph whenever one exists; the deck needs no other change.
+
 A panel is referenced as `"mock": { "image": "../../../assets/<file>" }`, which
 is also what switches the slide to the split layout. Unlike hook backdrops these
 are *not* full-bleed — they carry their own window chrome and are meant to be

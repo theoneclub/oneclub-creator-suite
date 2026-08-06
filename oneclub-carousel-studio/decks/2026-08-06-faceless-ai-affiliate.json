@@ -8,8 +8,8 @@
   "slides": [
     {
       "type": "hook",
-      "ghost": "faceless",
-      "headline": "NO FACE.\nNO PRODUCT.\nNO {{FOLLOWING}}.",
+      "headline": "NO FACE.\nNO PRODUCT.\nNO {{WORRIES}}.",
+      "image": "../../../assets/faceless-figure.svg",
       "copy": [
         "This is what faceless AI affiliate actually is."
       ],

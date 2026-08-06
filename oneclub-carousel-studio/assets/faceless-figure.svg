@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1440" width="1080" height="1440" role="img" aria-label="A hooded figure seen from behind in near-darkness, face not visible, facing a distant green light">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%">
+      <stop offset="0" stop-color="#a3f0af" stop-opacity=".46"/>
+      <stop offset="1" stop-color="#a3f0af" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur24"><feGaussianBlur stdDeviation="24"/></filter>
+    <filter id="blur6"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="1080" height="1440" fill="#000000"/>
+  <rect x="24" y="50" width="2" height="80" fill="#a3f0af" opacity="0.04"/><rect x="83" y="163" width="2" height="151" fill="#a3f0af" opacity="0.09"/><rect x="123" y="66" width="2" height="222" fill="#a3f0af" opacity="0.08"/><rect x="163" y="179" width="2" height="123" fill="#a3f0af" opacity="0.07"/><rect x="203" y="82" width="2" height="194" fill="#a3f0af" opacity="0.06"/><rect x="243" y="195" width="2" height="95" fill="#a3f0af" opacity="0.05"/><rect x="283" y="98" width="2" height="166" fill="#a3f0af" opacity="0.04"/><rect x="323" y="211" width="2" height="237" fill="#a3f0af" opacity="0.09"/><rect x="363" y="114" width="2" height="138" fill="#a3f0af" opacity="0.08"/><rect x="403" y="227" width="2" height="209" fill="#a3f0af" opacity="0.07"/><rect x="443" y="130" width="2" height="110" fill="#a3f0af" opacity="0.06"/><rect x="483" y="243" width="2" height="181" fill="#a3f0af" opacity="0.05"/><rect x="523" y="146" width="2" height="82" fill="#a3f0af" opacity="0.04"/><rect x="563" y="259" width="2" height="153" fill="#a3f0af" opacity="0.09"/><rect x="603" y="162" width="2" height="224" fill="#a3f0af" opacity="0.08"/><rect x="643" y="65" width="2" height="125" fill="#a3f0af" opacity="0.07"/><rect x="683" y="178" width="2" height="196" fill="#a3f0af" opacity="0.06"/><rect x="723" y="81" width="2" height="97" fill="#a3f0af" opacity="0.05"/><rect x="763" y="194" width="2" height="168" fill="#a3f0af" opacity="0.04"/><rect x="803" y="97" width="2" height="239" fill="#a3f0af" opacity="0.09"/><rect x="862" y="210" width="2" height="140" fill="#a3f0af" opacity="0.08"/><rect x="902" y="113" width="2" height="211" fill="#a3f0af" opacity="0.07"/><rect x="942" y="226" width="2" height="112" fill="#a3f0af" opacity="0.06"/><rect x="982" y="129" width="2" height="183" fill="#a3f0af" opacity="0.05"/><rect x="1022" y="242" width="2" height="84" fill="#a3f0af" opacity="0.04"/><rect x="1062" y="145" width="2" height="155" fill="#a3f0af" opacity="0.09"/>
+
+  <!-- the light the figure is facing -->
+  <ellipse cx="540" cy="1255" rx="400" ry="230" fill="url(#halo)"/>
+  <ellipse cx="540" cy="1240" rx="135" ry="46" fill="#a3f0af" opacity=".55" filter="url(#blur24)"/>
+
+  <!-- figure: pure black, so it separates from the halo behind it -->
+  <path d="M540 1080 C588 1080 618 1118 620 1170 C621 1208 613 1232 606 1250 C692 1258 788 1298 814 1440 L266 1440 C292 1298 388 1258 474 1250 C467 1232 459 1208 460 1170 C462 1118 492 1080 540 1080 Z" fill="#000000"/>
+  <path d="M540 1080 C588 1080 618 1118 620 1170 C621 1208 613 1232 606 1250 C692 1258 788 1298 814 1440 L266 1440 C292 1298 388 1258 474 1250 C467 1232 459 1208 460 1170 C462 1118 492 1080 540 1080 Z" fill="none" stroke="#000000" stroke-width="14"/>
+  <path d="M540 1080 C492 1080 462 1118 460 1170 C459 1208 467 1232 474 1250 C388 1258 292 1298 266 1440" fill="none" stroke="#a3f0af" stroke-width="7" stroke-linecap="round" opacity="1"/>
+  <path d="M540 1080 C492 1080 462 1118 460 1170 C459 1208 467 1232 474 1250 C388 1258 292 1298 266 1440" fill="none" stroke="#a3f0af" stroke-width="20" stroke-linecap="round" opacity=".42" filter="url(#blur6)"/>
+</svg>

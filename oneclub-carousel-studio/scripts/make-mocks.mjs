@@ -395,9 +395,76 @@ ${footer(s.footerY, s.footerH, {
   })}`);
 }
 
+/* ---------------------------------------------------- full-bleed hook art */
+
+/** Same wrapper, arbitrary canvas — hook backdrops are 1080x1440, not panels. */
+const svgAt = (w, h, label, body) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${esc(label)}">
+${body}
+</svg>
+`;
+
+/**
+ * The faceless figure: a hooded silhouette from behind, lit from in front.
+ *
+ * Drawn as a silhouette on purpose. Any attempt at rendering an actual person
+ * in vector reads as a cartoon — no face means no facial detail to get wrong,
+ * and it is the honest version of "faceless" besides. Replace with a
+ * photograph the moment one is available; nothing else in the deck changes.
+ *
+ * Sized as a person at mid-distance and anchored to the bottom edge, so the
+ * whole figure sits below the headline band (roughly y 380-1050). Drawn any
+ * larger it stops reading as a person and becomes a shape.
+ */
+function facelessFigure() {
+  const W = 1080, H = 1440;
+  const G = '#a3f0af';
+
+  // Faint code rain across the top, well clear of the headline.
+  let rain = '';
+  for (let i = 0; i < 26; i++) {
+    const x = 24 + i * 41 + ((i * 37) % 19);
+    const top = 50 + ((i * 113) % 210);
+    const len = 80 + ((i * 71) % 170);
+    const o = 0.04 + ((i * 29) % 6) / 100;
+    rain += `<rect x="${x}" y="${top}" width="2" height="${len}" fill="${G}" opacity="${o.toFixed(2)}"/>`;
+  }
+
+  // Wide, flat shoulders under a narrow neck. Curve them evenly into the head
+  // and the whole thing reads as a chess pawn instead of a person.
+  const body = 'M540 1080 C588 1080 618 1118 620 1170 C621 1208 613 1232 606 1250 '
+    + 'C692 1258 788 1298 814 1440 L266 1440 C292 1298 388 1258 474 1250 '
+    + 'C467 1232 459 1208 460 1170 C462 1118 492 1080 540 1080 Z';
+
+  // The lit edge — left side of the hood and shoulder only.
+  const rim = 'M540 1080 C492 1080 462 1118 460 1170 C459 1208 467 1232 474 1250 '
+    + 'C388 1258 292 1298 266 1440';
+
+  return svgAt(W, H, 'A hooded figure seen from behind in near-darkness, face not visible, facing a distant green light', `  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%">
+      <stop offset="0" stop-color="${G}" stop-opacity=".46"/>
+      <stop offset="1" stop-color="${G}" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur24"><feGaussianBlur stdDeviation="24"/></filter>
+    <filter id="blur6"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="${W}" height="${H}" fill="#000000"/>
+  ${rain}
+
+  <!-- the light the figure is facing -->
+  <ellipse cx="${W / 2}" cy="1255" rx="400" ry="230" fill="url(#halo)"/>
+  <ellipse cx="${W / 2}" cy="1240" rx="135" ry="46" fill="${G}" opacity=".55" filter="url(#blur24)"/>
+
+  <!-- figure: pure black, so it separates from the halo behind it -->
+  <path d="${body}" fill="#000000"/>
+  <path d="${body}" fill="none" stroke="#000000" stroke-width="14"/>
+  <path d="${rim}" fill="none" stroke="${G}" stroke-width="7" stroke-linecap="round" opacity="1"/>
+  <path d="${rim}" fill="none" stroke="${G}" stroke-width="20" stroke-linecap="round" opacity=".42" filter="url(#blur6)"/>`);
+}
+
 const PANELS = {
   'hook-sheet.svg': hookSheet,
   'program-check.svg': programCheck,
+  'faceless-figure.svg': facelessFigure,
   'oneclub-panel.svg': clubPanel,
   'oneclub-offer-board.svg': offerBoard,
   'oneclub-angle-sheet.svg': angleSheet,
