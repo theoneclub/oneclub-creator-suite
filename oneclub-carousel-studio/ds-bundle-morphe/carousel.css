@@ -1056,7 +1056,7 @@ h2.stacked .ln { display: block; white-space: nowrap; }
   margin-top: 42px;
   padding: 30px 34px 34px;
   border-radius: var(--radius-pill);
-  background: var(--green);
+  background: var(--yellow);
   color: var(--black);
   /* sized so a full sentence — "Comment X and I will send it over" — stays on
      one line; wrapping strands the last word in the middle of a huge pill */
