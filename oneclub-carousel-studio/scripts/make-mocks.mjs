@@ -395,9 +395,88 @@ ${footer(s.footerY, s.footerH, {
   })}`);
 }
 
+/** The size of the water — the industry, not anybody's income. */
+function marketSize() {
+  const [head, y0] = intro('THE SIZE OF THE WATER', 'It keeps rising.', 'Growing roughly 10-15% a year.');
+
+  // Deliberately unlabelled by year: a dated axis goes stale, and the shape is
+  // the whole point. Heights are a growth curve, not a claim about any figure.
+  const bars = [0.34, 0.42, 0.52, 0.63, 0.76, 0.88, 1.0];
+  const labels = ['', '', '', '', '', '', 'NOW'];
+  const top = y0 + 40;
+  const plotH = 740;
+  const bw = 58, gap = (IW - bars.length * bw) / (bars.length - 1);
+
+  const cols = bars.map((v, i) => {
+    const h = Math.round(plotH * v);
+    const x = PAD + i * (bw + gap);
+    const y = top + plotH - h;
+    const now = labels[i] === 'NOW';
+    return `  ${rect(x, y, bw, h, 10, now ? G : 'rgba(163,240,175,0.26)', null)}
+  ${now ? `<text class="lab" x="${x + bw / 2}" y="${y - 16}" text-anchor="middle" fill="${G}">NOW</text>` : ''}`;
+  }).join('\n');
+
+  return svg('A rising bar chart showing the affiliate industry growing year on year', `${chrome('AFFILIATE INDUSTRY', 'GROWING')}
+  <rect x="1" y="89" width="${W - 2}" height="210" fill="url(#glow)"/>
+${head}
+${cols}
+  <line x1="${PAD}" y1="${top + plotH + 8}" x2="${W - PAD}" y2="${top + plotH + 8}" stroke="${LINE}" stroke-width="2"/>
+  <text class="s" x="${PAD}" y="${top + plotH + 40}" font-size="15" fill="${DIM}">Every year, bigger than the last</text>
+${footer(H - PAD - 150, 150, {
+    icon: tickIcon(PAD + 48, H - PAD - 150 + 75),
+    title: 'This is the industry',
+    sub: 'Not a projection, and not anyone’s income.',
+  })}`);
+}
+
+/** Teaspoon or bucket — the same effort, twelve months apart. */
+function teaspoonVsBucket() {
+  const [head, y0] = intro('SAME SALE, TWELVE MONTHS ON', 'One resets. One stacks.', 'The same sale, twelve months apart.');
+
+  const top = y0 + 74;
+  const plotH = 690;
+  const plotW = IW;
+  const months = 12;
+  const stepX = plotW / (months - 1);
+
+  // Relative shapes only — one-time flat at its first month, recurring adding
+  // one more unit every month. No units, so nothing here is a claim.
+  const oneTime = Array.from({ length: months }, () => 0.10);
+  const recurring = Array.from({ length: months }, (_, i) => 0.10 + (i / (months - 1)) * 0.86);
+
+  const line = (vals) => vals.map((v, i) =>
+    `${i ? 'L' : 'M'}${(PAD + i * stepX).toFixed(1)} ${(top + plotH - v * plotH).toFixed(1)}`).join(' ');
+
+  const legend = [['One-time', 'rgba(255,255,255,0.32)'], ['Recurring', G]].map(([t, c], i) => {
+    const x = PAD + i * 210;
+    return `  ${rect(x, y0 + 8, 22, 22, 6, c, null)}
+  <text class="s" x="${x + 32}" y="${y0 + 26}" font-size="16">${esc(t)}</text>`;
+  }).join('\n');
+
+  const grid = [0, 0.25, 0.5, 0.75, 1].map((g) =>
+    `  <line x1="${PAD}" y1="${top + plotH - g * plotH}" x2="${W - PAD}" y2="${top + plotH - g * plotH}" stroke="${LINE}"/>`).join('\n');
+
+  return svg('A line chart: one-time earnings stay flat over twelve months while recurring earnings climb', `${chrome('TEASPOON OR BUCKET', '12 MONTHS')}
+${head}
+${legend}
+${grid}
+  <path d="${line(oneTime)}" fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="5" stroke-linecap="round"/>
+  <path d="${line(recurring)}" fill="none" stroke="${G}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="${PAD + plotW}" cy="${top + plotH * 0.04}" r="10" fill="${G}"/>
+  <text class="s" x="${PAD}" y="${top + plotH + 36}" font-size="15" fill="${DIM}">Month 1</text>
+  <text class="s" x="${W - PAD}" y="${top + plotH + 36}" font-size="15" text-anchor="end" fill="${DIM}">Month 12</text>
+${footer(H - PAD - 150, 150, {
+    icon: tickIcon(PAD + 48, H - PAD - 150 + 75),
+    title: 'Same work either way',
+    sub: 'Only one of them is still paying in month twelve.',
+  })}`);
+}
+
 const PANELS = {
   'hook-sheet.svg': hookSheet,
   'program-check.svg': programCheck,
+  'market-size.svg': marketSize,
+  'teaspoon-vs-bucket.svg': teaspoonVsBucket,
   'oneclub-panel.svg': clubPanel,
   'oneclub-offer-board.svg': offerBoard,
   'oneclub-angle-sheet.svg': angleSheet,

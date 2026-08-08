@@ -15,9 +15,19 @@ const RULES = [
   {
     id: 'money-claim',
     severity: 'error',
-    // Any dollar figure except the Freedom Fund's $10,000.
-    test: (t) => (t.match(/\$\s?\d{1,3}(?:,\d{3})*(?:\.\d+)?\s?[kKmM]?\b/g) || []).filter((m) => !/^\$\s?10,?000$/.test(m.trim())),
-    message: (hits) => `Dollar figure(s) ${hits.join(', ')} — no specific dollar figures as personal income results. Only "$10,000 monthly, community-voted" (Freedom Fund) is allowed.`,
+    // The rule bans dollar figures as *personal income results*. Two things are
+    // not that, and both have to prove it from the same slide's own words:
+    //   - the Freedom Fund's $10,000, framed as community-voted
+    //   - the size of the industry, in billions and named as a market
+    // A personal earnings claim is never in billions, and never calls itself an
+    // industry, so the pair of conditions is hard to satisfy by accident.
+    test: (t) => (t.match(/\$\s?\d{1,3}(?:,\d{3})*(?:\.\d+)?\s?[kKmM]?\b/g) || []).filter((m) => {
+      const fig = m.trim();
+      if (/^\$\s?10,?000$/.test(fig)) return false;
+      const atScale = new RegExp(`${fig.replace(/[$.]/g, '\\$&')}\\s*(billion|trillion)`, 'i').test(t);
+      return !(atScale && /\b(industry|market|sector|worldwide|globally)\b/i.test(t));
+    }),
+    message: (hits) => `Dollar figure(s) ${hits.join(', ')} — no specific dollar figures as personal income results. Allowed: "$10,000 monthly, community-voted" (Freedom Fund), and an industry size in billions named as a market on the same slide.`,
   },
   {
     id: 'freedom-fund-framing',

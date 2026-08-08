@@ -51,6 +51,14 @@ stranding hand-placed numbers. Edit the script, never the SVG.
 | `oneclub-walkthrough.svg` | The walkthrough the CTA hands over |
 | `hook-sheet.svg` | Six fill-in-the-blank first-line shapes |
 | `program-check.svg` | Four questions to vet an affiliate program |
+| `market-size.svg` | The affiliate industry rising year on year |
+| `teaspoon-vs-bucket.svg` | One-time flat vs recurring climbing over twelve months |
+
+Both charts are shaped, not scaled: `market-size.svg` carries no year labels
+because a dated axis goes stale, and `teaspoon-vs-bucket.svg` plots relative
+units with no currency on it at all. The dollar figure that goes with them lives
+in the **slide text**, deliberately — text inside an SVG is invisible to
+`compliance.mjs`, so putting a money claim there would slip past the checker.
 
 ## The one committed bitmap
 
