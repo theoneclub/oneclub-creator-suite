@@ -90,8 +90,8 @@
       "type": "cta",
       "headline": "IF YOU WANT TO KNOW\nHOW TO RUN THIS\nSYSTEM RIGHT NOW.",
       "product": {
-        "image": "../../../assets/ebook-blueprint.svg",
-        "width": "340px"
+        "image": "../../../assets/ebook-blueprint.png",
+        "width": "430px"
       },
       "trigger": "SYSTEM",
       "button": "Comment SYSTEM and I'll send it over"

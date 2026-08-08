@@ -126,6 +126,7 @@ node scripts/build.mjs  decks/2026-07-27-permission-slip.json   # HTML + complia
 node scripts/render.mjs decks/2026-07-27-permission-slip.json   # builds, then exports PNGs + layout QA
 node scripts/render.mjs output/2026-07-27-permission-slip       # re-export after a CSS tweak
 node scripts/angle-report.mjs                                   # which angle actually converts
+node scripts/trim-product.mjs assets/<render>.png               # key + crop a supplied product shot
 ```
 
 `build.mjs` exits non-zero on any compliance error, so a non-compliant deck

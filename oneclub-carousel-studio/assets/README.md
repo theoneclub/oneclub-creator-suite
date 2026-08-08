@@ -31,7 +31,7 @@ pipeline and no credits spent:
 | `face-vs-faceless.svg` | hook slides | Hard split: dim figure on camera vs lit screen recording |
 | `comment-to-inbox.svg` | hook slides | The comment → DM → inbox chain |
 | `tab-graveyard.svg` | hook slides | Ten browser tabs, nine dim, one lit |
-| `ebook-blueprint.svg` | CTA `product` block | The Faceless AI Affiliate Blueprint as a standing paperback. **Stand-in** — replace with the real cover render (see below) |
+
 
 ## UI panels for split slides (generated)
 
@@ -90,10 +90,19 @@ is also what switches the slide to the split layout. Unlike hook backdrops these
 are *not* full-bleed — they carry their own window chrome and are meant to be
 read, so they need the column to themselves.
 
-**Swapping in the real ebook cover.** Save it as `assets/ebook-blueprint.png` with
-a *transparent* background, roughly 3:4, then point the CTA's `product.image` at
-the PNG. If the render you have sits on a white background, key the white out
-first — on a pure-black slide an un-keyed mockup shows as a white rectangle.
+**Product renders: run them through `scripts/trim-product.mjs` first.**
+
+```
+node scripts/trim-product.mjs assets/ebook-blueprint.png
+```
+
+It does two mechanical things and never repaints the artwork: keys the
+background out, and crops to the subject. `ebook-blueprint.png` arrived at
+1280x720 with the book floating in the middle — `contain` would have rendered it
+tiny, because the box was mostly empty canvas. Trimmed, it is 407x715.
+
+The key is a **flood fill from the border inwards**, not a threshold. The book's
+own page block is white, and a threshold would have eaten it.
 
 Hook art needs a clear middle band: the headline block sits roughly y 380–1050,
 so put the subject above or below it, or keep it as uniform texture. Every one of
