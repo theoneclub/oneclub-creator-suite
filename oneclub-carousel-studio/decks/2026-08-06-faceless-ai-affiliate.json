@@ -2,7 +2,7 @@
   "slug": "faceless-ai-affiliate",
   "date": "2026-08-06",
   "angle": "Faceless AI Affiliate Marketing — the whole model",
-  "trigger": "GUIDE",
+  "trigger": "SYSTEM",
   "handle": "@theoneclub",
   "chip": true,
   "slides": [
@@ -17,7 +17,10 @@
       "copy": [
         "This is what faceless AI affiliate\nmarketing actually is."
       ],
-      "pill": { "text": "Swipe — the whole model →", "ghost": true }
+      "pill": {
+        "text": "Swipe — the whole model →",
+        "ghost": true
+      }
     },
     {
       "type": "stakes",
@@ -28,8 +31,16 @@
         "The work moves somewhere else: **picking one offer**, and posting often enough to learn something."
       ],
       "tiles": [
-        { "icon": "target", "value": "1 OFFER", "label": "IS THE STRATEGY — NOT TEN" },
-        { "icon": "calendar", "value": "30 POSTS", "label": "BEFORE THE DATA MEANS ANYTHING" }
+        {
+          "icon": "target",
+          "value": "1 OFFER",
+          "label": "IS THE STRATEGY — NOT TEN"
+        },
+        {
+          "icon": "calendar",
+          "value": "30 POSTS",
+          "label": "BEFORE THE DATA MEANS ANYTHING"
+        }
       ]
     },
     {
@@ -37,10 +48,26 @@
       "label": "The model in one slide",
       "headline": "FOUR MOVING\nPARTS. THAT'S IT.",
       "flow": [
-        { "k": "1", "t": "One recurring offer", "s": "Pays again next month" },
-        { "k": "2", "t": "One faceless angle", "s": "Screen, text or AI voice" },
-        { "k": "3", "t": "A posting rhythm", "s": "Thirty before you judge" },
-        { "k": "4", "t": "One tracked link", "s": "So you know what worked" }
+        {
+          "k": "1",
+          "t": "One recurring offer",
+          "s": "Pays again next month"
+        },
+        {
+          "k": "2",
+          "t": "One faceless angle",
+          "s": "Screen, text or AI voice"
+        },
+        {
+          "k": "3",
+          "t": "A posting rhythm",
+          "s": "Thirty before you judge"
+        },
+        {
+          "k": "4",
+          "t": "One tracked link",
+          "s": "So you know what worked"
+        }
       ],
       "pull": "AI writes it and edits it. It doesn't [[pick]] for you."
     },
@@ -51,21 +78,26 @@
       "copy": [
         "Answer them honestly. Three yeses or leave it alone."
       ],
-      "mock": { "image": "../../../assets/program-check.svg" },
-      "note": { "text": "Screenshot this one.", "arrow": "curve" }
+      "mock": {
+        "image": "../../../assets/program-check.svg"
+      },
+      "note": {
+        "text": "Screenshot this one.",
+        "arrow": "curve"
+      }
     },
     {
       "type": "cta",
-      "headline": "THE WHOLE MODEL,\nWRITTEN DOWN.",
-      "copy": [
-        "The AI Affiliate Blueprint — every step above, expanded. Free."
-      ],
-      "product": { "image": "../../../assets/ebook-blueprint.svg", "width": "340px" },
-      "trigger": "GUIDE",
-      "button": "Comment GUIDE and it's yours"
+      "headline": "IF YOU WANT TO KNOW\nHOW TO RUN THIS\nSYSTEM RIGHT NOW.",
+      "product": {
+        "image": "../../../assets/ebook-blueprint.svg",
+        "width": "340px"
+      },
+      "trigger": "SYSTEM",
+      "button": "Comment SYSTEM and I'll send it over"
     }
   ],
-  "caption": "Comment GUIDE and I'll send you the AI Affiliate Blueprint, free. The whole faceless model, written out.\n\nFaceless AI affiliate marketing has four moving parts. That is genuinely all of it.\n\n1. One recurring offer — something that pays again next month, not once\n2. One faceless angle — screen recording, text on screen, or an AI voice over stills\n3. A posting rhythm — thirty posts before you decide whether it works\n4. One tracked link per angle — so you know which one did the work\n\nWhat faceless actually means: the camera stops being the reason you don't post. It does not mean effortless. The work moves to picking the offer and showing up often enough to learn something.\n\nWhat AI actually does: it writes the script, edits the cut and reads the voice, forty times a month. It does not pick your offer or read the market. The judgement stays yours. The volume is the machine's.\n\nBefore you promote anything, four questions:\n\nWould you sign up to it yourself? If you wouldn't pay for it, the post will sound like it.\n\nDoes it pay every month? Or once, and you are back at zero.\n\nCan you show it on a screen? No screen to record means no faceless post.\n\nWould you still be using it in a year? A tool they keep is a payment you keep.\n\nThree honest yeses, or leave it alone.\n\nOne more thing worth knowing: the cookie. It is a timer. Someone clicks and a note lands in their browser saying you sent them. Buy before it expires and you get paid. Thirty to ninety days is normal. Under seven and you carry all the risk.\n\nComment GUIDE for the Blueprint.",
+  "caption": "Comment SYSTEM and I'll send it over — the whole faceless model, written out.\n\nFaceless AI affiliate marketing has four moving parts. That is genuinely all of it.\n\n1. One recurring offer — something that pays again next month, not once\n2. One faceless angle — screen recording, text on screen, or an AI voice over stills\n3. A posting rhythm — thirty posts before you decide whether it works\n4. One tracked link per angle — so you know which one did the work\n\nWhat faceless actually means: the camera stops being the reason you don't post. It does not mean effortless. The work moves to picking the offer and showing up often enough to learn something.\n\nWhat AI actually does: it writes the script, edits the cut and reads the voice, forty times a month. It does not pick your offer or read the market. The judgement stays yours. The volume is the machine's.\n\nBefore you promote anything, four questions:\n\nWould you sign up to it yourself? If you wouldn't pay for it, the post will sound like it.\n\nDoes it pay every month? Or once, and you are back at zero.\n\nCan you show it on a screen? No screen to record means no faceless post.\n\nWould you still be using it in a year? A tool they keep is a payment you keep.\n\nThree honest yeses, or leave it alone.\n\nOne more thing worth knowing: the cookie. It is a timer. Someone clicks and a note lands in their browser saying you sent them. Buy before it expires and you get paid. Thirty to ninety days is normal. Under seven and you carry all the risk.\n\nComment SYSTEM and I'll send it over.",
   "hashtags": [
     "#facelessmarketing",
     "#aiaffiliate",

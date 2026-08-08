@@ -1054,11 +1054,13 @@ h2.stacked .ln { display: block; white-space: nowrap; }
 .bigbtn {
   align-self: stretch;
   margin-top: 42px;
-  padding: 32px 40px 36px;
+  padding: 30px 34px 34px;
   border-radius: var(--radius-pill);
   background: var(--green);
   color: var(--black);
-  font-size: calc(40px * var(--fit));
+  /* sized so a full sentence — "Comment X and I will send it over" — stays on
+     one line; wrapping strands the last word in the middle of a huge pill */
+  font-size: calc(34px * var(--fit));
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;

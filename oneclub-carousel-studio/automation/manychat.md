@@ -98,18 +98,18 @@ One word per asset. Reusing a word across two magnets is exactly what makes
 | Trigger | Asset | Deck |
 |---|---|---|
 | `EBOOK` | The Faceless AI Affiliate ebook | `faceless-affiliate-playbook`, the five alternates |
-| `SYSTEM` | The AI Affiliate Blueprint | `best-ai-model-for-beginners`, `first-week-plan` |
+| `SYSTEM` | The AI Affiliate Blueprint | `best-ai-model-for-beginners`, `first-week-plan`, `faceless-ai-affiliate` |
 | `FOUNDING` | The One Club walkthrough | `the-one-club-documented` |
 | `HOOKS` | The first-line swipe file | `first-line-patterns` |
-| `GUIDE` | The AI Affiliate Blueprint (ebook) | `faceless-ai-affiliate` |
 
-`FOUNDING`, `HOOKS` and `GUIDE` are new — create all three automations before
-those decks go live, or the comments land nowhere.
 
-`GUIDE` needs `FREE` and `BLUEPRINT` as aliases on the same automation. Its CTA
-slide says "The AI Affiliate Blueprint … Free", so a good share of people will
-type one of those instead of the trigger. QA warns about exactly this, and the
-alias is the fix — not rewording the slide.
+`FOUNDING` and `HOOKS` are new — create both automations before those decks go
+live, or the comments land nowhere.
+
+**Three decks now share `SYSTEM`.** The trigger alone can no longer tell you
+which one converted, so the `carousel:<slug>` tag in section 3 stops being
+good practice and becomes the only thing keeping attribution readable. Apply it
+on every fire, or `angle-report.mjs` will pool all three into one row.
 
 ## 5. Per-carousel checklist
 
