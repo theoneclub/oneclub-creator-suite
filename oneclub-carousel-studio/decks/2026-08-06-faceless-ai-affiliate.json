@@ -8,36 +8,71 @@
   "slides": [
     {
       "type": "hook",
-      "headline": "THERE'S A RIVER\nOF CASH FLOWING\n{{PAST YOU}}.",
+      "headline": "ALMOST {{$1 BILLION}}\nA DAY MOVES THROUGH\nTHIS INDUSTRY.",
       "image": "../../../assets/faceless-figure.jpg",
       "imageFit": "600px 1075px",
       "imagePos": "center bottom",
       "scrim": "vignette",
       "align": "top",
       "copy": [
-        "You don't need to be smart to get some.\nYou need to know where to look."
+        "You don't need to be smart to get some of it.\nYou need to know where to look."
       ],
-      "pill": { "text": "Swipe — where it is →", "ghost": true }
+      "pill": {
+        "text": "Swipe to see where →",
+        "ghost": true
+      }
     },
     {
       "type": "stakes",
-      "label": "Where the river is",
-      "headline": "AFFILIATE IS A\n{{$200 BILLION}}\nINDUSTRY.",
+      "label": "The industry behind it",
+      "headline": "AFFILIATE MARKETING\nGROWS EVERY\nSINGLE YEAR.",
       "copy": [
-        "Growing ten to fifteen per cent a year. That's close to a billion dollars a day moving through it.",
+        "A $200 billion a year industry. Growing ten to fifteen per cent a year — same as last year, and the year before.",
         "Not a projection. Not anybody's income. **That's the size of the water.**"
       ],
-      "mock": { "image": "../../../assets/market-size.svg" }
+      "mock": {
+        "image": "../../../assets/market-size.svg"
+      }
+    },
+    {
+      "type": "value",
+      "label": "Then AI made it easier",
+      "headline": "NO CAMERA.\nNO FACE.\nSTILL COUNTS.",
+      "copy": [
+        "A screen recording. Text over stock footage. A voice reading a list. AI can write the script — AI can even read it out loud.",
+        "The bottleneck was never the offer. It was standing in front of a camera. **That bottleneck is gone.**"
+      ],
+      "figure": {
+        "image": "../../../assets/faceless-formats.svg",
+        "ratio": "900 / 420",
+        "caption": "Three formats. None of them show your face."
+      }
     },
     {
       "type": "value",
       "label": "How it actually works",
       "headline": "YOU DON'T BUILD IT.\nYOU JUST SEND\nSOMEONE.",
       "flow": [
-        { "k": "1", "t": "Somebody else has a product", "s": "Already built, already supported" },
-        { "k": "2", "t": "You send them a person", "s": "One post, one link" },
-        { "k": "3", "t": "That person buys", "s": "Nothing else changes hands" },
-        { "k": "4", "t": "You get a commission", "s": "And again next month, if it recurs" }
+        {
+          "k": "1",
+          "t": "Somebody else has a product",
+          "s": "Already built, already supported"
+        },
+        {
+          "k": "2",
+          "t": "You send them a person",
+          "s": "One post, one link"
+        },
+        {
+          "k": "3",
+          "t": "That person buys",
+          "s": "Nothing else changes hands"
+        },
+        {
+          "k": "4",
+          "t": "You get a commission",
+          "s": "And again next month, if it recurs"
+        }
       ],
       "pull": "No product. No shipping. No support. You send traffic, you [[get paid]]."
     },
@@ -49,8 +84,13 @@
         "Four per cent on a cheap blender is not a bucket. The bucket is two things: **high commission, and recurring.**",
         "One-time money is a job with extra steps. You wake up every month at zero."
       ],
-      "mock": { "image": "../../../assets/teaspoon-vs-bucket.svg" },
-      "note": { "text": "Screenshot this one.", "arrow": "curve" }
+      "mock": {
+        "image": "../../../assets/teaspoon-vs-bucket.svg"
+      },
+      "note": {
+        "text": "Screenshot this one.",
+        "arrow": "curve"
+      }
     },
     {
       "type": "cta",
@@ -63,7 +103,7 @@
       "button": "Comment SYSTEM and I'll send it over"
     }
   ],
-  "caption": "Comment SYSTEM and I'll send it over — the whole faceless model, written out.\n\nWhat if the reason you're still trading hours for money isn't that you're lazy, or late, or bad with money. It's that nobody ever showed you where the money actually moves.\n\nThere's a river of cash flowing past you on the internet right now. You don't need to be smart to get some of it. You need to know where to look, and to bring a bucket.\n\nWHERE THE RIVER IS\n\nAffiliate marketing is a $200 billion a year industry, growing somewhere around ten to fifteen per cent a year. That's close to a billion dollars a day moving through it. Not a projection. That's the size of the water.\n\nHOW IT WORKS\n\nSomebody else has a product. You send them a person who might want it. That person buys, you get a commission. You don't build the product. You don't ship it. You don't do support.\n\nWHERE MOST PEOPLE GO WRONG\n\nThey grab a four per cent commission on a cheap blender and wonder why nothing happens. That's not a bucket. That's a teaspoon.\n\nThe bucket is two things: high commission, and recurring.\n\nHigh commission means one sale is worth something. Recurring means you get paid again next month for a sale you made once. One-time money is a job with extra steps — you wake up every month at zero. Recurring money means you wake up on top of last month.\n\nAnd it's faceless. No camera, no lighting, no \"hey guys welcome back\". It's a post that runs while you're doing something else.\n\nTHE HONEST PART\n\nI'm not going to tell you what you'll make. I don't know you, and I don't know how hard you'll work. Anyone who quotes you a number they can't back is selling you a feeling.\n\nIt could be zero. If you post twice and quit, it's zero. This is not easy and it's not passive on day one. You'll post things that flop.\n\nBut it is simple, and the ceiling isn't set by your resume or whether you're good on camera. It's set by how many people see the post, and how long you keep putting posts out.\n\nComment SYSTEM and I'll send it over.",
+  "caption": "Comment SYSTEM and I'll send it over — the whole faceless model, written out.\n\nWhat if the reason you're still trading hours for money isn't that you're lazy, or late, or bad with money. It's that nobody ever showed you where the money actually moves.\n\nThere's a river of cash flowing past you on the internet right now. You don't need to be smart to get some of it. You need to know where to look, and to bring a bucket.\n\nWHERE THE RIVER IS\n\nAffiliate marketing is a $200 billion a year industry. It grows ten to fifteen per cent a year, same as last year and the year before. That's close to a billion dollars a day moving through it. Not a projection. That's the size of the water.\n\nAND NOW IT'S FACELESS\n\nA screen recording. Text over stock footage. A voice reading a list. AI writes the script and can read it out loud. The bottleneck was never the offer. It was the camera. That bottleneck is gone.\n\nHOW IT WORKS\n\nSomebody else has a product. You send them a person who might want it. That person buys, you get a commission. You don't build the product. You don't ship it. You don't do support.\n\nWHERE MOST PEOPLE GO WRONG\n\nThey grab a four per cent commission on a cheap blender and wonder why nothing happens. That's not a bucket. That's a teaspoon.\n\nThe bucket is two things: high commission, and recurring.\n\nHigh commission means one sale is worth something. Recurring means you get paid again next month for a sale you made once. One-time money is a job with extra steps — you wake up every month at zero. Recurring money means you wake up on top of last month.\n\nTHE HONEST PART\n\nI'm not going to tell you what you'll make. I don't know you, and I don't know how hard you'll work. Anyone who quotes you a number they can't back is selling you a feeling.\n\nIt could be zero. If you post twice and quit, it's zero. This is not easy and it's not passive on day one. You'll post things that flop.\n\nBut it is simple, and the ceiling isn't set by your resume or whether you're good on camera. It's set by how many people see the post, and how long you keep putting posts out.\n\nComment SYSTEM and I'll send it over.",
   "hashtags": [
     "#affiliatemarketing",
     "#facelessmarketing",
