@@ -42,7 +42,12 @@ never drift apart.
 
 ## Shipped
 
-<!-- Append one row per post, newest first: date | slug | angle | trigger -->
+<!-- Append one row per post, newest first:
+     date | slug | angle | trigger | slides | block types | assets used
+     The next firing reads the last 3 rows (daily-automation.md step 4) and must not
+     repeat their slide count, hook treatment, or primary visual block type. Keep this
+     column filled in, or that check has nothing to work from. -->
 
-2026-08-09 | not-a-pyramid-scheme | Faceless AI Affiliate Marketing: answering the pyramid scheme objection | BLUEPRINT
-2026-08-09 | side-hustle-math | Faceless AI Affiliate Marketing: side-hustle math | BLUEPRINT
+2026-08-09 | not-a-pyramid-scheme | Faceless AI Affiliate Marketing: answering the pyramid scheme objection | BLUEPRINT | 6 | hook: photo+quoted objection; versus; flow | faceless-figure.jpg, ebook-blueprint.png
+2026-08-09 | side-hustle-math | Faceless AI Affiliate Marketing: side-hustle math | BLUEPRINT | 5 | hook: text-only; figure; flow | twelve-month-stack.svg, ebook-blueprint.png
+2026-08-06 | faceless-ai-affiliate | Faceless AI Affiliate Marketing: $22B market, $30B by 2030, and why AI made it easier | BLUEPRINT | 6 | hook: photo; mock; figure; flow | faceless-figure.jpg, market-size.svg, faceless-formats.svg, program-check.svg, ebook-blueprint.png
