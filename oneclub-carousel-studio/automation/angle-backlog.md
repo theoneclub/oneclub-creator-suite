@@ -17,8 +17,9 @@ never drift apart.
       hourly-wage number entirely — the money-claim compliance rule flags any `$` figure
       regardless of whose income it is, so the comparison runs on "pays once vs. pays on
       repeat" instead of a dollar amount.
-- [ ] **"Isn't this a pyramid scheme?"** — answer the objection directly. No recruiting, no
-      downline, no one below you. You get paid for a sale, not for signing people up.
+- [x] **"Isn't this a pyramid scheme?"** — shipped as `not-a-pyramid-scheme` (2026-08-09).
+      Used the `versus` block (❌/✅ side-by-side) for the first time in this campaign —
+      fits objection-handling angles better than a chart.
 - [ ] **The tools, not the tool** — what AI actually does in the workflow (script drafting,
       voiceover, scheduling) without naming or endorsing specific paid products.
 - [ ] **Vet the offer before you promote it** — a checklist format: commission rate, recurring
@@ -43,4 +44,5 @@ never drift apart.
 
 <!-- Append one row per post, newest first: date | slug | angle | trigger -->
 
+2026-08-09 | not-a-pyramid-scheme | Faceless AI Affiliate Marketing: answering the pyramid scheme objection | BLUEPRINT
 2026-08-09 | side-hustle-math | Faceless AI Affiliate Marketing: side-hustle math | BLUEPRINT

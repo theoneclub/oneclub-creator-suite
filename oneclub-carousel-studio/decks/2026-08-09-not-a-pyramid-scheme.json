@@ -1,0 +1,119 @@
+{
+  "slug": "not-a-pyramid-scheme",
+  "date": "2026-08-09",
+  "angle": "Faceless AI Affiliate Marketing: answering the pyramid scheme objection",
+  "trigger": "BLUEPRINT",
+  "handle": "@theoneclub",
+  "chip": true,
+  "slides": [
+    {
+      "type": "hook",
+      "headline": "“ISN’T THIS JUST\nA PYRAMID SCHEME?”",
+      "image": "../../../assets/faceless-figure.jpg",
+      "imageFit": "600px 1075px",
+      "imagePos": "center bottom",
+      "scrim": "vignette",
+      "align": "top",
+      "copy": [
+        "Fair question. Here's the actual answer."
+      ],
+      "pill": {
+        "text": "Swipe for the answer →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "label": "The real difference",
+      "headline": "ONE OF THESE PAYS YOU\nTO RECRUIT.\nTHE OTHER DOESN'T.",
+      "copy": [
+        "No one signs up under you. No downline, no levels, nobody you have to recruit to make this work."
+      ],
+      "versus": {
+        "no": {
+          "t": "Pyramid scheme",
+          "s": "Pays you when people below you recruit more people"
+        },
+        "yes": {
+          "t": "Affiliate marketing",
+          "s": "Pays you when someone buys something real"
+        }
+      }
+    },
+    {
+      "type": "value",
+      "label": "How the money actually moves",
+      "headline": "YOU DON'T GET PAID\nUNLESS SOMEONE\nACTUALLY BUYS.",
+      "flow": [
+        {
+          "k": "1",
+          "t": "You post about a product",
+          "s": "One video, one caption, one link"
+        },
+        {
+          "k": "2",
+          "t": "Someone clicks and buys it",
+          "s": "A real purchase, not a signup fee"
+        },
+        {
+          "k": "3",
+          "t": "The company pays you",
+          "s": "A commission, once"
+        },
+        {
+          "k": "4",
+          "t": "That's the whole chain",
+          "s": "Nobody signs up under you, ever"
+        }
+      ],
+      "pull": "No downline. No recruiting. No one below you. [[Just a commission.]]"
+    },
+    {
+      "type": "value",
+      "label": "The 10-second test",
+      "headline": "IF THERE'S NO PRODUCT\nSOMEONE ACTUALLY WANTS,\nWALK AWAY.",
+      "copy": [
+        "Ask one question. Would this exist without new recruits paying to join? If the answer is no, that's the scheme.",
+        "**If the answer is yes, that's just business.**"
+      ]
+    },
+    {
+      "type": "receipts",
+      "label": "Why this matters",
+      "headline": "TRUST IS THE WHOLE\nBUSINESS MODEL.",
+      "copy": [
+        "A pyramid scheme burns trust to make one fast round of money before it collapses. This only works if people keep buying from the same recommendation, over and over.",
+        "**Burn trust once, and the recurring income stops recurring.**"
+      ],
+      "note": {
+        "text": "This is the part people skip.",
+        "arrow": "curve"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "IF YOU WANT THE EXACT\nFACELESS BLUEPRINT\nI USE.",
+      "product": {
+        "image": "../../../assets/ebook-blueprint.png",
+        "width": "400px"
+      },
+      "trigger": "BLUEPRINT",
+      "button": "Comment “BLUEPRINT” and I'll send it over"
+    }
+  ],
+  "caption": "Comment BLUEPRINT and I'll send it over: the whole faceless model, written out.\n\n\"Isn't this just a pyramid scheme?\" Fair question. Here's the actual answer.\n\nTHE REAL DIFFERENCE\n\nA pyramid scheme pays you when people below you recruit more people. There's no real product, just money moving upward until it collapses.\n\nAffiliate marketing pays you when someone buys something real. No one signs up under you. No downline, no levels, nobody you have to recruit to make this work.\n\nHOW THE MONEY ACTUALLY MOVES\n\nYou post about a product. Someone clicks and buys it, a real purchase, not a signup fee. The company pays you a commission, once. That's the whole chain. Nobody signs up under you, ever.\n\nTHE 10-SECOND TEST\n\nAsk one question about any offer, this one included. Would it exist without new recruits paying to join? If the answer is no, that's the scheme. If the answer is yes, that's just business.\n\nWHY THIS MATTERS\n\nA pyramid scheme burns trust to make one fast round of money before it collapses. This only works if people keep buying from the same recommendation, over and over. Burn trust once, and the recurring income stops recurring.\n\nTHE HONEST PART\n\nI'm not going to tell you what you'll make. I don't know you, and I don't know how hard you'll work. Anyone who quotes you a number they can't back is selling you a feeling.\n\nIt could be zero. If you post twice and quit, it's zero. This is not easy and it's not passive on day one.\n\nBut it is simple, and nobody has to sign up under you for any of it to work.\n\nComment BLUEPRINT and I'll send it over.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiaffiliate",
+    "#facelessdigitalmarketing",
+    "#recurringincome",
+    "#onlinebusiness",
+    "#digitalmarketing",
+    "#aitools",
+    "#sidebusiness",
+    "#beginnerfriendly",
+    "#affiliatetips",
+    "#contentcreatortips"
+  ]
+}
