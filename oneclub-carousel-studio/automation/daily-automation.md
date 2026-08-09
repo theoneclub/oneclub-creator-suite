@@ -17,9 +17,12 @@ posts manually, same as every carousel before this.
    for f in decks/*.json; do node -e "try{const d=require('./\$f'); console.log(d.slug,'|',d.angle)}catch(e){}"; done
    ```
 4. Write a new deck at `decks/<today>-<angle-slug>.json`:
-   - `trigger: "SYSTEM"`, CTA `product.image: "../../../assets/ebook-blueprint.png"`,
-     button text `Comment "SYSTEM" and I'll send it over` (match the live deck's exact
+   - `trigger: "BLUEPRINT"`, CTA `product.image: "../../../assets/ebook-blueprint.png"`,
+     button text `Comment "BLUEPRINT" and I'll send it over` (match the live deck's exact
      wording — see `decks/2026-08-06-faceless-ai-affiliate.json` as the quality/format bar).
+     The button font auto-scales to the trigger word's length (`scripts/lib/template.mjs`,
+     `button()`), so a longer or shorter word than "BLUEPRINT" won't wrap or need a manual
+     font-size tweak.
    - 5-8 slides, the 5-beat structure (hook, stakes, value x2-4, receipts, cta) per
      `.claude/skills/carousel-generator/SKILL.md`.
    - Apply the `social` skill's hook formulas and carousel architecture, the
@@ -40,13 +43,13 @@ posts manually, same as every carousel before this.
 6. `node scripts/render.mjs output/<slug>` — every slide must hit fit 1.00 with no
    overflow. Fix and rerender until clean.
 7. Check off the angle in `automation/angle-backlog.md` and append a row under
-   "Shipped": `date | slug | angle | SYSTEM`.
+   "Shipped": `date | slug | angle | BLUEPRINT`.
 8. Commit (deck JSON + any new/changed assets) and push to
    `claude/oneclub-carousel-automation-02vsrn`.
 9. Send the rendered PNGs to the user (`SendUserFile`, status `proactive` since
    they didn't ask for this specific run). Caption: the angle used, and a reminder
    that this deck still needs its own `carousel:<slug>` tag added to the existing
-   `SYSTEM` ManyChat automation before posting live (see `automation/manychat.md`
+   `BLUEPRINT` ManyChat automation before posting live (see `automation/manychat.md`
    section 3) — that step isn't automated, there's no ManyChat/Buffer connection in
    this environment.
 

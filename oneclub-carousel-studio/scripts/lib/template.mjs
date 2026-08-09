@@ -191,8 +191,18 @@ function infocard(c) {
       </div>`;
 }
 
-/** The big rounded comment button — the CTA's one tappable-looking thing. */
-const button = (b) => (b ? `<div class="bigbtn">${esc(typeof b === 'string' ? b : b.text)}</div>` : '');
+/** The big rounded comment button — the CTA's one tappable-looking thing.
+ *  Font scales down with text length so a longer trigger word (BLUEPRINT vs
+ *  SYSTEM) can't wrap and strand its last word alone in the pill — 34px was
+ *  hand-tuned for one specific word and broke the moment the word changed. */
+function button(b) {
+  if (!b) return '';
+  const text = typeof b === 'string' ? b : b.text;
+  const BASE_LEN = 38; // "Comment "SYSTEM" and I'll send it over" — the calibrated fit
+  const BASE_SIZE = 34;
+  const size = Math.max(24, Math.min(BASE_SIZE, Math.round(BASE_SIZE * (BASE_LEN / text.length))));
+  return `<div class="bigbtn" style="font-size:calc(${size}px * var(--fit))">${esc(text)}</div>`;
+}
 
 /** CTA block: the one word we want typed, at the size it deserves. */
 function ctaBlock(slide) {

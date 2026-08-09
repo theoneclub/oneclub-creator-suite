@@ -98,7 +98,7 @@ One word per asset. Reusing a word across two magnets is exactly what makes
 | Trigger | Asset | Deck |
 |---|---|---|
 | `EBOOK` | The Faceless AI Affiliate ebook | `faceless-affiliate-playbook`, the five alternates |
-| `SYSTEM` | The AI Affiliate Blueprint | `best-ai-model-for-beginners`, `first-week-plan`, `faceless-ai-affiliate` |
+| `BLUEPRINT` | The AI Affiliate Blueprint | `best-ai-model-for-beginners`, `first-week-plan`, `faceless-ai-affiliate`, all daily-automation posts |
 | `FOUNDING` | The One Club walkthrough | `the-one-club-documented` |
 | `HOOKS` | The first-line swipe file | `first-line-patterns` |
 
@@ -106,10 +106,17 @@ One word per asset. Reusing a word across two magnets is exactly what makes
 `FOUNDING` and `HOOKS` are new — create both automations before those decks go
 live, or the comments land nowhere.
 
-**Three decks now share `SYSTEM`.** The trigger alone can no longer tell you
-which one converted, so the `carousel:<slug>` tag in section 3 stops being
-good practice and becomes the only thing keeping attribution readable. Apply it
-on every fire, or `angle-report.mjs` will pool all three into one row.
+**`BLUEPRINT` is now the primary trigger for the Blueprint asset** (flipped from
+`SYSTEM`, which is the more literal word for what the CTA slides actually say —
+"send you the blueprint"). `SYSTEM` is kept as an alias on the same automation
+so any leftover posts or comments using the old word still land. Every daily
+automation post also uses `BLUEPRINT` as its trigger.
+
+**Multiple decks share `BLUEPRINT`, and that count grows daily** once the
+automation is live. The trigger alone can't tell you which post converted, so
+the `carousel:<slug>` tag in section 3 stops being good practice and becomes
+the only thing keeping attribution readable. Apply it on every fire — including
+every automated daily post — or `angle-report.mjs` pools them into one row.
 
 ## 5. Per-carousel checklist
 
