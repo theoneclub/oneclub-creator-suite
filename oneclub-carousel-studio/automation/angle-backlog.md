@@ -3,7 +3,7 @@
 Source list for the 3x/day carousel automation (see `automation/daily-automation.md`).
 Each firing picks the next unchecked angle, builds a full deck around it, checks it off,
 and appends a row here noting the slug it shipped as. All decks share the theme
-("Faceless AI Affiliate Marketing"), the `SYSTEM` trigger, and the same ebook lead
+("Faceless AI Affiliate Marketing"), the `BLUEPRINT` trigger, and the same ebook lead
 magnet — only the hook, proof point, and analogy change per post. Checked-off angles
 also cross-reference existing decks under `decks/` — never regenerate one already used.
 
@@ -13,9 +13,10 @@ never drift apart.
 
 ## Unused
 
-- [ ] **Side-hustle math** — compare trading an hour for a fixed rate (rideshare, delivery)
-      against one post that keeps earning. Hook: a specific hourly-wage number, not a claim
-      about this business's income.
+- [x] **Side-hustle math** — shipped as `side-hustle-math` (2026-08-09). Dropped the
+      hourly-wage number entirely — the money-claim compliance rule flags any `$` figure
+      regardless of whose income it is, so the comparison runs on "pays once vs. pays on
+      repeat" instead of a dollar amount.
 - [ ] **"Isn't this a pyramid scheme?"** — answer the objection directly. No recruiting, no
       downline, no one below you. You get paid for a sale, not for signing people up.
 - [ ] **The tools, not the tool** — what AI actually does in the workflow (script drafting,
@@ -41,3 +42,5 @@ never drift apart.
 ## Shipped
 
 <!-- Append one row per post, newest first: date | slug | angle | trigger -->
+
+2026-08-09 | side-hustle-math | Faceless AI Affiliate Marketing: side-hustle math | BLUEPRINT

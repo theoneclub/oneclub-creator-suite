@@ -1,0 +1,99 @@
+{
+  "slug": "side-hustle-math",
+  "date": "2026-08-09",
+  "angle": "Faceless AI Affiliate Marketing: side-hustle math",
+  "trigger": "BLUEPRINT",
+  "handle": "@theoneclub",
+  "chip": true,
+  "slides": [
+    {
+      "type": "hook",
+      "headline": "ONE HOUR OF DRIVING\nBUYS ONE HOUR\nOF PAY.",
+      "copy": [
+        "Rideshare. Delivery. Any gig paid by the hour.\nThe clock is the ceiling."
+      ],
+      "pill": {
+        "text": "Swipe to see what's different →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "label": "The hour that keeps paying",
+      "headline": "ONE POST DOESN'T\nCLOCK OUT\nWHEN YOU DO.",
+      "copy": [
+        "A driving hour pays once. A delivery hour pays once. Both stop the second you stop.",
+        "A post made once can still be earning **next month, without you touching it again.**"
+      ],
+      "figure": {
+        "image": "../../../assets/twelve-month-stack.svg",
+        "ratio": "1000 / 470",
+        "caption": "A pay-once offer is one bar. A monthly offer is twelve."
+      }
+    },
+    {
+      "type": "value",
+      "label": "Why the math changes",
+      "headline": "YOU'RE NOT PAID\nFOR THE HOUR.\nYOU'RE PAID FOR THE POST.",
+      "copy": [
+        "You spend the hour once, writing or recording it."
+      ],
+      "flow": [
+        {
+          "k": "1",
+          "t": "You make the post once",
+          "s": "Writing, recording, scheduling: one hour"
+        },
+        {
+          "k": "2",
+          "t": "It stays live",
+          "s": "No new shift to clock into"
+        },
+        {
+          "k": "3",
+          "t": "It can earn on repeat",
+          "s": "This week, next month, whenever it's seen"
+        }
+      ],
+      "pull": "The hour and the payout are no longer [[the same thing]]."
+    },
+    {
+      "type": "receipts",
+      "label": "The honest part",
+      "headline": "THIS ISN'T ABOUT\nWHAT YOU'LL MAKE.\nIT'S ABOUT THE CEILING.",
+      "copy": [
+        "An hourly gig has a hard ceiling: hours in a day, times the rate.",
+        "A post doesn't have that ceiling. **Whether it earns anything still depends on you making it, and making more than one.**"
+      ],
+      "note": {
+        "text": "This is math, not a promise.",
+        "arrow": "curve"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "IF YOU WANT THE EXACT\nFACELESS BLUEPRINT\nI USE.",
+      "product": {
+        "image": "../../../assets/ebook-blueprint.png",
+        "width": "400px"
+      },
+      "trigger": "BLUEPRINT",
+      "button": "Comment “BLUEPRINT” and I'll send it over"
+    }
+  ],
+  "caption": "Comment BLUEPRINT and I'll send it over: the whole faceless model, written out.\n\nAn hour of driving pays for one hour. An hour of delivery pays for one hour. That's the deal with almost every hourly gig. Your time goes in, its worth comes out, then it resets to zero.\n\nTHE HOUR THAT DOESN'T RESET\n\nA post works differently. You spend the hour once, writing or recording it. After that it stays live. It can get seen, and can earn, whether you're driving, sleeping, or off the clock completely. The hour and the payout stop being the same thing.\n\nHOW\n\nYou make the post once. It stays live, no new shift to clock into. It can earn on repeat: this week, next month, whenever someone sees it and buys through it.\n\nTHE HONEST PART\n\nThis isn't a claim about what you'll make. An hourly gig has a hard ceiling: hours in a day, times the rate. A post doesn't have that ceiling. Whether it earns anything still depends on you actually making it, and making more than one.\n\nIt could be zero. Post once and stop, and it's zero. This is math about which one has a ceiling, not a promise about results.\n\nComment BLUEPRINT and I'll send it over.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiaffiliate",
+    "#sidehustle",
+    "#recurringincome",
+    "#onlinebusiness",
+    "#digitalmarketing",
+    "#aitools",
+    "#gigeconomy",
+    "#beginnerfriendly",
+    "#affiliatetips",
+    "#contentcreatortips"
+  ]
+}
