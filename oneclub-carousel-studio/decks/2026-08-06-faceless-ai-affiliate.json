@@ -52,26 +52,29 @@
       "type": "value",
       "label": "How it actually works",
       "headline": "YOU DON'T BUILD IT.\nYOU JUST SEND\nSOMEONE.",
+      "copy": [
+        "Say it's a tool you already use. That's the whole starting point, you don't invent anything."
+      ],
       "flow": [
         {
           "k": "1",
-          "t": "Somebody else has a product",
-          "s": "Already built, already supported"
+          "t": "The tool already exists",
+          "s": "Built, supported, and already has customers"
         },
         {
           "k": "2",
-          "t": "You send them a person",
-          "s": "One post, one link"
+          "t": "You post about it",
+          "s": "One video, one caption, one link"
         },
         {
           "k": "3",
-          "t": "That person buys",
+          "t": "Someone clicks and signs up",
           "s": "Nothing else changes hands"
         },
         {
           "k": "4",
-          "t": "You get a commission",
-          "s": "Again next month, if it recurs"
+          "t": "You get paid",
+          "s": "Again next month, if the plan renews"
         }
       ],
       "pull": "No product. No shipping. No support. You send traffic, you [[get paid]]."

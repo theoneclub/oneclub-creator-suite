@@ -20,7 +20,7 @@
   <text class="lab" x="34" y="130">SAME SALE, TWELVE MONTHS ON</text>
   <text class="num" x="34" y="184">One resets. One stacks.</text>
   <text class="s" x="34" y="218">The same sale, twelve months apart.</text>
-  <rect x="34" y="260" width="22" height="22" rx="6" fill="rgba(255,255,255,0.32)"/>
+  <rect x="34" y="260" width="22" height="22" rx="6" fill="rgba(255,255,255,0.55)"/>
   <text class="s" x="66" y="278" font-size="16">One-time</text>
   <rect x="244" y="260" width="22" height="22" rx="6" fill="#a3f0af"/>
   <text class="s" x="276" y="278" font-size="16">Recurring</text>
@@ -29,7 +29,7 @@
   <line x1="34" y1="671" x2="586" y2="671" stroke="rgba(255,255,255,0.09)"/>
   <line x1="34" y1="498.5" x2="586" y2="498.5" stroke="rgba(255,255,255,0.09)"/>
   <line x1="34" y1="326" x2="586" y2="326" stroke="rgba(255,255,255,0.09)"/>
-  <path d="M34.0 947.0 L84.2 947.0 L134.4 947.0 L184.5 947.0 L234.7 947.0 L284.9 947.0 L335.1 947.0 L385.3 947.0 L435.5 947.0 L485.6 947.0 L535.8 947.0 L586.0 947.0" fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M34.0 947.0 L84.2 947.0 L134.4 947.0 L184.5 947.0 L234.7 947.0 L284.9 947.0 L335.1 947.0 L385.3 947.0 L435.5 947.0 L485.6 947.0 L535.8 947.0 L586.0 947.0" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="5" stroke-linecap="round"/>
   <path d="M34.0 947.0 L84.2 893.1 L134.4 839.1 L184.5 785.2 L234.7 731.2 L284.9 677.3 L335.1 623.3 L385.3 569.4 L435.5 515.4 L485.6 461.5 L535.8 407.5 L586.0 353.6" fill="none" stroke="#a3f0af" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="586" cy="353.6" r="10" fill="#a3f0af"/>
   <text class="s" x="34" y="1052" font-size="15" fill="#4b5563">Month 1</text>

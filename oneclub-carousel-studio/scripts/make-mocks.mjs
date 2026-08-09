@@ -447,7 +447,7 @@ function tipVsPaycheck() {
   const line = (vals) => vals.map((v, i) =>
     `${i ? 'L' : 'M'}${(PAD + i * stepX).toFixed(1)} ${(top + plotH - v * plotH).toFixed(1)}`).join(' ');
 
-  const legend = [['One-time', 'rgba(255,255,255,0.32)'], ['Recurring', G]].map(([t, c], i) => {
+  const legend = [['One-time', 'rgba(255,255,255,0.55)'], ['Recurring', G]].map(([t, c], i) => {
     const x = PAD + i * 210;
     return `  ${rect(x, y0 + 8, 22, 22, 6, c, null)}
   <text class="s" x="${x + 32}" y="${y0 + 26}" font-size="16">${esc(t)}</text>`;
@@ -460,7 +460,7 @@ function tipVsPaycheck() {
 ${head}
 ${legend}
 ${grid}
-  <path d="${line(oneTime)}" fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="5" stroke-linecap="round"/>
+  <path d="${line(oneTime)}" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="5" stroke-linecap="round"/>
   <path d="${line(recurring)}" fill="none" stroke="${G}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="${PAD + plotW}" cy="${top + plotH * 0.04}" r="10" fill="${G}"/>
   <text class="s" x="${PAD}" y="${top + plotH + 36}" font-size="15" fill="${DIM}">Month 1</text>
