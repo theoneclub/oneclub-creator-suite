@@ -14,7 +14,7 @@
   </defs>
   <rect x="0" y="0" width="620" height="1300" rx="26" fill="#0a0a0a" stroke="rgba(255,255,255,0.09)"/>
   <circle cx="46" cy="50" r="10" fill="#a3f0af"/>
-  <text class="lab" x="68" y="56">TEASPOON OR BUCKET</text>
+  <text class="lab" x="68" y="56">TIP OR PAYCHECK</text>
   <text class="lab" x="586" y="56" text-anchor="end">12 MONTHS</text>
   <line x1="0" y1="88" x2="620" y2="88" stroke="rgba(255,255,255,0.09)"/>
   <text class="lab" x="34" y="130">SAME SALE, TWELVE MONTHS ON</text>

@@ -395,9 +395,9 @@ ${footer(s.footerY, s.footerH, {
   })}`);
 }
 
-/** The size of the water — the industry, not anybody's income. */
+/** The size of the market — the industry, not anybody's income. */
 function marketSize() {
-  const [head, y0] = intro('THE SIZE OF THE WATER', 'It keeps rising.', 'Growing roughly 10-15% a year.');
+  const [head, y0] = intro('THE SIZE OF THE MARKET', 'It keeps rising.', 'Growing roughly 10-15% a year.');
 
   // Deliberately unlabelled by year: a dated axis goes stale, and the shape is
   // the whole point. Heights are a growth curve, not a claim about any figure.
@@ -429,8 +429,8 @@ ${footer(H - PAD - 150, 150, {
   })}`);
 }
 
-/** Teaspoon or bucket — the same effort, twelve months apart. */
-function teaspoonVsBucket() {
+/** Tip or paycheck — the same effort, twelve months apart. */
+function tipVsPaycheck() {
   const [head, y0] = intro('SAME SALE, TWELVE MONTHS ON', 'One resets. One stacks.', 'The same sale, twelve months apart.');
 
   const top = y0 + 74;
@@ -456,7 +456,7 @@ function teaspoonVsBucket() {
   const grid = [0, 0.25, 0.5, 0.75, 1].map((g) =>
     `  <line x1="${PAD}" y1="${top + plotH - g * plotH}" x2="${W - PAD}" y2="${top + plotH - g * plotH}" stroke="${LINE}"/>`).join('\n');
 
-  return svg('A line chart: one-time earnings stay flat over twelve months while recurring earnings climb', `${chrome('TEASPOON OR BUCKET', '12 MONTHS')}
+  return svg('A line chart: one-time earnings stay flat over twelve months while recurring earnings climb', `${chrome('TIP OR PAYCHECK', '12 MONTHS')}
 ${head}
 ${legend}
 ${grid}
@@ -476,7 +476,7 @@ const PANELS = {
   'hook-sheet.svg': hookSheet,
   'program-check.svg': programCheck,
   'market-size.svg': marketSize,
-  'teaspoon-vs-bucket.svg': teaspoonVsBucket,
+  'tip-vs-paycheck.svg': tipVsPaycheck,
   'oneclub-panel.svg': clubPanel,
   'oneclub-offer-board.svg': offerBoard,
   'oneclub-angle-sheet.svg': angleSheet,
