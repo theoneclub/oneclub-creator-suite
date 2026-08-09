@@ -15,7 +15,7 @@
       "scrim": "vignette",
       "align": "top",
       "copy": [
-        "You don't need to be smart to get some of it.\nYou need to know where to look."
+        "You don't need to be smart.\nYou need to know where to look."
       ],
       "pill": {
         "text": "Swipe to see where →",
@@ -27,7 +27,7 @@
       "label": "The industry behind it",
       "headline": "AFFILIATE MARKETING\nGROWS EVERY\nSINGLE YEAR.",
       "copy": [
-        "A $200 billion a year industry. Growing ten to fifteen per cent a year — same as last year, and the year before.",
+        "A $200 billion industry. Growing ten to fifteen per cent a year — same as last year, and the year before.",
         "Not a projection. Not anybody's income. **That's the size of the water.**"
       ],
       "mock": {
@@ -39,7 +39,7 @@
       "label": "Then AI made it easier",
       "headline": "NO CAMERA.\nNO FACE.\nSTILL COUNTS.",
       "copy": [
-        "A screen recording. Text over stock footage. A voice reading a list. AI can write the script — AI can even read it out loud.",
+        "A screen recording. Text over stock footage. A voice reading a list. AI writes the script — it can even read it out loud.",
         "The bottleneck was never the offer. It was standing in front of a camera. **That bottleneck is gone.**"
       ],
       "figure": {
@@ -71,7 +71,7 @@
         {
           "k": "4",
           "t": "You get a commission",
-          "s": "And again next month, if it recurs"
+          "s": "Again next month, if it recurs"
         }
       ],
       "pull": "No product. No shipping. No support. You send traffic, you [[get paid]]."
@@ -94,7 +94,7 @@
     },
     {
       "type": "cta",
-      "headline": "ONE POST CAN CHANGE\nTHE DIRECTION OF\nYOUR WHOLE YEAR.",
+      "headline": "THE WHOLE SYSTEM,\nWRITTEN OUT.",
       "product": {
         "image": "../../../assets/ebook-blueprint.png",
         "width": "400px"
