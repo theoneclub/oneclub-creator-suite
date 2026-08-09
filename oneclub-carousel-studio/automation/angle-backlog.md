@@ -20,8 +20,9 @@ never drift apart.
 - [x] **"Isn't this a pyramid scheme?"** — shipped as `not-a-pyramid-scheme` (2026-08-09).
       Used the `versus` block (❌/✅ side-by-side) for the first time in this campaign —
       fits objection-handling angles better than a chart.
-- [ ] **The tools, not the tool** — what AI actually does in the workflow (script drafting,
-      voiceover, scheduling) without naming or endorsing specific paid products.
+- [x] **The tools, not the tool** — shipped as `tools-not-the-tool` (2026-08-09). First deck
+      to use `big`, `cards`, `panel`/`stats`, and `tiles` — none of which had appeared yet.
+      Hook reuses `tab-graveyard.svg` as full-bleed art instead of the real photo or text-only.
 - [ ] **Vet the offer before you promote it** — a checklist format: commission rate, recurring
       or not, cookie duration, payout minimum. Teach the reader to evaluate any offer, not
       just this one.
@@ -48,6 +49,7 @@ never drift apart.
      repeat their slide count, hook treatment, or primary visual block type. Keep this
      column filled in, or that check has nothing to work from. -->
 
+2026-08-09 | tools-not-the-tool | Faceless AI Affiliate Marketing: the tools, not the tool | BLUEPRINT | 7 | hook: illustrated full-bleed (tab-graveyard.svg); big; cards; panel/stats; tiles | tab-graveyard.svg, ebook-blueprint.png
 2026-08-09 | not-a-pyramid-scheme | Faceless AI Affiliate Marketing: answering the pyramid scheme objection | BLUEPRINT | 6 | hook: photo+quoted objection; versus; flow | faceless-figure.jpg, ebook-blueprint.png
 2026-08-09 | side-hustle-math | Faceless AI Affiliate Marketing: side-hustle math | BLUEPRINT | 5 | hook: text-only; figure; flow | twelve-month-stack.svg, ebook-blueprint.png
 2026-08-06 | faceless-ai-affiliate | Faceless AI Affiliate Marketing: $22B market, $30B by 2030, and why AI made it easier | BLUEPRINT | 6 | hook: photo; mock; figure; flow | faceless-figure.jpg, market-size.svg, faceless-formats.svg, program-check.svg, ebook-blueprint.png

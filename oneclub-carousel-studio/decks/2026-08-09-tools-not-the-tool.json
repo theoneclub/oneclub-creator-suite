@@ -1,0 +1,123 @@
+{
+  "slug": "tools-not-the-tool",
+  "date": "2026-08-09",
+  "angle": "Faceless AI Affiliate Marketing: the tools, not the tool",
+  "trigger": "BLUEPRINT",
+  "handle": "@theoneclub",
+  "chip": true,
+  "slides": [
+    {
+      "type": "hook",
+      "headline": "TOOL OVERLOAD\nKILLS MORE POSTS\nTHAN LAZINESS.",
+      "image": "../../../assets/tab-graveyard.svg",
+      "scrim": "vignette",
+      "align": "top",
+      "copy": [
+        "Five tabs open. Zero posts made. Sound familiar?"
+      ],
+      "pill": {
+        "text": "Swipe to see the fix →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "label": "The actual fix",
+      "headline": "YOU NEED THREE\nTOOLS. NOT THIRTY.",
+      "big": {
+        "value": "3",
+        "label": "AI tools in the whole workflow",
+        "sub": "One writes. One speaks. One schedules."
+      }
+    },
+    {
+      "type": "value",
+      "label": "The actual toolkit",
+      "headline": "WRITE. VOICE.\nSCHEDULE. DONE.",
+      "cards": [
+        {
+          "icon": "doc",
+          "t": "A script writer",
+          "s": "Turns an idea into a script in one prompt"
+        },
+        {
+          "icon": "bolt",
+          "t": "A voice generator",
+          "s": "Reads it out loud so you don't have to",
+          "on": true
+        },
+        {
+          "icon": "calendar",
+          "t": "A scheduler",
+          "s": "Posts it while you're doing something else"
+        }
+      ],
+      "flag": "That's the entire stack."
+    },
+    {
+      "type": "value",
+      "label": "Where the confusion actually is",
+      "headline": "THE GAP ISN'T\nTHE TOOLS.",
+      "copy": [
+        "It's the twelve tabs you open trying to compare them."
+      ],
+      "stats": {
+        "caption": "Needed vs. opened",
+        "items": [
+          { "label": "Tools you actually need", "value": "3", "bar": 3 },
+          { "label": "Tabs people open instead", "value": "12+", "bar": 12 }
+        ]
+      }
+    },
+    {
+      "type": "value",
+      "label": "How to actually choose",
+      "headline": "PICK BY THE JOB,\nNOT THE BRAND.",
+      "copy": [
+        "Any tool that does the job works. The newest release isn't the point.",
+        "**The one you'll actually open tomorrow is the right one.**"
+      ]
+    },
+    {
+      "type": "receipts",
+      "label": "Why this matters",
+      "headline": "COMPLEXITY IS WHAT\nMAKES PEOPLE QUIT.",
+      "copy": [
+        "Every extra tool is one more reason to stop before you start."
+      ],
+      "tiles": [
+        { "icon": "target", "value": "3", "label": "tools, total" },
+        { "icon": "bolt", "value": "1", "label": "prompt to start" }
+      ],
+      "note": {
+        "text": "Screenshot this one.",
+        "arrow": "curve"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "IF YOU WANT THE EXACT\nFACELESS BLUEPRINT\nI USE.",
+      "product": {
+        "image": "../../../assets/ebook-blueprint.png",
+        "width": "400px"
+      },
+      "trigger": "BLUEPRINT",
+      "button": "Comment “BLUEPRINT” and I'll send it over"
+    }
+  ],
+  "caption": "Comment BLUEPRINT and I'll send it over: the whole faceless model, written out.\n\nFive tabs open. Zero posts made. If that's you, the problem was never the tools.\n\nTHE ACTUAL FIX\n\nYou need three AI tools in this whole workflow. Not thirty. One writes, one speaks, one schedules.\n\nTHE ACTUAL TOOLKIT\n\nA script writer turns an idea into a script in one prompt. A voice generator reads it out loud so you don't have to. A scheduler posts it while you're doing something else. That's the entire stack.\n\nWHERE THE CONFUSION ACTUALLY IS\n\nThe gap isn't the tools. It's the twelve tabs you open trying to compare them.\n\nHOW TO ACTUALLY CHOOSE\n\nAny tool that does the job works. The newest release isn't the point. The one you'll actually open tomorrow is the right one.\n\nWHY THIS MATTERS\n\nEvery extra tool you add on top is one more reason to stop before you start. Three tools. One prompt to start.\n\nTHE HONEST PART\n\nI'm not going to tell you what you'll make. I don't know you, and I don't know how hard you'll work.\n\nIt could be zero. If you never open any of the three tools, it's zero.\n\nBut the tools were never what was stopping you.\n\nComment BLUEPRINT and I'll send it over.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiaffiliate",
+    "#facelessdigitalmarketing",
+    "#recurringincome",
+    "#onlinebusiness",
+    "#digitalmarketing",
+    "#aitools",
+    "#sidebusiness",
+    "#beginnerfriendly",
+    "#affiliatetips",
+    "#contentcreatortips"
+  ]
+}
