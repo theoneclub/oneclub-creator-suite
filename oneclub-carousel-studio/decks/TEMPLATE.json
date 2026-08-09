@@ -13,7 +13,7 @@
       "kicker": "Two or three words",
       "headline": "Bold claim, stacked\nwith one ((phrase boxed)).",
       "image": "../../../assets/<slug>-hook.png",
-      "copy": ["The second beat of the hook — one line, no more."],
+      "copy": ["The second beat of the hook: one line, no more."],
       "tiles": [
         { "value": "$10,000", "label": "Community-voted, monthly" },
         { "value": "500", "label": "Founding members" }
@@ -68,10 +68,10 @@
       "headline": "Want the exact\nplaybook?",
       "image": "../../../assets/<slug>-cta.png",
       "pill": { "before": "Comment", "word": "BLUEPRINT", "text": "↓" },
-      "copy": ["and I'll send you {{The Faceless AI Affiliate Blueprint}} — start to finish. 🔒"]
+      "copy": ["and I'll send you {{The Faceless AI Affiliate Blueprint}}, start to finish. 🔒"]
     }
   ],
-  "caption": "Comment BLUEPRINT and I'll send you the exact playbook. 🔒\n\nThe caption restates the argument for people who never swipe. Keep the trigger word in the first 125 characters — that is what shows above the fold.\n\nComment BLUEPRINT and it's in your DMs.",
+  "caption": "Comment BLUEPRINT and I'll send you the exact playbook. 🔒\n\nThe caption restates the argument for people who never swipe. Keep the trigger word in the first 125 characters. That is what shows above the fold.\n\nComment BLUEPRINT and it's in your DMs.",
   "hashtags": [
     "#facelessmarketing", "#aiincome", "#recurringincome", "#affiliatemarketing",
     "#escapethe9to5", "#aitools", "#contentautomation", "#onlinebusinesstips",

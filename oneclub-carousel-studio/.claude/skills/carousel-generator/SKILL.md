@@ -258,6 +258,9 @@ Break the line where the sentence breathes.
 - Pre-launch framing: "we're building this"
 - Write forward — 2026+, never a past year
 - Avoid: hustle, grind, synergy, leverage
+- No em dashes anywhere in slide copy or caption — split into two sentences,
+  or use a comma/colon instead. It's an AI-writing tell; `compliance.mjs`
+  blocks export on it.
 
 Warnings ship; errors block. If the user wants a warning overridden, that's
 their call — say it's overridden, don't quietly drop it.

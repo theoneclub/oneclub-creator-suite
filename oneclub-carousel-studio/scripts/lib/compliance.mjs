@@ -67,6 +67,13 @@ const RULES = [
     message: (hits) => `Off-voice word(s): "${hits.join('", "')}". Brand memory lists these as words to avoid.`,
   },
   {
+    id: 'em-dash',
+    severity: 'error',
+    // Em dashes read as an AI-writing tell. Use a period, comma, or colon instead.
+    test: (t) => (t.match(/—/g) || []),
+    message: (hits) => `Em dash used ${hits.length}x. Split into two sentences, or use a comma/colon instead.`,
+  },
+  {
     id: 'long-sentence',
     severity: 'warn',
     // A slide is read in about two seconds. Long sentences lose people.
