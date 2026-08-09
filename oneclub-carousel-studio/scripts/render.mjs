@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Slide HTML -> numbered 1080x1440 PNGs, plus the layout half of the QA pass
+ * Slide HTML -> numbered 1080x1350 PNGs, plus the layout half of the QA pass
  * (auto-fit scale + overflow detection measured in the real browser).
  *
  *   node scripts/render.mjs output/2026-07-27-system-critique
@@ -17,7 +17,7 @@ import { buildDeck } from './build.mjs';
 
 const STUDIO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SLIDE_W = 1080;
-const SLIDE_H = 1440;
+const SLIDE_H = 1350;
 const FIT_FLOOR = 0.62;
 
 async function loadChromium() {

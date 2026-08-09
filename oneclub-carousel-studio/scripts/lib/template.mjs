@@ -1,5 +1,5 @@
 /**
- * Deck JSON -> slide HTML. One file per slide, 1080x1440.
+ * Deck JSON -> slide HTML. One file per slide, 1080x1350.
  * Slide HTML links the design bundle by relative path, so an exported folder
  * stays editable: tweak ds-bundle-morphe/carousel.css, re-render, done.
  */
@@ -401,10 +401,10 @@ export function renderGrid(deck, findings) {
   .grid .hold { border:1px solid var(--dim); }
   .thumb { margin:0; }
   .thumb figcaption { font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--grey); margin-top:8px; }
-  .strip .hold { width:270px; height:360px; }
-  .grid  .hold { width:100%; aspect-ratio:3/4; }
+  .strip .hold { width:270px; height:337.5px; }
+  .grid  .hold { width:100%; aspect-ratio:4/5; }
   .hold { position:relative; overflow:hidden; flex:0 0 auto; background:#000; }
-  iframe { position:absolute; top:0; left:0; width:1080px; height:1440px; border:0; transform-origin:top left; }
+  iframe { position:absolute; top:0; left:0; width:1080px; height:1350px; border:0; transform-origin:top left; }
   .strip iframe { transform:scale(0.25); }
   .grid  iframe { transform:scale(0.1574); }
   .caption { white-space:pre-wrap; background:#111; border:1px solid var(--dim); border-left:3px solid var(--green); padding:20px 24px; font-size:14px; line-height:1.6; max-width:820px; color:#e5e7eb; }
@@ -418,7 +418,7 @@ export function renderGrid(deck, findings) {
 </head>
 <body>
   <h1>The One <b>Club</b> — ${esc(deck.slug)}</h1>
-  <div class="meta">${esc(deck.date)} · angle: ${esc(deck.angle)} · trigger: <code>${esc(deck.trigger)}</code> · ${total} slides · 1080×1440</div>
+  <div class="meta">${esc(deck.date)} · angle: ${esc(deck.angle)} · trigger: <code>${esc(deck.trigger)}</code> · ${total} slides · 1080×1350</div>
 
   <h2>Swipe order</h2>
   <div class="strip">${frames}</div>

@@ -1,6 +1,6 @@
 ---
 name: carousel-generator
-description: Build a One Club Instagram carousel end to end — slide-by-slide copy on the 5-beat formula, hook slide art via Higgsfield, branded 1080x1440 HTML slides, compliance + layout QA, grid preview, and numbered PNG export ready for Buffer. Use when the user asks for a carousel, a swipe post, a slide set, or says "use the carousel generator skill".
+description: Build a One Club Instagram carousel end to end — slide-by-slide copy on the 5-beat formula, hook slide art via Higgsfield, branded 1080x1350 HTML slides, compliance + layout QA, grid preview, and numbered PNG export ready for Buffer. Use when the user asks for a carousel, a swipe post, a slide set, or says "use the carousel generator skill".
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep, AskUserQuestion, mcp__Higgsfield__generate_image, mcp__Higgsfield__balance, mcp__Higgsfield__select_workspace, mcp__Higgsfield__show_medias, mcp__Higgsfield__media_import_url, mcp__Higgsfield__job_display
 ---
 
@@ -117,7 +117,7 @@ A slide gets about two seconds. Anything the reader has to re-read is lost.
    strip and as it lands on the Instagram grid, with the caption and the QA
    table. Review before export.
 6. **Export.** `render.mjs` writes numbered PNGs to `output/<date>-<slug>/`,
-   1080x1440, ready to airdrop or drop into Buffer.
+   1080x1350, ready to airdrop or drop into Buffer.
 
 ## Commands
 

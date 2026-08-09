@@ -26,9 +26,12 @@
   --track:      rgba(255, 255, 255, 0.14);
   --scrim:      rgba(0, 0, 0, 0.78);
 
-  /* Canvas — 3:4, NOT square. Square gets throttled on IG. */
+  /* Canvas — 4:5, NOT square. Square gets throttled on IG, and 4:5 is
+     Instagram's actual max portrait ratio — it dominates the feed and gets
+     the engagement boost. Taller ratios (this used to be 3:4 / 1440px) get
+     cropped or letterboxed by IG instead of rendering full-bleed. */
   --slide-w: 1080px;
-  --slide-h: 1440px;
+  --slide-h: 1350px;
   --pad:     76px;   /* safe margin — nothing important outside this */
   --pad-top: 72px;
 
