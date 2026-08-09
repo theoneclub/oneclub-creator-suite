@@ -95,6 +95,16 @@ posts manually, same as every carousel before this.
 - Never repeat the slide count, hook treatment, or primary visual block type of any of
   the last 3 shipped decks (step 4). Three posts a day in the same layout reads as one
   templated post copy-pasted, not three different ones — this is a hard rule, not a
+  nice-to-have. But variety is never a reason to ship a slide with nothing real on it —
+  a `tiles`/`note`-screenshot-this slide that just restates a number already shown two
+  slides earlier is worse than repeating a block type. If the angle doesn't naturally
+  fill a fresh block type with something worth a reader's attention, pick a different
+  fresh block, or fall back to text — never pad a slide just to hit the variety quota.
+  (`tools-not-the-tool` shipped its first version with exactly this problem: `tiles`
+  showing "3 tools, total" and "1 prompt to start" on a receipts slide already headlined
+  "screenshot this," when there was nothing in it worth saving. Fixed by replacing it
+  with an actual reusable test — "will you still be opening it in a week?" — instead of
+  restating the number from slide 2.)
   nice-to-have.
 - If three consecutive firings fail QA on the same root cause, stop and leave a
   clear note in the session rather than retrying blindly — that's a signal

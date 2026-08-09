@@ -80,14 +80,11 @@
     },
     {
       "type": "receipts",
-      "label": "Why this matters",
-      "headline": "COMPLEXITY IS WHAT\nMAKES PEOPLE QUIT.",
+      "label": "The one test that matters",
+      "headline": "ASK THIS BEFORE\nYOU BUY ANY TOOL.",
       "copy": [
-        "Every extra tool is one more reason to stop before you start."
-      ],
-      "tiles": [
-        { "icon": "target", "value": "3", "label": "tools, total" },
-        { "icon": "bolt", "value": "1", "label": "prompt to start" }
+        "Not whether it's the newest release. Not whether it has more features than the last one.",
+        "**Will you still be opening it in a week? That's the only trial period that matters.**"
       ],
       "note": {
         "text": "Screenshot this one.",
