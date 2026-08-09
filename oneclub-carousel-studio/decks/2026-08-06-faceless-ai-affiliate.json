@@ -8,17 +8,17 @@
   "slides": [
     {
       "type": "hook",
-      "headline": "{{$22 BILLION}} MARKET.\nMOST PEOPLE HAVE\nNEVER HEARD OF IT.",
+      "headline": "{{$22 BILLION}}\nDOLLAR INDUSTRY.",
       "image": "../../../assets/faceless-figure.jpg",
       "imageFit": "600px 1075px",
       "imagePos": "center bottom",
       "scrim": "vignette",
       "align": "top",
       "copy": [
-        "And by every measure, it's still just getting started."
+        "And most people aren't taking advantage of it."
       ],
       "pill": {
-        "text": "Swipe to see how big →",
+        "text": "Swipe left for the industry →",
         "ghost": true
       }
     },
