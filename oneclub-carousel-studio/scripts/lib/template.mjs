@@ -345,10 +345,21 @@ export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle
       : 0;
     if (contentH < body.clientHeight * 0.82) body.classList.add('body--centred');
 
+    /* .figure has overflow:hidden on a flex-shrinkable box (image + caption).
+       When .body is short on room, flexbox shrinks .figure to fit instead of
+       letting it push .body's scrollHeight past clientHeight — so the caption
+       can get silently clipped inside its own box while the checks above see
+       no overflow at all. Check clip-prone containers directly. */
+    var clipped = false;
+    slide.querySelectorAll('.figure').forEach(function (el) {
+      if (el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1) clipped = true;
+    });
+
     var root = document.documentElement;
     root.dataset.fit = String(scale);
     root.dataset.overflow  = body.scrollHeight > body.clientHeight + 1 ? '1' : '0';
     root.dataset.overflowX = body.scrollWidth  > body.clientWidth  + 1 ? '1' : '0';
+    root.dataset.clipped   = clipped ? '1' : '0';
     root.dataset.ready = '1';
   }
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);

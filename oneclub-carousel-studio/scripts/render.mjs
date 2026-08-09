@@ -87,6 +87,7 @@ async function main() {
       fit: parseFloat(document.documentElement.dataset.fit || '1'),
       overflow: document.documentElement.dataset.overflow === '1',
       overflowX: document.documentElement.dataset.overflowX === '1',
+      clipped: document.documentElement.dataset.clipped === '1',
     }));
 
     const png = path.join(outDir, file.replace('.html', '.png'));
@@ -95,12 +96,14 @@ async function main() {
     const where = file.replace('.html', '');
     if (m.overflow || m.overflowX) {
       layout.push({ severity: 'error', where, rule: 'overflow', message: `Copy overflows the slide even at the ${FIT_FLOOR} auto-fit floor — cut words, do not shrink further.` });
+    } else if (m.clipped) {
+      layout.push({ severity: 'error', where, rule: 'clipped', message: `A .figure block was flex-shrunk to fit and clipped its own content (likely the caption) — invisible at the body level. Cut copy above it or shorten the caption.` });
     } else if (m.fit <= FIT_FLOOR + 0.001) {
       layout.push({ severity: 'warn', where, rule: 'fit-floor', message: `Auto-fit bottomed out at ${m.fit} — type is at minimum size and losing impact. Cut ~20% of the copy.` });
     } else if (m.fit < 0.8) {
       layout.push({ severity: 'warn', where, rule: 'fit', message: `Type scaled to ${m.fit} to fit. Tighten the copy if this slide is meant to punch.` });
     }
-    console.log(`  ${file.replace('.html', '.png').padEnd(14)} fit ${m.fit.toFixed(2)}${m.overflow ? '  OVERFLOW' : ''}`);
+    console.log(`  ${file.replace('.html', '.png').padEnd(14)} fit ${m.fit.toFixed(2)}${m.overflow ? '  OVERFLOW' : ''}${m.clipped ? '  CLIPPED' : ''}`);
   }
 
   await browser.close();
