@@ -1,0 +1,99 @@
+{
+  "slug": "vet-the-offer",
+  "date": "2026-08-10",
+  "angle": "Faceless AI Affiliate Marketing: vet the offer before you promote it",
+  "trigger": "BLUEPRINT",
+  "handle": "@theoneclub",
+  "chip": true,
+  "slides": [
+    {
+      "type": "hook",
+      "headline": "VET ANY OFFER\nIN {{60 SECONDS}}.",
+      "image": "../../../assets/faceless-figure.jpg",
+      "imageFit": "600px 1075px",
+      "imagePos": "center bottom",
+      "scrim": "vignette",
+      "align": "top",
+      "copy": [
+        "Four checks. Run them before you record a single video."
+      ],
+      "pill": {
+        "text": "Swipe for the checklist →",
+        "ghost": true
+      }
+    },
+    {
+      "type": "stakes",
+      "label": "Why this comes first",
+      "headline": "PICK THE WRONG OFFER\nAND NONE OF THE\nREST MATTERS.",
+      "copy": [
+        "A great hook. A clean script. A well-timed post. All of it is wasted on an offer that was never worth promoting.",
+        "**Vetting takes minutes. A bad offer costs you months.**"
+      ]
+    },
+    {
+      "type": "value",
+      "label": "The four checks",
+      "headline": "RUN THIS BEFORE\nYOU SAY YES.",
+      "copy": [
+        "Not a vibe check. Four specific terms, every time."
+      ],
+      "tiles": [
+        { "icon": "bag", "value": "1", "label": "Commission rate" },
+        { "icon": "calendar", "value": "2", "label": "Recurring, not one-time" },
+        { "icon": "eye", "value": "3", "label": "Cookie window" },
+        { "icon": "target", "value": "4", "label": "Payout minimum" }
+      ]
+    },
+    {
+      "type": "value",
+      "label": "Why these four, not just one",
+      "headline": "A GOOD RATE MEANS\nNOTHING IF IT ONLY\nPAYS YOU ONCE.",
+      "copy": [
+        "A high one-time commission looks better on paper than a smaller recurring one. Then month two arrives, and the one-time payout is already gone.",
+        "**Recurring beats high, every time it renews.**"
+      ]
+    },
+    {
+      "type": "receipts",
+      "label": "The one you screenshot",
+      "headline": "WHAT A GOOD OFFER\nACTUALLY LOOKS LIKE.",
+      "copy": [
+        "No offer needs a perfect score. But fail two or more of these, and that's your answer.",
+        "**Save this. Check every offer against it before you post.**"
+      ],
+      "mock": {
+        "image": "../../../assets/offer-scorecard.svg"
+      },
+      "note": {
+        "text": "Screenshot this one.",
+        "arrow": "curve"
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "IF YOU WANT THE EXACT\nFACELESS BLUEPRINT\nI USE.",
+      "product": {
+        "image": "../../../assets/ebook-blueprint.png",
+        "width": "400px"
+      },
+      "trigger": "BLUEPRINT",
+      "button": "Comment “BLUEPRINT” and I'll send it over"
+    }
+  ],
+  "caption": "Comment BLUEPRINT and I'll send it over: the whole faceless model, written out.\n\nYou can vet an offer in under 60 seconds. Four checks, run before you ever record a video.\n\nWHY THIS COMES FIRST\n\nA great hook, a clean script, a well-timed post. All of it is wasted on an offer that was never worth promoting. Vetting takes minutes. A bad offer costs you months.\n\nTHE FOUR CHECKS\n\nCommission rate. Recurring, not one-time. Cookie window. Payout minimum. Not a vibe check, four specific terms, every time.\n\nWHY THESE FOUR, NOT JUST ONE\n\nA high one-time commission looks better on paper than a smaller recurring one. Then month two arrives, and the one-time payout is already gone. Recurring beats high, every time it renews.\n\nWHAT A GOOD OFFER ACTUALLY LOOKS LIKE\n\nA commission rate worth the traffic. Paid on renewal, not just once. A cookie window long enough to matter. A payout minimum you'll actually hit. No offer needs a perfect score, but fail two or more, and that's your answer.\n\nTHE HONEST PART\n\nI'm not going to tell you what you'll make. I don't know you, and I don't know how hard you'll work.\n\nIt could be zero. Vetting an offer doesn't make anyone click it. This is a filter, not a promise.\n\nBut it's the filter that decides whether the rest of the work has a chance.\n\nComment BLUEPRINT and I'll send it over.",
+  "hashtags": [
+    "#affiliatemarketing",
+    "#facelessmarketing",
+    "#aiaffiliate",
+    "#facelessdigitalmarketing",
+    "#recurringincome",
+    "#onlinebusiness",
+    "#digitalmarketing",
+    "#aitools",
+    "#sidebusiness",
+    "#beginnerfriendly",
+    "#affiliatetips",
+    "#contentcreatortips"
+  ]
+}

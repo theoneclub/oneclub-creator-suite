@@ -52,12 +52,13 @@ posts manually, same as every carousel before this.
        - `big` — one oversized number as the whole visual moment (`{ value, label, sub }`)
        - text-only, no visual block at all — a legitimate choice, not a fallback
      - **Visual assets**: reuse an existing SVG under `assets/` when its shape genuinely
-       fits the new angle (list them: `market-size.svg`, `tip-vs-paycheck.svg`,
-       `faceless-formats.svg`, `twelve-month-stack.svg`, `program-check.svg`,
-       `quit-curve.svg`, `ninety-day-heatmap.svg`, `thirty-posts-grid.svg`,
-       `tab-graveyard.svg`, `week-one-calendar.svg`, `comment-to-inbox.svg`,
-       `script-template.svg`, `no-requirements.svg`, `model-compare.svg`,
-       `face-vs-faceless.svg`) — but don't reuse the same asset two firings in a row.
+       fits the new angle (list them: `market-size.svg`, `money-stack.svg`,
+       `tip-vs-paycheck.svg`, `faceless-formats.svg`, `twelve-month-stack.svg`,
+       `program-check.svg`, `offer-scorecard.svg`, `quit-curve.svg`,
+       `ninety-day-heatmap.svg`, `thirty-posts-grid.svg`, `tab-graveyard.svg`,
+       `week-one-calendar.svg`, `comment-to-inbox.svg`, `script-template.svg`,
+       `no-requirements.svg`, `model-compare.svg`, `face-vs-faceless.svg`) —
+       but don't reuse the same asset two firings in a row.
        If nothing fits, build a new panel via `scripts/make-mocks.mjs` (follow its
        existing helper patterns: `svg()`, `chrome()`, `intro()`, `footer()`) rather than
        forcing an ill-fitting asset onto the angle.

@@ -27,9 +27,10 @@ never drift apart.
       restated the "3" from slide 2) despite the "screenshot this" note next to it —
       replaced with a real reusable test instead. See the guardrails note in
       daily-automation.md: variety is never a reason to ship a slide with nothing on it.
-- [ ] **Vet the offer before you promote it** — a checklist format: commission rate, recurring
-      or not, cookie duration, payout minimum. Teach the reader to evaluate any offer, not
-      just this one.
+- [x] **Vet the offer before you promote it** — shipped as `vet-the-offer` (2026-08-10). New
+      `tiles` intro (icon numbered checks) plus a fresh scorecard mock (`offer-scorecard.svg`),
+      distinct from `program-check.svg`'s gut-check questions — this one is the actual terms
+      (commission rate, recurring, cookie window, payout minimum).
 - [ ] **A day in the actual routine** — what 30-60 minutes of this looks like on a normal day.
       Grounds the "faceless" claim in something concrete instead of an abstraction.
 - [ ] **No audience, cold reach** — go deeper than slide 3 of `faceless-ai-affiliate`: how a
@@ -53,6 +54,7 @@ never drift apart.
      repeat their slide count, hook treatment, or primary visual block type. Keep this
      column filled in, or that check has nothing to work from. -->
 
+2026-08-10 | vet-the-offer | Faceless AI Affiliate Marketing: vet the offer before you promote it | BLUEPRINT | 6 | hook: photo; tiles; text-only; mock | faceless-figure.jpg, offer-scorecard.svg, ebook-blueprint.png
 2026-08-09 | tools-not-the-tool | Faceless AI Affiliate Marketing: the tools, not the tool | BLUEPRINT | 7 | hook: illustrated full-bleed (tab-graveyard.svg); big; cards; panel/stats | tab-graveyard.svg, ebook-blueprint.png
 2026-08-09 | not-a-pyramid-scheme | Faceless AI Affiliate Marketing: answering the pyramid scheme objection | BLUEPRINT | 6 | hook: photo+quoted objection; versus; flow | faceless-figure.jpg, ebook-blueprint.png
 2026-08-09 | side-hustle-math | Faceless AI Affiliate Marketing: side-hustle math | BLUEPRINT | 5 | hook: text-only; figure; flow | twelve-month-stack.svg, ebook-blueprint.png

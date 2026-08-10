@@ -396,6 +396,37 @@ ${footer(s.footerY, s.footerH, {
   })}`);
 }
 
+/** Four criteria for vetting an offer before promoting it — not the same four
+ *  questions as programCheck (that one is a gut check; this one is the terms). */
+function offerScorecard() {
+  const rows = [
+    ['COMMISSION RATE', 'High enough to justify the traffic you send.'],
+    ['RECURRING, NOT ONE-TIME', 'Paid every renewal beats paid once.'],
+    ['COOKIE WINDOW', 'The longer you get credit after the click, the better.'],
+    ['PAYOUT MINIMUM', 'Low enough that you will actually hit it.'],
+  ];
+  const [head, y0] = intro('BEFORE YOU PROMOTE ANYTHING', 'Four terms.', 'Check every offer against this, no exceptions.');
+  const s = slots(y0 + 20, rows.length, { footer: 132, gap: 22 });
+  const list = rows.map(([k, t], i) => {
+    const y = s.at(i);
+    return `  ${rect(PAD, y, IW, s.h, 16)}
+  <rect x="${PAD}" y="${y}" width="6" height="${s.h}" rx="3" fill="${G}"/>
+  ${tickIcon(W - PAD - 46, y + s.h / 2, 17)}
+  <text class="lab" x="${PAD + 28}" y="${y + s.h / 2 - 10}" fill="${G}">${esc(k)}</text>
+  <text class="s" x="${PAD + 28}" y="${y + s.h / 2 + 22}" font-size="16" fill="#ffffff">${esc(t)}</text>`;
+  }).join('\n');
+
+  return svg('A scorecard of four terms to check on any affiliate offer before promoting it: commission rate, recurring or one-time, cookie window, payout minimum', `${chrome('OFFER SCORECARD', '4 TERMS')}
+  <rect x="1" y="89" width="${W - 2}" height="200" fill="url(#glow)"/>
+${head}
+${list}
+${footer(s.footerY, s.footerH, {
+    icon: tickIcon(PAD + 48, s.footerY + s.footerH / 2),
+    title: 'Fail two or more',
+    sub: 'That is your answer. Move on.',
+  })}`);
+}
+
 /** The size of the market — the industry, not anybody's income. */
 function marketSize() {
   const [head, y0] = intro('THE SIZE OF THE MARKET', 'It keeps rising.', 'Growing roughly 10-15% a year.');
@@ -517,6 +548,7 @@ ${footer(H - PAD - 150, 150, {
 const PANELS = {
   'hook-sheet.svg': hookSheet,
   'program-check.svg': programCheck,
+  'offer-scorecard.svg': offerScorecard,
   'market-size.svg': marketSize,
   'money-stack.svg': moneyStack,
   'tip-vs-paycheck.svg': tipVsPaycheck,
