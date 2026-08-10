@@ -34,6 +34,7 @@ const CARD = '#111111';
 const LINE = 'rgba(255,255,255,0.09)';
 const ON_FILL = '#0e150f';
 const ON_LINE = 'rgba(163,240,175,0.34)';
+const YELLOW = '#FFD700'; // matches --yellow in tokens.css
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -429,6 +430,47 @@ ${footer(H - PAD - 150, 150, {
   })}`);
 }
 
+/** The market size, made literal: two stacks of coins instead of a bar chart. */
+function moneyStack() {
+  const [head, y0] = intro('WHAT THAT NUMBER LOOKS LIKE', 'Two piles of coins.', 'Same market, six years apart.');
+
+  const baseY = H - PAD - 150 - 34;
+  const coinW = 172, ry = 16;
+  const leftX = PAD + coinW / 2 + 6;
+  const rightX = W - PAD - coinW / 2 - 6;
+  const tallCount = 24, tallGap = 32;
+  const shortCount = 18, shortGap = tallGap; // same pitch, fewer coins -> visibly shorter
+
+  const stack = (cx, count, gap, label, value, bright) => {
+    const coins = Array.from({ length: count }, (_, i) => {
+      const y = baseY - i * gap;
+      const top = i === count - 1;
+      const fill = bright ? YELLOW : 'rgba(255,215,0,0.5)';
+      const edge = bright ? 'rgba(120,90,0,0.55)' : 'rgba(120,90,0,0.35)';
+      return `
+      <ellipse cx="${cx}" cy="${y}" rx="${coinW / 2}" ry="${ry}" fill="${fill}" stroke="${edge}" stroke-width="2"/>
+      ${top ? `<ellipse cx="${cx}" cy="${y}" rx="${coinW / 2 - 16}" ry="${ry - 6}" fill="none" stroke="rgba(0,0,0,0.28)" stroke-width="2"/>` : ''}`;
+    }).join('');
+    const topY = baseY - (count - 1) * gap - ry;
+    const loose = [-1, 1].map((s) => `<ellipse cx="${cx + s * (coinW / 2 + 22)}" cy="${baseY + ry - 4}" rx="${coinW / 5}" ry="${ry * 0.8}" fill="rgba(255,215,0,0.4)" stroke="rgba(120,90,0,0.3)" stroke-width="1.5"/>`).join('');
+    return `${loose}${coins}
+      <text class="lab" x="${cx}" y="${topY - 30}" text-anchor="middle" fill="${bright ? G : GREY}">${esc(label)}</text>
+      <text class="num" x="${cx}" y="${topY + 12}" text-anchor="middle" font-size="36">${esc(value)}</text>`;
+  };
+
+  return svg('Two stacks of gold coins: a shorter one labelled now at $22 billion, a taller one labelled 2030 at $30 billion', `${chrome('MARKET SIZE', 'IN COINS')}
+  <rect x="1" y="89" width="${W - 2}" height="260" fill="url(#glow)"/>
+${head}
+  <line x1="${PAD}" y1="${baseY + ry + 10}" x2="${W - PAD}" y2="${baseY + ry + 10}" stroke="${LINE}" stroke-width="2"/>
+  ${stack(leftX, shortCount, shortGap, 'NOW', '$22B', false)}
+  ${stack(rightX, tallCount, tallGap, '2030', '$30B', true)}
+${footer(H - PAD - 150, 150, {
+    icon: tickIcon(PAD + 48, H - PAD - 150 + 75),
+    title: 'This is the industry',
+    sub: 'Not a projection, and not anyone’s income.',
+  })}`);
+}
+
 /** Tip or paycheck — the same effort, twelve months apart. */
 function tipVsPaycheck() {
   const [head, y0] = intro('SAME SALE, TWELVE MONTHS ON', 'One resets. One stacks.', 'The same sale, twelve months apart.');
@@ -476,6 +518,7 @@ const PANELS = {
   'hook-sheet.svg': hookSheet,
   'program-check.svg': programCheck,
   'market-size.svg': marketSize,
+  'money-stack.svg': moneyStack,
   'tip-vs-paycheck.svg': tipVsPaycheck,
   'oneclub-panel.svg': clubPanel,
   'oneclub-offer-board.svg': offerBoard,
