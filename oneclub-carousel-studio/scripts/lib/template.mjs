@@ -262,7 +262,11 @@ function bodyFor(slide, index) {
 
 export function renderSlide(deck, slide, index, bundlePath = '../../../ds-bundle-morphe') {
   const total = deck.slides.length;
-  const photo = slide.type === 'hook' || slide.type === 'cta';
+  // Hook/CTA always get the art layer (their layout assumes it, even with no
+  // image yet — see slide--noart below). Any other slide type gets it too the
+  // moment it carries its own `image` — full-bleed backdrop art isn't a
+  // hook/CTA-only privilege, a value or receipts slide can carry it as well.
+  const photo = slide.type === 'hook' || slide.type === 'cta' || Boolean(slide.image);
   const split = Boolean(slide.mock || slide.split);
   const handle = deck.handle || '@theoneclub';
   const progress = Math.round(((index + 1) / total) * 100);

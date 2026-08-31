@@ -59,6 +59,12 @@ html, body {
 }
 .slide--scrim-none .scrim { display: none; }
 
+/* Full-bleed backdrop art behind a text-heavy slide (value/stakes/receipts):
+   the art needs to read as atmosphere, not compete with body copy for
+   contrast, so this flattens the scrim to a near-solid dark wash instead of
+   the photo-oriented gradient above. */
+.slide--scrim-heavy .scrim { background: rgba(0,0,0,0.82); }
+
 /* A photo placed smaller than the frame shows its own rectangle: the picture's
    near-black is not the slide's pure black. This dissolves that edge from the
    centre out, so the subject sits on the slide instead of on a panel. */
