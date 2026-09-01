@@ -9,7 +9,7 @@
     {
       "type": "hook",
       "headline": "THE LOOP THAT\nPAYS YOU\nWITHOUT A FACE.",
-      "image": "../../../assets/field-1.svg",
+      "image": "../../../assets/scene-loop.svg",
       "scrim": "low",
       "align": "top",
       "copy": [
@@ -24,7 +24,7 @@
       "type": "stakes",
       "label": "The part nobody explains",
       "headline": "RECURRING INCOME\nISN'T LUCK.\nIT'S A LOOP.",
-      "image": "../../../assets/field-2.svg",
+      "image": "../../../assets/scene-triloop.svg",
       "scrim": "heavy",
       "copy": [
         "The offer you pick. The post you make. The person who clicks.",
@@ -35,7 +35,7 @@
       "type": "value",
       "label": "Step 1 of 5",
       "headline": "PICK THE\nOFFER.",
-      "image": "../../../assets/field-3.svg",
+      "image": "../../../assets/scene-cardstack.svg",
       "scrim": "heavy",
       "copy": [
         "Recurring, not one-time. If it doesn't pay you again next month, it's not a loop, it's a job with extra steps."
@@ -45,7 +45,7 @@
       "type": "value",
       "label": "Step 2 of 5",
       "headline": "BUILD ONE\nANGLE.",
-      "image": "../../../assets/field-4.svg",
+      "image": "../../../assets/scene-oneangle.svg",
       "scrim": "heavy",
       "copy": [
         "Pick one way in, not five. Say it the same way until it's the thing you're known for saying."
@@ -55,7 +55,7 @@
       "type": "value",
       "label": "Step 3 of 5",
       "headline": "POST WITHOUT\nYOUR FACE.",
-      "image": "../../../assets/field-1.svg",
+      "image": "../../../assets/scene-mask.svg",
       "scrim": "heavy",
       "copy": [
         "A screen recording. Text over stock footage. A voice reading a script. None of it needs your face in frame."
@@ -65,7 +65,7 @@
       "type": "value",
       "label": "Step 4 of 5",
       "headline": "LET THE\nLOOP RUN.",
-      "image": "../../../assets/field-2.svg",
+      "image": "../../../assets/scene-gauge.svg",
       "scrim": "heavy",
       "copy": [
         "Stop checking it every hour. The post either works or it doesn't, and watching it do nothing doesn't make it do something."
@@ -75,7 +75,7 @@
       "type": "value",
       "label": "Step 5 of 5",
       "headline": "REPEAT THE\nPATTERN.",
-      "image": "../../../assets/field-3.svg",
+      "image": "../../../assets/scene-repeatgrid.svg",
       "scrim": "heavy",
       "copy": [
         "One post proves nothing. Ten posts start a pattern. The platform pays attention to what you repeat, not what you tried once."
@@ -85,7 +85,7 @@
       "type": "value",
       "label": "Why this actually works",
       "headline": "THE ALGORITHM\nBECOMES WHAT\nYOU REPEAT.",
-      "image": "../../../assets/field-4.svg",
+      "image": "../../../assets/scene-broadcast.svg",
       "scrim": "heavy",
       "copy": [
         "Every post is a signal. Repeat the same angle enough times, and the platform starts treating it as your lane.",
@@ -96,7 +96,7 @@
       "type": "receipts",
       "label": "The pattern in one line",
       "headline": "CHOOSE IT, REPEAT IT,\nBECOME WHAT IT TRUSTS.",
-      "image": "../../../assets/field-1.svg",
+      "image": "../../../assets/scene-loop-bright.svg",
       "scrim": "low",
       "copy": [
         "Not a hack. Not something you use once. The account the algorithm trusts is the one that never stopped repeating the same loop.",
@@ -110,7 +110,7 @@
     {
       "type": "cta",
       "headline": "IF YOU WANT THE\nEXACT FACELESS\nBLUEPRINT I USE.",
-      "image": "../../../assets/field-2.svg",
+      "image": "../../../assets/scene-cta-glow.svg",
       "scrim": "low",
       "product": {
         "image": "../../../assets/ebook-blueprint.png",
