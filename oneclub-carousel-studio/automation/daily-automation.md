@@ -107,6 +107,12 @@ posts manually, same as every carousel before this.
   with an actual reusable test — "will you still be opening it in a week?" — instead of
   restating the number from slide 2.)
   nice-to-have.
+- The receipts slide's `note` ("Screenshot this one.", curve arrow) is one option, not
+  the default. It had become reflexive — nearly every deck used the identical line on
+  the identical slide. Use it when the slide genuinely earns a save; otherwise let the
+  headline and copy close the deck on their own, or write a different close line. Same
+  rule as the block-type variety above: don't pad a slide with a stock note just because
+  every prior deck had one there.
 - If three consecutive firings fail QA on the same root cause, stop and leave a
   clear note in the session rather than retrying blindly — that's a signal
   something upstream (a skill, a template, an asset) needs a human look.
