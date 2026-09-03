@@ -22,6 +22,11 @@ posts manually, same as every carousel before this.
    layout is the thing this step exists to prevent. If the backlog log is missing the
    structure notes for recent rows (older entries, before this rule existed), open those
    decks' JSON directly and check.
+   - **Also pick this firing's visual style** per `automation/visual-styles.md` (Signature,
+     Scene, or Editorial): read the last 2 rows' `style` column and use whichever style
+     isn't in that set. This is a separate axis from block type/hook treatment above — a
+     deck can vary its block types while still repeating yesterday's whole visual system,
+     which is its own kind of sameness.
 5. Write a new deck at `decks/<today>-<angle-slug>.json`:
    - `trigger: "BLUEPRINT"`, CTA `product.image: "../../../assets/ebook-blueprint.png"`,
      button text `Comment "BLUEPRINT" and I'll send it over` (match the live deck's exact

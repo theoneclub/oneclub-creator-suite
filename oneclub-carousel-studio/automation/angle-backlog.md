@@ -38,9 +38,12 @@ never drift apart.
 - [ ] **The flat month vs the compounding month** — month 1 looks identical whether someone
       quits after it or not. Month 12 doesn't. A visual on delayed payoff, no new SVG needed
       if `tip-vs-paycheck.svg`'s shape still fits — reuse before building new art.
-- [ ] **Red flags in an affiliate program** — reverse framing: what disqualifies an offer
-      (no minimum payout transparency, short cookie window, one-time only). Teaches by
-      exclusion instead of endorsement.
+- [x] **Red flags in an affiliate program** — shipped as `red-flags-in-an-offer`
+      (2026-08-31). First deck in the new **Editorial** style (see
+      `automation/visual-styles.md`): zero imagery on any slide, pure typography.
+      Trimmed to four flags, not five, to fit an 8-slide deck — the hook headline
+      had to be corrected to match once that scope changed, a live example of why
+      slide count and content have to agree before copy locks.
 - [ ] **You don't need a niche, you need a translator** — reframes "I have no expertise" by
       positioning the poster as translating a tool for a beginner, not as an authority.
 - [ ] **What actually breaks first** — the realistic failure mode (posting twice and quitting)
@@ -49,13 +52,15 @@ never drift apart.
 ## Shipped
 
 <!-- Append one row per post, newest first:
-     date | slug | angle | trigger | slides | block types | assets used
-     The next firing reads the last 3 rows (daily-automation.md step 4) and must not
-     repeat their slide count, hook treatment, or primary visual block type. Keep this
-     column filled in, or that check has nothing to work from. -->
+     date | slug | angle | trigger | style | slides | block types | assets used
+     The next firing reads the last 3 rows (daily-automation.md step 4) for structure
+     and the last 2 rows' `style` (visual-styles.md) for the visual system. Keep both
+     filled in, or those checks have nothing to work from. -->
 
-2026-08-10 | vet-the-offer | Faceless AI Affiliate Marketing: vet the offer before you promote it | BLUEPRINT | 6 | hook: photo; tiles; text-only; mock | faceless-figure.jpg, offer-scorecard.svg, ebook-blueprint.png
-2026-08-09 | tools-not-the-tool | Faceless AI Affiliate Marketing: the tools, not the tool | BLUEPRINT | 7 | hook: illustrated full-bleed (tab-graveyard.svg); big; cards; panel/stats | tab-graveyard.svg, ebook-blueprint.png
-2026-08-09 | not-a-pyramid-scheme | Faceless AI Affiliate Marketing: answering the pyramid scheme objection | BLUEPRINT | 6 | hook: photo+quoted objection; versus; flow | faceless-figure.jpg, ebook-blueprint.png
-2026-08-09 | side-hustle-math | Faceless AI Affiliate Marketing: side-hustle math | BLUEPRINT | 5 | hook: text-only; figure; flow | twelve-month-stack.svg, ebook-blueprint.png
-2026-08-06 | faceless-ai-affiliate | Faceless AI Affiliate Marketing: $22B market, $30B by 2030, and why AI made it easier | BLUEPRINT | 6 | hook: photo; mock; figure; flow | faceless-figure.jpg, market-size.svg, faceless-formats.svg, program-check.svg, ebook-blueprint.png
+2026-08-31 | red-flags-in-an-offer | Faceless AI Affiliate Marketing: red flags in an affiliate program | BLUEPRINT | Editorial | 8 | hook: text-only; text-only throughout, no imagery | ebook-blueprint.png
+2026-08-31 | faceless-loop-system | Faceless AI Affiliate Marketing: it was never the tool, it's the loop | BLUEPRINT | Scene | 10 | hook: text-only; full-bleed scene art on every slide (no mock/figure/tiles) | scene-loop.svg, scene-triloop.svg, scene-cardstack.svg, scene-oneangle.svg, scene-mask.svg, scene-gauge.svg, scene-repeatgrid.svg, scene-broadcast.svg, scene-loop-bright.svg, scene-cta-glow.svg, ebook-blueprint.png
+2026-08-10 | vet-the-offer | Faceless AI Affiliate Marketing: vet the offer before you promote it | BLUEPRINT | Signature | 6 | hook: photo; tiles; text-only; mock | faceless-figure.jpg, offer-scorecard.svg, ebook-blueprint.png
+2026-08-09 | tools-not-the-tool | Faceless AI Affiliate Marketing: the tools, not the tool | BLUEPRINT | Signature | 7 | hook: illustrated full-bleed (tab-graveyard.svg); big; cards; panel/stats | tab-graveyard.svg, ebook-blueprint.png
+2026-08-09 | not-a-pyramid-scheme | Faceless AI Affiliate Marketing: answering the pyramid scheme objection | BLUEPRINT | Signature | 6 | hook: photo+quoted objection; versus; flow | faceless-figure.jpg, ebook-blueprint.png
+2026-08-09 | side-hustle-math | Faceless AI Affiliate Marketing: side-hustle math | BLUEPRINT | Signature | 5 | hook: text-only; figure; flow | twelve-month-stack.svg, ebook-blueprint.png
+2026-08-06 | faceless-ai-affiliate | Faceless AI Affiliate Marketing: $22B market, $30B by 2030, and why AI made it easier | BLUEPRINT | Signature | 6 | hook: photo; mock; figure; flow | faceless-figure.jpg, market-size.svg, faceless-formats.svg, program-check.svg, ebook-blueprint.png
