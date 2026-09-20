@@ -4,6 +4,7 @@ import BrainScreen from '@/components/screens/BrainScreen'
 import ContentScreen from '@/components/screens/ContentScreen'
 import VideoCloneScreen from '@/components/screens/VideoCloneScreen'
 import OutreachScreen from '@/components/screens/OutreachScreen'
+import LeadsScreen from '@/components/screens/LeadsScreen'
 import EmailScreen from '@/components/screens/EmailScreen'
 import SMSScreen from '@/components/screens/SMSScreen'
 import SchedulerScreen from '@/components/screens/SchedulerScreen'
@@ -36,6 +37,7 @@ const NAV_MAIN: { id: Screen; emoji: string; label: string }[] = [
 ]
 
 const NAV_TOOLS: { id: Screen; emoji: string; label: string }[] = [
+  { id: 'leads',    emoji: '🎯', label: 'Leads'     },
   { id: 'outreach', emoji: '🤝', label: 'Outreach'  },
   { id: 'email',    emoji: '📧', label: 'Email'     },
   { id: 'sms',      emoji: '📱', label: 'SMS'       },
@@ -45,7 +47,7 @@ const NAV_TOOLS: { id: Screen; emoji: string; label: string }[] = [
 
 const PAGE_TITLES: Record<Screen, string> = {
   home: 'Home', brain: 'Brain', content: 'Content', clone: 'Video Clone',
-  outreach: 'Outreach', email: 'Email', sms: 'SMS', schedule: 'Scheduler',
+  outreach: 'Outreach', leads: 'Leads', email: 'Email', sms: 'SMS', schedule: 'Scheduler',
 }
 
 interface AppShellProps { memberId: string }
@@ -93,6 +95,7 @@ export default function AppShell({ memberId }: AppShellProps) {
       case 'content':  return <ContentScreen memberId={memberId} avatarSettings={avatar} />
       case 'clone':    return <VideoCloneScreen memberId={memberId} />
       case 'outreach': return <OutreachScreen memberId={memberId} avatarSettings={avatar} />
+      case 'leads':    return <LeadsScreen memberId={memberId} />
       case 'email':    return <EmailScreen memberId={memberId} avatarSettings={avatar} />
       case 'sms':      return <SMSScreen memberId={memberId} avatarSettings={avatar} />
       case 'schedule': return <SchedulerScreen memberId={memberId} avatarSettings={avatar} />
