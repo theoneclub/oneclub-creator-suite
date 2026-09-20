@@ -199,3 +199,9 @@ begin
   return v_row;
 end;
 $$;
+
+-- ── Pin search_path (fixes the security advisor's "function_search_path_mutable"
+-- WARN) so a caller can't influence which objects an unqualified name resolves to.
+alter function outreach_add_lead(text, int, jsonb) set search_path = public;
+alter function outreach_add_leads_batch(text, int, jsonb) set search_path = public;
+alter function outreach_toggle_contacted(text, uuid, boolean) set search_path = public;
