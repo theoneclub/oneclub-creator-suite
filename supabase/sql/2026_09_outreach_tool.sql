@@ -1,7 +1,7 @@
 -- Outreach Tool (lead discovery + enrichment) schema.
--- This repo has no migration runner wired up (existing tables like
--- member_credits were created by hand in the Supabase dashboard), so run
--- this file once in the Supabase SQL editor.
+-- Applied via the Supabase MCP connector's apply_migration (tracked as a
+-- proper migration) — this file is kept in-repo as the source of truth
+-- alongside it, matching how the rest of this schema was hand-built.
 
 create extension if not exists pgcrypto;
 
@@ -48,6 +48,23 @@ create table if not exists member_email_integrations (
   from_email         text,
   connected_at       timestamptz not null default now()
 );
+
+-- ── RLS — matches every other per-member table in this schema exactly:
+-- RLS enabled + an "own row" policy keyed off current_setting('app.member_id').
+-- The app only ever queries via the service-role key (which bypasses RLS),
+-- so this is defense-in-depth, not the enforcement mechanism — but every
+-- existing table in this project follows this same convention.
+alter table outreach_leads enable row level security;
+create policy outreach_leads_own on outreach_leads for all
+  using (member_id = current_setting('app.member_id', true));
+
+alter table member_affiliate_links enable row level security;
+create policy member_affiliate_links_own on member_affiliate_links for all
+  using (member_id = current_setting('app.member_id', true));
+
+alter table member_email_integrations enable row level security;
+create policy member_email_integrations_own on member_email_integrations for all
+  using (member_id = current_setting('app.member_id', true));
 
 -- ── Atomic "add lead" (single, from Add-Lead / enrich flow) ────────────
 -- Locks the member's credit row, verifies balance, deducts, and inserts the
