@@ -6,6 +6,8 @@ const DAILY_LIMITS: Record<string, number> = {
   sms: 30,
   outreach: 30,
   brain: 20,
+  outreach_enrich: 60,
+  outreach_discover: 15,
 }
 
 export async function checkRateLimit(

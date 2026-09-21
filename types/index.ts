@@ -137,7 +137,52 @@ export interface AdminStats {
   globalBrainCount: number
 }
 
-export type Screen = 'home' | 'brain' | 'content' | 'clone' | 'outreach' | 'email' | 'sms' | 'schedule'
+export type Screen = 'home' | 'brain' | 'content' | 'clone' | 'outreach' | 'leads' | 'email' | 'sms' | 'schedule'
+
+export type LeadAudience = 'influencer' | 'public'
+export type LeadPlatform = 'instagram' | 'tiktok' | 'linkedin' | 'email'
+
+export interface DraftMessages {
+  dm: string
+  email: string
+  followup: string
+}
+
+export interface OutreachLead {
+  id: string
+  member_id: string
+  audience: LeadAudience
+  platform: LeadPlatform
+  handle: string | null
+  first_name: string | null
+  followers: number | null
+  niche: string | null
+  notes: string | null
+  email: string | null
+  draft_message: DraftMessages | null
+  needs_enrichment: boolean
+  contacted: boolean
+  created_at: string
+  contacted_at: string | null
+  updated_at: string
+}
+
+export type EmailProvider = 'brevo' | 'mailchimp' | 'convertkit' | 'other'
+
+export interface MemberAffiliateLink {
+  member_id: string
+  provider: string
+  affiliate_url: string
+  updated_at: string
+}
+
+export interface MemberEmailIntegration {
+  member_id: string
+  provider: EmailProvider
+  from_name: string | null
+  from_email: string | null
+  connected_at: string
+}
 
 export interface VideoCloneResult {
   blueprint: string
